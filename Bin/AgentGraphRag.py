@@ -6,16 +6,16 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.documents import Document
 
-MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY", "ajdZoka3ALvP7WpgZoqcKkOSZ0irJeou")
+MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
 NEO4J_URI = os.getenv("NEO4J_URI", "bolt://127.0.0.1:7687")
 NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
-NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "azerty00")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 class AgentGraphRAG:
     def __init__(self):
         print("Initialisation des modèles Mistral...")
-        self.llm = ChatMistralAI(model="mistral-small-latest", api_key="ajdZoka3ALvP7WpgZoqcKkOSZ0irJeou")
-        self.embeddings = MistralAIEmbeddings(model="mistral-embed", api_key="ajdZoka3ALvP7WpgZoqcKkOSZ0irJeou")
+        self.llm = ChatMistralAI(model="mistral-small-latest", api_key=MISTRAL_API_KEY)
+        self.embeddings = MistralAIEmbeddings(model="mistral-embed", api_key=MISTRAL_API_KEY)
 
         print("Connexion à Neo4j et vérification de l'index vectoriel...")
         

@@ -113,6 +113,32 @@ def _prochaine_position(conversation_id: str) -> int:
         return len(session.exec(statement).all())
 
 
+def _uuid_valide(conversation_id: str) -> uuid.UUID:
+    try:
+        return uuid.UUID(conversation_id)
+    except (TypeError, ValueError, AttributeError):
+        raise HTTPException(status_code=400, detail="Identifiant de conversation invalide.")
+
+
+def _charger_historique(conversation_id: str) -> list[dict[str, str]]:
+    conv_id = _uuid_valide(conversation_id)
+    with Session(engine) as session:
+        if session.get(Conversation, conv_id) is None:
+            raise HTTPException(status_code=404, detail="Conversation introuvable.")
+        statement = (
+            select(Message)
+            .where(Message.conversation_id == conv_id)
+            .order_by(Message.position)
+        )
+        messages = session.exec(statement).all()
+    roles = {"utilisateur": "user", "assistant": "assistant"}
+    return [
+        {"role": roles[m.role], "content": m.contenu}
+        for m in messages
+        if m.role in roles
+    ]
+
+
 def _enregistrer_message(conversation_id: str, role: str, contenu: str, position: int):
     with Session(engine) as session:
         msg = Message(
@@ -128,22 +154,28 @@ def _enregistrer_message(conversation_id: str, role: str, contenu: str, position
 
 @app.post("/ask", response_model=Reponse)
 def ask(payload: Question):
-    if not payload.question.strip():
+    question = payload.question.strip()
+    if not question:
         raise HTTPException(status_code=400, detail="La question ne peut pas être vide.")
+    if len(question) > 4000:
+        raise HTTPException(status_code=400, detail="La question est trop longue (maximum 4000 caractères).")
 
     conversation_id = payload.conversation_id
     if not conversation_id:
-        conversation_id = _creer_conversation(titre=payload.question)
+        conversation_id = _creer_conversation(titre=question)
 
     try:
+        historique = _charger_historique(conversation_id)
         position = _prochaine_position(conversation_id)
-        _enregistrer_message(conversation_id, "utilisateur", payload.question, position)
+        _enregistrer_message(conversation_id, "utilisateur", question, position)
 
-        reponse = agent.ask(payload.question)
+        reponse = agent.ask(question, historique=historique)
 
         _enregistrer_message(conversation_id, "assistant", reponse, position + 1)
 
-        return Reponse(question=payload.question, reponse=reponse, conversation_id=conversation_id)
+        return Reponse(question=question, reponse=reponse, conversation_id=conversation_id)
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erreur lors du traitement : {str(e)}")
 
@@ -161,10 +193,11 @@ def lister_conversations():
 
 @app.get("/conversations/{conversation_id}/messages", response_model=list[MessageItem])
 def charger_messages(conversation_id: str):
+    conv_id = _uuid_valide(conversation_id)
     with Session(engine) as session:
         statement = (
             select(Message)
-            .where(Message.conversation_id == conversation_id)
+            .where(Message.conversation_id == conv_id)
             .order_by(Message.position)
         )
         messages = session.exec(statement).all()
@@ -175,12 +208,13 @@ def charger_messages(conversation_id: str):
 
 @app.delete("/conversations/{conversation_id}")
 def supprimer_conversation(conversation_id: str):
+    conv_id = _uuid_valide(conversation_id)
     with Session(engine) as session:
-        conv = session.get(Conversation, conversation_id)
+        conv = session.get(Conversation, conv_id)
         if conv:
             # Suppression manuelle des messages lies (pas de CASCADE automatique
             # aussi simple qu'en SQL brut avec SQLite/SQLModel par defaut)
-            statement = select(Message).where(Message.conversation_id == conversation_id)
+            statement = select(Message).where(Message.conversation_id == conv_id)
             for msg in session.exec(statement).all():
                 session.delete(msg)
             session.delete(conv)

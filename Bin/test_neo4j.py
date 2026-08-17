@@ -1,8 +1,13 @@
+import os
+
+from dotenv import load_dotenv
 from neo4j import GraphDatabase
 
+load_dotenv()
+
 driver = GraphDatabase.driver(
-    "bolt://127.0.0.1:7687",
-    auth=("neo4j", "password")
+    os.getenv("NEO4J_URI", "bolt://127.0.0.1:7687"),
+    auth=(os.getenv("NEO4J_USER", "neo4j"), os.getenv("NEO4J_PASSWORD")),
 )
 
 driver.verify_connectivity()

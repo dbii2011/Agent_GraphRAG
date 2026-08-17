@@ -5,3 +5,46 @@ $env:JAVA_HOME="C:\Program Files\Temurin\Temurin-17
 $env:HTTPS_PROXY = "http://hprod-proxy.dax.reseau.sncf.fr:8080"
 $env:HTTP_PROXY  = "http://hprod-proxy.dax.reseau.sncf.fr:8080"
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+if you ever need to know the placement of an installation
+git configuration 
+
+PS C:\> Get-ChildItem "C:\Program Files" -Filter git.exe -Recurse -ErrorAction SilentlyContinue |
+>> Select-Object -ExpandProperty FullName
+PS C:\> Get-ChildItem $env:LOCALAPPDATA -Filter git.exe -Recurse -ErrorAction SilentlyContinue |
+>> Select-Object -ExpandProperty FullName
+
+PS C:\> $gitPath = "$env:LOCALAPPDATA\Programs\Git\cmd"
+PS C:\> $gitPath
+C:\Users\0404836P\AppData\Local\Programs\Git\cmd
+PS C:\> Test-Path "$gitPath\git.exe"
+True
+PS C:\> "$gitPath\git.exe" --version  
+Au caractère Ligne:1 : 22
++ "$gitPath\git.exe" --version
++                      ~~~~~~~
+Jeton inattendu « version » dans l’expression ou l’instruction.
+Au caractère Ligne:1 : 1
++ "$gitPath\git.exe" --version
++ ~~~~~~~~~~~~~~~~~~
+L’opérateur « -- » ne fonctionne que sur les variables ou les propriétés.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\> $env:Path = "$gitPath;$env:Path"
+PS C:\> Get-Command git
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     git.exe                                            2.55.0.3   C:\Users\0404836P\AppData\Local\Programs\Git\cm...
+
+
+
+PS C:\> git --version
+git version 2.55.0.windows.3
+PS C:\>
+
+
+git init crée le dépôt ;
+git add . copie l’état des fichiers dans l’index ;
+git restore a remis les fichiers supprimés.

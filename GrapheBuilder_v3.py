@@ -5,13 +5,16 @@ from datetime import datetime
 import glob
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_mistralai import MistralAIEmbeddings
+from dotenv import load_dotenv
+
+load_dotenv()
 
 DATA_DIR = "data"
 DOCS_DIR = "docs"
 
-URI      = "bolt://127.0.0.1:7687"
-USER     = "neo4j"
-PASSWORD = "azerty00"
+URI = os.getenv("NEO4J_URI", "bolt://127.0.0.1:7687")
+USER = os.getenv("NEO4J_USER", "neo4j")
+PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 class ArianeGraphBuilder:
     def __init__(self, uri, user, password):

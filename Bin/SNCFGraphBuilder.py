@@ -1,10 +1,15 @@
 import json
+import os
+
+from dotenv import load_dotenv
 from neo4j import GraphDatabase
 
+load_dotenv()
 
-URI = "bolt://localhost:7687"
-USER = "neo4j"
-PASSWORD = "password"
+
+URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+USER = os.getenv("NEO4J_USER", "neo4j")
+PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 
 class SNCFGraphBuilder:

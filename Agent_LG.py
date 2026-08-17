@@ -15,7 +15,7 @@ load_dotenv()
 MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
 NEO4J_URI = os.getenv("NEO4J_URI", "bolt://127.0.0.1:7687")
 NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
-NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 MODEL = "mistral-small-latest"
 
 logging.basicConfig(
@@ -76,31 +76,8 @@ class AgentLG:
         @tool
         @chronometrer
         def get_schema_context() -> str:
-            """permet d'avoir une vision globale sur le graphe"""
-            with agent_self.driver.session() as session:
-                 labels = session.run("MATCH (n) RETURN DISTINCT labels(n) AS labels")
-                 relations = session.run("MATCH ()-[r]->() RETURN DISTINCT type(r) AS relation, r.role AS role")
-                 classes = session.run("MATCH (c:Classe) RETURN c.nom AS classe ORDER BY c.nom")
-                 attributs = session.run("MATCH (a:Attribut) RETURN DISTINCT a.nom AS attribut, a.key AS key ORDER BY a.nom")
-                 types = session.run("MATCH (t:Type) RETURN DISTINCT t.nom AS type ORDER BY t.nom")
-                 documents = session.run("MATCH (d:Document) RETURN DISTINCT d.titre AS document ORDER BY d.titre")
-
-
-                 data = {
-            "labels": [label for record in labels for label in record["labels"]],
-            "relations": [r["relation"] for r in relations if r["relation"]],
-            "classes": [r["classe"] for r in classes],
-            "attributs": [r["attribut"] for r in attributs],
-            "types": [r["type"] for r in types],
-            "documents": [r["document"] for r in documents ],
-            }
-                 return (
-            f"Labels : {', '.join(set(data['labels']))}\n"
-            f"Relations : {', '.join(data['relations'])}\n"
-            f"Classes ({len(data['classes'])}) : {', '.join(data['classes'])}\n"
-            f"Attributs ({len(data['attributs'])}) : {', '.join(data['attributs'])}\n"
-            f"Types : {', '.join(data['types'])}\n"
-            f"documents ({len(data['documents'])}) : {', '.join(data['documents'])}")
+            """Donne une vision globale en lecture seule du schéma du graphe."""
+            return agent_self.get_schema_context()
 
         @tool
         @chronometrer
@@ -175,7 +152,14 @@ class AgentLG:
             noms=noms_classes,)
                 return list(set(resultat.single()["perimetre"]))     
 
-        self.tools = [rechercher_classes, interroger_graphe_ariane, rechercher_documents, rechercher_documentation, etendre_au_voisinage]
+        self.tools = [
+            rechercher_classes,
+            rechercher_documents,
+            get_schema_context,
+            interroger_graphe_ariane,
+            rechercher_documentation,
+            etendre_au_voisinage,
+        ]
         system_prompt = f"""Tu es un expert Neo4j/Cypher et un assistant métier.
  
 Schéma réel du graphe :
@@ -227,9 +211,50 @@ Règles :
         self.executor = create_agent(model=self.llm, tools=self.tools, system_prompt=system_prompt)
 
 
+    def get_schema_context(self) -> str:
+        """Retourne un aperçu borné du schéma réellement présent dans Neo4j."""
+        with self.driver.session() as session:
+            labels = session.run("MATCH (n) RETURN DISTINCT labels(n) AS labels")
+            relations = session.run(
+                "MATCH ()-[r]->() RETURN DISTINCT type(r) AS relation ORDER BY relation"
+            )
+            classes = session.run(
+                "MATCH (c:Classe) RETURN c.nom AS classe ORDER BY c.nom LIMIT 1000"
+            )
+            attributs = session.run(
+                "MATCH (a:Attribut) RETURN DISTINCT a.nom AS attribut ORDER BY attribut LIMIT 1000"
+            )
+            types = session.run(
+                "MATCH (t:Type) RETURN DISTINCT t.nom AS type ORDER BY type LIMIT 500"
+            )
+            documents = session.run(
+                "MATCH (d:Document) RETURN DISTINCT d.titre AS document ORDER BY document LIMIT 500"
+            )
+            data = {
+                "labels": sorted({label for record in labels for label in record["labels"]}),
+                "relations": [record["relation"] for record in relations],
+                "classes": [record["classe"] for record in classes],
+                "attributs": [record["attribut"] for record in attributs],
+                "types": [record["type"] for record in types],
+                "documents": [record["document"] for record in documents],
+            }
+        return (
+            f"Labels : {', '.join(data['labels'])}\n"
+            f"Relations : {', '.join(data['relations'])}\n"
+            f"Classes ({len(data['classes'])}) : {', '.join(data['classes'])}\n"
+            f"Attributs ({len(data['attributs'])}) : {', '.join(data['attributs'])}\n"
+            f"Types : {', '.join(data['types'])}\n"
+            f"Documents ({len(data['documents'])}) : {', '.join(data['documents'])}"
+        )
+
     def _valider_et_executer(self, requete_cypher: str) -> str:
         requete = requete_cypher.replace("```cypher", "").replace("```", "").strip()
-        mots_interdits = ["CREATE", "MERGE", "SET", "DELETE", "REMOVE", "DROP", "DETACH", "CALL"]
+        mots_interdits = [
+            "CREATE", "MERGE", "SET", "DELETE", "REMOVE", "DROP", "DETACH",
+            "CALL", "LOAD", "FOREACH", "GRANT", "DENY", "REVOKE", "ALTER",
+        ]
+        if not re.match(r"^(MATCH|OPTIONAL\s+MATCH|UNWIND)\b", requete, re.IGNORECASE):
+            return "Erreur de sécurité : la requête doit commencer par MATCH, OPTIONAL MATCH ou UNWIND."
         if any(re.search(rf"\b{mot}\b", requete.upper()) for mot in mots_interdits):
             return "Erreur de sécurité : seule la lecture est autorisée."
         try:
@@ -241,13 +266,15 @@ Règles :
         except Exception as e:
             return f"Erreur technique Neo4j : {str(e)}"
 
-    def ask(self, question: str) -> str:
+    def ask(self, question: str, historique: list[dict[str, str]] | None = None) -> str:
         debut = time.time()
         logger.info(f"Question reçue : {question}")
     
         try:
+            messages = list(historique or [])[-12:]
+            messages.append({"role": "user", "content": question})
             resultat = self.executor.invoke(
-            {"messages": [{"role": "user", "content": question}]},
+            {"messages": messages},
             config={"recursion_limit": 15},
         )
         except Exception as e:

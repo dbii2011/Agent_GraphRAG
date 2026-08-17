@@ -1,8 +1,13 @@
+import os
+
+from dotenv import load_dotenv
 from neo4j import GraphDatabase
 
-URI = "bolt://127.0.0.1:7687"
-USER = "neo4j"
-PASSWORD = "db200402"
+load_dotenv()
+
+URI = os.getenv("NEO4J_URI", "bolt://127.0.0.1:7687")
+USER = os.getenv("NEO4J_USER", "neo4j")
+PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 
 class UMLGraphBuilder:
