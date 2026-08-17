@@ -1,0 +1,3443 @@
+{
+    "enums": [
+        {
+            "nom": "EnumTypeAlimentation",
+            "valeurs": []
+        },
+        {
+            "nom": "EnumSensLecture",
+            "valeurs": []
+        },
+        {
+            "nom": "EnumIndicateur",
+            "valeurs": []
+        },
+        {
+            "nom": "EnumPositionFile",
+            "valeurs": []
+        },
+        {
+            "nom": "EnumUtilisationRessource",
+            "valeurs": []
+        },
+        {
+            "nom": "EnumTalonnable",
+            "valeurs": []
+        },
+        {
+            "nom": "EnumTypeRearmement",
+            "valeurs": [
+                "P",
+                "Z",
+                "NA"
+            ]
+        },
+        {
+            "nom": "EnumTemporisation",
+            "valeurs": [
+                "T_45_S",
+                "T_60_S",
+                "NA"
+            ]
+        },
+        {
+            "nom": "EnumDuplicationBalise",
+            "valeurs": [
+                "O",
+                "N",
+                "NA",
+                "NR",
+                "AMONT",
+                "AVAL"
+            ]
+        },
+        {
+            "nom": "EnumPositionPointBut",
+            "valeurs": [
+                "EST_POSITIONNE_SUR",
+                "EST_POSITIONNE_AMONT",
+                "EST_POSITIONNE_AVAL",
+                "EST_POSITIONNE_PI_AVAL"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "ContrainteFonctionnelleComposite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteItineraire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteFonctionnelleTerminaleEtatRessource",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatSignal",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Signal",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationBrancheAPV",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AppareilDeVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignalDeProtection",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeEtat",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Itineraire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeContrainte",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeSystemeContrainte",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationInstallationFixeCommandee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeContrainte",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationMiseEnOeuvre",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationProprieteRessource",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationProprieteResourceQuantite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationFonctionIfx",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationExtremiteLiaison",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "InstallationFixeVirtuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeTension",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CircuitDeVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationTopologiqueLinaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationPk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypePropriete",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Anticheminement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CableFeeder",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CableTransversal",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Porteur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CableDeProtection",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "FilDeContact",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LiaisonTransversable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementADateAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ModuleMFA",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ModuleImage",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeCK",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "DetecteurCirculation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AppareilInterruptionElectrique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "OrganeDeControleSonore",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeDeControleCK",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EquipementDeSecurite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Barriere",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PlaqueGAMEC",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CroixBlancheLumineuse",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignalRoutier",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "NiveauAcceleration",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneAnnonceCirculationPN",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneAnnonceCirculationSTEM",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneAnnonceCirculationDAELZD",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceInstallationFixeOrdonnee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeInstallationFixeExtremite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "JointDeZone",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Eurobalise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetPersistant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Message",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "BaliseKVB",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Implantation_sur_v3",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ressource_structurelle_ligne_produit",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CONDITIONS DE FORMATION itineraire 7501-7506",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "appareil_de_voie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Modele signalisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImageAsset",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Modele coeur description du réseau ",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ressource_nouvelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ITINERAIRE 7501-7506",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "passage_a_niveau",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "une_phrase_principe",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Modele Contrainte Fonctionnelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CONDITIONS D'OUVERTURE SIGNAL 7101",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "zep",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "enclenchement_proximite_instancié",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "zone_de_detection",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "modele_enclenchement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Modele canton et itineraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "systeme_protection_kvb",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Modele esclave signal",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Modele installationsFixes",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "une_phrase_instanciee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "model_commun_enclenchement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "itineraire_7501_7506",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "base",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "execution",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "traversee_voie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteEnclenchementDA",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteEnclenchementSensContraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                },
+                {
+                    "nom": "sensInversePris",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ContrainteAppareilVoiePourProtection",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteVoieServiceDestination",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteVoieServiceOrigine",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteAiguillageParcouru",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "parcouruElectriquement",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ContrainteEtatRessourceCommande",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteFonctionnelleCompositeRessource",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteEnclenchementDM",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "temporisation",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ContrainteEtatSignalAutre",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteControlImperatif",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteAppareilVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ContrainteEtatSignalOrigine",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "bandeJauneHorizontale",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ContrainteEtatRessourceKontroleEnclenche",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteAnnulation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteEnclenchementSens",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ContrainteFonctionnelleReportIndication",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteEtatRessourceKontrole",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteFonctionnelleCompositeEtatRessource",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeContrainteEnclenchementItineraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "priorite",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ContrainteDetecteurIsole",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteAnnonce",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteEnclenchementDeProximite",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "refoulement",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AssociationParametreAdressage",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "adressage[]",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Alimentation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "intensiteMaximale",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "puissanceMaximale",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sansInterruption",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "tensionNomimale",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationResourceIFxAlimentationDisponible",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceIFxAlimentationSecours",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ProductionAlimentation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AlimNormale",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceIFxAlimentationNormale",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueConsoAlimentation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SourceAlimentation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "intensiteMaximale",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "puissanceMaximale",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sansInterruption",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "tensionNomimale",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Lampe",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CarteElectroniqueUCS",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CarteElectroniqueEntreeSignal",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Emetteur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ModuleEntreeSortie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nombreCarte",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreEntree",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ConnexionInductive",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CarteElectroniqueAlim",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Relais",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CarteElectroniqueMixte",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ModuleAlimentation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "typeAlim",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CarteElectroniqueSortie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CarteElectronique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Bouchon",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CarteElectroniqueEntree",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Recepteur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PointDeConnexion",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "tensionSuperieure50Volt",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Codeur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ChassisCable",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Local",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "fauxPlafond",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "fauxPlancher",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Chassis",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Baie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ColonneModule",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementStructureTechnique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "reliePlanDeMasse",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Abri",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SupportElementStructureTechnique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "horizontal",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "taille",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CentreTechnique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ChassisModule",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nbColonnes",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Armoire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SectionPolarite",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "file",
+                    "type": "EnumPositionFile",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ReportDePolarite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationReportPolarite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLiaison",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementConducteurAbstrait",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "LigneRigide",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PaireDeConducteur",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "torsade",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Cable",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "conducteurs",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "section",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RailDeContact",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Conducteur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Liaison",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationPresentationKVBRessource",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PresentationKVB",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationPresentationKVBEtatRessource",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationPresentationKVB",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "distanceButParametree",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "numerocCasDES",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Type : Sequence",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Signal_Destination",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "C7508",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EP7524",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "102B",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Poste",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type Etat : Occupée",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Pedale",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Operateur :  ET",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Operateur : ET",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type : Enclenchement de proximite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EP : ContrainteFonctionnelleComposite - Copy",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteFonctionnelleTerminaleRessource",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Sequence : ContrainteFonctionnelleComposite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "C7524",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type Contrainte : Ressource Concernée",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Block automatique lumineux",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Poste 75",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type contrainte: Enclenchement de proximite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Zone",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type Contrainte : Etat Ressource Concernée",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Signal_Origine",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Poste de VP électrique à enclenchement informatique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Canton",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "position",
+                    "type": "string",
+                    "description": "",
+                    "defaut": "G"
+                }
+            ]
+        },
+        {
+            "nom": "SubTopic1",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Télécommandé (asservi)",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "7524-7508",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EP : ContrainteFonctionnelleComposite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Rang : I",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "BrancheAPV",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteAppareilDeVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "2616b",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneEmpruntee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneCantonDeVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CantonEmprunte",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "int",
+                    "description": "",
+                    "defaut": "1"
+                }
+            ]
+        },
+        {
+            "nom": "jalonItineraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "macaron",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AutorisationDeManoeuvre",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "InstallationFixeCommandee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": ":gare",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "poste",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneDeDetection",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CantonEmpruntee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CircuitDeVoie: z7513",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeEtat: RR",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Macaron: c7501",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "zone empruntee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Tableau G au 365+007",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CircuitDeVoie: z7505",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CircuitDeVoie: z7501",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": ":relationAPV",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "position",
+                    "type": "string",
+                    "description": "",
+                    "defaut": "G"
+                }
+            ]
+        },
+        {
+            "nom": "Poste: 75",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Gare: Saint-Sulpice",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Circuit de voie",
+            "abstraite": false,
+            "description": "z7501\nz7502\nz7503\nz7504\nz7505\nz7506",
+            "attributs": [
+                {
+                    "nom": "z7501",
+                    "type": "int",
+                    "description": "z7501\nz7502\nz7503\nz7504\nz7505\nz7506"
+                }
+            ]
+        },
+        {
+            "nom": "AppareildeVoie: 7501b",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AppareilDeVoie: 7503",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeEtat: A",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteEtatSignal",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "JalonItineraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CircuitDeVoie: z7509",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Itineraire: 7501-7506",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Canton empruntee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Macaron: c7506",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CircuitDeVoie: z7527",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AppareilDeVoie: 7504a",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Appareil de voie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationAPV",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteAPV",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "int",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ContrainteFonctionnelleEtatRessource",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Gare",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationFixeCommandee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SignalArretAnnonce",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "zoneEmpruntee",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "string",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Une Phrase :  ContrainteFonctionnelleComposite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type Ressource : Complement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "est",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Le ciel",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type Contrainte : Verbe",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type Ressource : Sujet",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type Contrainte : Complement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type Ressource : Verbe",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type contrainte: Phrase",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type Etat",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "type: Première Lettre En Majuscule",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "bleu",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Ressource Virtuelle Complement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Ressource Virtuelle Sujet",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Ressource Virtuelle Verbe",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AnnonceIfx",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                },
+                {
+                    "nom": "temporisation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "typeRearmement",
+                    "type": "EnumTypeRearmement",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Filet",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneAnnonceCirculationDATZD",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "pointArretAmont",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pointArretAval",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Fleche",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AnnulationDeTransit",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AvalCS",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Module",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneAnnonceCirculationTVP",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "pointArretAmont",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pointArretAval",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SensSecours",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "DIN",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Composant",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneComptageEssieu",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type ifx : detecteur electromecanique, detecteur electronique, cadre jeumont\n",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Intervalle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Artifact1",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "OrganeDeFractionnement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "OrganeCK",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ProtectionPersonnel",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeControle",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemonique",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "OrganeDeCommande",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "capot",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ProtectionDeContreSens",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatOrganeCK",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Camera",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "EnumUtilisationRessource",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Sonnerie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "DetecteurIsole",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "OrganeDeControle",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "controleIntegre",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "NiveauAcceleation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "electrification",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AppareilCK",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "capot",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "cleEnchainee",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "controleIntegre",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Equipement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Crocodile",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                },
+                {
+                    "nom": "talonnable",
+                    "type": "EnumTalonnable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Serrure",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "clePresente",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "marque",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "type",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Annonce",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "observation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ZoneDApproche",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneDeFermertureUrgence",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ACtionRelaisVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Transit",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TraverseePersonnel",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "plaqueGAMEC",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "produitVitesse",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AnnonceCirculation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "appuiFort",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumUtilisationRessource",
+                    "description": ""
+                },
+                {
+                    "nom": "voyant",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "IntervalleEntrePoste",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "indicTempoShunt",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "tonnageDeConception",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Detonateur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Detecteur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Mirliton",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Telephone",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sonnerie",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ZoneAnnonceCirculationIfx",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "delaiMinimalAnnonce",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "delaiReelAnnonce",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceMinimaleDepuisOrigine",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceReelleDepuisOrigine",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "observation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "profilVitesse",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumUtilisationRessource",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeChampInformationKVB",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ModeSupervisionTrain",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "PointBut",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "distance",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "positionnement",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ChampInformationKVBPointBut",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "declivite",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceBut",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "indSortieVS",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "VitesseBut",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "vitesseBut",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CategorieKVB",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ChampInformationFixe",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "distance",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "MessageKVB",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ChampInformationKVB",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "observation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumUtilisationRessource",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ChampInformationExtremite",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "distance",
+                    "type": "int",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ChampInformationKVBP",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "distanceControleFreinage",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceTransmission",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceTransmissionCorrigee",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceVisibilite",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceVisibiliteEnCanton",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "incDistanceActivation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "porteeTransmissionCorrigee",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "porteeTransmissionCorrigeeEnCanton",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "vitesseDeReference",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ContrainteEnclenchementDA",
+            "cible": "ContrainteFonctionnelleComposite"
+        },
+        {
+            "source": "ContrainteEnclenchementSensContraire",
+            "cible": "ContrainteFonctionnelleComposite"
+        },
+        {
+            "source": "ContrainteAppareilVoiePourProtection",
+            "cible": "ContrainteAppareilVoie"
+        },
+        {
+            "source": "ContrainteVoieServiceDestination",
+            "cible": "ContrainteItineraire"
+        },
+        {
+            "source": "ContrainteVoieServiceOrigine",
+            "cible": "ContrainteItineraire"
+        },
+        {
+            "source": "ContrainteAiguillageParcouru",
+            "cible": "ContrainteFonctionnelleTerminaleEtatRessource"
+        },
+        {
+            "source": "ContrainteEtatRessourceCommande",
+            "cible": "ContrainteFonctionnelleTerminaleEtatRessource"
+        },
+        {
+            "source": "ContrainteFonctionnelleCompositeRessource",
+            "cible": "ContrainteFonctionnelleComposite"
+        },
+        {
+            "source": "ContrainteAnnonce",
+            "cible": "ContrainteFonctionnelleCompositeRessource"
+        },
+        {
+            "source": "ContrainteDetecteurIsole",
+            "cible": "ContrainteFonctionnelleCompositeRessource"
+        },
+        {
+            "source": "ContrainteEnclenchementDM",
+            "cible": "ContrainteFonctionnelleComposite"
+        },
+        {
+            "source": "ContrainteEtatSignalAutre",
+            "cible": "ContrainteItineraire"
+        },
+        {
+            "source": "ContrainteControlImperatif",
+            "cible": "ContrainteFonctionnelleComposite"
+        },
+        {
+            "source": "ContrainteAppareilVoie",
+            "cible": "ContrainteItineraire"
+        },
+        {
+            "source": "ContrainteEtatSignalOrigine",
+            "cible": "ContrainteItineraire"
+        },
+        {
+            "source": "ContrainteEtatRessourceKontroleEnclenche",
+            "cible": "ContrainteFonctionnelleTerminaleEtatRessource"
+        },
+        {
+            "source": "ContrainteAnnulation",
+            "cible": "ContrainteFonctionnelleComposite"
+        },
+        {
+            "source": "ContrainteEnclenchementSens",
+            "cible": "ContrainteFonctionnelleComposite"
+        },
+        {
+            "source": "ContrainteFonctionnelleReportIndication",
+            "cible": "ContrainteFonctionnelleTerminaleEtatRessource"
+        },
+        {
+            "source": "ContrainteEtatRessourceKontrole",
+            "cible": "ContrainteFonctionnelleTerminaleEtatRessource"
+        },
+        {
+            "source": "ContrainteFonctionnelleCompositeEtatRessource",
+            "cible": "ContrainteFonctionnelleComposite"
+        },
+        {
+            "source": "SystemeContrainteEnclenchementItineraire",
+            "cible": "SystemeContrainte"
+        },
+        {
+            "source": "ContrainteEnclenchementDeProximite",
+            "cible": "ContrainteFonctionnelleComposite"
+        },
+        {
+            "source": "AssociationParametreAdressage",
+            "cible": "AssociationProprieteRessource"
+        },
+        {
+            "source": "Alimentation",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "RelationResourceIFxAlimentationDisponible",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "RelationRessourceIFxAlimentationSecours",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "RelationRessourceIFxAlimentationNormale",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "SourceAlimentation",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Lampe",
+            "cible": "Composant"
+        },
+        {
+            "source": "CarteElectroniqueUCS",
+            "cible": "CarteElectronique"
+        },
+        {
+            "source": "CarteElectroniqueEntreeSignal",
+            "cible": "CarteElectroniqueEntree"
+        },
+        {
+            "source": "Emetteur",
+            "cible": "Composant"
+        },
+        {
+            "source": "ModuleEntreeSortie",
+            "cible": "Module"
+        },
+        {
+            "source": "ConnexionInductive",
+            "cible": "Composant"
+        },
+        {
+            "source": "CarteElectroniqueAlim",
+            "cible": "CarteElectronique"
+        },
+        {
+            "source": "Relais",
+            "cible": "Composant"
+        },
+        {
+            "source": "CarteElectroniqueMixte",
+            "cible": "CarteElectronique"
+        },
+        {
+            "source": "ModuleAlimentation",
+            "cible": "Module"
+        },
+        {
+            "source": "CarteElectroniqueSortie",
+            "cible": "CarteElectronique"
+        },
+        {
+            "source": "CarteElectronique",
+            "cible": "Composant"
+        },
+        {
+            "source": "CarteElectroniqueEntree",
+            "cible": "CarteElectronique"
+        },
+        {
+            "source": "Bouchon",
+            "cible": "Composant"
+        },
+        {
+            "source": "Recepteur",
+            "cible": "Composant"
+        },
+        {
+            "source": "PointDeConnexion",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Codeur",
+            "cible": "Composant"
+        },
+        {
+            "source": "ChassisCable",
+            "cible": "Chassis"
+        },
+        {
+            "source": "Local",
+            "cible": "ElementStructureTechnique"
+        },
+        {
+            "source": "Chassis",
+            "cible": "ElementStructureTechnique"
+        },
+        {
+            "source": "ChassisModule",
+            "cible": "Chassis"
+        },
+        {
+            "source": "Baie",
+            "cible": "ElementStructureTechnique"
+        },
+        {
+            "source": "ColonneModule",
+            "cible": "ElementStructureTechnique"
+        },
+        {
+            "source": "SupportElementStructureTechnique",
+            "cible": "ElementStructureTechnique"
+        },
+        {
+            "source": "Armoire",
+            "cible": "ElementStructureTechnique"
+        },
+        {
+            "source": "Abri",
+            "cible": "ElementStructureTechnique"
+        },
+        {
+            "source": "ElementStructureTechnique",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "CentreTechnique",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "SectionPolarite",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ReportDePolarite",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "RelationReportPolarite",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "TypeLiaison",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "Conducteur",
+            "cible": "ElementConducteurAbstrait"
+        },
+        {
+            "source": "ElementConducteurAbstrait",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "PaireDeConducteur",
+            "cible": "ElementConducteurAbstrait"
+        },
+        {
+            "source": "LigneRigide",
+            "cible": "Liaison"
+        },
+        {
+            "source": "Cable",
+            "cible": "Liaison"
+        },
+        {
+            "source": "Anticheminement",
+            "cible": "Cable"
+        },
+        {
+            "source": "CableFeeder",
+            "cible": "Cable"
+        },
+        {
+            "source": "CableTransversal",
+            "cible": "Cable"
+        },
+        {
+            "source": "Porteur",
+            "cible": "Cable"
+        },
+        {
+            "source": "CableDeProtection",
+            "cible": "Cable"
+        },
+        {
+            "source": "FilDeContact",
+            "cible": "Cable"
+        },
+        {
+            "source": "RailDeContact",
+            "cible": "Liaison"
+        },
+        {
+            "source": "LiaisonTransversable",
+            "cible": "Liaison"
+        },
+        {
+            "source": "Liaison",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "RelationPresentationKVBRessource",
+            "cible": "RelationPresentationKVB"
+        },
+        {
+            "source": "RelationPresentationKVBEtatRessource",
+            "cible": "RelationPresentationKVBRessource"
+        },
+        {
+            "source": "PresentationKVB",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "RelationPresentationKVB",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "AnnonceIfx",
+            "cible": "Annonce"
+        },
+        {
+            "source": "Filet",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ZoneAnnonceCirculationDATZD",
+            "cible": "ZoneAnnonceCirculationIfx"
+        },
+        {
+            "source": "Fleche",
+            "cible": "Signal"
+        },
+        {
+            "source": "AnnulationDeTransit",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "AvalCS",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "ZoneAnnonceCirculationSTEM",
+            "cible": "ZoneAnnonceCirculationIfx"
+        },
+        {
+            "source": "ModuleMFA",
+            "cible": "Module"
+        },
+        {
+            "source": "ModuleImage",
+            "cible": "Module"
+        },
+        {
+            "source": "SystemeCK",
+            "cible": "Module"
+        },
+        {
+            "source": "Module",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ZoneAnnonceCirculationTVP",
+            "cible": "ZoneAnnonceCirculationIfx"
+        },
+        {
+            "source": "SensSecours",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "DIN",
+            "cible": "OrganeDeControle"
+        },
+        {
+            "source": "Composant",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ZoneComptageEssieu",
+            "cible": "CircuitDeVoie"
+        },
+        {
+            "source": "IntervalleEntrePoste",
+            "cible": "Intervalle"
+        },
+        {
+            "source": "Intervalle",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "OrganeDeFractionnement",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "OrganeDeCommande",
+            "cible": "OrganeCK"
+        },
+        {
+            "source": "OrganeDeControle",
+            "cible": "OrganeCK"
+        },
+        {
+            "source": "OrganeCK",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "AppareilCK",
+            "cible": "OrganeCK"
+        },
+        {
+            "source": "AppareilInterruptionElectrique",
+            "cible": "OrganeCK"
+        },
+        {
+            "source": "ProtectionPersonnel",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "TypeControle",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "ProtectionDeContreSens",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "EtatOrganeCK",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "Camera",
+            "cible": "Equipement"
+        },
+        {
+            "source": "Sonnerie",
+            "cible": "Equipement"
+        },
+        {
+            "source": "DetecteurIsole",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "OrganeDeControleSonore",
+            "cible": "OrganeDeControle"
+        },
+        {
+            "source": "NiveauAcceleation",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "EquipementDeSecurite",
+            "cible": "Equipement"
+        },
+        {
+            "source": "Equipement",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Telephone",
+            "cible": "Equipement"
+        },
+        {
+            "source": "Barriere",
+            "cible": "Equipement"
+        },
+        {
+            "source": "PlaqueGAMEC",
+            "cible": "Equipement"
+        },
+        {
+            "source": "CroixBlancheLumineuse",
+            "cible": "Equipement"
+        },
+        {
+            "source": "SignalRoutier",
+            "cible": "Equipement"
+        },
+        {
+            "source": "Crocodile",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Serrure",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "AnnonceCirculation",
+            "cible": "Annonce"
+        },
+        {
+            "source": "Annonce",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "ZoneDApproche",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "ZoneDeFermertureUrgence",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ACtionRelaisVoie",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "Transit",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "TraverseePersonnel",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Detonateur",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Detecteur",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Mirliton",
+            "cible": "Signal"
+        },
+        {
+            "source": "ZoneAnnonceCirculationIfx",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "ZoneAnnonceCirculationPN",
+            "cible": "ZoneAnnonceCirculationIfx"
+        },
+        {
+            "source": "ZoneAnnonceCirculationSTEM",
+            "cible": "ZoneAnnonceCirculationIfx"
+        },
+        {
+            "source": "ZoneAnnonceCirculationDAELZD",
+            "cible": "ZoneAnnonceCirculationIfx"
+        },
+        {
+            "source": "TypeChampInformationKVB",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "ModeSupervisionTrain",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "ChampInformationKVBPointBut",
+            "cible": "ChampInformationKVB"
+        },
+        {
+            "source": "CategorieKVB",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "ChampInformationFixe",
+            "cible": "ChampInformationKVB"
+        },
+        {
+            "source": "MessageKVB",
+            "cible": "Message"
+        },
+        {
+            "source": "ChampInformationKVB",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "ChampInformationExtremite",
+            "cible": "ChampInformationKVB"
+        },
+        {
+            "source": "ChampInformationKVBP",
+            "cible": "ChampInformationKVB"
+        }
+    ],
+    "relations": [
+        {
+            "source": "ContrainteFonctionnelleCompositeRessource",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceAbstraite",
+            "role": "ressource",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteEtatSignalAutre",
+            "type": "ASSOCIE_A",
+            "cible": "EtatSignal",
+            "role": "etatSignal",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteEtatSignalAutre",
+            "type": "ASSOCIE_A",
+            "cible": "Signal",
+            "role": "signalId",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteAppareilVoie",
+            "type": "COMPOSE_DE",
+            "cible": "RelationBrancheAPV",
+            "role": "aiguillesPositionnees",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteAppareilVoie",
+            "type": "ASSOCIE_A",
+            "cible": "AppareilDeVoie",
+            "role": "appareilDeVoie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteEtatSignalOrigine",
+            "type": "ASSOCIE_A",
+            "cible": "EtatSignal",
+            "role": "etatsDedie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteEtatSignalOrigine",
+            "type": "ASSOCIE_A",
+            "cible": "SignalDeProtection",
+            "role": "origineId",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteFonctionnelleCompositeEtatRessource",
+            "type": "ASSOCIE_A",
+            "cible": "TypeEtat",
+            "role": "etatDedie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SystemeContrainteEnclenchementItineraire",
+            "type": "ASSOCIE_A",
+            "cible": "Itineraire",
+            "role": "itineraire",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteDetecteurIsole",
+            "type": "ASSOCIE_A",
+            "cible": "DetecteurIsole",
+            "role": "detecteur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteAnnonce",
+            "type": "ASSOCIE_A",
+            "cible": "AnnonceCirculation",
+            "role": "annonceCirculation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Alimentation",
+            "type": "ASSOCIE_A",
+            "cible": "TypeTension",
+            "role": "typeTension",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SourceAlimentation",
+            "type": "ASSOCIE_A",
+            "cible": "TypeTension",
+            "role": "typeTension",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CarteElectroniqueEntreeSignal",
+            "type": "ASSOCIE_A",
+            "cible": "EtatSignal",
+            "role": "indications",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PresentationKVB",
+            "type": "ASSOCIE_A",
+            "cible": "Bouchon",
+            "role": "bouchon",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CentreTechnique",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": "zonesDAction",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SectionPolarite",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationTopologiqueLinaire",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReportDePolarite",
+            "type": "ASSOCIE_A",
+            "cible": "SectionPolarite",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReportDePolarite",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkSectionA",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReportDePolarite",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkSectionB",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationReportPolarite",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Liaison",
+            "type": "ASSOCIE_A",
+            "cible": "TypeLiaison",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PaireDeConducteur",
+            "type": "AGREGE",
+            "cible": "Conducteur",
+            "role": "conducteurs",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationPresentationKVBRessource",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceAbstraite",
+            "role": "ressource",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PresentationKVB",
+            "type": "COMPOSE_DE",
+            "cible": "RelationPresentationKVB",
+            "role": "presentations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationPresentationKVBEtatRessource",
+            "type": "ASSOCIE_A",
+            "cible": "TypeEtat",
+            "role": "etatDedie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AnnonceIfx",
+            "type": "AGREGE",
+            "cible": "ZoneAnnonceCirculationIfx",
+            "role": "zonesDAnnonce",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AnnonceIfx",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrganeCK",
+            "type": "AGREGE",
+            "cible": "EtatOrganeCK",
+            "role": "etats",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrganeDeControle",
+            "type": "ASSOCIE_A",
+            "cible": "TypeControle",
+            "role": "typeControle",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AppareilInterruptionElectrique",
+            "type": "ASSOCIE_A",
+            "cible": "EtatOrganeCK",
+            "role": "etatParDefaut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatOrganeCK",
+            "type": "ASSOCIE_A",
+            "cible": "TypeEtat",
+            "role": "etat",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AppareilCK",
+            "type": "ASSOCIE_A",
+            "cible": "EtatOrganeCK",
+            "role": "etatParDefaut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrganeDeControle",
+            "type": "ASSOCIE_A",
+            "cible": "TypeDeControleCK",
+            "role": "typeDeControle",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneAnnonceCirculationIfx",
+            "type": "ASSOCIE_A",
+            "cible": "NiveauAcceleation",
+            "role": "niveau",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TraverseePersonnel",
+            "type": "ASSOCIE_A",
+            "cible": "NiveauAcceleration",
+            "role": "niveauAcceleration",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AnnonceCirculation",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "destination",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneAnnonceCirculationIfx",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "destination",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneAnnonceCirculationIfx",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "origine",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeChampInformationKVB",
+            "type": "ASSOCIE_A",
+            "cible": "TypeChampInformationKVB",
+            "role": "parent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ChampInformationKVB",
+            "type": "ASSOCIE_A",
+            "cible": "TypeChampInformationKVB",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ChampInformationKVBPointBut",
+            "type": "COMPOSE_DE",
+            "cible": "PointBut",
+            "role": "pointBut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointBut",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceAbstraite",
+            "role": "ressource",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ChampInformationKVBPointBut",
+            "type": "COMPOSE_DE",
+            "cible": "VitesseBut",
+            "role": "vitesses",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ChampInformationFixe",
+            "type": "COMPOSE_DE",
+            "cible": "VitesseBut",
+            "role": "valeurs",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "VitesseBut",
+            "type": "ASSOCIE_A",
+            "cible": "CategorieKVB",
+            "role": "categorie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "MessageKVB",
+            "type": "AGREGE",
+            "cible": "ChampInformationKVB",
+            "role": "champs",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ChampInformationKVB",
+            "type": "ASSOCIE_A",
+            "cible": "BaliseKVB",
+            "role": "balise",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ChampInformationExtremite",
+            "type": "ASSOCIE_A",
+            "cible": "TypeInstallationFixeExtremite",
+            "role": "typeInstallationFixeExtremite",
+            "cardinalite": "0..*"
+        }
+    ]
+}

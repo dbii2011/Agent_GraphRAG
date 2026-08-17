@@ -1,0 +1,526 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "SegmentStructureAdministrative",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageStructureAdministrative",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ProprietesLieu",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationGeographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetPersistant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ProprietesEcartDRRFF",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationResponsableGI",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageEntreprise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Noeud",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentEntreprise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueConstructeur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ExtremiteReseau",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ProprietaireVoieDeSaf",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "VoieDeSaf",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageRegionSNCF",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationEntiteResponsableRegion",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ModuleSuivi",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageTypeValeur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRegionSNCF",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentRegionSNCF",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Region",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Pays",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code1",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "code2",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "code3",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Commune",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "codeInsee",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "StructureGeographique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CorrespondanceRegion",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "dateDebutActivite",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "dateFinActivite",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RegionRFF",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Entreprise",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "codeUIC",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "ferroviaire",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sigle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RegionSNCF",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "parisienne",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Departement",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "numero",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "Region",
+            "cible": "StructureGeographique"
+        },
+        {
+            "source": "Pays",
+            "cible": "StructureGeographique"
+        },
+        {
+            "source": "Commune",
+            "cible": "StructureGeographique"
+        },
+        {
+            "source": "RegionRFF",
+            "cible": "StructureGeographique"
+        },
+        {
+            "source": "Departement",
+            "cible": "StructureGeographique"
+        },
+        {
+            "source": "StructureGeographique",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "CorrespondanceRegion",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "Entreprise",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "RegionSNCF",
+            "cible": "RessourceAbstraiteNommee"
+        }
+    ],
+    "relations": [
+        {
+            "source": "Pays",
+            "type": "AGREGE",
+            "cible": "Region",
+            "role": "listeRegion",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegionRFF",
+            "type": "AGREGE",
+            "cible": "Region",
+            "role": "listeRegion",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CorrespondanceRegion",
+            "type": "ASSOCIE_A",
+            "cible": "Region",
+            "role": "nouvelleRegionAdministrative",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Region",
+            "type": "AGREGE",
+            "cible": "Departement",
+            "role": "listeCommune",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CorrespondanceRegion",
+            "type": "ASSOCIE_A",
+            "cible": "Region",
+            "role": "anciennesRegionsAdministratives",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Departement",
+            "type": "AGREGE",
+            "cible": "Commune",
+            "role": "listeDepartement",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentStructureAdministrative",
+            "type": "ASSOCIE_A",
+            "cible": "StructureGeographique",
+            "role": "structureInterconnectee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageStructureAdministrative",
+            "type": "ASSOCIE_A",
+            "cible": "StructureGeographique",
+            "role": "structureInterconnectee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProprietesLieu",
+            "type": "ASSOCIE_A",
+            "cible": "StructureGeographique",
+            "role": "structuresGeographiques",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationGeographique",
+            "type": "ASSOCIE_A",
+            "cible": "StructureGeographique",
+            "role": "structureGeographique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProprietesEcartDRRFF",
+            "type": "ASSOCIE_A",
+            "cible": "RegionRFF",
+            "role": "regionsRFF",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationResponsableGI",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "gi",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageEntreprise",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "entrepriseInterconnectee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Noeud",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "entrepriseInterconnectee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentEntreprise",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "entrepriseInterconnectee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CaracteristiqueConstructeur",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "constructeur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ExtremiteReseau",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "entrepriseLimite",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProprietaireVoieDeSaf",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "proprietaire",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CaracteristiqueConstructeur",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "VoieDeSaf",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "appartientA",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageRegionSNCF",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "regionInterconnectee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationEntiteResponsableRegion",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "region",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ModuleSuivi",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "regionSncf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageTypeValeur",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "region",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRegionSNCF",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "regionSNCF",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointRemarquable",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "region",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentRegionSNCF",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "regionInterconnectee",
+            "cardinalite": "0..*"
+        }
+    ]
+}

@@ -1,0 +1,296 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CompetenceSurLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementTopologiqueLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointOrientation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SectionDeLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "VoieDeLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleEspacement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ExtremiteReseau",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementADateAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperageLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetPersistant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationPk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TroncCommun",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TronconDItineraireLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Ligne",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "dateAttribution",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "libelleCourt",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "reservee",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ExtremiteLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationSRLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "TroncCommun",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "TypeLigne",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "TronconDItineraireLigne",
+            "cible": "ElementTopologiqueLineaire"
+        },
+        {
+            "source": "Ligne",
+            "cible": "RessourceParcoursTopologique"
+        },
+        {
+            "source": "ExtremiteLigne",
+            "cible": "ExtremiteReseau"
+        },
+        {
+            "source": "RelationSRLigne",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "RelationLigne",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "RelationLigne",
+            "cible": "ElementADateAbstrait"
+        }
+    ],
+    "relations": [
+        {
+            "source": "TroncCommun",
+            "type": "COMPOSE_DE",
+            "cible": "RelationLigne",
+            "role": "ligneReference",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TroncCommun",
+            "type": "COMPOSE_DE",
+            "cible": "RelationLigne",
+            "role": "ligneMasquee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Ligne",
+            "type": "ASSOCIE_A",
+            "cible": "TypeLigne",
+            "role": "typeLigne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CompetenceSurLigne",
+            "type": "ASSOCIE_A",
+            "cible": "TronconDItineraireLigne",
+            "role": "tronconDItineraireLignes",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointOrientation",
+            "type": "ASSOCIE_A",
+            "cible": "TronconDItineraireLigne",
+            "role": "troncon",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SectionDeLigne",
+            "type": "ASSOCIE_A",
+            "cible": "Ligne",
+            "role": "ligne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Ligne",
+            "type": "COMPOSE_DE",
+            "cible": "RelationSRLigne",
+            "role": "relationsSRLigne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLigne",
+            "type": "ASSOCIE_A",
+            "cible": "Ligne",
+            "role": "ligne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "VoieDeLigne",
+            "type": "ASSOCIE_A",
+            "cible": "Ligne",
+            "role": "ligne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleEspacement",
+            "type": "ASSOCIE_A",
+            "cible": "Ligne",
+            "role": "ligne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationSRLigne",
+            "type": "AGREGE",
+            "cible": "SystemeReperageLigne",
+            "role": "systemesReperageLigne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLigne",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLigne",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        }
+    ]
+}

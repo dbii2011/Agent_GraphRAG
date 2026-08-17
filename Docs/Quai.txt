@@ -1,0 +1,220 @@
+1.	Définition 
+
+
+•	Un quai est un aménagement (construction surélevée) dans une gare ferroviaire parallèle à la voie et permettant aux usagers d’accéder facilement aux véhicules sur rails.
+
+2.	Généralités de l’objet « Quais »
+
+
+Un quai est défini par :
+   
+	Un libellé : si le quai a un nom particulier, celui-ci est conservé. Sinon le quai est nommé en concaténant les noms locaux des voies desservies (quai VA/VB)
+
+	La gare de rattachement  (exemple quai 25 de Paris Saint Lazare)
+
+
+3.	Localisation des quais
+
+On décrit autant de localisation que de voies desservies.
+
+ La localisation se décrit par :
+
+	Le nom local de la voie desservie 
+	La longueur totale pour cette voie 
+	La longueur utile pour cette voie  (entre signaux ou pancartes) 
+	Pk du quai (plus petit pk dans le sens croissant du SR)
+
+
+4.	Caractéristiques du quai
+4.1.	Caractéristiques obligatoires 
+
+	La hauteur du quai :
+•	Quai Bas ancien (0,300)
+•	Quai Bas rénové (0,385)
+•	Mi - haut (0,5 à 0,6)
+•	Haut (0,760 à 1)
+•	Super - haut (1,15)
+•	Marchandise (1,15 à 1,25)
+	Type de Couverture (voir valeur possible ci-dessous).
+•	Abri métallique
+•	Abri toile
+•	Dalle béton
+•	Marquise
+•	Halle
+•	Non - couvert
+
+	Type de revêtement du sol 
+•	Terre                        .
+•	Goudron
+•	Béton
+•	Carrelage
+•	Résine
+
+	DDA
+	DFA
+
+4.2.	Caractéristiques non obligatoires 
+
+
+
+	Largeur du quai (valeur exprimée en mètre) 
+	Indication quai de service (valeurs possibles : Oui / Non).
+	Eclairage (valeurs possibles : Oui/Non).
+	Nombre d’abris.
+	Nombre d’ascenseurs.
+	Nombre d’escaliers mécaniques.
+	Nombre de rampes.
+	Nombre de traversées.
+	Type de traversée (voir valeur possible ci-dessous).
+•	Aérienne
+•	Plain-pied
+•	Souterraine 
+•	Combinaisons (exemple : Aérienne /Plein pied)
+
+	Accessible aux personnes à mobilité réduite (valeurs possible : Oui / Non)
+
+
+
+
+
+
+
+NB : Concernant la caractéristique « nombre de traversée » la valeur à renseigner est le nombre d’équipement (type de traversée) permettant le changement de quai 
+
+Exemple :
+Gare équipée d’un passage souterrain : la valeur est 1
+Gare équipée d’un passage souterrain et d’un passage de plain-pied : la valeur est 2
+
+
+
+
+
+5.	Règles générales pour la gestion 
+
+5.1.	Suppression de l’objet 
+
+Si sur le plan technique, le symbole de l’installation apparaît en jaune, alors l’actif est supprimé (borné).
+
+
+Procédure. Suppression d’un quai
+
+Localiser le quai au niveau de la ligne, 
+
+
+Repérer la ou les voies desservant le quai dans l’application
+	
+
+Borner le quai à la date d’application 
+	
+
+Enregistrer 
+
+
+
+5.2.	Création de l’objet
+
+Si les Quais sont en rouge, il faut créer un nouvel actif en prenant en compte les nouvelles caractéristiques.
+
+
+Procédure. Création d’un quai
+
+Commencer par localiser le quai au niveau de la ligne puis au niveau de la voie desservie
+
+
+Renseigner les caractéristiques obligatoires 
+	
+
+Renseigner les caractéristiques de localisation du quai
+	
+
+Renseigner la DDA et DFA
+
+
+Renseigner les caractéristiques non obligatoires
+
+	
+      Enregistrer
+5.3.	Modification de l’objet
+
+Si le symbole des quais est décrit en jaune/rouge : l’actif doit être modifié
+Procédure. Modification d’un quai 
+
+Localiser le quai par rapport à la ligne puis par rapport à la voie desservie
+
+
+Apporter les modifications voulues 
+
+
+        Ne pas oublier de rectifier les au besoin  les caractéristiques non obligatoires
+
+
+
+
+Ne pas modifier la DDA et la DFA pour des mises à jour des quais
+
+
+Enregistrer
+ 
+6.	Cas particulier 
+
+
+6.1.	Calcul de la longueur total
+
+La longueur totale est calculée par rapport au point kilométrique des plans techniques. (pk début et Pk fin)
+
+
+
+6.1.	Calcul de la longueur utile
+
+
+Règle générale : Cette valeur est donnée par le Crr
+
+
+Toutefois sur certains quais, cette valeur ne peut dépasser
+•	La pancarte TT
+•	La pancarte XV… (en prenant en compte le nombre de voiture maximum)
+
+La pancarte TT ou XV… étant localisé, la longueur utile calculable en prenant le pk début du quai jusqu’au Pk de localisation de la pancarte.
+
+Dans certaine gare en cas d’absence de pancarte TT ou XV…, la longueur utile est eégale à la longueur totale.
+
+
+
+
+
+
+7.	Forme de remontée
+
+•	Plan technique
+8.	Périodicité
+
+•	Au fil de l’eau 
+
+
+
+
+
+
+9.	Impacts à contrôler
+
+
+	Impacts sur les installations fixes sur voies (pancartes, signaux …)
+10.	Annexes
+
+
+	Exemple de quais au niveau d’une gare :
+
+	1er cas :
+o	Quai A desservi  par les voies V1 et V3 
+o	Quai B desservi  par la voie V2
+o	Quai C desservi  par la voie V5
+
+ 
+
+
+	2ème cas
+o	Quai 1 desservi  par les voies V1 et V3
+
+
+ 
+

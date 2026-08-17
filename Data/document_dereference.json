@@ -1,0 +1,694 @@
+{
+    "enums": [
+        {
+            "nom": "EnumTypeRT",
+            "valeurs": [
+                "RT",
+                "CONSIGNE_LIGNE"
+            ]
+        },
+        {
+            "nom": "EnumTypePT",
+            "valeurs": [
+                "GARE",
+                "LIGNE"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SigneConventionnel",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetPersistant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Structure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Saf",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatConfigurationInfrastructure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatConsigneAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatOrganisationTravaux",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationEditionDocument",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegionSNCF",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetProcessusAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "VersionS11CorpsConsigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatDocumentDeReference",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "VersionRenseignementTechnique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "VersionS9C",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypePieceTechnique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "PieceTechnique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationEntiteResponsable",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ArticleDocumentDeReference",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "contenu",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "typeContenu",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "url",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "EtatDocumentDeReferenceAbstrait",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "dateMES",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "datePublication",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "indice",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "versionTemporaire",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "EtatMiseEnService",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationEntiteResponsableStructure",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "DemandeDiverseDocument",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "datePublication",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "dateReception",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "objetDocument",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "EtatEtudeTravaux",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeDemandeDiverseDocument",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementDocumentDeReferenceAbstrait",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "indice",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "objetDocument",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "DocumentProgramme",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "indice",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "EtatProjet",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "VersionS11",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "DocumentS11",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "index",
+                    "type": "EnumTypePT",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "DocumentS9C",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Consigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "DocumentRT",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "docOpposable",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "numeroOP",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "typeRT",
+                    "type": "EnumTypeRT",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "DocumentDeReferenceAbstrait",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "etat",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "reference",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "DocumentConsigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationEntiteResponsableRegion",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PlanTechnique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "typePT",
+                    "type": "EnumTypePT",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "DocumentDeReference",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "VersionS11CorpsSchema",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeArticleDeReference",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "EtatAbroge",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "VersionS11CorpsConsigne",
+            "cible": "VersionS11"
+        },
+        {
+            "source": "EtatMiseEnService",
+            "cible": "EtatDocumentDeReference"
+        },
+        {
+            "source": "EtatEtudeTravaux",
+            "cible": "EtatDocumentDeReference"
+        },
+        {
+            "source": "EtatProjet",
+            "cible": "EtatDocumentDeReference"
+        },
+        {
+            "source": "EtatDocumentDeReference",
+            "cible": "EtatDocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "VersionRenseignementTechnique",
+            "cible": "ElementDocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "VersionS9C",
+            "cible": "ElementDocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "TypePieceTechnique",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "PieceTechnique",
+            "cible": "ElementDocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "RelationEntiteResponsableStructure",
+            "cible": "RelationEntiteResponsable"
+        },
+        {
+            "source": "RelationEntiteResponsable",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "RelationEntiteResponsableRegion",
+            "cible": "RelationEntiteResponsable"
+        },
+        {
+            "source": "ArticleDocumentDeReference",
+            "cible": "ElementDocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "EtatDocumentDeReferenceAbstrait",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "EtatAbroge",
+            "cible": "EtatDocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "DemandeDiverseDocument",
+            "cible": "DocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "TypeDemandeDiverseDocument",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "VersionS11",
+            "cible": "ElementDocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "Consigne",
+            "cible": "ElementDocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "ElementDocumentDeReferenceAbstrait",
+            "cible": "DocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "DocumentProgramme",
+            "cible": "DocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "VersionS11CorpsSchema",
+            "cible": "VersionS11"
+        },
+        {
+            "source": "DocumentS11",
+            "cible": "DocumentDeReference"
+        },
+        {
+            "source": "DocumentS9C",
+            "cible": "DocumentDeReference"
+        },
+        {
+            "source": "DocumentRT",
+            "cible": "DocumentDeReference"
+        },
+        {
+            "source": "DocumentDeReferenceAbstrait",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "DocumentDeReference",
+            "cible": "DocumentDeReferenceAbstrait"
+        },
+        {
+            "source": "DocumentConsigne",
+            "cible": "DocumentDeReference"
+        },
+        {
+            "source": "PlanTechnique",
+            "cible": "DocumentDeReference"
+        },
+        {
+            "source": "TypeArticleDeReference",
+            "cible": "RessourceAbstraiteNommee"
+        }
+    ],
+    "relations": [
+        {
+            "source": "EtatDocumentDeReference",
+            "type": "AGREGE",
+            "cible": "ElementDocumentDeReferenceAbstrait",
+            "role": "elements",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PieceTechnique",
+            "type": "ASSOCIE_A",
+            "cible": "TypePieceTechnique",
+            "role": "typePiece",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SigneConventionnel",
+            "type": "ASSOCIE_A",
+            "cible": "PieceTechnique",
+            "role": "rt",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DocumentDeReferenceAbstrait",
+            "type": "COMPOSE_DE",
+            "cible": "RelationEntiteResponsable",
+            "role": "entitesResponsables",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DocumentRT",
+            "type": "ASSOCIE_A",
+            "cible": "EnumTypeRT",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ArticleDocumentDeReference",
+            "type": "ASSOCIE_A",
+            "cible": "ArticleDocumentDeReference",
+            "role": "articleParent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ArticleDocumentDeReference",
+            "type": "ASSOCIE_A",
+            "cible": "TypeArticleDeReference",
+            "role": "typeArticle",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DocumentDeReference",
+            "type": "AGREGE",
+            "cible": "EtatDocumentDeReferenceAbstrait",
+            "role": "etats",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationEntiteResponsableStructure",
+            "type": "ASSOCIE_A",
+            "cible": "Structure",
+            "role": "structure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DemandeDiverseDocument",
+            "type": "ASSOCIE_A",
+            "cible": "TypeDemandeDiverseDocument",
+            "role": "typeDemande",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DemandeDiverseDocument",
+            "type": "AGREGE",
+            "cible": "ObjetPersistant",
+            "role": "objets",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DocumentS11",
+            "type": "ASSOCIE_A",
+            "cible": "EnumTypePT",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementDocumentDeReferenceAbstrait",
+            "type": "AGREGE",
+            "cible": "ObjetPersistant",
+            "role": "objets",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DocumentS11",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceAbstraite",
+            "role": "consigneProtection",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DocumentS9C",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceAbstraite",
+            "role": "consigneProtection",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "ASSOCIE_A",
+            "cible": "Consigne",
+            "role": "consignesEmbranchementIds",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatConfigurationInfrastructure",
+            "type": "ASSOCIE_A",
+            "cible": "DocumentDeReferenceAbstrait",
+            "role": "documents",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatConsigneAbstraite",
+            "type": "AGREGE",
+            "cible": "DocumentDeReferenceAbstrait",
+            "role": "documentReferences",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatOrganisationTravaux",
+            "type": "AGREGE",
+            "cible": "DocumentDeReferenceAbstrait",
+            "role": "documentsDeReference",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationEditionDocument",
+            "type": "ASSOCIE_A",
+            "cible": "DocumentDeReferenceAbstrait",
+            "role": "document",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationEntiteResponsableRegion",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "region",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ObjetProcessusAbstrait",
+            "type": "ASSOCIE_A",
+            "cible": "PlanTechnique",
+            "role": "planTechnique",
+            "cardinalite": "0..*"
+        }
+    ]
+}

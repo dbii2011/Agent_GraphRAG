@@ -1,0 +1,215 @@
+1.	Définition 
+
+Un détecteur de boîtes chaudes est un appareil utilisé dans le milieu ferroviaire afin de détecter un éventuel échauffement des boîtes d'essieux sur un train.
+•	Le DBC a pour rôle d’accroitre la sécurité des circulations surtout dans les zones à trafic dense et de surveiller les essieux des circulations avant d’aborder des zones sensibles.
+
+2.	Caractéristiques obligatoires
+
+•	Le DBC est typé et localisé sur une voie de ligne : 
+o	code ligne 
+o	rang du tronçon 
+o	nom de la voie de l’installation 
+
+
+ 
+
+o	Dates de validité de l’installation
+
+
+Il est décrit par : 
+
+•	Le rattachement à un poste d’aiguillage principal qui reçoit les informations émises par le DBC et éventuellement à un poste d’aiguillage secondaire
+
+•	Un libellé (éventuellement) formé de la manière suivante :
+  
+Libellé = Numéro identifiant DBC + Nom du lieu d’installation + Nom de voie
+
+Exemple : 51 Sorigny V1
+
+
+
+
+Cas Particuliers : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Il y a deux DBCs à créer :
+
+1.	Le premier DBC : 41 + Nom du lieu d’installation + V1 
+2.	Le deuxième DBC : 41 + Nom du lieu d’installation + V2
+3.	Caractéristiques non obligatoires
+
+N/A
+4.	Règles de nommage du DBC 
+
+
+•	Typage des DBC : 
+                                        
+
+DBC – Capteur 2ème génération
+DBC – Capteur 3ème génération
+DBC – Capteur 4ème génération
+DBC – Capteur dernière génération (4Bis)
+
+Le typage est fourni par I&P SF 
+
+
+
+
+•	Exemple de capteurs installés à la voie sur des traverses spécifiques
+ 
+
+•	Abréviation et signes :
+
+ 
+ 
+
+ 
+
+
+•	Sur le RT on trouve : 
+  
+
+•	Sur le Plan Technique on trouve :
+ 
+  
+ 
+5.	Règles générales pour la gestion 
+
+5.1.	Suppression du DBC 
+
+Si sur le plan technique, le symbole d’une installation apparaît en jaune, alors l’actif est supprimé (à borner).
+
+
+
+Procédure. Suppression d’un DBC
+
+
+Repérer la ligne ou le DBC est à supprimer 
+
+
+Se positionner sur la voie ou se trouve le DBC 
+	
+
+Borner le DBC à la Date d’application du document
+	
+
+Enregistrer 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5.2.	Création du DBC
+
+Si le nom du DBC est en rouge, il faut créer un nouvel actif en prenant en compte les nouvelles caractéristiques.
+Important : lorsque le typage du DBC est changé, il faut obligatoirement borner et créer le nouveau DBC
+
+
+Procédure. Création d’un DBC
+
+Localiser la ligne ou la création du DBC est prévue 
+
+
+Renseigner la voie et le PK ou est implanté le DBC
+	
+
+Renseigner le libellé ainsi que le type du DBC
+	
+
+Renseigner la DDA (MES du PT) et la DFA (01/01/2382)
+
+
+Ne pas oublier de renseigner les Informations complémentaires du DBC (numéro, poste de rattachement …)
+
+	
+Enregistrer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5.3.	Modification du DBC
+
+Si le nom du DBC et/ou un ou des Pk sont en jaune/rouge : l’actif est modifié
+Important : La modification d’un DBC est possible dans les cas suivants :
+o	Correction d’un PK 
+o	Correction d’un libellé
+Procédure. Modification d’un DBC
+ 
+
+Localiser le DBC par rapport au code ligne et à sa voie dans l’application
+
+
+Si modification du libellé ou mises à jour diverses 
+	
+
+Modifier les nouvelles informations du DBC
+	
+
+Ne pas modifier la DDA et la DFA
+
+	
+Enregistrer 
+ 
+6.	Forme de remontée
+
+
+•	Dés connaissance de l’information et à chaque MES du Plan Technique.
+•	Les schémas MES situation temporaire de plus de 6 mois sont également à prendre en compte.
+7.	Impacts à contrôler
+
+N/A
+8.	Observations particulières
+
+
+N/A

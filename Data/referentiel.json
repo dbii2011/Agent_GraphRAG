@@ -1,0 +1,217 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "ReferentielTypeADV",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeRail",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentileTypeCatenaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielAutresRSTypeADV",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielMetaDataTechnique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeAppareilInterruption",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Specialite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeReferentielTechnique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeConducteur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeEquipementTendeur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeSupport",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielMetier",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeIsolateurSection",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeOrganeEALE",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeAppareilTendeur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeTraverse",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeSelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeAttache",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTechnique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ReferentielTypeTraverse",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeSelle",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeAttache",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeADV",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeRail",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentileTypeCatenaire",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielAutresRSTypeADV",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeAppareilInterruption",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeConducteur",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeEquipementTendeur",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeSupport",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTechnique",
+            "cible": "ReferentielMetier"
+        },
+        {
+            "source": "ReferentielTypeIsolateurSection",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeOrganeEALE",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeAppareilTendeur",
+            "cible": "ReferentielTechnique"
+        }
+    ],
+    "relations": [
+        {
+            "source": "ReferentielTechnique",
+            "type": "ASSOCIE_A",
+            "cible": "ReferentielMetaDataTechnique",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReferentielTechnique",
+            "type": "ASSOCIE_A",
+            "cible": "Specialite",
+            "role": "specialite",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReferentielTechnique",
+            "type": "ASSOCIE_A",
+            "cible": "TypeReferentielTechnique",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReferentielTechnique",
+            "type": "ASSOCIE_A",
+            "cible": "ReferentielMetaDataTechnique",
+            "role": "metaData",
+            "cardinalite": "0..*"
+        }
+    ]
+}

@@ -1,0 +1,4032 @@
+{
+    "enums": [
+        {
+            "nom": "EnumIndicateurLigneOuVoie",
+            "valeurs": [
+                "L",
+                "V"
+            ]
+        },
+        {
+            "nom": "EnumCodeDenivele",
+            "valeurs": [
+                "C",
+                "A",
+                "S"
+            ]
+        },
+        {
+            "nom": "EnumTalonnable",
+            "valeurs": [
+                "T",
+                "NT",
+                "TNR"
+            ]
+        },
+        {
+            "nom": "EnumCodeTypeAcces",
+            "valeurs": [
+                "P",
+                "PL",
+                "Q",
+                "VL"
+            ]
+        },
+        {
+            "nom": "EnumTypeSecurisation",
+            "valeurs": [
+                "NS",
+                "PP",
+                "PPTA",
+                "NA"
+            ]
+        },
+        {
+            "nom": "EnumReprisePoste",
+            "valeurs": [
+                "N",
+                "O"
+            ]
+        },
+        {
+            "nom": "EnumPosition",
+            "valeurs": [
+                "G",
+                "D",
+                "N",
+                "DG"
+            ]
+        },
+        {
+            "nom": "EnumRechauffage",
+            "valeurs": [
+                "E",
+                "G",
+                "A"
+            ]
+        },
+        {
+            "nom": "SensParcours",
+            "valeurs": [
+                "C",
+                "D"
+            ]
+        },
+        {
+            "nom": "EnumPositionBrancheAPV",
+            "valeurs": [
+                "G",
+                "D",
+                "N"
+            ]
+        },
+        {
+            "nom": "EnumTypeTransit",
+            "valeurs": [
+                "R",
+                "S"
+            ]
+        },
+        {
+            "nom": "EnumTypeCrocodile",
+            "valeurs": [
+                "NA",
+                "NT",
+                "T"
+            ]
+        },
+        {
+            "nom": "EnumTypeMobilite",
+            "valeurs": [
+                "F",
+                "M",
+                "NA"
+            ]
+        },
+        {
+            "nom": "EnumLumineux",
+            "valeurs": [
+                "NA",
+                "NR",
+                "L"
+            ]
+        },
+        {
+            "nom": "EnumVsVp",
+            "valeurs": [
+                "VP",
+                "VS"
+            ]
+        },
+        {
+            "nom": "EnumProprieteCourant",
+            "valeurs": [
+                "EMZ",
+                "REZ"
+            ]
+        },
+        {
+            "nom": "EnumRoleExtremiteCDV",
+            "valeurs": [
+                "EMETTEUR",
+                "RECEPTEUR"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "systeme_reperage",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ExtremiteCDV",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "InstallationFixeProtection",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeHauteur",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "DetecteurBoiteChaude",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "distanceAmont",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceAval",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "numero",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "typeInstallation",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationInstallationFixeComposant",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeSigneConventionnel",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Gare",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "activite",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "categorie",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "codeUIC",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "commentaireAccessibilite",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "commentaireOrientation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "commentaireOuverture",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "grandeGare",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "numeroInterne",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Acces",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "codeDenivele",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "codeTypeAcces",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "entretienSpecifique",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "escalier",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "ferme",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "hauteurDenivele",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "infoComplementaires",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "informationFermeture",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "largeur",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "numeroAcces",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "position",
+                    "type": "EnumPosition",
+                    "description": ""
+                },
+                {
+                    "nom": "signalisationRoutiere",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "videoSurveillance",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationInstallationFixeControlee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeInstallationFixeExtremite",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeRelationRessourceInstallationFixe",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "libelle",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeSurveillance",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Poste",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "codeSecurite",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "dateRemplacement",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "reprisePoste",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationMiseEnOeuvre",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationLocalisationExtremiteDeZone",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationRessourceInstallationFixe",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Balise",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceInstallationFixeOrdonnee",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SigneConventionnel",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "valeur",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeModeFonctionnementPoste",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Enrailleur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "coordonneeX",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "coordonneeY",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "à supprimer"
+                },
+                {
+                    "nom": "dateFinService",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "libelleObstacle",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "longueur",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationExtremiteDeZone",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PointDeSignalisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Noeud",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationInstallationFixeDeleguee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationExtremiteLiaison",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeInstallationFixe",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "indicLigVoi",
+                    "type": "EnumIndicateurLigneOuVoie",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeElementSousStation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "InstallationFixeVirtuelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationInstallationFixeExtremite",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "DetecteurCirculation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "dedouble",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "electronique",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "BaliseProximite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "NiveauAccelerationIfx",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationInstallationFixeCommandee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Taquet",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "fixe",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "VerrouIndependant",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "position",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Aiguillage",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "agraffe",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "boulonDeCalage",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "brocheCadenacee",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "cadenacee",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "commandeElectrique",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "inoxe",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "lameSemiIndependante",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "numeroAiguillage",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "rechauffage",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "talonnable",
+                    "type": "EnumTalonnable",
+                    "description": ""
+                },
+                {
+                    "nom": "verrouCarterCoussinet",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ClefSignalisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "marque",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "secours",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "type",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImageAsset",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "BrancheAPVAvecAiguillage",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Communication",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "destination",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "provenance",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "BrancheAPV",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "axeHorizontal",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "codeBranche",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "direction",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "fixe",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "neutralisee",
+                    "type": "EnumPosition",
+                    "description": ""
+                },
+                {
+                    "nom": "pointObservation",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "OrganeDeControleSonore",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteEtatRessourceVerrouille",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeDeControleCK",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RechauffageAiguille",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rechauffage",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AppareilDeVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AiguillageFictif",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "DispositifDeVerrouillage",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "annulable",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "portePetard",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "serrure",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeAVDate",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "NoeudDeVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nbVoiesService",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeNoeudDeVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "maxLocalisation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "minLocalisation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemonique",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "positionSignificative",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeAppareilDeVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mnemonique",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreAiguilles",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreBranches",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AssociationFonctionIfx",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AssociationProprieteResourceQuantite",
+            "abstraite": false,
+            "description": "Type proriete : nombre de pendule d'une portee\nAssociationProprieteResourceQuantite : nombre = 5",
+            "attributs": [
+                {
+                    "nom": "nombre",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Detournement",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "arrive",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "depart",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "FicheComplementaireDetournement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ParcoursOperationnel",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelleArrive",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "libelleDepart",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "libelleVia",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "String",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixeNumerique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "InstallationEALEFonctionnelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "OrganeEALEFonctionnel",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixeGenerique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SousEnsembleEALEFonctionnel",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementConstitutifEALEFonctionnel",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "NoeudDeLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeNoeudDeLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "PointRuptureTrafic",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypePointRuptureTrafic",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "DomaineSystemeProtection",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ModeGestionItineraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ContrainteAiguillageNonParcouru",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneEmpruntee",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ModeDeCantonnement",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ItineraireVaEtVient",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeAutorisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CantonEmprunte",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Itineraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "FCNonCommandee",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "observation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "particulier",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "typeTransit",
+                    "type": "EnumTypeTransit",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CantonETCS",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "retentionMAOS",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AutorisationManoeuvre",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Autorisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mouvementPermis",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "observation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "particulier",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "plusieursCirculation",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Canton",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationBrancheAPV",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "position",
+                    "type": "EnumPositionBrancheAPV",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ModeCommandeItineraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "JalonItineraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "int",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CantonZoneEmprunte",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "MacaronItineraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ItineraireIntermediaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteItineraire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "OuvrageTerreDeblai",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "OuvrageTerre",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "chevauchement",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "commentairePente",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "hauteurMax",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "hauteurMoyenne",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "surface",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypePenteOT",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeNatureOT",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "NatureDeblai",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "OuvrageTerreRemblai",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "OuvrageArt",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PassageSouterrain",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Tunnel",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Platelage",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nbCouloirPieton",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CodeComposition",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ZoneAnnonceCirculationPN",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "delaiAnnonceApresRetention",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "delaiNormalAnnonce",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceVisibiliteDepuisPR",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceVisibiliteNecessaire",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "majorationAutre",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "majorationFeuCarrefour",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "majorationLongueur",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "vitesseMaxInf140",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ElementProfiltRoutier",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "abscisse",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "abscisseSurRail",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "altitude",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "NiveauAcceleration",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "niveau",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "PassageANiveau",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "codeLigneDesignation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "delaiReelFermetureCroissant",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "delaiReelFermetureDecroissant",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "delaiTheoriqueFermeture",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "dureeMaxFermeture",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "indicDifficulteFranchissement",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "\"N\""
+                },
+                {
+                    "nom": "indicPlaqueGAMEC",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "\"N\""
+                },
+                {
+                    "nom": "indicTelephone",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "\"N\""
+                },
+                {
+                    "nom": "indicZoneHumide",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "\"N\""
+                },
+                {
+                    "nom": "largeur",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "-1"
+                },
+                {
+                    "nom": "longueurTraversee",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "-1"
+                },
+                {
+                    "nom": "momentConception",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "-1.00"
+                },
+                {
+                    "nom": "momentProduitTrainCirculationConception",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "-1"
+                },
+                {
+                    "nom": "preoccupant",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "visibiliteCroissantEnMetre",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "-1"
+                },
+                {
+                    "nom": "visibiliteCroissantEnSeconde",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "-1"
+                },
+                {
+                    "nom": "visibiliteDecroissantEnMetre",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "-1"
+                },
+                {
+                    "nom": "visibiliteDecroissantEnSeconde",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "-1"
+                }
+            ]
+        },
+        {
+            "nom": "ProfilEnLongRoutier",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "margeGardeAuSol",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "margePorteAFaux",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeCouverture",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeRevetement",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeTraverseVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Quai",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "eclaire",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "indPmr",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "indQuaiSVC",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "largeur",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreAbri",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreAscenseur",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreEsc",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreRampeAcces",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreTraverseeV",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ZEPTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceDPTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelleVoie",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SecteurTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "GroupementElementCatenaireTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZEPLigneTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZEPGareTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "FeederTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "InfoLocalisationDPTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "pkDebut",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pkFin",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "GroupementZEPTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SELTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SousSecteurTemporaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CodeUPMREADate",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "upmre",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Feeder",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CentralSousStation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeElectrification",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "codeRes",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RealtionSouStation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SEL",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "commutable",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "dispositifAlerteAutomatique",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "escamotable",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Secteur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "GroupementCatenaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "upmre",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SousSecteur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementCatenaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "consigne",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "upmre",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SousStation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "codeTypeSecurisation",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ValiditeSEL",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SignalDivers",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "bandeBlanche",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "eclaire",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "mobilite",
+                    "type": "EnumTypeMobilite",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreDeMirlitons",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "reflectorise",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypePlaqueDeReconnaissance",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SignalDeProtection",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PlaqueGAMEC",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PlaqueDirection",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "commentaireTerminal",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "commentaireVia",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "numeroDirection",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "zoneDirectionTerminal",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "zoneDirectionVia",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypePlaqueIdentificationSignal",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SignalTractionElectrique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "eclaire",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "mobilite",
+                    "type": "EnumTypeMobilite",
+                    "description": ""
+                },
+                {
+                    "nom": "reflectorise",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SignalLimitationDeVitesse",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "crocodile",
+                    "type": "EnumTypeCrocodile",
+                    "description": ""
+                },
+                {
+                    "nom": "eclaire",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "KVB",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mobilite",
+                    "type": "EnumTypeMobilite",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreDeMirlitons",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "preAnnonce",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "reflectorise",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "telephone",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "telephoneRelieRegulateur",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SignalTVM",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "bandeJaune",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "commutateurDeblocage",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "feuDeFranchissement",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "telephone",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "telephoneRelieRegulateur",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "valeurCommutateurCm",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CroixBlancheLumineuse",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeProctectionSignal",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Barriere",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EsclavageDEtatDestinationSignal",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EsclavageDEtat",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "MicrosoftTeams-image (8).png",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeSupportSignal",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "PkExecution",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "pk",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "GarageFranc",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatSignal",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "enService",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SignalArretAnnonce",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "annulationFermetureAutomatique",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "arretNonDAAT",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "bandeJaune",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "commutateurDeBlocage",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "crocodile",
+                    "type": "EnumTypeCrocodile",
+                    "description": ""
+                },
+                {
+                    "nom": "DAAT",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "detonateur",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "eclaire",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "fermetureAutomatique",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "KVB",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "mobilite",
+                    "type": "EnumTypeMobilite",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreDeMirlitons",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "oeilleton",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "petard",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "plaqueReperageArriere",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "preAnnonce",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "reflectorise",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "retentionPN",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "telephone",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "telephoneRelieRegulateur",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "valeurCommutateurCm",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Type Extremite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Signal",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "commentaire",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "enService",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "fictif",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "jourNuit",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "lumineux",
+                    "type": "EnumLumineux",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreDeFleches",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "valeur",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "EsclavageSignal",
+            "abstraite": false,
+            "description": "Si un des états des états esclaves change pour un même signal esclave alors on instancie  un autre EsclavageSignal. Cela permet d'avoir \"à date\" un ensemble d'états esclaves cohérents.",
+            "attributs": []
+        },
+        {
+            "nom": "SignalJointDeZone",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PointDeCroisementBon",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypePlaqueCantonSignal",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SignalRoutier",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Heurtoir",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SignalManoeuvre",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "bandeBlanche",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "eclaire",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "mobilite",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreDeMirlitons",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "reflectorise",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SignalFinDExploitation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneAnnonceCirculationSTEM",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "STEM",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nombreProjecteurs",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "observation",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Eurobalise",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "dupliquee",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "PointInformationETCS",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "chaine",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "codeRegion",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "numero",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "PointInformation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "PointInformationKVB",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PointInformationKVBP",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelleHexa",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "BaliseKVB",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeAnnonce",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ZoneAnnonceCirculationDAELZD",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "delaiAcheminement",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pointArretAmont",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pointArretAval",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TraverseVoiePieton",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "accesMobilite",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "dateComptage",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "effetFoule",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreTrains",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreTrainsDesserte",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "observations",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "plaqueGAMEC",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "positionPointsArret",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "produitVitesse",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "visibilite",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationExtremite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ValiditeZEP",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZEP",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "trainTravauxInterdits",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "utilisableIsolement",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "VsVp",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "GroupementDeZEP",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "trainTravauxInterdits",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "VsVp",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationLocalisationExtremite",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AssociationProprieteRessourceAdhoc",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneDeDetection",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PointDeComptage",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CircuitDeVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nbVoieService",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "typeFrequence",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ZoneCompteurEssieux",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "GroupementDeZoneDeDetection",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CircuitDeVoieCompense",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nbCondensateur",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "premierDemiPas",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AssociationProprieteExtremiteCDV",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "premierDemiPas",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "role",
+                    "type": "EnumRoleExtremiteCDV",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AuxiliaireDeFermeture",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "JointDeZone",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RearmementCompteurEssieux",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "preparation",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AutorisationAnnulationTransit",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationProprieteCDV",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nbCondensateur",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "typeFrequence",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ExtremiteCDV",
+            "cible": "JointDeZone"
+        },
+        {
+            "source": "Signal",
+            "cible": "InstallationFixeProtection"
+        },
+        {
+            "source": "InstallationFixeProtection",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "JointDeZone",
+            "cible": "InstallationFixeProtection"
+        },
+        {
+            "source": "DetecteurBoiteChaude",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "RelationInstallationFixeComposant",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "Gare",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Acces",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "RelationInstallationFixeControlee",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "Poste",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "RelationMiseEnOeuvre",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "RelationRessourceInstallationFixeOrdonnee",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "RelationExtremiteLiaison",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "RelationInstallationFixeDeleguee",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "RelationInstallationFixeExtremite",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "RelationInstallationFixeCommandee",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "Balise",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "BaliseKVB",
+            "cible": "Balise"
+        },
+        {
+            "source": "Eurobalise",
+            "cible": "Balise"
+        },
+        {
+            "source": "DomaineSystemeProtection",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "AppareilDeVoie",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "GroupementCatenaire",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "GroupementDeZoneDeDetection",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ZoneDeDetection",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "STEM",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ClefSignalisation",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "RessourceDPTemporaire",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Aiguillage",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "CircuitDeVoie",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Noeud",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ElementCatenaire",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Quai",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "SousStation",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "BaliseProximite",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "RessourceInstallationFixeGenerique",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "PointDeComptage",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "TraverseVoiePieton",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "DetecteurCirculation",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "PointDeSignalisation",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "GroupementDeZEP",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ZEP",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "InstallationFixeVirtuelle",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "MacaronItineraire",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "DispositifDeVerrouillage",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Platelage",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "GarageFranc",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "PointInformation",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Canton",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Signal",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "PassageANiveau",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "OuvrageArt",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "JointDeZone",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "OuvrageTerre",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "CentralSousStation",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Itineraire",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Autorisation",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "NoeudDeLigne",
+            "cible": "Noeud"
+        },
+        {
+            "source": "NoeudDeVoie",
+            "cible": "Noeud"
+        },
+        {
+            "source": "PointDeCroisementBon",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "AuxiliaireDeFermeture",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "AutorisationAnnulationTransit",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "AiguillageFictif",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "RearmementCompteurEssieux",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "RechauffageAiguille",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "Taquet",
+            "cible": "AppareilDeVoie"
+        },
+        {
+            "source": "VerrouIndependant",
+            "cible": "DispositifDeVerrouillage"
+        },
+        {
+            "source": "BrancheAPVAvecAiguillage",
+            "cible": "BrancheAPV"
+        },
+        {
+            "source": "RessourceInstallationFixeNumerique",
+            "cible": "RessourceInstallationFixeGenerique"
+        },
+        {
+            "source": "InstallationEALEFonctionnelle",
+            "cible": "RessourceInstallationFixeGenerique"
+        },
+        {
+            "source": "OrganeEALEFonctionnel",
+            "cible": "RessourceInstallationFixeGenerique"
+        },
+        {
+            "source": "SousEnsembleEALEFonctionnel",
+            "cible": "RessourceInstallationFixeGenerique"
+        },
+        {
+            "source": "ElementConstitutifEALEFonctionnel",
+            "cible": "RessourceInstallationFixeGenerique"
+        },
+        {
+            "source": "CantonZoneEmprunte",
+            "cible": "CantonEmprunte"
+        },
+        {
+            "source": "ItineraireIntermediaire",
+            "cible": "Itineraire"
+        },
+        {
+            "source": "CantonETCS",
+            "cible": "Canton"
+        },
+        {
+            "source": "AutorisationManoeuvre",
+            "cible": "Autorisation"
+        },
+        {
+            "source": "JalonItineraire",
+            "cible": "MacaronItineraire"
+        },
+        {
+            "source": "OuvrageTerreDeblai",
+            "cible": "OuvrageTerre"
+        },
+        {
+            "source": "OuvrageTerreRemblai",
+            "cible": "OuvrageTerre"
+        },
+        {
+            "source": "Tunnel",
+            "cible": "OuvrageArt"
+        },
+        {
+            "source": "PassageSouterrain",
+            "cible": "OuvrageArt"
+        },
+        {
+            "source": "ZEPTemporaire",
+            "cible": "RessourceDPTemporaire"
+        },
+        {
+            "source": "ZEPLigneTemporaire",
+            "cible": "ZEPTemporaire"
+        },
+        {
+            "source": "ZEPGareTemporaire",
+            "cible": "ZEPTemporaire"
+        },
+        {
+            "source": "GroupementElementCatenaireTemporaire",
+            "cible": "RessourceDPTemporaire"
+        },
+        {
+            "source": "SousSecteurTemporaire",
+            "cible": "RessourceDPTemporaire"
+        },
+        {
+            "source": "SELTemporaire",
+            "cible": "RessourceDPTemporaire"
+        },
+        {
+            "source": "SecteurTemporaire",
+            "cible": "RessourceDPTemporaire"
+        },
+        {
+            "source": "FeederTemporaire",
+            "cible": "RessourceDPTemporaire"
+        },
+        {
+            "source": "Feeder",
+            "cible": "ElementCatenaire"
+        },
+        {
+            "source": "SEL",
+            "cible": "ElementCatenaire"
+        },
+        {
+            "source": "SousSecteur",
+            "cible": "Secteur"
+        },
+        {
+            "source": "Secteur",
+            "cible": "ElementCatenaire"
+        },
+        {
+            "source": "SignalDivers",
+            "cible": "Signal"
+        },
+        {
+            "source": "SignalDeProtection",
+            "cible": "Signal"
+        },
+        {
+            "source": "Heurtoir",
+            "cible": "SignalDeProtection"
+        },
+        {
+            "source": "SignalFinDExploitation",
+            "cible": "SignalDeProtection"
+        },
+        {
+            "source": "SignalTVM",
+            "cible": "SignalDeProtection"
+        },
+        {
+            "source": "SignalManoeuvre",
+            "cible": "SignalDeProtection"
+        },
+        {
+            "source": "SignalJointDeZone",
+            "cible": "SignalDeProtection"
+        },
+        {
+            "source": "SignalArretAnnonce",
+            "cible": "SignalDeProtection"
+        },
+        {
+            "source": "SignalTractionElectrique",
+            "cible": "Signal"
+        },
+        {
+            "source": "SignalLimitationDeVitesse",
+            "cible": "Signal"
+        },
+        {
+            "source": "EsclavageDEtatDestinationSignal",
+            "cible": "EsclavageDEtat"
+        },
+        {
+            "source": "PointInformationETCS",
+            "cible": "PointInformation"
+        },
+        {
+            "source": "PointInformationKVB",
+            "cible": "PointInformation"
+        },
+        {
+            "source": "ZoneCompteurEssieux",
+            "cible": "ZoneDeDetection"
+        },
+        {
+            "source": "CircuitDeVoie",
+            "cible": "ZoneDeDetection"
+        },
+        {
+            "source": "CircuitDeVoieCompense",
+            "cible": "CircuitDeVoie"
+        }
+    ],
+    "relations": [
+        {
+            "source": "InstallationFixeProtection",
+            "type": "ASSOCIE_A",
+            "cible": "TypeInstallationFixeExtremite",
+            "role": "typeInstallationFixeExtremite",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationExtremite",
+            "type": "ASSOCIE_A",
+            "cible": "InstallationFixeProtection",
+            "role": "installation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DetecteurBoiteChaude",
+            "type": "ASSOCIE_A",
+            "cible": "Poste",
+            "role": "posteAiguillagePrincipal",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SigneConventionnel",
+            "type": "ASSOCIE_A",
+            "cible": "TypeSigneConventionnel",
+            "role": "typeSigneConventionnel",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PlaqueDirection",
+            "type": "ASSOCIE_A",
+            "cible": "Gare",
+            "role": "gareVia",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PlaqueDirection",
+            "type": "ASSOCIE_A",
+            "cible": "Gare",
+            "role": "gare",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SigneConventionnel",
+            "type": "ASSOCIE_A",
+            "cible": "Gare",
+            "role": "gare",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Poste",
+            "type": "AGREGE",
+            "cible": "Gare",
+            "role": "postes",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Gare",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ressourceInstallationFixe",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ValiditeZEP",
+            "type": "ASSOCIE_A",
+            "cible": "TypeInstallationFixeExtremite",
+            "role": "typeInstallationFixeExtremiteFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceInstallationFixe",
+            "type": "ASSOCIE_A",
+            "cible": "TypeRelationRessourceInstallationFixe",
+            "role": "typeRelationRessourceIfx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeSurveillance",
+            "type": "ASSOCIE_A",
+            "cible": "TraverseVoiePieton",
+            "role": "typeSurveillance",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CircuitDeVoie",
+            "type": "ASSOCIE_A",
+            "cible": "Poste",
+            "role": "poste",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Poste",
+            "type": "ASSOCIE_A",
+            "cible": "TypeModeFonctionnementPoste",
+            "role": "typeModeFonctionnement",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLocalisationExtremiteDeZone",
+            "type": "COMPOSE_DE",
+            "cible": "RelationExtremiteDeZone",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ItineraireIntermediaire",
+            "type": "ASSOCIE_A",
+            "cible": "RelationRessourceInstallationFixe",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceInstallationFixe",
+            "type": "AGREGE",
+            "cible": "RessourceInstallationFixe",
+            "role": "relationsInstallationsFixes",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceInstallationFixe",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ressourceInstallationFixe",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceInstallationFixe",
+            "type": "AGREGE",
+            "cible": "GroupementElementCatenaireTemporaire",
+            "role": "ressourcesInstallationFixe",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EsclavageSignal",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "signalEsclave",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceInstallationFixe",
+            "type": "AGREGE",
+            "cible": "GroupementZEPTemporaire",
+            "role": "ressourcesInstallationFixe",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceInstallationFixe",
+            "type": "ASSOCIE_A",
+            "cible": "TypeInstallationFixe",
+            "role": "typeInstallationFixe",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DispositifDeVerrouillage",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationExtremiteDeZone",
+            "type": "ASSOCIE_A",
+            "cible": "JointDeZone",
+            "role": "jdz",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Noeud",
+            "type": "ASSOCIE_A",
+            "cible": "InstallationFixeVirtuelle",
+            "role": "noeudId",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeInstallationFixe",
+            "type": "ASSOCIE_A",
+            "cible": "TypeInstallationFixe",
+            "role": "parent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "BaliseProximite",
+            "type": "ASSOCIE_A",
+            "cible": "SignalDeProtection",
+            "role": "signalProtection",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "NiveauAccelerationIfx",
+            "type": "ASSOCIE_A",
+            "cible": "NiveauAcceleration",
+            "role": "niveauAcceleration",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Aiguillage",
+            "type": "AGREGE",
+            "cible": "BrancheAPVAvecAiguillage",
+            "role": "aiguillage",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Communication",
+            "type": "COMPOSE_DE",
+            "cible": "AppareilDeVoie",
+            "role": "listeCommunications",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "BrancheAPV",
+            "type": "AGREGE",
+            "cible": "AppareilDeVoie",
+            "role": "listeBranches",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationBrancheAPV",
+            "type": "ASSOCIE_A",
+            "cible": "BrancheAPV",
+            "role": "branche",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeAVDate",
+            "type": "COMPOSE_DE",
+            "cible": "AppareilDeVoie",
+            "role": "listeTypeAVDate",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeAVDate",
+            "type": "ASSOCIE_A",
+            "cible": "TypeAppareilDeVoie",
+            "role": "typeAV",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "NoeudDeVoie",
+            "type": "ASSOCIE_A",
+            "cible": "TypeNoeudDeVoie",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeAppareilDeVoie",
+            "type": "ASSOCIE_A",
+            "cible": "TypeNoeudDeVoie",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ParcoursOperationnel",
+            "type": "COMPOSE_DE",
+            "cible": "Detournement",
+            "role": "parcoursDetournements",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ParcoursOperationnel",
+            "type": "COMPOSE_DE",
+            "cible": "Detournement",
+            "role": "reference",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ParcoursOperationnel",
+            "type": "COMPOSE_DE",
+            "cible": "FicheComplementaireDetournement",
+            "role": "parcoursDetournement",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "NoeudDeLigne",
+            "type": "ASSOCIE_A",
+            "cible": "TypeNoeudDeLigne",
+            "role": "typeNoeudDeLigne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointRuptureTrafic",
+            "type": "ASSOCIE_A",
+            "cible": "TypePointRuptureTrafic",
+            "role": "typePointRuptureTrafic",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Itineraire",
+            "type": "ASSOCIE_A",
+            "cible": "ModeGestionItineraire",
+            "role": "modesGestion",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AutorisationManoeuvre",
+            "type": "ASSOCIE_A",
+            "cible": "ModeGestionItineraire",
+            "role": "modesGestion",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneEmpruntee",
+            "type": "ASSOCIE_A",
+            "cible": "ZoneDeDetection",
+            "role": "zone",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneEmpruntee",
+            "type": "COMPOSE_DE",
+            "cible": "CantonZoneEmprunte",
+            "role": "zonesEmpruntees",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Canton",
+            "type": "ASSOCIE_A",
+            "cible": "ModeDeCantonnement",
+            "role": "modeCantonnement",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Autorisation",
+            "type": "ASSOCIE_A",
+            "cible": "TypeAutorisation",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CantonEmprunte",
+            "type": "ASSOCIE_A",
+            "cible": "Canton",
+            "role": "canton",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CantonEmprunte",
+            "type": "AGREGE",
+            "cible": "Itineraire",
+            "role": "cantonsEmpruntes",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "MacaronItineraire",
+            "type": "AGREGE",
+            "cible": "Itineraire",
+            "role": "macaronDestination",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteItineraire",
+            "type": "AGREGE",
+            "cible": "Itineraire",
+            "role": "contraintes",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "JalonItineraire",
+            "type": "AGREGE",
+            "cible": "Itineraire",
+            "role": "jalons",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "MacaronItineraire",
+            "type": "AGREGE",
+            "cible": "Itineraire",
+            "role": "macaronOrigine",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Itineraire",
+            "type": "ASSOCIE_A",
+            "cible": "ModeCommandeItineraire",
+            "role": "modesCommande",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CantonETCS",
+            "type": "ASSOCIE_A",
+            "cible": "CantonETCS",
+            "role": "cantonParent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteItineraire",
+            "type": "AGREGE",
+            "cible": "AutorisationManoeuvre",
+            "role": "contraintes",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignalDeProtection",
+            "type": "AGREGE",
+            "cible": "Canton",
+            "role": "signalDestination",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignalDeProtection",
+            "type": "AGREGE",
+            "cible": "Canton",
+            "role": "signalOrigine",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OuvrageTerreDeblai",
+            "type": "ASSOCIE_A",
+            "cible": "NatureDeblai",
+            "role": "natureDeblai",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeNatureOT",
+            "type": "AGREGE",
+            "cible": "OuvrageTerre",
+            "role": "typeNature",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypePenteOT",
+            "type": "AGREGE",
+            "cible": "OuvrageTerre",
+            "role": "pente",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementProfiltRoutier",
+            "type": "COMPOSE_DE",
+            "cible": "ProfilEnLongRoutier",
+            "role": "elementsProfilsRoutiers",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PassageANiveau",
+            "type": "ASSOCIE_A",
+            "cible": "NiveauAcceleration",
+            "role": "niveauAcceleration",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TraverseVoiePieton",
+            "type": "ASSOCIE_A",
+            "cible": "NiveauAcceleration",
+            "role": "niveauAcceleration",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Quai",
+            "type": "ASSOCIE_A",
+            "cible": "TypeCouverture",
+            "role": "codeTypeCouverture",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Quai",
+            "type": "ASSOCIE_A",
+            "cible": "TypeRevetement",
+            "role": "codeTypeRevetement",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Quai",
+            "type": "ASSOCIE_A",
+            "cible": "TypeTraverseVoie",
+            "role": "typeTraverseV",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "InfoLocalisationDPTemporaire",
+            "type": "AGREGE",
+            "cible": "RessourceDPTemporaire",
+            "role": "infoLocalisation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CodeUPMREADate",
+            "type": "COMPOSE_DE",
+            "cible": "ElementCatenaire",
+            "role": "codesUpmre",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CodeUPMREADate",
+            "type": "COMPOSE_DE",
+            "cible": "GroupementCatenaire",
+            "role": "codesUpmre",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SousStation",
+            "type": "AGREGE",
+            "cible": "CentralSousStation",
+            "role": "listeSousStations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ValiditeSEL",
+            "type": "ASSOCIE_A",
+            "cible": "SEL",
+            "role": "sel",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Secteur",
+            "type": "AGREGE",
+            "cible": "SousStation",
+            "role": "secteurs",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "GroupementCatenaire",
+            "type": "ASSOCIE_A",
+            "cible": "GroupementCatenaire",
+            "role": "parent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementCatenaire",
+            "type": "AGREGE",
+            "cible": "GroupementCatenaire",
+            "role": "listeElementCatenaires",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementCatenaire",
+            "type": "ASSOCIE_A",
+            "cible": "ElementCatenaire",
+            "role": "catenaireParent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Signal",
+            "type": "ASSOCIE_A",
+            "cible": "TypePlaqueDeReconnaissance",
+            "role": "plaqueDeReconnaissance",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignalDeProtection",
+            "type": "ASSOCIE_A",
+            "cible": "TypeProctectionSignal",
+            "role": "typeProtectionSignal",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PlaqueDirection",
+            "type": "ASSOCIE_A",
+            "cible": "TypePlaqueCantonSignal",
+            "role": "typePlaqueCanton",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PlaqueDirection",
+            "type": "COMPOSE_DE",
+            "cible": "Signal",
+            "role": "plaqueDirection",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PkExecution",
+            "type": "COMPOSE_DE",
+            "cible": "PlaqueDirection",
+            "role": "listePkExecutionVia",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Signal",
+            "type": "ASSOCIE_A",
+            "cible": "TypePlaqueIdentificationSignal",
+            "role": "plaqueIdentification",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EsclavageDEtatDestinationSignal",
+            "type": "ASSOCIE_A",
+            "cible": "Signal",
+            "role": "destination",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EsclavageDEtat",
+            "type": "ASSOCIE_A",
+            "cible": "EtatSignal",
+            "role": "etatMaitre",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EsclavageDEtat",
+            "type": "ASSOCIE_A",
+            "cible": "EtatSignal",
+            "role": "etatEsclave",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EsclavageDEtat",
+            "type": "COMPOSE_DE",
+            "cible": "EsclavageSignal",
+            "role": "esclavagesDEtats",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Signal",
+            "type": "ASSOCIE_A",
+            "cible": "TypeSupportSignal",
+            "role": "support",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatSignal",
+            "type": "AGREGE",
+            "cible": "Signal",
+            "role": "listeEtatSignal",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EsclavageSignal",
+            "type": "COMPOSE_DE",
+            "cible": "Signal",
+            "role": "signauxEsclaves",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignalJointDeZone",
+            "type": "ASSOCIE_A",
+            "cible": "JointDeZone",
+            "role": "jointDeZone",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TraverseVoiePieton",
+            "type": "ASSOCIE_A",
+            "cible": "TypeAnnonce",
+            "role": "typeAnnonce",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLocalisationExtremite",
+            "type": "COMPOSE_DE",
+            "cible": "RelationExtremite",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationExtremite",
+            "type": "COMPOSE_DE",
+            "cible": "ZEP",
+            "role": "extremites",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ValiditeZEP",
+            "type": "ASSOCIE_A",
+            "cible": "ZEP",
+            "role": "localisationSurVs",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZEP",
+            "type": "AGREGE",
+            "cible": "GroupementDeZEP",
+            "role": "listeZEP",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneDeDetection",
+            "type": "ASSOCIE_A",
+            "cible": "ZoneDeDetection",
+            "role": "zoneParente",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneDeDetection",
+            "type": "AGREGE",
+            "cible": "GroupementDeZoneDeDetection",
+            "role": "zones",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "JointDeZone",
+            "type": "AGREGE",
+            "cible": "CircuitDeVoie",
+            "role": "extremites",
+            "cardinalite": "0..*"
+        }
+    ]
+}

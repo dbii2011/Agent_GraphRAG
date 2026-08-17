@@ -1,0 +1,46 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Module",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ModuleFonctionnelSignalisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ModuleMFA",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ModuleFonctionnelSignalisation",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ModuleMFA",
+            "cible": "Module"
+        }
+    ],
+    "relations": []
+}

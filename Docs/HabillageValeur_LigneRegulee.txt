@@ -1,0 +1,119 @@
+1.	Définition 
+
+•	Cet habillage indique les portions de lignes dont le trafic est géré par un régulateur. 
+
+2.	Caractéristiques de l’objet
+
+•	Il est défini par les informations suivantes :
+o	code ligne
+o	numéro du tronçon de ligne (le rang)
+o	PK début
+o	PK fin
+o	Valeur (seule la valeur « oui » est tolérée)
+o	Une DDA
+o	Une DFA
+3.	Règles de nommage de l’objet 
+
+
+•	La seule valeur possible est « OUI » 
+4.	Règles générales pour la gestion 
+
+4.1.	Suppression de l’objet
+
+
+Procédure. Suppression 
+
+Sélectionner le tronçon de ligne demandé
+
+
+                       Dans la section « Habillages Ligne » choisissez le « Ligne régulée »
+	
+
+Supprimer la valeur dans l’outils à la date voulue 
+
+
+Enregistrer  
+
+
+
+4.2.	Création de l’objet 
+
+
+Procédure : Création 
+
+Lors d’une modernisation d’une ligne ou suite à la connaissance de l’information 
+
+
+
+Sélectionner le tronçon de ligne concerné
+	
+
+                          Dans la section « Habillages Ligne » choisissez le  « Ligne régulée »
+	
+
+
+Rentrer la valeur dans l’outils (oui) à la date de validité voulue
+
+
+
+        La saisie se fait  par tranche de PK (ex : du 0+036 au 100+512 – OUI)  puis 
+Enregistrer -
+
+
+4.3.	Modification de l’objet
+
+Procédure. Modification 
+
+
+Pour faire suite à la demande, commencer par Localiser le tronçon de ligne 
+
+
+Dans les Habillages Ligne, modifier dans « ligne régulée » la valeur du sujet
+	
+
+Faire les modifications à la date prévue
+
+
+
+Enregistrer -
+
+
+
+
+5.	Cas particulier
+
+NA
+6.	Forme de remontée
+
+•	Rectificatifs aux RT
+7.	Périodicité
+
+•	Dès connaissance de l’information 
+8.	Impacts à contrôler
+
+•	Impact sur les structures et compétences des EIC
+9.	Observations particulières
+
+
+•	Cet habillage implique une évolution du découpage « type de suivi » 
+
+ 
+10.	ANNEXE 
+
+Cas de figure de suppression de l’objet
+
+NA
+
+Cas de figure création de l’objet
+
+NA
+
+
+
+Cas de figure modification de l’objet
+
+•	Exemple présent lors d’une modification d’un RT 
+
+
+ 
+

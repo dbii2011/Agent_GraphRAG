@@ -1,0 +1,254 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "EtatElementOrganisationTravaux",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignalitiqueIntervention",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatEnrichissementBesoin",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetPersistant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Structure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatBesoinCompositeAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementSignaletiqueProjet",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignaletiqueRalentissementPatrimoine",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatNonNominalDefaut",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AnalyseEvtSecurite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatEtudeAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignaletiqueChantierTravauxCapacite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignaletiqueRalentissementTravaux",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatPreBesoinInstructionAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RoleStructureOrganisationnelleExerce",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementRoleStructure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RoleStructureExerce",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeRoleStructure",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "libelle",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "RoleStructureExerce",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "TypeRoleStructure",
+            "cible": "ObjetPersistant"
+        }
+    ],
+    "relations": [
+        {
+            "source": "EtatElementOrganisationTravaux",
+            "type": "AGREGE",
+            "cible": "RoleStructureExerce",
+            "role": "roleStructureExerces",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignalitiqueIntervention",
+            "type": "ASSOCIE_A",
+            "cible": "RoleStructureExerce",
+            "role": "rolesStructuresExerces",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatEnrichissementBesoin",
+            "type": "ASSOCIE_A",
+            "cible": "RoleStructureExerce",
+            "role": "rolesStructures",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RoleStructureExerce",
+            "type": "ASSOCIE_A",
+            "cible": "Structure",
+            "role": "structure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatBesoinCompositeAbstrait",
+            "type": "ASSOCIE_A",
+            "cible": "RoleStructureExerce",
+            "role": "rolesStructuresExerces",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementSignaletiqueProjet",
+            "type": "AGREGE",
+            "cible": "RoleStructureExerce",
+            "role": "rolesStructures",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignaletiqueRalentissementPatrimoine",
+            "type": "ASSOCIE_A",
+            "cible": "RoleStructureExerce",
+            "role": "rolesStructuresExerces",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatNonNominalDefaut",
+            "type": "ASSOCIE_A",
+            "cible": "RoleStructureExerce",
+            "role": "roleStructures",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AnalyseEvtSecurite",
+            "type": "ASSOCIE_A",
+            "cible": "RoleStructureExerce",
+            "role": "roleStructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatEtudeAbstrait",
+            "type": "AGREGE",
+            "cible": "RoleStructureExerce",
+            "role": "roleStructures",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignaletiqueChantierTravauxCapacite",
+            "type": "ASSOCIE_A",
+            "cible": "RoleStructureExerce",
+            "role": "rolesStructuresExerces",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RoleStructureExerce",
+            "type": "ASSOCIE_A",
+            "cible": "TypeRoleStructure",
+            "role": "typeRoleExerce",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignaletiqueRalentissementTravaux",
+            "type": "ASSOCIE_A",
+            "cible": "RoleStructureExerce",
+            "role": "rolesStructuresExerces",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatPreBesoinInstructionAbstrait",
+            "type": "ASSOCIE_A",
+            "cible": "RoleStructureExerce",
+            "role": "rolesStructuresExerces",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RoleStructureOrganisationnelleExerce",
+            "type": "ASSOCIE_A",
+            "cible": "TypeRoleStructure",
+            "role": "typeRole",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementRoleStructure",
+            "type": "ASSOCIE_A",
+            "cible": "TypeRoleStructure",
+            "role": "typeRole",
+            "cardinalite": "0..*"
+        }
+    ]
+}

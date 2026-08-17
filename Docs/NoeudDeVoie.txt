@@ -1,0 +1,171 @@
+1.	Définition
+
+Les nœuds de ligne permettent de décrire les extrémités de ligne et les intersections entre lignes.
+
+2.	Caractéristiques de l’objet
+2.1.	Les types de nœud de Ligne
+
+Quatre types de nœuds sont matérialisés sur le terrain :
+-	Le nœud « Terminal » : il désigne l’extrémité physique de la ligne, pour les lignes se terminant en impasse (exemple : Dans la Gare Paris Saint Lazare).
+
+
+
+
+-	Le nœud « Pont » : il indique un croisement de ligne vu du ciel sans communication possible. le nœud précisera la ligne placée au-dessus de l’autre
+-	Le nœud « Y » : il situe un croisement entre deux ou trois lignes, dont l’une au moins est en extrémité ou extrémité de rang de ligne.
+
+
+
+
+
+
+-	Le nœud « X » : il désigne un croisement entre deux lignes dont aucune n’est en extrémité ou bien un croisement entre plus de deux lignes.
+
+-	Le nœud « J » : il désigne l’intersection entre deux lignes parallèles. La connexion entre deux lignes se fait par la voie de jonction 
+
+
+
+
+
+Deux autres types peuvent être qualifiés de virtuels, car non matérialisés :
+-	Le nœud « Frontière » : situé à l’extrémité d’un tronçon de ligne, il indique l’interruption de gestion du réseau à la frontière d’un réseau privé ou étranger (localisation unique) ; ce nœud est associé à un réseau partenaire, propriétaire de l’autre partie de la ligne.
+
+-	Le nœud « Intermédiaire » : il maille les extrémités communes de deux tronçons, d’une même ligne ou deux lignes différentes.
+
+
+
+
+2.2.	Les nœud Y, X et J
+
+
+Caractéristiques	Compléments d’informations
+Libellé (gestion à date)	Les nœuds Y et X ont un libellé, obligatoire pour les nœuds localisés entièrement sur des lignes exploitées, facultatif pour les autres. 
+Ce libellé correspond : à la dénomination trouvée sur les renseignements techniques lorsque celle-ci existe ou bien à « Bif » + les codes des lignes participant au nœud.
+Exemple : Bif de St-Laurent, Bif 060000/061000
+Les nœuds J ont le libellé suivant : « Jct » + les codes des deux lignes participant au nœud 
+Exemple : « Jct 515000/561000»
+
+Type	Choix du type de nœud voir chapitre 2.1
+Localisations	Le nœud « Y » : 2 localisations, voire 3. Si deux localisations l’une est en extrémité, si 3 localisations, les trois sont en extrémité.
+Le nœud « X » : Au moins deux localisations, dont aucune située en extrémité.
+Le nœud « J » : Deux localisations, dont aucune située en extrémité.
+
+Activité correspond à la période d’activité des localisations : 
+DDA : correspond à la date de MES future.
+DFA : soit 01/01/2382 (en activité) ou date de suppression /modification. 
+Période d’activité et métadonnées	DDA correspond à la date de MES.
+DFA soit 01/01/2382 (en activité) ou date de suppression /modification 
+Liste des communications (gestion à date)	Voir chapitre 2.2.1 
+
+
+
+
+
+
+
+
+
+
+2.2.1.	Description des communications pour les Nœud Y, X et J
+
+Afin de determiner les communication il faut commencer par identifier le nœud de ligne sur le schéma de signalisation (un adv ).
+Il faut bien determiner le début des lignes sachant que le début est toujours le plus petit PK
+Exemple :
+Nœud Y entre les lignes 935000 et 935111 
+ 
+ Ensuite il faut identifier les trajets possibles suivant les itinéraires, puis compléter l’onglet communication en fonction. 
+ 
+
+
+
+
+
+
+2.3.	Le nœud « Terminal », extrémité physique d’un tronçon
+
+
+Caractéristiques	Compléments d’informations
+Libellé (gestion à date)	Pas de libellé
+Type	Type T- Extrémité physique d’un tronçon de ligne
+Localisations	1 localisation en extrémité de ligne
+Activité correspond à la période d’activité de la localisation : 
+DDA : correspond à la date de MES future.
+DFA : soit 01/01/2382 (en activité) ou date de suppression /modification. 
+Période d’activité et métadonnées	DDA correspond à la date de MES.
+DFA soit 01/01/2382 (en activité) ou date de suppression /modification 
+
+2.4.	Le nœud « Frontière », interruption de gestion d’un tronçon
+
+
+Caractéristiques	Compléments d’informations
+Libellé (gestion à date)	Pas de libellé
+
+Localisations	Un nœud type F possède une localisation en extrémité de ligne.
+PK : correspond au PK indiqué sur le schéma de signalisation.
+Activité correspond à la période d’activité des localisations : 
+DDA : correspond à la date de MES future via étude travaux fournit par le GUF.
+DFA : soit 01/01/2382 (en activité) ou date de suppression /modification de l’extrémité fournit par le GUF. 
+Période d’activité et métadonnées	DDA correspond à la date de MES future via étude travaux fournit par le GUF.
+DFA soit 01/01/2382 (en activité) ou date de suppression /modification fournit par le GUF.
+
+
+
+
+
+
+
+
+2.5.	Le nœud « Pont », croisement de ligne vu du ciel sans intersection physique.
+
+
+Caractéristiques	Compléments d’informations
+Libellé (gestion à date)	Le libellé se compose du nom des différentes voies en intersection : « nom de Ligne située au-dessus/nom de Ligne située en-dessous ».
+Localisations	Un nœud P possède 2 localisations (1 pour chacune des lignes).
+PK : correspond au PK axe de croissement des lignes.
+Activité correspond à la période d’activité des localisations : 
+DDA : correspond à la date de MES future via étude travaux fournit par le GUF ou MES 
+DFA : soit 01/01/2382 (en activité) ou date de suppression /modification fournit par le GUF. 
+Période d’activité et métadonnées	DDA correspond à la date de MES future via étude travaux fournit par le GUF ou MES du Noeud
+DFA : 01/01/2382 (en activité) ou date de suppression /modification fournit par le GUF.
+
+
+2.1.	Le nœud « Intermédiaire », extrémités communes à deux tronçons sans matérialisation
+
+
+Caractéristiques	Compléments d’informations
+Libellé (gestion à date)	Pas de libellé
+
+Localisations	Un appareil de voie type I possède deux localisations.
+PK : correspond au PK extrémité des tronçons d’une ligne ou de deux lignes sur le schéma de signalisation.
+Activité correspond à la période d’activité des localisations : 
+DDA : correspond à la date de MES future via étude travaux fournit par le GUF ou MES de l’ADV.
+DFA : soit 01/01/2382 (en activité) ou date de suppression /modification de l’extrémité fournit par le GUF. 
+Période d’activité et métadonnées	DDA correspond à la date de MES, future via étude travaux fournit par le GUF ou MES.
+DFA :  01/01/2382 (en activité) ou date de suppression /modification fournit par le GUF.
+
+
+
+3.	Règles générales pour la gestion 
+
+3.1.	Création 
+
+3.2.	Modification 
+
+3.3.	Suppression 
+
+
+4.	Documents sources
+
+ Documents techniques issus de programmes de signalisation et de plans techniques.
+5.	Périodicité
+
+Dès connaissance de l’information et à chaque MES du Plan Technique (schéma de signalisation). 
+
+Lors de la création d’une nouvelle ligne, lors de poses/déposes des appareils de voie en extrémité 
+6.	Impacts à contrôler
+
+Lors d’une création / modification / suppression d’un nœud il faut vérifier les impacts sur les objets suivants :
+
+•	Habillages des lignes
+•	Correspondance avec les Nœuds de voies
+•	Point remarquable

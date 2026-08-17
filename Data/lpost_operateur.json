@@ -1,0 +1,260 @@
+{
+    "enums": [
+        {
+            "nom": "EnumNatureActivite",
+            "valeurs": [
+                "S9",
+                "S6",
+                "S11",
+                "S10",
+                "NA",
+                "TOUT"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "EvenementInitial",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PosteOperateur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Zone",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RolePosteOperateur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "InstallationFixeVirtuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PriseDePoste",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ActivationConfigurationExploitation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RPOExploitantCatenaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PosteOperateurIHM",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nbEcransBas",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "nbEcransHaut",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RPOExploitantCirculation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ProfilConfigurationExploitation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RPOSpecialise",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ConfigurationExploitation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "predefinie",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ConfigurationAutomatisme",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PriseDePosteAvecConfiguration",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ActivationConfigurationExploitation",
+            "cible": "EvenementInitial"
+        },
+        {
+            "source": "RPOExploitantCatenaire",
+            "cible": "RPOSpecialise"
+        },
+        {
+            "source": "PosteOperateurIHM",
+            "cible": "PosteOperateur"
+        },
+        {
+            "source": "RPOExploitantCirculation",
+            "cible": "RPOSpecialise"
+        },
+        {
+            "source": "RPOSpecialise",
+            "cible": "RolePosteOperateur"
+        },
+        {
+            "source": "ConfigurationExploitation",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "PriseDePosteAvecConfiguration",
+            "cible": "PriseDePoste"
+        }
+    ],
+    "relations": [
+        {
+            "source": "ProfilConfigurationExploitation",
+            "type": "COMPOSE_DE",
+            "cible": "EnumNatureActivite",
+            "role": "naturesActivite",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ActivationConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "ConfigurationExploitation",
+            "role": "configuration",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProfilConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "Zone",
+            "role": "zones",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProfilConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "PosteOperateur",
+            "role": "posteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ConfigurationExploitation",
+            "type": "COMPOSE_DE",
+            "cible": "ProfilConfigurationExploitation",
+            "role": "relationsConfigurationExploitation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProfilConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RPOSpecialise",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "Zone",
+            "role": "zones",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PriseDePosteAvecConfiguration",
+            "type": "ASSOCIE_A",
+            "cible": "ConfigurationExploitation",
+            "role": "configuration",
+            "cardinalite": "0..*"
+        }
+    ]
+}

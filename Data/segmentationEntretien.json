@@ -1,0 +1,71 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "SegmentImplante",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentClasseDEntretien",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ClasseDEntretien",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "SegmentClasseDEntretien",
+            "cible": "SegmentImplante"
+        },
+        {
+            "source": "ClasseDEntretien",
+            "cible": "RessourceAbstraite"
+        }
+    ],
+    "relations": [
+        {
+            "source": "SegmentClasseDEntretien",
+            "type": "ASSOCIE_A",
+            "cible": "ClasseDEntretien",
+            "role": "classeDEntretien",
+            "cardinalite": "0..*"
+        }
+    ]
+}

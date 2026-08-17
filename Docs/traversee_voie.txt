@@ -1,0 +1,60 @@
+1.	Définition
+
+(Réf : RRG21032)
+Traversée des Voies à niveau par le Public (TVP) : Désignation générique des équipements mis en œuvre pour permettre au public de traverser, dans un point d’arrêt, les voies à niveau en empruntant un passage planchéié, muni ou non d’un dispositif signalant l’approche des circulations. Ce terme exclut les ouvrages dénivelés (passerelles, passages souterrains, …).
+2.	Caractéristiques 
+2.1.	Caractéristiques de l’objet
+
+Objets	Caractéristiques	Obligatoire Facultative Conditionnelle	Compléments d’informations
+TVP	Libellé 	F	Inscrire le libellé du type pour les créations (en théorie impossible d’après le RRG21032). Les installations existantes n’ont pas forcement de libellé.
+	Région	O	
+	Type	O	- Traversée de voie pour piétons : terme générique à ne pas sélectionner.
+- TVP- Autres équipements : non équipée de pictogramme ou de signalétique.
+- TVP- Passage planchéié avec pictogramme « piétons » :  
+- TVP- Passage planchéié avec signalétique
+	Visibilité	F	Suivant info du CRR
+	Annonce	F	- Dispositif de réarment : Suivant info du CRR
+- Dispositif d’annonce : voir PT
+	Effet de foule	F	Suivant info du CRR
+	Surveillance	F	- Sans : Suivant info du CRR
+- Permanente : Suivant info du CRR
+- Temporaire : Suivant info du CRR
+	Accès PMR	F	Suivant info du CRR
+	Gare	O	Indiqué la gare en la recherchant par code ligne
+	Observation	F	Suivant info du CRR
+	Date de comptage	F	Suivant info du CRR
+	Nombre trains	F	Suivant info du CRR
+	Produit de vitesse	F	Suivant info du CRR
+	Nb trains desserte	F	Suivant info du CRR
+	Localisations à la Ligne 	0	Ligne : code ligne
+PK : le PK correspond à l’axe de la TVP et est indiqué sur le schéma de signalisation
+DDA
+DFA
+	Localisations sur SAF	0	Localisation : SAF ou sous SAF
+DDA
+DFA
+	DDA	0	
+	DFS	0	
+	DFA	0	
+
+3.	Règles générales pour la gestion 
+
+3.1.	Création 
+
+3.2.	Modification 
+
+3.3.	Suppression (bornage)
+
+
+4.	Forme de remontée 
+
+-	Parution d’un nouveau plan technique
+-	Mise à jour par le CRR selon le calendrier géré par le guichet fournisseur (GUF)
+
+5.	Périodicité
+
+Dés connaissance de l’information.
+6.	Impact à contrôler
+
+Sans objet.
+7.	Fiche d’identification

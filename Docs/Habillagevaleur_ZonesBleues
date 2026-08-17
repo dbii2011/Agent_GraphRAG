@@ -1,0 +1,107 @@
+1.	Définition
+
+Les fils de contact des caténaires sont placés, en général, à une hauteur supérieure ou égale à 5 mètres par rapport au plan de roulement.
+Cette hauteur peut être réduite à moins de 5 mètres au droit de certains ouvrages d’art. Ces zones sont repérées sur ou au droit des supports par une bande bleue avec liserés blancs.
+
+Dans les tunnels, souterrains, tranchées couvertes, le fil de contact est à considérer, sauf indications contraires, comme se trouvant à une hauteur inférieure à 5 mètres, même en l’absence de repérage.
+(Extrait CM00116)
+
+ L’intégralité du RFN électrifié est ou peut être concerné par les zones bleues.
+
+ 2.	Caractéristiques des zones bleues
+
+La description des zones bleues dans GAÏA sera exclusivement effectuée au sein de l’habillage voie.
+
+	Code Ligne
+	Rang de Ligne
+	Voie
+	Rang de Voie
+	Pk Début
+	Pk Fin
+	Valeur
+	Date Début Activité (DDA)
+	Date Fin Activité (DFA)
+3.	Valeurs disponibles
+
+	Oui : pour un tronçon de voie (PkD au PkF) où le fil de contact est d’une hauteur inférieure à
+5 mètres par rapport au plan de roulement.
+	Non : pour un tronçon de voie (PkD au PkF) où le fil de contact est d’une hauteur égale ou 
+supérieure à 5 mètres ou pour les voies non électrifiées.
+	Non renseignée : seules les voies de jonction doivent bénéficier de cette valeur.
+
+4.	Règles générales pour la gestion 
+
+4.1.	Principe de gestion
+
+Une adaptation de description de l’habillage « zones bleues » devra être apportée par la Division Description du Réseau (DDR) si le découpage des voies repris dans GAÏA est différent de celui présent dans les particularités locales. L’habillage reposera sur la description GAÏA effectuée à partir du document référence, le schéma de signalisation du Plan Technique.
+
+L’habillage des voies de jonctions sera exclu de la collecte et de la gestion car non pertinent pour l’utilisation de cet objet.
+
+Lorsque le Pk indiqué dans la Particularité Locale se trouve hors SRV Gaïa, alors le gérant doit s’assurer que le Pk indiqué sur le document de référence ne se situe pas sur une autre voie décrite dans Gaïa. Une analyse doit être effectuée à partir des PT et de la description présente dans Gaïa.
+3 cas peuvent se présenter :
+	si le Pk hors SRV se situe sur une autre voie décrite dans Gaïa, alors il convient de décrire la Zone Bleue sur les voies concernées. Idem si les 2 Pk (PkD ET PkF) sont hors SRV.
+	si le Pk hors SRV ne repose sur aucune autre description existante, alors il convient d’indiquer le Pk limite de la voie Gaïa.
+	si le Pk hors SRV repose sur une voie non décrite dans Gaïa et que cette voie doit être insérer dans le référentiel, alors il convient de créer cette voie à partir du PT puis de décrire la Zone Bleue en conséquence.
+
+4.1.1.	Création
+
+Les nouvelles zones bleues seront créées lors de la parution d’une nouvelle version des particularités locales avec une DDA correspondant à la date d’application de cette version.
+
+4.1.2.	Bornage
+
+Les zones bleues seront bornées lors de la parution d’une nouvelle version des particularités locales avec une DFA correspondant à la date d’application de cette version.
+
+4.1.3.	Modification
+
+Seulement autorisée pour la reprise d’une erreur effectuée lors de la saisie en collecte ou lors d’une création d’un objet (exemple : faute de frappe etc)
+A ce titre il ne sera pas nécessaire d’historiser la modification.
+
+4.2.	Particularité de certains textes
+
+4.2.1.	« Non concerné »
+
+ Dans ce cas :
+	Aucune collecte à effectuer
+	Conserver la référence du texte et veiller à d’éventuelles évolutions de versions de ce dernier
+
+4.2.2.	« Réservé »
+
+ 
+	Contacter l’INFP concerné pour obtenir des précisions. A titre d’exemple, sur PSL « Réservé » est inscrit sur la Particularité Locale mais il existe un fichier annexe au sein de l’INFP
+	Capitaliser les retours sur le fichier de suivi du GUF
+
+4.2.1.	 « Mise à disposition »
+
+  
+
+	Contacter l’INFP concerné pour l’obtention des documents
+	Capitaliser les retours sur le fichier de suivi du GUF
+
+
+4.2.2.	 Règle pour les zones bleues définies par un seul Pk dans les documents sources
+
+Figure 2 : extrait Particularités Locales – INFP Centre - OP40005
+ 
+Dans ce cas :
+	Renseigner l’IHM avec Pk Début = Pk Fin (Pk de l’ouvrage repris dans la Particularité Locale)
+
+NB : voir retours métier (§9-Annexe)
+ 4.3.	Cas des LGV
+
+D’après l’IN03566, la hauteur minimale sur LGV est de 5,08 m.
+Cependant dans plusieurs Particularités Locales, des Zones Bleues sont décrites sur certains raccordements.
+	Traiter les raccordements
+5.	Impact entre les données
+
+Les objets ci-dessous peuvent être impactés lors de la création, modification ou suppression :
+
+•	Evolution du plan de voie
+•	Evolution ouvrage d’art
+•	Evolution tunnel, souterrain, tranchée couverte
+•	Evolution de l’électrification
+
+Cette liste n’est peut-être pas exhaustive, cette dernière sera complétée lors de l’écriture du mode opératoire correspondant aux « zones bleues ».
+6.	Forme de remontée 
+
+Particularités Locales émises par les différents Infrapôles.
+

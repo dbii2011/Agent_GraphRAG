@@ -1,0 +1,174 @@
+1.	Définition
+
+Un passage à niveau (PN) est un croisement des voies ferrées et d'une route ou assimilé au même niveau.
+-	Un passage à niveau (PN) est gardé quand les barrières sont actionnées manuellement, soit directement, soit à distance.
+-	Il est automatique quand les avertisseurs routiers et les barrières (s'il y en a) sont commandés par le train lui-même (annonce puis libération de l’annonce).
+
+2.	Caractéristiques de l’objet
+
+2.1.	Caractéristiques Obligatoire de l’objet
+
+-	Un libellé 
+-	Un type d’installation 
+-	Le libellé de l’obstacle traversé (la route, ou assimilé qu'il croise).
+-	Une ou plusieurs localisations à savoir pour chaque ligne sur lequel il est localisé comprenant :
+-	Un code ligne
+-	Un numéro du tronçon (son rang)
+-	Un PK de l'axe du PN projeté sur la ligne ou les lignes
+-	Une date de création ou une date de suppression
+2.2.	Les informations complémentaires des PN (facultatives) 
+
+Caractéristiques traversées de voie pour piétons avec :
+o	Système d’annonce
+o	Surveillance
+o	Délai minimal de la visibilité pour le train le plus rapide
+o	Effet de foule 
+o	Accès PMR
+-	Informations circulation en gare :
+o	Nombre de trains passant en gare
+o	Somme des produits V*T des trains de desserte pour 1 journée
+o	Date du dernier comptage du produit V*T
+o	Nombre de trains desservant la gare
+-	Caractéristiques du PN :
+o	Délai théorique de fermeture 
+o	Préoccupant 
+o	Délai maximal de fermeture 
+o	Délai réel de fermeture
+	Sens croissant (PK)
+	Sens décroissant (PK)
+2.3.	Définitions complémentaires des caractéristiques
+2.3.1.	Les différents types de PN 
+
+•	00, PN secondaire
+Important : Un PN secondaire doit obligatoirement être rattaché au PN « père »
+
+
+•	PN public pour voitures avec barrières :
+o	11, gardé sans passage piétons accolé manœuvré à pied d’œuvre
+o	12, gardé sans passage piétons accolé manœuvré à distance
+o	13, gardé sans passage piétons accolé à pied d’œuvre et distance
+o	14, gardé avec passage piétons accolé manœuvré à pied d’œuvre
+o	15, gardé avec passage piétons accolé manœuvré à distance
+o	16, gardé avec passage piétons accolé à pied d’œuvre et distance
+o	17, ou ½ barrières, non gardé à SAL 2 et SAL 2B
+o	18, ou ½ barrières, non gardé à SAL 2 + îlot séparateur
+o	19, ou ½ barrières, non gardé à SAL 4
+
+•	PN public pour voitures sans barrières :
+o	10, protection assurée par agent
+o	20, sans SAL
+o	21, avec SAL 0
+
+•	PN public isolé pour piétons :
+o	31, sans portillons
+o	32, avec portillons
+
+•	PN privé pour voitures :
+o	41, sans barrières
+o	42, avec barrières sans passage piétons accolé
+o	43, avec barrières avec passage piétons accolé public
+o	44, avec barrières avec passage piétons accolé privé
+
+•	PN privé isolé pour piétons
+o	45, sans portillons
+o	46, avec portillons
+
+
+3.	Règles de nommage de l’objet
+
+Le libellé des PN se construit comme suit :
+
+	Libellé sur le plan technique (PT) = PN XX (XX= numéro du PN).
+	Dans le cas des PN BIS, le nommage est le suivant : PN xx-2.
+
+Attention : 
+Il ne faudra pas oublier l’espace entre PN et son numéro même lorsque celui-ci ne figure pas sur le plan technique.
+
+Attention : 
+Lorsqu’un PN se trouve en dehors du système de repérage de la ligne, indiquer son PK réel à côté du libellé info. 
+Ex : PN xx (Km 12+640).
+
+Les libellés d’obstacle :
+
+Type de Route	Nommage utilisé	Remarques sur le nommage
+Voie Communale	VC	aucune précision : ni le nom de la rue, ni son numéro
+Chemin Privé	CP	aucune précision : ni le nom de la rue, ni son numéro
+Chemin Rural	CR	aucune précision : ni le nom de la rue, ni son numéro
+Route Départemental	CD ou D	Précision du numéro avec -x par exemple : CD 211-0 (le -x est utilisé dans certains départements lorsque la route se divise en plusieurs branches)
+Possibilité d’avoir dans un même département 
+CD 211-0 / CD 211-1 / CD 211-2….
+
+Route Nationale	RN	Même remarque que sur pour les Routes Départementales (ici on aura RN 211-0)
+Autre	Autres	
+Autoroute	A	Pas utilisé
+
+ 
+
+4.	Règles générales pour la gestion 
+
+4.1.	Création d’un Passage à Niveau
+
+Procédure : Création 
+
+Dans le cas d’un PN pour piste cyclable accolé au PN routier, il faut créer un seul PN en indiquant dans l’obstacle les 2 informations « route et piste cyclable ».
+
+Un PN localisé sur plusieurs lignes et possédant une identification différente sur chacune des lignes déclenche 2 créations de PN :
+o	Un PN Père qui porte la classe du PN (classe 10 à classe 46)
+o	Un PN secondaire qui porte la classe 00. La référence au PN père est indiquée dans le libellé d’obstacle du PN secondaire sous la forme suivante :
+<Libellé du PN père> <code ligne du PN père> <PK du PN père au format externe>
+
+Un PN localisé sur plusieurs lignes et possédant une même identification sur ces lignes sera lui multi localisé. Il ne déclenchera pas la créations de plusieurs PN.
+
+
+4.2.	Modification d’un Passage à Niveau
+
+Procédure : Modification 
+4.3.	Suppression d’un PN
+
+Procédure : Suppression d’un PN 
+
+Dans le cas d’une ligne non exploitée, quelle que soit la valeur du statut les données du PN sont maintenues à jour tant que l’arrêté préfectoral n’est pas paru. 
+
+En cas d’absence de l’arrêté préfectoral, il est nécessaire d’utiliser la fiche d’échange avec l’établissement pour confirmation de la dépose.
+4.4.	Mise hors service d’un PN
+
+Dans certain cas, le PN est mis « hors service » pendant une période indéterminée.
+Dans ce cas précis, il faut renseigner la date « Fin de service » dans NETGEO.
+
+5.	Impacts à contrôler
+
+Lors d’une création / modification / suppression d’un PN, il faut vérifier les impacts sur les objets suivants :
+	Vérifier les zones courtes du PN
+	Vérifier l’impact sur les OA (Pra, Pro …)
+	En cas de suppression d’un PN, il faut s’assurer qu’un PN secondaire n’est pas rattaché au PN supprimé. 
+Si un PN secondaire est rattaché au PN supprimé, il faut supprimer également le PN secondaire selon les informations du PT
+	Vérifier les signaux protégeant le PN
+6.	Forme de remontée 
+
+Schéma de signalisation, arrêté préfectoral.
+7.	Périodicité
+
+
+Dés connaissance de l’information et à chaque MES et ET (Etudes et Travaux) du Plan Technique. 
+8.	Annexe
+
+
+8.1.	Fiche d’échange : suppression d’un PN
+
+
+Objet Du Document :
+Ce document a pour objet d’éviter les suppressions intempestives de PN et de tracer les suppressions de PN.
+
+Informations Complémentaires :
+ATTENTION : Cette fiche d’échanges doit être renvoyée par l’Infrapôle au GUF. Si possible accompagnée de l’arrêté préfectoral.
+
+Numéro(s) de LIGNE sur laquelle se trouve le PN :
+Numéro du PN :
+PK début et PK fin du PN :
+
+
+ 	Données 	Valeurs
+1	NOM Prénom du demandeur ( Gaïa Fab’)	 
+2	Nom de l’établissement	 
+3	Transmission de la fiche d’échanges et/ou de l’arrêté préfectoral de la suppression du PN concerné.	
+4	Date de l’abrogation du PN : à partir de cette date, Gaïa Fab’ supprimera le PN des bases de données le cas échéant. 	

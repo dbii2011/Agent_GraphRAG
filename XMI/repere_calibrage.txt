@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no" ?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2026-07-02 12:46:46">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+			<XMI.exporterID>1628</XMI.exporterID>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_B90A14F7_9E55_46df_9036_77A85E5BBA0A">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
+				<UML:Package name="repere_de_calibrage" xmi.id="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="parent" value="EAPK_88B9CC1D_880A_4a40_B113_E312311B6B89"/>
+						<UML:TaggedValue tag="created" value="2019-09-13 06:20:18"/>
+						<UML:TaggedValue tag="modified" value="2024-06-17 20:14:41"/>
+						<UML:TaggedValue tag="iscontrolled" value="0"/>
+						<UML:TaggedValue tag="lastloaddate" value="2024-06-17 20:14:42"/>
+						<UML:TaggedValue tag="lastsavedate" value="2019-01-08 11:06:45"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isprotected" value="0"/>
+						<UML:TaggedValue tag="usedtd" value="0"/>
+						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
+						<UML:TaggedValue tag="logxml" value="0"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="packageFlags" value="Recurse=1;"/>
+						<UML:TaggedValue tag="batchsave" value="0"/>
+						<UML:TaggedValue tag="batchload" value="0"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="author" value="PSDQ07841"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="ea_stype" value="Public"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Namespace.ownedElement>
+						<UML:Class name="PointDeCalibrageIFX" xmi.id="EAID_24F7E137_1EE6_4b7b_B27D_528FC850D030" visibility="public" namespace="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Class"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="AVe"/>
+								<UML:TaggedValue tag="package" value="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A"/>
+								<UML:TaggedValue tag="date_created" value="2019-09-13 06:20:18"/>
+								<UML:TaggedValue tag="date_modified" value="2024-01-21 17:38:24"/>
+								<UML:TaggedValue tag="genfile" value="C:\sncf\home\workspace\area\v3\ariane\description-reseau\src\main\java\com\sncf\reseau\csi\urb\ariane\v3\description_reseau\reperage_spatial\repere_de_calibrage\PointDeCalibrageIFX.java"/>
+								<UML:TaggedValue tag="gentype" value="Java"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="repere_de_calibrage"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="PSDQ07841"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="3027"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={4320B231-174C-4b61-B60C-2884C90ACF4F}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=isActive@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={24F7E137-1EE6-4b7b-B27D-528FC850D030}$CLT;$ENDXREF;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Class>
+						<UML:Association xmi.id="EAID_0A4A2565_322D_49a0_A927_90F8D5B110C8" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Association"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2843"/>
+								<UML:TaggedValue tag="ea_sourceName" value="PointDeCalibrageIFX"/>
+								<UML:TaggedValue tag="ea_targetName" value="RessourceInstallationFixe"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+								<UML:TaggedValue tag="ea_targetType" value="Class"/>
+								<UML:TaggedValue tag="ea_sourceID" value="3027"/>
+								<UML:TaggedValue tag="ea_targetID" value="11583"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="rb" value="1"/>
+								<UML:TaggedValue tag="rt" value="+ifx"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_24F7E137_1EE6_4b7b_B27D_528FC850D030">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" multiplicity="1" name="ifx" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_A9B5893D_95E7_42e5_AE83_678A803CE7DD">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Generalization subtype="EAID_24F7E137_1EE6_4b7b_B27D_528FC850D030" supertype="EAID_DC021D36_9680_4d8c_B92B_770AA7378FA8" xmi.id="EAID_92F0F600_C022_4aa4_B329_36C6CFEC9D2B" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Generalization"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="0"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" {isSubstitutable=false} "/>
+								<UML:TaggedValue tag="ea_localid" value="2842"/>
+								<UML:TaggedValue tag="ea_sourceName" value="PointDeCalibrageIFX"/>
+								<UML:TaggedValue tag="ea_targetName" value="PointDeCalibragePK"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+								<UML:TaggedValue tag="ea_targetType" value="Class"/>
+								<UML:TaggedValue tag="ea_sourceID" value="3027"/>
+								<UML:TaggedValue tag="ea_targetID" value="3030"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={46B2B592-0232-435e-A358-65FF02FAEB96}$XID;$NAM=CustomProperties$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$DES=@PROP=@NAME=isSubstitutable@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={92F0F600-C022-4aa4-B329-36C6CFEC9D2B}$CLT;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" {isSubstitutable=false} "/>
+							</UML:ModelElement.taggedValue>
+						</UML:Generalization>
+						<UML:Class name="RepereDeCalibragePkGeo" xmi.id="EAID_748202B6_0AB7_4256_B7B8_929DA363679D" visibility="public" namespace="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Class"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="AVe"/>
+								<UML:TaggedValue tag="package" value="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A"/>
+								<UML:TaggedValue tag="date_created" value="2019-09-13 06:20:18"/>
+								<UML:TaggedValue tag="date_modified" value="2024-01-21 17:38:27"/>
+								<UML:TaggedValue tag="genfile" value="C:\sncf\home\workspace\area\v3\ariane\description-reseau\src\main\java\com\sncf\reseau\csi\urb\ariane\v3\description_reseau\reperage_spatial\repere_de_calibrage\RepereDeCalibragePkGeo.java"/>
+								<UML:TaggedValue tag="gentype" value="Java"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="repere_de_calibrage"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="PSDQ07841"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="3028"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={3811C764-011B-43f9-935F-ECD9693518E0}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=isActive@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={748202B6-0AB7-4256-B7B8-929DA363679D}$CLT;$ENDXREF;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Class>
+						<UML:Association xmi.id="EAID_21C2A97F_0FF7_4100_86B2_E63B6E941EAD" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Association"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2841"/>
+								<UML:TaggedValue tag="ea_sourceName" value="RepereDeCalibragePkGeo"/>
+								<UML:TaggedValue tag="ea_targetName" value="SystemeReperageGeodesique"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+								<UML:TaggedValue tag="ea_targetType" value="Class"/>
+								<UML:TaggedValue tag="ea_sourceID" value="3028"/>
+								<UML:TaggedValue tag="ea_targetID" value="3034"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="rb" value="1"/>
+								<UML:TaggedValue tag="rt" value="+srGeodesique"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_748202B6_0AB7_4256_B7B8_929DA363679D">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" multiplicity="1" name="srGeodesique" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_4224832A_8673_46c8_B415_6335941B38FA">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Generalization subtype="EAID_748202B6_0AB7_4256_B7B8_929DA363679D" supertype="EAID_061D0AD3_D16C_4716_819D_B949B63F23C9" xmi.id="EAID_4351E66A_1AF6_4257_885E_ACC70B2E0813" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Generalization"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="0"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" {isSubstitutable=false} "/>
+								<UML:TaggedValue tag="ea_localid" value="2840"/>
+								<UML:TaggedValue tag="ea_sourceName" value="RepereDeCalibragePkGeo"/>
+								<UML:TaggedValue tag="ea_targetName" value="SystemeReperage"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+								<UML:TaggedValue tag="ea_targetType" value="Class"/>
+								<UML:TaggedValue tag="ea_sourceID" value="3028"/>
+								<UML:TaggedValue tag="ea_targetID" value="3032"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={9590027A-46D7-490b-8E41-0F3B59181C10}$XID;$NAM=CustomProperties$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$DES=@PROP=@NAME=isSubstitutable@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={4351E66A-1AF6-4257-885E-ACC70B2E0813}$CLT;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" {isSubstitutable=false} "/>
+							</UML:ModelElement.taggedValue>
+						</UML:Generalization>
+						<UML:Association xmi.id="EAID_BF754526_4D1A_4dcf_B5FE_8DF8E2D7BF60" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Association"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2839"/>
+								<UML:TaggedValue tag="ea_sourceName" value="RepereDeCalibragePkGeo"/>
+								<UML:TaggedValue tag="ea_targetName" value="SystemeReperagePk"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+								<UML:TaggedValue tag="ea_targetType" value="Class"/>
+								<UML:TaggedValue tag="ea_sourceID" value="3028"/>
+								<UML:TaggedValue tag="ea_targetID" value="3048"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="rb" value="1"/>
+								<UML:TaggedValue tag="rt" value="+srPk"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_748202B6_0AB7_4256_B7B8_929DA363679D">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" multiplicity="1" name="srPk" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_E604436E_24F0_43f4_B21D_9D577360556A">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_CFE019A4_9DC5_4032_88A8_43AD2516ADB5" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Association"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="0"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2838"/>
+								<UML:TaggedValue tag="ea_sourceName" value="RepereDeCalibragePkGeo"/>
+								<UML:TaggedValue tag="ea_targetName" value="PointDeCalibragePK"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+								<UML:TaggedValue tag="ea_targetType" value="Class"/>
+								<UML:TaggedValue tag="ea_sourceID" value="3028"/>
+								<UML:TaggedValue tag="ea_targetID" value="3030"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={BF3B8ED0-E358-4e4c-8055-F2C0B9EB8BB4}$XID;$NAM=CustomProperties$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$DES=@PROP=@NAME=isDerived@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={CFE019A4-9DC5-4032-88A8-43AD2516ADB5}$CLT;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="rb" value="*"/>
+								<UML:TaggedValue tag="rt" value="+pointsDeCalibrage"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="shared" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_748202B6_0AB7_4256_B7B8_929DA363679D">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Derived=0;Union=0;Owned=0;AllowDuplicates=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" multiplicity="*" name="pointsDeCalibrage" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_DC021D36_9680_4d8c_B92B_770AA7378FA8">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Derived=0;Union=0;Owned=0;AllowDuplicates=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Comment xmi.id="EAID_899B04F5_413B_4767_824D_387C32848D6B" visibility="public" namespace="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Text"/>
+								<UML:TaggedValue tag="ea_ntype" value="18"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A"/>
+								<UML:TaggedValue tag="date_created" value="2019-09-13 06:20:18"/>
+								<UML:TaggedValue tag="date_modified" value="2019-09-13 06:20:18"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="repere_de_calibrage"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="7611458Z"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="3029"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Comment>
+						<UML:Class name="PointDeCalibragePK" xmi.id="EAID_DC021D36_9680_4d8c_B92B_770AA7378FA8" visibility="public" namespace="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Class"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="AVe"/>
+								<UML:TaggedValue tag="package" value="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A"/>
+								<UML:TaggedValue tag="date_created" value="2019-09-13 06:20:18"/>
+								<UML:TaggedValue tag="date_modified" value="2024-01-21 17:38:24"/>
+								<UML:TaggedValue tag="genfile" value="C:\sncf\home\workspace\area\v3\ariane\description-reseau\src\main\java\com\sncf\reseau\csi\urb\ariane\v3\description_reseau\reperage_spatial\repere_de_calibrage\PointDeCalibragePK.java"/>
+								<UML:TaggedValue tag="gentype" value="Java"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="repere_de_calibrage"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="PSDQ07841"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="3030"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={8625FFC6-64F1-47b4-ADFC-8B847864F5A1}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=isActive@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={DC021D36-9680-4d8c-B92B-770AA7378FA8}$CLT;$ENDXREF;"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Classifier.feature>
+								<UML:Attribute name="exclu" changeable="none" visibility="public" ownerScope="instance" targetScope="instance">
+									<UML:Attribute.initialValue>
+										<UML:Expression/>
+									</UML:Attribute.initialValue>
+									<UML:StructuralFeature.type>
+										<UML:Classifier xmi.idref="EAID_8412B4A7_D2C1_4320_B1EC_E250FA4EF362"/>
+									</UML:StructuralFeature.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="type" value="P-Boolean"/>
+										<UML:TaggedValue tag="derived" value="0"/>
+										<UML:TaggedValue tag="length" value="0"/>
+										<UML:TaggedValue tag="ordered" value="0"/>
+										<UML:TaggedValue tag="precision" value="0"/>
+										<UML:TaggedValue tag="scale" value="0"/>
+										<UML:TaggedValue tag="static" value="0"/>
+										<UML:TaggedValue tag="collection" value="false"/>
+										<UML:TaggedValue tag="position" value="0"/>
+										<UML:TaggedValue tag="lowerBound" value="1"/>
+										<UML:TaggedValue tag="upperBound" value="1"/>
+										<UML:TaggedValue tag="duplicates" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{4E8B906A-B6BF-4b69-9C09-24ABB1AF9DB7}"/>
+										<UML:TaggedValue tag="ea_localid" value="1009"/>
+										<UML:TaggedValue tag="styleex" value="IsLiteral=0;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Attribute>
+								<UML:Attribute name="libelle" changeable="none" visibility="public" ownerScope="instance" targetScope="instance">
+									<UML:Attribute.initialValue>
+										<UML:Expression/>
+									</UML:Attribute.initialValue>
+									<UML:StructuralFeature.type>
+										<UML:Classifier xmi.idref="EAID_932534E6_36D4_4f30_AA49_0AC51870F1EA"/>
+									</UML:StructuralFeature.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="type" value="P-String"/>
+										<UML:TaggedValue tag="derived" value="0"/>
+										<UML:TaggedValue tag="length" value="0"/>
+										<UML:TaggedValue tag="ordered" value="0"/>
+										<UML:TaggedValue tag="precision" value="0"/>
+										<UML:TaggedValue tag="scale" value="0"/>
+										<UML:TaggedValue tag="static" value="0"/>
+										<UML:TaggedValue tag="collection" value="false"/>
+										<UML:TaggedValue tag="position" value="1"/>
+										<UML:TaggedValue tag="lowerBound" value="1"/>
+										<UML:TaggedValue tag="upperBound" value="1"/>
+										<UML:TaggedValue tag="duplicates" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{A5DA4870-9D94-462e-881D-C11BEA655CBB}"/>
+										<UML:TaggedValue tag="ea_localid" value="1010"/>
+										<UML:TaggedValue tag="styleex" value="IsLiteral=0;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Attribute>
+							</UML:Classifier.feature>
+						</UML:Class>
+						<UML:Generalization subtype="EAID_DC021D36_9680_4d8c_B92B_770AA7378FA8" supertype="EAID_351BA7B5_AB06_495b_B891_935183B9EEDA" xmi.id="EAID_AEE6E01B_4323_4b3d_9FA8_72F10B6DA166" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Generalization"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="0"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2837"/>
+								<UML:TaggedValue tag="ea_sourceName" value="PointDeCalibragePK"/>
+								<UML:TaggedValue tag="ea_targetName" value="ObjetPersistant"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+								<UML:TaggedValue tag="ea_targetType" value="Class"/>
+								<UML:TaggedValue tag="ea_sourceID" value="3030"/>
+								<UML:TaggedValue tag="ea_targetID" value="12031"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Generalization>
+						<UML:Association xmi.id="EAID_D365A1B4_D5DA_42bf_AC16_9CC2835189A7" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Association"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="0"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2836"/>
+								<UML:TaggedValue tag="ea_sourceName" value="PointDeCalibragePK"/>
+								<UML:TaggedValue tag="ea_targetName" value="LocalisationCartographique"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+								<UML:TaggedValue tag="ea_targetType" value="Class"/>
+								<UML:TaggedValue tag="ea_sourceID" value="3030"/>
+								<UML:TaggedValue tag="ea_targetID" value="11402"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={EBF5B8CF-8619-43a7-AC79-64DCE741BAA7}$XID;$NAM=CustomProperties$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$DES=@PROP=@NAME=isDerived@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={D365A1B4-D5DA-42bf-AC16-9CC2835189A7}$CLT;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="rb" value="1"/>
+								<UML:TaggedValue tag="rt" value="+geo"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="composite" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_DC021D36_9680_4d8c_B92B_770AA7378FA8">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Derived=0;Union=0;Owned=0;Navigable=Unspecified;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" multiplicity="1" name="geo" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_2C25385C_30F0_450b_A16E_414FDE1179EE">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Derived=0;Union=0;Owned=0;AllowDuplicates=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_FF0A1FB5_C20B_4189_B1C5_8BE9AFC76AC1" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Association"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="0"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2835"/>
+								<UML:TaggedValue tag="ea_sourceName" value="PointDeCalibragePK"/>
+								<UML:TaggedValue tag="ea_targetName" value="ImplantationPonctuelle"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Class"/>
+								<UML:TaggedValue tag="ea_targetType" value="Class"/>
+								<UML:TaggedValue tag="ea_sourceID" value="3030"/>
+								<UML:TaggedValue tag="ea_targetID" value="11432"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={1ED07E5C-D9EA-449e-92FC-B3C61C8C71B0}$XID;$NAM=CustomProperties$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$DES=@PROP=@NAME=isDerived@ENDNAME;@TYPE=Boolean@ENDTYPE;@VALU=0@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={FF0A1FB5-C20B-4189-B1C5-8BE9AFC76AC1}$CLT;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="rb" value="1"/>
+								<UML:TaggedValue tag="rt" value="+pk"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="shared" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_DC021D36_9680_4d8c_B92B_770AA7378FA8">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="sourcestyle" value="Derived=0;Union=0;Owned=0;Navigable=Unspecified;AllowDuplicates=0;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" multiplicity="1" name="pk" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_EED2D6B7_93E5_477d_8D50_015623A1BCA9">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Derived=0;Union=0;Owned=0;AllowDuplicates=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="reperes de calibrage" xmi.id="EAID_6E862FC9_71EB_43f2_A6DE_2BB5BB094D41" diagramType="ClassDiagram" owner="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="3.0.1"/>
+				<UML:TaggedValue tag="author" value="URB2"/>
+				<UML:TaggedValue tag="created_date" value="2019-09-13 06:20:35"/>
+				<UML:TaggedValue tag="modified_date" value="2024-11-05 10:57:02"/>
+				<UML:TaggedValue tag="package" value="EAPK_B90A14F7_9E55_46df_9036_77A85E5BBA0A"/>
+				<UML:TaggedValue tag="type" value="Logical"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="tpos" value="0"/>
+				<UML:TaggedValue tag="ea_localid" value="126"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=1134;DocSize.cy=791;ShowDetails=0;Orientation=L;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=46F9BA2D;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+				<UML:TaggedValue tag="persistentstyle" value="DGS=On=0:CNT=8:W=120:H=40:SG=0:SGH=0:AEB=0:;AR=0;DCL=0;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=450;Top=568;Right=540;Bottom=638;" subject="EAID_549EAA50_4472_4d7b_B75F_8FFF4C2FA6D6" seqno="1" style="DUID=2F5AD919;NSL=0;BFol=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;LCol=16760576;BCol=16775408;LWth=0;"/>
+				<UML:DiagramElement geometry="Left=440;Top=467;Right=540;Bottom=537;" subject="EAID_EED2D6B7_93E5_477d_8D50_015623A1BCA9" seqno="2" style="DUID=2798C33D;NSL=0;BFol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16775408;LCol=16760576;"/>
+				<UML:DiagramElement geometry="Left=1044;Top=320;Right=1164;Bottom=405;" subject="EAID_2C25385C_30F0_450b_A16E_414FDE1179EE" seqno="3" style="NSL=0;BFol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16436871;LCol=16760576;DUID=EE1A3A21;"/>
+				<UML:DiagramElement geometry="Left=46;Top=210;Right=170;Bottom=280;" subject="EAID_E604436E_24F0_43f4_B21D_9D577360556A" seqno="4" style="NSL=0;BFol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16775408;LCol=16760576;DUID=97127539;"/>
+				<UML:DiagramElement geometry="Left=848;Top=71;Right=981;Bottom=141;" subject="EAID_6C2CD6FC_8F82_4ee0_B229_CD80E409BF98" seqno="5" style="NSL=0;BFol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16775408;LCol=16760576;DUID=E89AC60D;"/>
+				<UML:DiagramElement geometry="Left=19;Top=365;Right=120;Bottom=423;" subject="EAID_C38B8223_4584_4733_8A6F_067EC328F036" seqno="6" style="NSL=0;BFol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16775408;LCol=16760576;DUID=6D23CBB1;"/>
+				<UML:DiagramElement geometry="Left=1052;Top=232;Right=1156;Bottom=302;" subject="EAID_9F685E74_689C_4a8a_B67E_06262D40C6D0" seqno="7" style="NSL=0;BFol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;LCol=16760576;BCol=16436871;DUID=BB278449;"/>
+				<UML:DiagramElement geometry="Left=852;Top=428;Right=1061;Bottom=568;" subject="EAID_34812531_5F7E_49fe_BB46_182685C23DD3" seqno="8" style="NSL=0;BFol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;LCol=16760576;BCol=16775408;DUID=5C771C79;"/>
+				<UML:DiagramElement geometry="Left=287;Top=66;Right=411;Bottom=136;" subject="EAID_061D0AD3_D16C_4716_819D_B949B63F23C9" seqno="9" style="NSL=0;BFol=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16775408;LCol=16760576;DUID=20FE37E1;LWth=0;"/>
+				<UML:DiagramElement geometry="Left=608;Top=210;Right=739;Bottom=267;" subject="EAID_4224832A_8673_46c8_B415_6335941B38FA" seqno="10" style="NSL=0;BFol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16436871;LCol=16760576;DUID=F9DAABBD;"/>
+				<UML:DiagramElement geometry="Left=69;Top=10;Right=319;Bottom=85;" subject="EAID_899B04F5_413B_4767_824D_387C32848D6B" seqno="11" style="LCol=16760576;DUID=6B7EA3BA;"/>
+				<UML:DiagramElement geometry="Left=264;Top=683;Right=400;Bottom=794;" subject="EAID_A9B5893D_95E7_42e5_AE83_678A803CE7DD" seqno="12" style="NSL=0;BFol=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16775408;LCol=16760576;DUID=DE1F72EC;LWth=0;"/>
+				<UML:DiagramElement geometry="Left=264;Top=494;Right=354;Bottom=564;" subject="EAID_24F7E137_1EE6_4b7b_B27D_528FC850D030" seqno="13" style="NSL=0;BFol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16436871;LCol=16760576;DUID=0AD15459;"/>
+				<UML:DiagramElement geometry="Left=308;Top=336;Right=421;Bottom=429;" subject="EAID_DC021D36_9680_4d8c_B92B_770AA7378FA8" seqno="14" style="NSL=0;BFol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16436871;LCol=16760576;DUID=92199E5D;"/>
+				<UML:DiagramElement geometry="Left=577;Top=335;Right=667;Bottom=405;" subject="EAID_7B366DCD_90E0_497e_AD65_5219D2F51CFA" seqno="15" style="NSL=0;BFol=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;LCol=16760576;DUID=385781A5;LWth=0;BCol=16775408;"/>
+				<UML:DiagramElement geometry="Left=291;Top=223;Right=450;Bottom=293;" subject="EAID_748202B6_0AB7_4256_B7B8_929DA363679D" seqno="16" style="NSL=0;BFol=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=16436871;LCol=16760576;DUID=D3AEB9B0;LWth=0;"/>
+				<UML:DiagramElement geometry="Left=703;Top=335;Right=828;Bottom=405;" subject="EAID_DE982C55_B32D_4262_868C_1A5EA72C85BF" seqno="17" style="NSL=0;BFol=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;LCol=16760576;DUID=424AADC9;LWth=0;BCol=16775408;"/>
+				<UML:DiagramElement geometry="Left=170;Top=359;Right=274;Bottom=429;" subject="EAID_17109611_B44A_467d_8234_CDC554A5F2C0" seqno="18" style="DUID=41CF5BAA;BCol=16775408;LCol=16760576;"/>
+				<UML:DiagramElement geometry="EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=16:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=CX=6:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_B27CFBA7_B3CF_4b69_B4F5_CD0EE3463AEB" style="Mode=3;EOID=5C771C79;SOID=2798C33D;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=93:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=CX=6:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_449C1B8A_4DB9_43af_B9FA_A70F943D9F9A" style="Mode=3;EOID=2F5AD919;SOID=2798C33D;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=2;EY=-1;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=93:CY=14:OX=0:OY=0:HDN=1:BLD=1:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=914:-362$;" subject="EAID_21903180_BF2D_4dc2_AB09_9561D03B4402" style="Mode=3;EOID=E89AC60D;SOID=EE1A3A21;Color=8388736;LWidth=0;TREE=LV;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=CX=93:CY=14:OX=0:OY=0:HDN=1:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=106:-186$349:-186$;" subject="EAID_D8DE4704_6AE2_41a4_88EA_52BE97C20F68" style="Mode=3;EOID=20FE37E1;SOID=97127539;Color=8388736;LWidth=0;TREE=V;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=-2;SY=25;EX=-2;EY=-11;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=CX=78:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=CX=6:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_602E6365_097A_4b0d_951C_F8DEBEBCFDD9" style="Mode=3;EOID=20FE37E1;SOID=E89AC60D;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
+				<UML:DiagramElement geometry="EDGE=1;SX=0;SY=0;EX=-8;EY=0;$LLB=;LLT=;LMT=;LMB=CX=93:CY=14:OX=0:OY=0:HDN=1:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=68:-330$108:-330$;" subject="EAID_2179AB23_2EE8_4e3d_BA3D_4275D88EE4AB" style="Mode=3;EOID=97127539;SOID=6D23CBB1;Color=8388736;LWidth=0;TREE=V;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=93:CY=14:OX=0:OY=0:HDN=1:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=914:-267$;" subject="EAID_9DCD8D09_5DE2_4542_9B04_680B3A899790" style="Mode=3;EOID=E89AC60D;SOID=BB278449;Color=8388736;LWidth=0;TREE=LV;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_FCDC9A67_5B86_4487_B69F_C2255A290D79" style="Mode=3;EOID=E89AC60D;SOID=5C771C79;Color=8388736;LWidth=0;TREE=LV;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=CX=5:CY=14:OX=0:OY=0:HDN=1:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=671:-186$349:-186$;" subject="EAID_92EE9081_6BD6_4223_B6B2_FC9A98425A87" style="Mode=3;EOID=20FE37E1;SOID=F9DAABBD;Color=8388736;LWidth=0;TREE=V;Hidden=0;"/>
+				<UML:DiagramElement geometry="EDGE=1;SX=0;SY=9;EX=-12;EY=0;$LLB=;LLT=;LMT=;LMB=CX=93:CY=14:OX=0:OY=0:HDN=1:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_92F0F600_C022_4aa4_B329_36C6CFEC9D2B" style="Mode=3;EOID=92199E5D;SOID=0AD15459;Color=8388736;LWidth=0;TREE=OS;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=27;SY=-1;EX=-67;EY=-18;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=15:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=CX=6:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_0A4A2565_322D_49a0_A927_90F8D5B110C8" style="Mode=3;EOID=DE1F72EC;SOID=0AD15459;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
+				<UML:DiagramElement geometry="EX=16;EY=0;EDGE=2;SX=0;SY=-19;$LLB=;LLT=;LMT=;LMB=;LRT=CX=16:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=CX=6:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;IRHS=;ILHS=;Path=506:-401$;" subject="EAID_FF0A1FB5_C20B_4189_B1C5_8BE9AFC76AC1" style="Mode=3;EOID=2798C33D;SOID=92199E5D;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=2;SY=0;EX=11;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=21:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=CX=6:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;IRHS=;ILHS=;Path=366:-648$1115:-648$;" subject="EAID_D365A1B4_D5DA_42bf_AC16_9CC2835189A7" style="Mode=3;EOID=EE1A3A21;SOID=92199E5D;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=CX=93:CY=14:OX=0:OY=0:HDN=1:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=620:-317$673:-317$;" subject="EAID_F97C544F_9F7F_4be4_84D9_3CED5EBFABB5" style="Mode=3;EOID=F9DAABBD;SOID=385781A5;Color=8388736;LWidth=0;TREE=V;Hidden=0;"/>
+				<UML:DiagramElement geometry="EX=-56;EY=-1;SX=24;SY=-1;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=78:CY=14:OX=105:OY=-22:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=CX=6:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_CFE019A4_9DC5_4032_88A8_43AD2516ADB5" style="Mode=3;EOID=92199E5D;SOID=D3AEB9B0;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=-16;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=CX=23:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=CX=6:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_BF754526_4D1A_4dcf_B5FE_8DF8E2D7BF60" style="Mode=3;EOID=97127539;SOID=D3AEB9B0;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=CX=93:CY=14:OX=0:OY=0:HDN=1:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=369:-186$349:-186$;" subject="EAID_4351E66A_1AF6_4257_885E_ACC70B2E0813" style="Mode=3;EOID=20FE37E1;SOID=D3AEB9B0;Color=8388736;LWidth=0;TREE=V;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=19;SY=12;EX=-2;EY=-7;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=60:CY=14:OX=-24:OY=-2:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=CX=6:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_21C2A97F_0FF7_4100_86B2_E63B6E941EAD" style="Mode=3;EOID=F9DAABBD;SOID=D3AEB9B0;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=CX=93:CY=14:OX=0:OY=0:HDN=1:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=763:-317$673:-317$;" subject="EAID_E2DC71AD_CDC9_4bb7_9A57_714F14A1308F" style="Mode=3;EOID=F9DAABBD;SOID=424AADC9;Color=8388736;LWidth=0;TREE=V;Hidden=0;"/>
+				<UML:DiagramElement geometry="EDGE=1;SX=2;SY=34;EX=-5;EY=0;$LLB=;LLT=;LMT=;LMB=CX=93:CY=14:OX=0:OY=0:HDN=1:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=223:-330$108:-330$;" subject="EAID_ABEBB5EB_2398_47ea_B364_1A4FBB5B0BC2" style="Mode=3;EOID=97127539;SOID=41CF5BAA;Color=8388736;LWidth=0;TREE=V;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAStub xmi.id="EAID_A9B5893D_95E7_42e5_AE83_678A803CE7DD" name="RessourceInstallationFixe" UMLType="Class"/>
+		<EAModel.paramSub/>
+		<EAStub xmi.id="EAID_4224832A_8673_46c8_B415_6335941B38FA" name="SystemeReperageGeodesique" UMLType="Class"/>
+		<EAStub xmi.id="EAID_061D0AD3_D16C_4716_819D_B949B63F23C9" name="SystemeReperage" UMLType="Class"/>
+		<EAStub xmi.id="EAID_E604436E_24F0_43f4_B21D_9D577360556A" name="SystemeReperagePk" UMLType="Class"/>
+		<EAStub xmi.id="EAID_351BA7B5_AB06_495b_B891_935183B9EEDA" name="ObjetPersistant" UMLType="Class"/>
+		<EAStub xmi.id="EAID_2C25385C_30F0_450b_A16E_414FDE1179EE" name="LocalisationCartographique" UMLType="Class"/>
+		<EAStub xmi.id="EAID_EED2D6B7_93E5_477d_8D50_015623A1BCA9" name="ImplantationPonctuelle" UMLType="Class"/>
+		<EAStub xmi.id="EAID_8412B4A7_D2C1_4320_B1EC_E250FA4EF362" UMLType="Note"/>
+		<EAStub xmi.id="EAID_932534E6_36D4_4f30_AA49_0AC51870F1EA" name="TypeLieuSecondaire" UMLType="Class"/>
+	</XMI.extensions>
+</XMI>

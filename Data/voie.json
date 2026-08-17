@@ -1,0 +1,1767 @@
+{
+    "enums": [
+        {
+            "nom": "EnumTypeParcours",
+            "valeurs": [
+                "D",
+                "V",
+                "T",
+                "L"
+            ]
+        },
+        {
+            "nom": "EnumUtilisationElementTopologique",
+            "valeurs": [
+                "D",
+                "C",
+                "A"
+            ]
+        },
+        {
+            "nom": "EnumSensVisible",
+            "valeurs": [
+                "D",
+                "C",
+                "B"
+            ]
+        },
+        {
+            "nom": "EnumSensParcours",
+            "valeurs": [
+                "D",
+                "C",
+                "N"
+            ]
+        },
+        {
+            "nom": "EnumMouvementPossible",
+            "valeurs": [
+                "BA",
+                "AB",
+                "I",
+                "D"
+            ]
+        },
+        {
+            "nom": "EnumCategorieCommercialeSaf",
+            "valeurs": [
+                "C1",
+                "C2",
+                "C3",
+                "C4",
+                "NA"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "ObjetPersistant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "GInstanceGeometrie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationPk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperagePk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Entreprise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationTypeVoieLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageParcours",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationRessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceParcoursInfrastructureLibre",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoPonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoPonctuelleRelative",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TripletDeVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AppareilDeVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Noeud",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementADateAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ParcoursTopologiqueHabille",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Portion",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CompetenceSurLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointOrientation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SectionDeLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleEspacement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperageLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Gare",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Consigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageOriente",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Localisateur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentHomogeneVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperageVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationTypeVoieIFX",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteTypeVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ValiditeSEL",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentSagitaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CompetenceSurVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "BrancheAPV",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "InstanceInfrastructure",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ReseauInfrastructure",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationRessourceInfra",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RessourceParcoursInfrastructureAbstraite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationInstanceInfrastructureRessource",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementParcours",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ExtremiteReseau",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementTopologique",
+            "abstraite": false,
+            "description": "TIV, TIL",
+            "attributs": []
+        },
+        {
+            "nom": "DetailParcours",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RessourceConnexion",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeExtremiteReseau",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RessourceConnexionOrientee",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "utilisationElementTopologiqueA",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "utilisationElementTopologiqueB",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ElementTopologiquePonctuel",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RupturePk",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceParcoursTopologiqueADate",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementParcoursBase",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ParcoursTopologique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "typeParcoursTopologique",
+                    "type": "EnumTypeParcours",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ElementTopologiqueLineaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationParcoursElementTopologique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "MouvementPossible",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mouvementPossible",
+                    "type": "EnumMouvementPossible",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TroncCommun",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TronconDItineraireLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Ligne",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "dateAttribution",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "libelleCourt",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "reservee",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ExtremiteLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationSRLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationIdentifiantSafSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "positionSignificative",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sousSaf",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Saf",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "categorieCommerciale",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "codeUic",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "gareIdReseau",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationSafPere",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationIdentifiantSafGare",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationIdentifiantSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeSafADate",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "VoieDeLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageNatureUsageVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ExtremiteVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ProprietaireVoieDeSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "longueur",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Voie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nom",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationSRVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RattachementVoieDeSafGare",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeDeVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mnemonique",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RattachementVoieDeSafSousSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "VoieDeSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nomLigne",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RattachementVoieDeSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TronconDItineraireVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "InfoComplementaireVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "aireChargement",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "aptitudeEssieux",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "besoinMilitaire",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "commentaireElectrification",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "commentaireRecommendation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "ddaRelais",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "dfaRelais",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "electrification",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "essaiFrein",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "faibleTraffic",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "longuerClasse1D",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurClasse1C",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurClasse2C",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurClasse2D",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurClasse3",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurClasse4",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurElectrifiee",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurQuai",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurUtile",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemoTypeElectrification",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "premierePartieITE",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "quaiUtilisable",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "reception3600Tonnes",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "receptionConvoiExceptionnel",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "relais",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "SGTC",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "statut",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "visiteTrainAutorisee",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "VSMD",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "NomVoieADate",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nom",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RattachementVoieDeSafSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "InstanceInfrastructure",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "ReseauInfrastructure",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "RelationRessourceInfra",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "RessourceParcoursInfrastructureAbstraite",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "AssociationInstanceInfrastructureRessource",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "ElementParcours",
+            "cible": "ElementParcoursBase"
+        },
+        {
+            "source": "ExtremiteReseau",
+            "cible": "ElementTopologiquePonctuel"
+        },
+        {
+            "source": "ExtremiteLigne",
+            "cible": "ExtremiteReseau"
+        },
+        {
+            "source": "ExtremiteVoie",
+            "cible": "ExtremiteReseau"
+        },
+        {
+            "source": "Ligne",
+            "cible": "RessourceParcoursTopologique"
+        },
+        {
+            "source": "Voie",
+            "cible": "RessourceParcoursTopologique"
+        },
+        {
+            "source": "RessourceParcoursTopologique",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "ElementTopologiquePonctuel",
+            "cible": "ElementTopologique"
+        },
+        {
+            "source": "ElementTopologiqueLineaire",
+            "cible": "ElementTopologique"
+        },
+        {
+            "source": "ElementTopologique",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "TripletDeVoie",
+            "cible": "ElementTopologique"
+        },
+        {
+            "source": "RessourceConnexionOrientee",
+            "cible": "RessourceConnexion"
+        },
+        {
+            "source": "RessourceConnexion",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "TypeExtremiteReseau",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "RupturePk",
+            "cible": "ElementTopologiquePonctuel"
+        },
+        {
+            "source": "RessourceParcoursTopologiqueADate",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "ElementParcoursBase",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "ParcoursTopologique",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "TronconDItineraireVoie",
+            "cible": "ElementTopologiqueLineaire"
+        },
+        {
+            "source": "TronconDItineraireLigne",
+            "cible": "ElementTopologiqueLineaire"
+        },
+        {
+            "source": "MouvementPossible",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "TroncCommun",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "TypeLigne",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "RelationSRLigne",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "RelationLigne",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "RelationLigne",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "RelationIdentifiantSafSaf",
+            "cible": "RelationIdentifiantSaf"
+        },
+        {
+            "source": "TypeSaf",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "RelationSafPere",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "RelationIdentifiantSafGare",
+            "cible": "RelationIdentifiantSaf"
+        },
+        {
+            "source": "RelationIdentifiantSaf",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "VoieDeLigne",
+            "cible": "Voie"
+        },
+        {
+            "source": "HabillageNatureUsageVoie",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "ProprietaireVoieDeSaf",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "VoieDeSaf",
+            "cible": "Voie"
+        },
+        {
+            "source": "RelationSRVoie",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "RattachementVoieDeSafGare",
+            "cible": "RattachementVoieDeSaf"
+        },
+        {
+            "source": "TypeDeVoie",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "RattachementVoieDeSafSousSaf",
+            "cible": "RattachementVoieDeSaf"
+        },
+        {
+            "source": "RattachementVoieDeSafSaf",
+            "cible": "RattachementVoieDeSaf"
+        },
+        {
+            "source": "RattachementVoieDeSaf",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "InfoComplementaireVoie",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "NomVoieADate",
+            "cible": "ElementADateAbstrait"
+        }
+    ],
+    "relations": [
+        {
+            "source": "InstanceInfrastructure",
+            "type": "AGREGE",
+            "cible": "InstanceInfrastructure",
+            "role": "instanceAgregee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationInstanceInfrastructureRessource",
+            "type": "ASSOCIE_A",
+            "cible": "InstanceInfrastructure",
+            "role": "instanceInfra",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "GInstanceGeometrie",
+            "type": "ASSOCIE_A",
+            "cible": "InstanceInfrastructure",
+            "role": "instanceInfra",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReseauInfrastructure",
+            "type": "AGREGE",
+            "cible": "InstanceInfrastructure",
+            "role": "infrastructures",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceParcoursInfrastructureAbstraite",
+            "type": "COMPOSE_DE",
+            "cible": "RelationRessourceInfra",
+            "role": "relationsRessourceInfra",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceInfra",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceAbstraite",
+            "role": "ressourceInfra",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceInfra",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceAbstraite",
+            "role": "ressourceInfra",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationInstanceInfrastructureRessource",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceAbstraite",
+            "role": "ressourceInfra",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationInstanceInfrastructureRessource",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceAbstraite",
+            "role": "ressourceInfra",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ExtremiteReseau",
+            "type": "ASSOCIE_A",
+            "cible": "TypeExtremiteReseau",
+            "role": "typeExtremite",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ExtremiteReseau",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "entrepriseLimite",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationTypeVoieLigne",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageParcours",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "parcoursInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceParcoursTopologique",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursTopo",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationRessourceParcoursTopologique",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursTopo",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceParcoursTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "RessourceParcoursTopologiqueADate",
+            "role": "ressourcesInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceParcoursInfrastructureLibre",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoPonctuelle",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoPonctuelleRelative",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPonctuelle",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceConnexionOrientee",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "elementTopologiqueA",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceConnexionOrientee",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "elementTopologiqueB",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationParcoursElementTopologique",
+            "type": "AGREGE",
+            "cible": "ElementTopologique",
+            "role": "ressourceInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DetailParcours",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "elementTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcoursBase",
+            "type": "COMPOSE_DE",
+            "cible": "DetailParcours",
+            "role": "detailsParcours",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AppareilDeVoie",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceConnexion",
+            "role": "connexions",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Noeud",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceConnexion",
+            "role": "connexions",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceConnexionOrientee",
+            "type": "COMPOSE_DE",
+            "cible": "MouvementPossible",
+            "role": "mouvementsPossibles",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementTopologiquePonctuel",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RupturePk",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceParcoursTopologiqueADate",
+            "type": "COMPOSE_DE",
+            "cible": "RelationParcoursElementTopologique",
+            "role": "ressourceInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ParcoursTopologique",
+            "type": "AGREGE",
+            "cible": "ElementParcoursBase",
+            "role": "elementsParcours",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ParcoursTopologiqueHabille",
+            "type": "ASSOCIE_A",
+            "cible": "ParcoursTopologique",
+            "role": "parcoursDemande",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementTopologiqueLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementTopologiqueLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Portion",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologiqueLineaire",
+            "role": "ressource",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TroncCommun",
+            "type": "COMPOSE_DE",
+            "cible": "RelationLigne",
+            "role": "ligneReference",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TroncCommun",
+            "type": "COMPOSE_DE",
+            "cible": "RelationLigne",
+            "role": "ligneMasquee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Ligne",
+            "type": "ASSOCIE_A",
+            "cible": "TypeLigne",
+            "role": "typeLigne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CompetenceSurLigne",
+            "type": "ASSOCIE_A",
+            "cible": "TronconDItineraireLigne",
+            "role": "tronconDItineraireLignes",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointOrientation",
+            "type": "ASSOCIE_A",
+            "cible": "TronconDItineraireLigne",
+            "role": "troncon",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SectionDeLigne",
+            "type": "ASSOCIE_A",
+            "cible": "Ligne",
+            "role": "ligne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Ligne",
+            "type": "COMPOSE_DE",
+            "cible": "RelationSRLigne",
+            "role": "relationsSRLigne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLigne",
+            "type": "ASSOCIE_A",
+            "cible": "Ligne",
+            "role": "ligne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "VoieDeLigne",
+            "type": "ASSOCIE_A",
+            "cible": "Ligne",
+            "role": "ligne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleEspacement",
+            "type": "ASSOCIE_A",
+            "cible": "Ligne",
+            "role": "ligne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationSRLigne",
+            "type": "AGREGE",
+            "cible": "SystemeReperageLigne",
+            "role": "systemesReperageLigne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLigne",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLigne",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationIdentifiantSafSaf",
+            "type": "ASSOCIE_A",
+            "cible": "Saf",
+            "role": "saf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeSafADate",
+            "type": "ASSOCIE_A",
+            "cible": "TypeSaf",
+            "role": "typeSaf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "ASSOCIE_A",
+            "cible": "TypeSaf",
+            "role": "typeSaf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeSaf",
+            "type": "ASSOCIE_A",
+            "cible": "TypeSaf",
+            "role": "typeSafRattachement",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationSafPere",
+            "type": "ASSOCIE_A",
+            "cible": "Saf",
+            "role": "safPere",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "AGREGE",
+            "cible": "RelationIdentifiantSaf",
+            "role": "identifiants",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "ASSOCIE_A",
+            "cible": "Gare",
+            "role": "IdentifiantId",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RattachementVoieDeSafSaf",
+            "type": "ASSOCIE_A",
+            "cible": "Saf",
+            "role": "saf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "ASSOCIE_A",
+            "cible": "Consigne",
+            "role": "consignesEmbranchementIds",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "COMPOSE_DE",
+            "cible": "TypeSafADate",
+            "role": "typesSaf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "COMPOSE_DE",
+            "cible": "RelationSafPere",
+            "role": "relationsSafPere",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "ASSOCIE_A",
+            "cible": "Saf",
+            "role": "safIdentifiantId",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationIdentifiantSafGare",
+            "type": "ASSOCIE_A",
+            "cible": "Gare",
+            "role": "gare",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageNatureUsageVoie",
+            "type": "ASSOCIE_A",
+            "cible": "TypeDeVoie",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageNatureUsageVoie",
+            "type": "ASSOCIE_A",
+            "cible": "Voie",
+            "role": "voie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProprietaireVoieDeSaf",
+            "type": "ASSOCIE_A",
+            "cible": "VoieDeSaf",
+            "role": "voie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProprietaireVoieDeSaf",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "proprietaire",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Voie",
+            "type": "COMPOSE_DE",
+            "cible": "NomVoieADate",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Localisateur",
+            "type": "ASSOCIE_A",
+            "cible": "Voie",
+            "role": "voieEntree",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Voie",
+            "type": "ASSOCIE_A",
+            "cible": "InfoComplementaireVoie",
+            "role": "voie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Localisateur",
+            "type": "ASSOCIE_A",
+            "cible": "Voie",
+            "role": "voieVia",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Voie",
+            "type": "ASSOCIE_A",
+            "cible": "TypeDeVoie",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Localisateur",
+            "type": "ASSOCIE_A",
+            "cible": "Voie",
+            "role": "voieDestination",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentHomogeneVoie",
+            "type": "ASSOCIE_A",
+            "cible": "Voie",
+            "role": "voie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Voie",
+            "type": "ASSOCIE_A",
+            "cible": "InfoComplementaireVoie",
+            "role": "infos",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Voie",
+            "type": "COMPOSE_DE",
+            "cible": "RelationSRVoie",
+            "role": "relationsSRVoie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationSRVoie",
+            "type": "AGREGE",
+            "cible": "SystemeReperageVoie",
+            "role": "systemesReperageVoie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RattachementVoieDeSafGare",
+            "type": "ASSOCIE_A",
+            "cible": "Gare",
+            "role": "gare",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationTypeVoieIFX",
+            "type": "ASSOCIE_A",
+            "cible": "TypeDeVoie",
+            "role": "types",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationTypeVoieLigne",
+            "type": "ASSOCIE_A",
+            "cible": "TypeDeVoie",
+            "role": "types",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteTypeVoie",
+            "type": "ASSOCIE_A",
+            "cible": "TypeDeVoie",
+            "role": "typeVoie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ValiditeSEL",
+            "type": "ASSOCIE_A",
+            "cible": "VoieDeSaf",
+            "role": "vs",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "VoieDeSaf",
+            "type": "AGREGE",
+            "cible": "RattachementVoieDeSaf",
+            "role": "rattachements",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "VoieDeSaf",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "appartientA",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentSagitaire",
+            "type": "ASSOCIE_A",
+            "cible": "TronconDItineraireVoie",
+            "role": "troncons",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CompetenceSurVoie",
+            "type": "ASSOCIE_A",
+            "cible": "TronconDItineraireVoie",
+            "role": "tronconDItineraireVoies",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "BrancheAPV",
+            "type": "ASSOCIE_A",
+            "cible": "TronconDItineraireVoie",
+            "role": "tiVoie",
+            "cardinalite": "0..*"
+        }
+    ]
+}

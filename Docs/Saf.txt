@@ -1,0 +1,134 @@
+1.	Définition
+
+Secteur d’Activité Ferroviaire : 
+Un secteur d’activité ferroviaire est une zone géographique localisée sur le réseau ferré, qui possède une ou plusieurs voies de service et qui assure une ou plusieurs fonctions liées à l’activité ferroviaire.
+Dans le cas d’un triage, le SAF pourra être décomposé en Sous-Saf (faisceau de triage). 
+
+2.	Caractéristiques 
+
+2.1.	Caractéristiques de l’objet
+
+Objets	Caractéristiques	Obligatoire /facultative /conditionnelle/ interdit	Compléments d’informations
+SAF ITE	Libellé	O	Les libellés à renseigner en priorités sont ceux indiqués sur le PT, à défaut d’indication sur le PT, le libellé sera Km*espace*Pk du SAF « ITE »
+	Code UIC	F	Ne pas remplir sauf si demande particulière
+	Type	O	ITE : Installation terminale embranchée
+	Région	O	
+	Catégorie relai	F	Non concerné
+	Rattachement	O	Une ITE doit être localisée sur une ligne ou sur un SAF et doit être rattachée à une GARE. Il faut choisir la gare responsable de l’ITE. Les consignes locales d’exploitation (cle) de manœuvre ou de desserte donnent des précisions sur la gare de rattachement du SAF ITE. Ces consignes sont consultables sur DigiDoc.
+	Localisations-Ligne-PK	O	Si ancrage sur Ligne.
+Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes 
+	Localisation sur SAF	O	Si son ancrage est sur un SAF.
+	DDA & DFA	O	Date de mise en service indiquée par le GUF
+SAF chantier	Libellé	O	Les libellés à renseigner en priorités sont ceux indiqués sur le PT.
+ À défaut d’indication sur le PT, le libellé sera :
+Si positionné côté voie 1, Faisceau Impair de XXX avec XXX = nom de la gare ou à défaut du lieu-dit.
+Si positionné côté voie 2, Faisceau Pair de XXX avec XXX = nom de la gare ou à défaut du lieu-dit.
+	Code UIC	F	Ne pas remplir sauf si demande particulière
+	Type	O	CHANTIER : Inclue les chantiers, les différents faisceaux utilisés pour le garage de matériel, ou toute autre entité non répertoriée.
+	Région	O	
+	Catégorie relai	C	Faisceau comportant au moins une voie ayant usage de relai. Les propriétés propres aux faisceaux relais sont les suivantes (données par le CRR) :
+-	L’orientation sous forme de commentaire
+-	Les conditions d’accessibilité sous forme de commentaire
+-	Les conditions d’ouverture sous forme de commentaire
+	Rattachement	O	Rattachement soit à une Gare, soit à un SAF
+	Localisations-ligne-PK	O	Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes 
+	Localisation sur SAF	O	Si un de ses ancrage est sur un SAF.
+	DDA & DFA	O	Date de mise en service indiquée par le GUF
+SAF EIM	Libellé	O	Les libellés à renseigner sont ceux indiqués sur le PT.
+	Code UIC	F	Ne pas remplir sauf si demande particulière
+	Type	O	EIM : Faisceaux de voies appartenant aux établissements incluant les EIMM, les EIM TGV, les EMM, les EMR, les postes MR, les ateliers du matériel, les centre MM, les postes d’entretien, les postes matériel, les EI, les magasins équipement, les magasins voie, les magasins généraux, les centres d’essai, les laboratoires.
+	Région	O	
+	Catégorie relai	C	Faisceau comportant au moins une voie ayant usage de relai. Les propriétés propres aux faisceaux relais sont les suivantes (données par le CRR) :
+-	L’orientation sous forme de commentaire
+-	Les conditions d’accessibilité sous forme de commentaire
+-	Les conditions d’ouverture sous forme de commentaire
+	Rattachement	O	Rattachement soit à une Gare, soit à un SAF
+	Localisations-ligne-PK	O	Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes 
+	Localisation sur SAF	O	Si un de ses ancrage est sur un SAF.
+	DDA & DFA	O	Date de mise en service indiquée par le GUF
+SAF ET	Libellé	O	Les libellés à renseigner sont ceux indiqués sur le PT.
+	Code UIC	F	Ne pas remplir sauf si demande particulière
+	Type	O	ET : Faisceaux de voies appartenant aux établissements avec une composante traction, ce qui inclut les EMT, les dépôts, les dépôts relais, les établissements T, les annexes T et les UP déportées
+	Région	O	
+	Catégorie relai	C	Faisceau comportant au moins une voie ayant usage de relai. Les propriétés propres aux faisceaux relais sont les suivantes :
+-	L’orientation sous forme de commentaire
+-	Les conditions d’accessibilité sous forme de commentaire
+-	Les conditions d’ouverture sous forme de commentaire
+	Rattachement	O	Rattachement soit à une Gare, soit à un SAF
+	Localisations-ligne-PK	O	Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes 
+	Localisation sur SAF	O	Si un de ses ancrage est sur un SAF.
+	DDA & DFA	O	Date de mise en service indiquée par le GUF
+
+
+
+
+
+
+
+
+
+SAF Triage	Libellé	O	Les libellés à renseigner sont ceux indiqués sur le PT.
+	Code UIC	F	Ne pas remplir sauf si demande particulière
+	Type	O	Triage 
+	Région	O	
+	Catégorie relai	C	Faisceau comportant au moins une voie ayant usage de relai. Les propriétés propres aux faisceaux relais sont les suivantes (données par le CRR) :
+-	L’orientation sous forme de commentaire
+-	Les conditions d’accessibilité sous forme de commentaire
+-	Les conditions d’ouverture sous forme de commentaire
+	Rattachement	O	Rattachement soit à une Gare, soit à un SAF
+	Localisations-ligne-PK	O	Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes 
+	Localisation sur SAF	O	Si un de ses ancrage est sur un SAF.
+	DDA & DFA	O	Date de mise en service indiquée par le GUF
+
+
+
+
+
+
+
+
+
+Sous-
+SAF 	Libellé	O	Les libellés à renseigner sont ceux indiqués sur le PT.
+	Code UIC	F	Ne pas remplir sauf si demande particulière
+	Type	O	Triage 
+	Région	O	
+	Catégorie relai	C	Faisceau comportant au moins une voie ayant usage de relai. Les propriétés propres aux faisceaux relais sont les suivantes (données par le CRR) :
+-	L’orientation sous forme de commentaire
+-	Les conditions d’accessibilité sous forme de commentaire
+-	Les conditions d’ouverture sous forme de commentaire
+	Rattachement	O	Rattachement à un SAF Triage
+	Localisations-ligne-PK	I	Pas de localisation à la ligne
+	Localisation sur SAF	O	Si un de ses ancrage est sur un SAF.
+	DDA & DFA	O	Date de mise en service indiquée par le GUF
+
+3.	Règles générales pour la gestion 
+
+3.1.	Création 
+
+3.2.	Modification 
+
+3.3.	Suppression (bornage)
+
+
+3.4.	Mise Hors service (DFS)
+
+
+4.	Forme de remontée 
+
+-	Le plan technique est la source prioritaire des informations.
+-	Le CRR complète les informations pour les caractéristiques spécifié au chapitre 2.
+En cas de demande du CRR si le PT n’indique pas clairement la caractéristique alors prendre en compte la demande du CRR.
+5.	Périodicité
+
+Dés connaissance de l’information.
+6.	Impact à contrôler
+
+-	Si un PR est horairisé au niveau du SAF à supprimer, prévenir le GUC afin qu’il procède à son maintien.
+-	Voies de service
+-	Les nœuds de VSM
+-	DP caténaires
+-	DP voies
+-	IF sur SAF 
+-	Itinéraires
+

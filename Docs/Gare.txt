@@ -1,0 +1,51 @@
+1.	Définition
+
+Cet objet correspond aux gares de voyageurs, il s’agit d’un lieu d'arrêt des trains. Une gare de voyageur est composée d’installations qui ont pour fonction de permettre la montée et la descente des voyageurs.
+Une gare de voyageur n’est pas nécessairement composée d’un bâtiment voyageur.
+1.1.	Caractéristiques de l’installation fixe Gare
+
+Caractéristiques	Obligatoire Facultative Conditionnelle	Compléments d’informations
+Libellé 	O	Le libellé est repris sur le schéma de signalisation.
+Il ne faut pas inscrire le PL (pleine Ligne) 
+Lorsque le nom est composé il faut séparer les mots par un tiret du 6.
+Si le nom de la gare comporte un Saint ou Sainte, il faut réduire à St ou Ste.
+Activité	O	Gare exploitée : 
+	Frêt 
+	Voyageur : si desservit par les trains voyageurs. 
+	Infra : à partir du moment ou il y a un poste rattaché
+
+Gare non exploitée : si aucune activité alors la gare est non exploitée
+Code UIC	O	Composé de 8 chiffres les deux premiers correspondant au n° du gestionnaire d’Infrastructure (87 pour SNCF Réseau) les 6 suivant correspondent au code UG issu de l’application SACHEM via la procédure PR. A demander au GUC.
+Grande gare	C	Cet attribut est administré pour répondre aux besoins de la segmentation de gestion, seule les gares parisiennes sont des « grande gare ».
+Région	0	Correspond à l’habillage région SNCF
+Accessibilité		Erreur d’affichage 
+Orientation		
+Ouverture		
+Localisations à la ligne	0	Code Ligne : localiser la gare sur l’ensemble des lignes 
+PK : correspond à l’Axe du BV ou à l’axe des quais si pas de BV
+DDA
+DFA
+DDA	0	Date du plan technique
+DFA	0	Avant de supprimer (DFA) une gare il faut s’assurer qu’aucun PR n’est rattaché à celle-ci. Date du plan technique
+DFS	0	Seule date à positionner lorsque la gare est rattachée à un PR. 
+
+
+
+2.	Règles générales pour la gestion 
+
+-	La création à lieu lorsqu’une gare de voyageur apparait sur le schéma.
+-	Si la gare est supprimée sur le schéma de signalisation, alors il faut regarder qu’aucun PR n’est rattaché à cette gare. 
+Si un PR et rattaché alors il faut mettre la date du plan technique en DFS et mettre la gare en gare non exploitée.
+Si aucun PR n’est rattaché, il faut borner l’objet (DDA) à date du plan technique.
+3.	Forme de remontée 
+
+Fichier transmis par G&C dans le cadre de la convention.
+
+4.	Périodicité
+
+Dés connaissance de l’information.
+5.	Impact à contrôler
+
+Rattachement SAF
+Rattachement PR
+Rattachement POSTE

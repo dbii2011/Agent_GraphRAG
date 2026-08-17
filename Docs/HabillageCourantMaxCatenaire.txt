@@ -1,0 +1,43 @@
+1.	Définition
+
+Le courant maximal à la caténaire définit la valeur du courant maximal en ligne disponible pour un engin moteur ou groupe d’engin moteur. Ce courant est fourni pour chaque section de ligne et est exprimé en ampère.
+Cette valeur indique au conducteur la valeur à utiliser afin de positionner son sélecteur de puissance présent dans le poste de conduite.
+
+2.	Caractéristiques du courant Max à la caténaire 
+
+2.1.	Caractéristiques de l’objet
+
+Objets	Caractéristiques	Obligatoire Facultative Conditionnelle	Compléments d’informations
+Courant Max à la caténaire	Valeur du courant maximal 	O	Indiquer les valeurs en Ampère extraites des RTA article 302. Sur certain RTA l’article 302 est « réservé » et les valeurs se trouvent dans l’article 111.
+En cas d’absence de valeurs dans le RTA : 
+- Pour les lignes électrifiées en 1500 volts = la valeur par défaut à indiquer est de 5333 Ampères 
+- Pour les lignes électrifiées en 25000 volts = la valeur par défaut à indiquer est de 400 Ampères.
+
+Il ne peut y avoir deux valeurs différentes de courant max sur une même section, si deux RTA présentent une valeur différente sur la même section de ligne, alors il faut saisir la valeur la plus restrictive (la plus basse).
+
+	SRL	O	
+	PKD	O	Le PK repris dans le RTA est indicatif et doit être ajusté à la lecture du schéma de signalisation.
+En cas d’absence de valeurs dans le RTA, il faut se référer au schéma de signalisation correspondant à la zone indiquée dans le RTA en repérant soit les nœuds de lignes, soit les signaux propres à la traction électrique tels que définis art 205.9 de l’OP00580.
+	PKF	O	
+	Période d’activité DDA -DFA	O	DDA = date d’application du RT
+
+
+3.	Règles générales pour la gestion 
+
+3.1.	Création 
+
+3.2.	Modification 
+
+
+3.3.	Suppression (bornage)
+
+
+4.	Forme de remontée 
+
+Parution d’un nouvel RT A.
+5.	Périodicité
+
+Dés connaissance de l’information.
+6.	Impact à contrôler
+
+Sans objet.

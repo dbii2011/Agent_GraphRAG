@@ -1,0 +1,377 @@
+{
+    "enums": [
+        {
+            "nom": "EnumPositionAmontAval",
+            "valeurs": []
+        },
+        {
+            "nom": "EnumIndicateur",
+            "valeurs": []
+        }
+    ],
+    "classes": [
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Liaison",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationProprieteResourceQuantite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypePropriete",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "InstallationFixeVirtuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementITEFixation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementITESuspension",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementADateAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "InstallationTractionElectrique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CantonDePose",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "temperatureMaxRegularisation",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "temperatureMinRegularisation",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationRessourceIFxAncrage",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "position",
+                    "type": "EnumPositionAmontAval",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ElementITEArmement",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "desaxementFilDeContact",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Potence",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementITEAncrage",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "fictif",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImageAsset",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "LiaisonTransversable",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "StructurePorteuse",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "FamilleCatenaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LigneAerienneDeContact",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeArchet",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Portique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "hauteur",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Portee",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "hauteur",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ElementITETensionMecanique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementITE",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Poteau",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLigneAerienneDeContact",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "forceDeContact",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "nombreFilDeContact",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "vitesseMax",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "LigneAerienneDeContact",
+            "cible": "InstallationTractionElectrique"
+        },
+        {
+            "source": "InstallationTractionElectrique",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "CantonDePose",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "RelationRessourceIFxAncrage",
+            "cible": "RelationRessourceInstallationFixe"
+        },
+        {
+            "source": "ElementITEArmement",
+            "cible": "ElementITE"
+        },
+        {
+            "source": "Potence",
+            "cible": "StructurePorteuse"
+        },
+        {
+            "source": "ElementITEAncrage",
+            "cible": "ElementITE"
+        },
+        {
+            "source": "LiaisonTransversable",
+            "cible": "Liaison"
+        },
+        {
+            "source": "Portique",
+            "cible": "StructurePorteuse"
+        },
+        {
+            "source": "Poteau",
+            "cible": "StructurePorteuse"
+        },
+        {
+            "source": "StructurePorteuse",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "FamilleCatenaire",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "TypeArchet",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "Portee",
+            "cible": "InstallationFixeVirtuelle"
+        },
+        {
+            "source": "ElementITETensionMecanique",
+            "cible": "ElementITE"
+        },
+        {
+            "source": "ElementITE",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "ElementITEFixation",
+            "cible": "ElementITE"
+        },
+        {
+            "source": "ElementITESuspension",
+            "cible": "ElementITE"
+        },
+        {
+            "source": "TypeLigneAerienneDeContact",
+            "cible": "ElementADateAbstrait"
+        }
+    ],
+    "relations": [
+        {
+            "source": "CantonDePose",
+            "type": "COMPOSE_DE",
+            "cible": "TypeLigneAerienneDeContact",
+            "role": "typesLigneAerienneDeContact",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "FamilleCatenaire",
+            "type": "ASSOCIE_A",
+            "cible": "FamilleCatenaire",
+            "role": "parent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeLigneAerienneDeContact",
+            "type": "ASSOCIE_A",
+            "cible": "FamilleCatenaire",
+            "role": "familleCatenaire",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeLigneAerienneDeContact",
+            "type": "ASSOCIE_A",
+            "cible": "TypeArchet",
+            "role": "typesArchetCompatibles",
+            "cardinalite": "0..*"
+        }
+    ]
+}

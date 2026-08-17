@@ -1,0 +1,132 @@
+1.	Définition 
+
+Un accès est un point aménagé permettant  à partir de l’infrastructure routière d'accéder aux voies ferrées (classées par ligne) de l’entreprise. 
+N’est déclaré accès que les points autres que les PN, Ouvrage d’art et gare
+2.	Généralités de l’objet « Accès »
+
+2.1.	Libellé de l’accès
+
+	Cette donnée n’est pas obligatoire car elle peut être absente des documents
+	Si l’accès est numéroté celui doit apparaitre dans le libellé
+2.2.	Localisation de l’accès
+
+	La localisation de l’accès est obligatoire avec les informations suivantes :
+	Code ligne
+	PK de localisation
+	Position dans le sens croissant des Pk, valeurs possibles: droite, gauche ou Central
+	Compléter éventuellement  les Coordonnées géographiques, pour les valeurs voir chapitre 3 « Règles de coordonnées GPS» 
+
+Particularité : un accès peut avoir une multi-localisation, les positions sont données tout en respectant les pks croissant de chaque ligne 
+
+2.3.	Caractéristiques obligatoires 
+
+	Type d’accès, valeurs possibles : piéton, véhicule léger, 4X4, poids-lourds
+	Fermeture: valeurs possibles : oui ou non
+	Si l’accès est fermé, une information complémentaire doit être renseignée 
+	Date de validité
+2.4.	Caractéristiques non obligatoires 
+
+	Dénivelé valeurs possibles A niveau, surélevé (Remblais) ou contrebas (Déblais)
+	Si l’accès n’est pas  « à niveau », préciser obligatoirement la valeur du dénivelé exprimé en mètre 
+
+	Largeur : exprimé en mètre
+	Escalier: valeurs possibles : oui ou non
+	Entretien spécifique : valeurs possibles : oui ou non
+	Signalisation routière: valeurs possibles : oui ou non
+	Vidéo surveillance: valeurs possibles : oui ou non
+	Commentaire libre 
+
+
+
+
+3.	Règles de coordonnées GPS
+
+
+Format des coordonnées GPS (WGS84) dans réseau pour la France métropolitaine : 
+	Longitude (X) indiquée sur le GPS entre N42.00000 et N52.00000
+	Dans l’IHM Réseau Gaia saisir ente -42,00000 et -52,00000 le N de  NORD est remplacé dans réseau par le signe – et le séparateur ‘point’ est transformés en virgule.
+
+	Latitude (Y) indiquée sur le GPS entre W5.00000 et E10.00000
+	Dans l’IHM de Réseau Gaia saisir ente -5,00000 et 10,00000 le W de l’anglais WEST, en français Ouest est remplacé dans réseau par le signe –, le E de l’anglais EAST, en français EST est remplacé dans réseau par le signe + donc non indiqué et le séparateur ‘point’ est transformé en virgule.
+
+	Altitude (Z) : information réservée 
+
+
+ 
+4.	Règles générales pour la gestion 
+
+4.1.	Suppression de l’objet 
+
+
+Procédure. Suppression d’un Accès
+
+Si dans le tableau fourni, l’accès est à supprimer (information en jaune ou mentionnée à supprimer)
+
+
+Rechercher l’accès sur la ou les lignes en recherchant par ligne et PK
+	
+
+Borner l’accès en respectant la date 
+
+
+Enregistrer 
+
+
+
+
+ 
+4.2.	Création de l’objet 
+
+
+
+Procédure. Création d’un Accès
+
+Si dans le tableau fourni, l’accès est nouveau (information en rouge ou mentionnée à créer)
+
+
+Renseigner toutes les informations nécessaires 
+
+
+Enregistrer
+ 
+4.3.	Modification de l’objet
+
+
+
+Procédure. Modification d’un Accès
+
+
+Rechercher l’accès sur la ou les lignes en recherchant par ligne et PK 
+
+
+Dans le tableau fourni, si présence d’une modification de l’objet 
+Modifier les caractéristiques 
+	
+
+                                                         enregistrer
+
+
+
+5.	Cas particulier
+
+6.	Forme de remontée
+
+•	Forme informatique PDF/WORD
+•	Tableau EXCEL 
+7.	Périodicité
+
+•	Dés connaissance de l’information remontée par le correspondant régional Réseau 
+8.	Impacts à contrôler
+
+
+N/A
+9.	Observations particulières
+
+N/A
+
+10.	Exemple d’accès aux emprises
+
+Ci-dessous une vue d’un accès en pleine ligne :
+
+ 
+ 

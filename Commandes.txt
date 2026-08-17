@@ -1,0 +1,7 @@
+Commandes pour activer neo4j sur le navigateur
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+$env:JAVA_HOME="C:\Program Files\Temurin\Temurin-17
+.\neo4j.ps1 console
+$env:HTTPS_PROXY = "http://hprod-proxy.dax.reseau.sncf.fr:8080"
+$env:HTTP_PROXY  = "http://hprod-proxy.dax.reseau.sncf.fr:8080"
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser

@@ -1,0 +1,293 @@
+{
+    "enums": [
+        {
+            "nom": "EnumIndicateurLigneOuVoie",
+            "valeurs": []
+        }
+    ],
+    "classes": [
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetPersistant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Segmentation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeSegmentAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentImplante",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Commentaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ValeurGabaritInternational",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Obstacle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationGabaritObstacle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PointCritique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationCorrespondanceValeurGabarit",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ValeurGabarit",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Gabarit",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "indicLigVoie",
+                    "type": "EnumIndicateurLigneOuVoie",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeSegmentGabarit",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeGabarit",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentGabarit",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentGabaritVS",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "dateMiseEnService",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "NatureGabarit",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImageAsset",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ValeurGabaritInternational",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "Obstacle",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "PointCritique",
+            "cible": "Obstacle"
+        },
+        {
+            "source": "RelationGabaritObstacle",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "AssociationCorrespondanceValeurGabarit",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "ValeurGabarit",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "Gabarit",
+            "cible": "Segmentation"
+        },
+        {
+            "source": "TypeSegmentGabarit",
+            "cible": "TypeSegmentAbstrait"
+        },
+        {
+            "source": "TypeGabarit",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "SegmentGabaritVS",
+            "cible": "SegmentGabarit"
+        },
+        {
+            "source": "SegmentGabarit",
+            "cible": "SegmentImplante"
+        },
+        {
+            "source": "NatureGabarit",
+            "cible": "ObjetPersistant"
+        }
+    ],
+    "relations": [
+        {
+            "source": "AssociationCorrespondanceValeurGabarit",
+            "type": "ASSOCIE_A",
+            "cible": "ValeurGabaritInternational",
+            "role": "valeurGabaritInternational",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationGabaritObstacle",
+            "type": "ASSOCIE_A",
+            "cible": "Obstacle",
+            "role": "obstacle",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Obstacle",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationGabaritObstacle",
+            "type": "ASSOCIE_A",
+            "cible": "SegmentGabarit",
+            "role": "gabarit",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationCorrespondanceValeurGabarit",
+            "type": "ASSOCIE_A",
+            "cible": "ValeurGabarit",
+            "role": "valeurGabaritInterne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentGabarit",
+            "type": "ASSOCIE_A",
+            "cible": "ValeurGabarit",
+            "role": "valeurGabarit",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeGabarit",
+            "type": "AGREGE",
+            "cible": "ValeurGabarit",
+            "role": "valeurGabarit",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Gabarit",
+            "type": "ASSOCIE_A",
+            "cible": "NatureGabarit",
+            "role": "nature",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentGabarit",
+            "type": "ASSOCIE_A",
+            "cible": "TypeGabarit",
+            "role": "typeGabarit",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentGabarit",
+            "type": "ASSOCIE_A",
+            "cible": "Commentaire",
+            "role": "commentaires",
+            "cardinalite": "0..*"
+        }
+    ]
+}

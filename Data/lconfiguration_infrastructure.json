@@ -1,0 +1,190 @@
+{
+    "enums": [
+        {
+            "nom": "EnumTypeConfigurationInfrastructure",
+            "valeurs": [
+                "REFERENCE",
+                "TRAVAIL"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "Logiciel",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "DocumentDeReferenceAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatObjetProcessusGestionDObjetRevision",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetClasse",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeEtatProcessus",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetProcessusGestionDObjet",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatConfigurationInfrastructure",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "dateMiseEnService",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "observations",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ReferenceConfiguration",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "observation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "reference",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ConfigurationInfrastructure",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "type",
+                    "type": "EnumTypeConfigurationInfrastructure",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImageAsset",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "EtatConfigurationInfrastructure",
+            "cible": "EtatObjetProcessusGestionDObjetRevision"
+        },
+        {
+            "source": "ReferenceConfiguration",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "ConfigurationInfrastructure",
+            "cible": "ObjetProcessusGestionDObjet"
+        }
+    ],
+    "relations": [
+        {
+            "source": "EtatConfigurationInfrastructure",
+            "type": "ASSOCIE_A",
+            "cible": "DocumentDeReferenceAbstrait",
+            "role": "documents",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatConfigurationInfrastructure",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatConfigurationInfrastructure",
+            "type": "ASSOCIE_A",
+            "cible": "ReferenceConfiguration",
+            "role": "referencesConfiguration",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatConfigurationInfrastructure",
+            "type": "ASSOCIE_A",
+            "cible": "Logiciel",
+            "role": "logiciels",
+            "cardinalite": "0..*"
+        }
+    ]
+}

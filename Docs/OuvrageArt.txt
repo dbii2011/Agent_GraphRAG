@@ -1,0 +1,84 @@
+1.	Définition
+
+Un ouvrage d’art est une construction de génie civil, autre qu’un bâtiment, qui permet d’assurer et/ou protéger la continuité d’une voie de circulation. Il existe trois grands types d’ouvrages d’art ferroviaire : les ponts, les ouvrages de soutènements et les tunnels.
+ 
+Dans le cadre de la description des OA dans GAIA, cinq types d’ouvrages sont décrits :
+-	Les ponts rails
+-	Les ponts routes
+-	Les passerelles
+-	Les tunnels ainsi que les galeries et tranchées couvertes
+-	Les passages souterrains
+
+Remarque : Les ouvrages en terre ne sont pas traités dans cette fiche procédure.
+
+2.	Caractéristiques 
+
+Objets	Caractéristiques	Obligatoire /facultative /conditionnelle	Compléments d’informations
+Pont rail	Libellé	O	Les libellés à renseigner en priorités sont ceux indiqués sur le PT, à défaut d’indication sur le PT, le libellé sera Pra XXX,X (Kilomètre, hectomètre)
+	Type	O	Pont rail
+	Longueur	O	Demande au CRR, si pas de donnée il faut mettre 2m
+	Région	O	
+	Obstacle	O	Voir chapitre 3.1
+	Localisation PK	O	PK médian (axe de l’ouvrage)
+	Période d’activité DDA - DFS - DFA	O	
+Pont route	Libellé	O	Les libellés à renseigner en priorités sont ceux indiqués sur le PT, à défaut d’indication sur le PT, le libellé sera Pro XXX,X (Kilomètre, hectomètre).
+	Type	O	Pont route
+	Région	O	
+	Obstacle	O	Voir chapitre 3.1
+	Localisation PK	O	PK médian (axe de l’ouvrage)
+	Période d’activité DDA - DFS - DFA	O	
+Passerelle	Libellé	O	Les libellés à renseigner en priorités sont ceux indiqués sur le PT, à défaut d’indication sur le PT, le libellé sera Passerelle XXX,X (Kilomètre, hectomètre).
+	Type	O	Passerelle
+	Région	O	
+	Obstacle	F	Voir chapitre 3.1
+	Localisation PK	O	PK médian (axe de l’ouvrage)
+	Période d’activité DDA - DFS - DFA	O	
+Passage souterrain	Libellé	O	Les libellés à renseigner en priorités sont ceux indiqués sur le PT, à défaut d’indication sur le PT, le libellé sera Passage souterrain XXX,X (Kilomètre, hectomètre).
+	Type	O	Passage souterrain
+	Région	O	
+	Obstacle	F	Voir chapitre 3.1
+	Localisation PK	O	PK médian (axe de l’ouvrage)
+	Période d’activité DDA - DFS - DFA	O	
+Tunnel	Libellé	O	Les libellés à renseigner en priorités sont ceux indiqués sur le PT, à défaut d’indication sur le PT, le libellé sera tunnel XXX,X (Kilomètre, hectomètre).
+	Type	O	Tunnel
+	Longueur	O	La donnée est fournie par le CRR, à défaut il peut être inscrit directement sur le Schéma ou calculable avec les PK.
+	Région	O	
+	Obstacle	F	
+	Localisation PK	O	Prendre le PKD dans le sens croissant des PK
+	Période d’activité DDA - DFS - DFA	O	
+
+3.	Règles de nommage de l’objet 
+3.1.	Libellé des obstacles
+
+Les obstacles correspondent aux ouvrages franchis des routes, cours d’eau ou autres.
+Le nommage de ces obstacles doit être renseigné lorsqu’ils sont connus, il devra respecter la construction suivante :
+-	Voie communale : VC
+-	Chemin Privé : CP
+-	Chemin rural : CR
+-	Route départementale : CD ou D suivi du n° de la route départementale.
+-	Route Nationale : RN suivi du numéro de la route nationale.
+-	Autoroute : A suivi du numéro d’autoroute.
+-	Cours d’eau : indiquer le nom du cours d’eau.
+-	Pour les autres obstacles il faut indiquer : indiquer Autre.
+
+
+4.	Règles générales pour la gestion 
+
+4.1.	Création 
+
+4.2.	Modification 
+
+
+4.3.	Suppression (bornage)
+
+
+5.	Forme de remontée 
+
+Parution d’un nouveau schéma de signalisation.
+6.	Périodicité
+
+Dés connaissance de l’information.
+7.	Impact à contrôler
+
+Sans objet.
+8.	Fiche d’identification

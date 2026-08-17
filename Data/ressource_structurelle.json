@@ -1,0 +1,835 @@
+{
+    "enums": [
+        {
+            "nom": "EnumIndicateur",
+            "valeurs": []
+        },
+        {
+            "nom": "EnumTypeAlimentation",
+            "valeurs": [
+                "HT",
+                "BT"
+            ]
+        },
+        {
+            "nom": "EnumTypeGrille",
+            "valeurs": [
+                "DEUX_COTE",
+                "COTE_VOIE",
+                "SANS"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "TypeHauteur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeAssociationStructurelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeRessourceStructurelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LigneProduit",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTechnique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceStructurelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceStructurelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueElement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Entreprise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Alimentation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SourceAlimentation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeNomenclature",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Specialite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RestrictionAppareilSignalisation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Geometrie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SerieAppareilSignalisation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourcePhysiqueMesurable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ValeurNomenclature",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielAutresRSTypeADV",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeADV",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceStructurelleADV",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "etatDePause",
+                    "type": "ValeurNomenclature",
+                    "description": ""
+                },
+                {
+                    "nom": "indAnticheminants",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indChampignonInoxydable",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indContreRailPointeCoeurTraversee",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indContreRailVoieDirecte",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indCordonInoxydable",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indDMAR",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indGraisseursFixes",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurAncrageMax",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurAncrageMin",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "nuanceRail",
+                    "type": "ValeurNomenclature",
+                    "description": ""
+                },
+                {
+                    "nom": "rayonEnroulement",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "supportBecheAncrage",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "typeDePose",
+                    "type": "ValeurNomenclature",
+                    "description": ""
+                },
+                {
+                    "nom": "typeEnroulement",
+                    "type": "ValeurNomenclature",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RessourceStructurelleADV",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueConnectique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueDimension",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "diametre",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "hauteur",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "largeur",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "longueur",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeLargeur",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CaracteristiqueType",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueConstructeur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueSerie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeTension",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CaracteristiqueAlimentation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "frequence",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "intensite",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "puissanceApparente",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "tension",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CaracteristiqueLibre",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "propriete",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "valeur",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CaracteristiqueSpecialite ",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeMatiere",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CaracteristiqueAutre",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "charge",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "couleur",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "entraxe",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "intemperie",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "miseEnCharge",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "poids",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "porteeDroite",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "porteeGauche",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "NatureRestriction",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeConnectique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CaracteristiqueGeometrie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "LigneProduitAutreCaracteristique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "contact",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "responsable",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ElementAffichage",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementModule",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementLiaison",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementComposantLampe",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "alimentation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SupportBas",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "fleurDeSol",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ElementSignalisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementSupport",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "typeGrille",
+                    "type": "EnumTypeGrille",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ElementComposant",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementAbri",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Zone Plancher",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceStructurelleZoneRail",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "etatPose",
+                    "type": "ValeurNomenclature",
+                    "description": ""
+                },
+                {
+                    "nom": "indGalvanise",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indGraisseur",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indPatinRabote",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indPresenceCordonChampignon",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "largeurPatin",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurElementaire",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "position",
+                    "type": "ValeurNomenclature",
+                    "description": ""
+                },
+                {
+                    "nom": "typeDePose",
+                    "type": "ValeurNomenclature",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ReferentielAutresRSTypeADV",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "ReferentielTypeADV",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "RelationRessourceStructurelleADV",
+            "cible": "RelationRessourceStructurelle"
+        },
+        {
+            "source": "RessourceStructurelleADV",
+            "cible": "RessourceStructurelle"
+        },
+        {
+            "source": "CaracteristiqueConnectique",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "CaracteristiqueDimension",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "TypeLargeur",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "CaracteristiqueType",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "CaracteristiqueConstructeur",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "CaracteristiqueSerie",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "TypeTension",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "CaracteristiqueAlimentation",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "CaracteristiqueLibre",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "CaracteristiqueSpecialite ",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "TypeMatiere",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "CaracteristiqueAutre",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "NatureRestriction",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "TypeConnectique",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "CaracteristiqueGeometrie",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "LigneProduitAutreCaracteristique",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "ElementAffichage",
+            "cible": "RessourceStructurelle"
+        },
+        {
+            "source": "ElementModule",
+            "cible": "RessourceStructurelle"
+        },
+        {
+            "source": "ElementLiaison",
+            "cible": "RessourceStructurelle"
+        },
+        {
+            "source": "ElementComposantLampe",
+            "cible": "ElementComposant"
+        },
+        {
+            "source": "SupportBas",
+            "cible": "ElementSupport"
+        },
+        {
+            "source": "SerieAppareilSignalisation",
+            "cible": "ElementSignalisation"
+        },
+        {
+            "source": "ElementSignalisation",
+            "cible": "RessourceStructurelle"
+        },
+        {
+            "source": "ElementSupport",
+            "cible": "RessourceStructurelle"
+        },
+        {
+            "source": "ElementComposant",
+            "cible": "RessourceStructurelle"
+        },
+        {
+            "source": "ElementAbri",
+            "cible": "RessourceStructurelle"
+        },
+        {
+            "source": "Zone Plancher",
+            "cible": "RessourcePhysiqueMesurable"
+        },
+        {
+            "source": "RelationRessourceStructurelleZoneRail",
+            "cible": "RelationRessourceStructurelle"
+        }
+    ],
+    "relations": [
+        {
+            "source": "CaracteristiqueConnectique",
+            "type": "ASSOCIE_A",
+            "cible": "TypeConnectique",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CaracteristiqueType",
+            "type": "ASSOCIE_A",
+            "cible": "TypeLargeur",
+            "role": "typeLargeur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CaracteristiqueType",
+            "type": "ASSOCIE_A",
+            "cible": "TypeMatiere",
+            "role": "typeMatiere",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CaracteristiqueType",
+            "type": "ASSOCIE_A",
+            "cible": "TypeHauteur",
+            "role": "typeHauteur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CaracteristiqueConstructeur",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "constructeur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Alimentation",
+            "type": "ASSOCIE_A",
+            "cible": "TypeTension",
+            "role": "typeTension",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CaracteristiqueAlimentation",
+            "type": "ASSOCIE_A",
+            "cible": "TypeTension",
+            "role": "typeTension",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SourceAlimentation",
+            "type": "ASSOCIE_A",
+            "cible": "TypeTension",
+            "role": "typeTension",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CaracteristiqueLibre",
+            "type": "ASSOCIE_A",
+            "cible": "TypeNomenclature",
+            "role": "typeNomenclature",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CaracteristiqueSpecialite ",
+            "type": "ASSOCIE_A",
+            "cible": "Specialite",
+            "role": "specialite",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RestrictionAppareilSignalisation",
+            "type": "ASSOCIE_A",
+            "cible": "NatureRestriction",
+            "role": "nature",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CaracteristiqueGeometrie",
+            "type": "COMPOSE_DE",
+            "cible": "Geometrie",
+            "role": "geometrie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "LigneProduitAutreCaracteristique",
+            "type": "ASSOCIE_A",
+            "cible": "LigneProduit",
+            "role": "ligneProduit",
+            "cardinalite": "0..*"
+        }
+    ]
+}

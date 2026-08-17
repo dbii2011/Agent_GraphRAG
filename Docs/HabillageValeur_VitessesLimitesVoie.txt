@@ -1,0 +1,137 @@
+1.	Définition
+
+La vitesse limite est une valeur (en km/h) indiquée pour chaque catégorie de train sur une portion de voie.
+
+Mnémonique : VL/COMP
+2.	Caractéristiques 
+
+
+Objets	Caractéristiques	Obligatoire /facultative /conditionnelle	Compléments d’informations
+Vitesses limite	Libellé	O	Correspond à l’indice composition, au code vitesse ou le code composition. Voir le chapitre 2.1
+	Vitesse	O	Valeur en Km/h
+	Un sens 	O	La seule valeur possible est soit croissante ou décroissante (suivant le sens des PK).
+	PKD et PKF	O	Pour renseigner le PK au mètre près, il faut consulter sa valeur dans le référentiel et la comparer avec celle du PT. Il faut toujours prendre le PK indiqué sur le PT même s’il est différent du RT.
+
+	DDA et DFA	O	Date d’application du RT (en cohérence avec le SR voie)
+
+ 
+2.1.	Catégorie de train, code composition, indice de composition et code vitesse
+
+Il existe plusieurs catégories de train, code de composition et indice de composition ainsi que des codes vitesse :
+Catégorie de train, Code composition, Indice de composition, Code vitesse 
+ 
+
+3.	Règles générales pour la gestion 
+3.1.	Analyse et lecture du RT
+
+Pour détecter la création d’une vitesse limite voie, on doit regarder le résumé des modifications dans le préambule sur la nouvelle version du Renseignement Technique (RT). Les modifications sont repérées par des tirets dans le paragraphe concerné.
+
+ 
+
+3.1.1.	Tableau présent dans les RT
+
+Dénomination réf OP00803 art 1102.3 et 1102.4.
+
+Catégorie de train
+Code composition /séries d’engins moteurs
+Indice de composition 
+Code vitesse 
+
+        
+ 
+
+
+3.1.2.	Extrait de modification de vitesse limite
+
+
+ 
+
+
+Identification des modifications dans le tableau.
+
+ 
+
+3.1.3.	Lecture des points de transition
+ 
+
+Dans le cas ci-dessus, pour les gares de Rennes, Pléchatel, Fougeray-Langon, Beslé et Redon, comme aucune précision de PK est apportée, les vitesses sont indiquées jusqu’à l’axe du bâtiment voyageur ou équivalent. (Article A301 de l’OP00528)
+
+Exemple :  Dans l’exemple ci-dessous le PK de transition de vitesses à prendre n’est pas l’axe du BV de Guillerval mais la fin du Pas d’ICPS.
+  
+
+3.2.	 Gestion de la vitesse limite sur IPCS et voie banalisée
+
+
+Pour les circulations à contre sens (IPCS, voie banalisée), il faut prendre, sur le schéma de signalisation, le PK début et le PK fin de la portion de voie parcourues à contre-sens.
+
+
+
+
+
+								
+Lorsque la portion de voie en IPCS est encadrée par des voies banalisées et que le RT décrit 1 seule vitesse limite, il est admis que les pas ne soient pas décrits et que la portion IPCS/voie banalisée soit décrite en 1 bloc comme mentionné dans le RT.
+3.3.	Gestion des vitesses limite dans les gares tête de ligne (Exemple Gare de Paris Est et Paris Montparnasse)
+
+La vitesse sur l’ensemble des voies à quai doit impérativement être renseignée.
+Certains renseignements techniques (RT) indiquent la mention « toutes les voies » ou « voies 1 à 30 » pour une vitesse limite (Exemple 30 km/h)
+D’autres renseignements techniques (RT) n’indiquent pas ces mentions mais indiquent uniquement la voie 1, ou 1 TGV……Dans ce cas, la vitesse limite de toutes les voies à quai est la même que celle indiquée sur la voie 1, ou 1 TGV……
+
+Gare de Paris-Est
+
+ 
+
+
+
+
+
+3.4.	Cas de chevauchement dans les gares
+
+Dans certaines gares traversées par plusieurs lignes, des portions de voie peuvent être décrites avec des vitesses limite différentes suivant les RT. Il faut renseigner l’ensemble des vitesses limite décrites dans les RT.
+
+Lorsqu’une voie s’arrête avant le BV, la vitesse est prolongée sur les V1 et V2 (ou VU) de la gare jusqu’à son axe.
+Lorsque le parcours est possible, il faut indiquer la VLIM sur la V1 et/ou la V2 de la ligne qui traverse la gare (attention la V1 et/ou V2 peuvent avoir un nom local de gare autre que V1 et/ou V2) en habillant du PK de l’Adv permettant l’itinéraire jusqu’à l’axe du BV.
+Lorsque le parcours est impossible on ne fait pas de projection de VLim.
+
+Exemple voie unique : Gare de Lamballe, La VU s’arrête sur l’Adv 7a, on remarque que le parcours depuis la VU vers la V1 est possible, on habille la V1 de la 420000 depuis l’Adv 9b jusqu’à l’axe du BV.
+Le parcours vers la V2 est impossible, on habille le sens pair à partir du début de de la VU soit l’Adv 7a.
+  
+  Dans le cas où aucun parcours vers V1 et V2 n’est possible, il faut habiller la voie en prolongement de la VU, ici la V4 jusqu’à l’axe du BV dans les deux sens.
+
+Exemple de double voie : 
+La voie 1 de la 621000 est habillée jusqu’à l’AdV 105b et la voie 2 jusqu’au 104a , il faut créer un chevauchement sur la voie 1 de la ligne 570000 du AdV 104b jusqu’à l’axe du BV et sur la  voie 2 du 111b jusqu’à l’axe du BV. Les deux parcours étant possibles.
+
+
+ 
+
+
+
+3.5.	Gestion de la vitesse limite sur les lignes à trafic restreint
+
+Pour mettre à jour les vitesses limite par indice composition des consignes de ligne à trafic restreint procéder comme suit :
+
+-	En cas d’absence d’indice de composition pour les vitesses limite sur voie, utiliser l’indice MA80.
+
+-	Si seule la famille est indiquée (exemple : Messagerie ou Marchandise) appliquer la vitesse à l’indice composition de la classe la plus petite de la famille (ex : ME100 ou MA 80)
+
+-	Sinon reprendre les indices de composition précisée dans la consigne.
+
+3.6.	Création 
+
+3.7.	Modification 
+
+
+3.8.	Suppression (bornage)
+
+
+
+
+4.	Forme de remontée 
+
+Parution d’un nouveau RT
+Consigne de ligne
+5.	Périodicité
+
+Dés connaissance de l’information.
+6.	Impact à contrôler
+
+Sans objet.

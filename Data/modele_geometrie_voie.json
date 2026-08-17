@@ -1,0 +1,236 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "HabillageOriente",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ProprietesLieu",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Courbe",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "devers",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "rayon",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Rampe",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rampe",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CourbeDroite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Pente",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "pente",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Plat",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Alignement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CourbeGauche",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Trace",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RaccordementCirculaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rayon",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Repere",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "entraxe",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "hauteur",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueur",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "type",
+                    "type": "ProprietesLieu",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Declivite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RaccordementParabolique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "variationDevers",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "CourbeDroite",
+            "cible": "Courbe"
+        },
+        {
+            "source": "Courbe",
+            "cible": "Trace"
+        },
+        {
+            "source": "CourbeGauche",
+            "cible": "Courbe"
+        },
+        {
+            "source": "Rampe",
+            "cible": "Declivite"
+        },
+        {
+            "source": "Pente",
+            "cible": "Declivite"
+        },
+        {
+            "source": "Plat",
+            "cible": "Declivite"
+        },
+        {
+            "source": "Alignement",
+            "cible": "Trace"
+        },
+        {
+            "source": "RaccordementParabolique",
+            "cible": "Trace"
+        },
+        {
+            "source": "Trace",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "RaccordementCirculaire",
+            "cible": "Declivite"
+        },
+        {
+            "source": "Repere",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "Declivite",
+            "cible": "HabillageOriente"
+        }
+    ],
+    "relations": [
+        {
+            "source": "RaccordementParabolique",
+            "type": "ASSOCIE_A",
+            "cible": "Courbe",
+            "role": "reccordementDeSortie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RaccordementParabolique",
+            "type": "ASSOCIE_A",
+            "cible": "Courbe",
+            "role": "raccordementDEntree",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Repere",
+            "type": "ASSOCIE_A",
+            "cible": "Trace",
+            "role": "trace",
+            "cardinalite": "0..*"
+        }
+    ]
+}

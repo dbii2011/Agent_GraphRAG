@@ -1,0 +1,167 @@
+Le mode de cantonnement décrit le système de signalisation mis en place pour assurer l’espacement des trains circulant dans le même sens.
+Sur ligne, le mode de cantonnement correspond à celui ou ceux décrits dans les RT (renseignements techniques), sans tenir compte des interruptions du cantonnement à la traversée de certaines gares, si ce cantonnement existe de part et d’autre de ces gares.
+Il est possible que deux modes de cantonnement se chevauchent sur une même portion de ligne.
+Les différents types de mode de cantonnement sont :
+o	Les blocks automatiques (BAL et BAPR)
+o	Les blocks manuels (BM)
+o	Les cantonnements téléphoniques (CAPI et CT)
+o	Les transmissions voie-machine (TVM)
+o	L’ETCS
+o	Autres
+2.	Caractéristiques obligatoires du mode de cantonnement 
+
+
+Il est défini par les informations suivantes :
+o	Code ligne
+o	Numéro du tronçon de ligne (le rang)
+o	PK début
+o	PK fin
+o	La Valeur 
+o	Une DDA 
+o	Une DFA
+
+
+
+
+
+
+
+
+
+
+
+3.	Représentation graphique des modes de cantonnement dans les RT
+
+          
+
+ 
+
+
+
+
+
+
+Ci-dessous un exemple de transition entre 2 modes de cantonnement (ici BAL/BAPR/BAL)
+ 
+
+ 
+
+4.	Valeurs possibles du mode de cantonnement 
+
+•	Les valeurs utilisables sont :
+
+o	BAL : Block automatique lumineux
+o	BAL VB : Block automatique lumineux de voie banalisée
+o	BAPR DV : Block automatique à permissivité restreinte de double voie
+o	BAPR VB : Block automatique à permissivité restreinte de voie banalisée
+o	BM VU : Block manuel de voie unique de type SNCF
+o	BM VU SE : Block manuel de voie unique de type Sud-Est	
+o	BMU : Block manuel de double voie de type SNCF	
+o	BM AMU : Block manuel de double voie de type Alsace-Moselle uniformisé	
+o	BM NB : Block manuel de double voie de type Nantes-Bordeaux	
+o	BM LU : Block manuel de double voie de type Lartigue uniformisé	
+o	BM LUS : Block manuel de double voie de type Lartigue uniformisé S
+o	BM SEUS : Block manuel de double voie de type Sud-Est uniformisé S
+o	CAPI : Cantonnement téléphonique assisté par informatique	
+o	CT DV : Cantonnement téléphonique de double voie	
+o	CT VU : Cantonnement téléphonique de voie unique	
+o	TVM300 : Transmission voie-machine 300	
+o	TVM430 : Transmission voie-machine 430	
+o	ETCS 1 : European train control system 1	
+o	ETCS 2 : European train control system 2	
+o	ETCS 3 : European train control system 1
+o	Sans cantonnement = uniquement pour les lignes VUTR et voie de desserte
+o	AUTRE : Dans tous les autres cas ou le mode de cantonnement n’est pas précisé dans un document reprenant cette information.
+
+Attention : Il ne faudra plus utiliser les modes de cantonnement doubles tels que ETCS2/T430. Il faudra créer un cantonnement ETCS 2 et un cantonnement T430.
+5.	Règles générales pour la gestion 
+
+5.1.	Bornage du mode du cantonnement 
+
+Le mode de cantonnement doit être borné dans les cas suivants :
+
+o	Modernisation d’une ligne existante.
+o	Bornage de la Ligne
+
+
+5.2.	Création du mode de cantonnement 
+
+La création du mode de cantonnement est nécessaire dans les cas suivants :
+o	Création d’une nouvelle ligne.
+o	Modernisation d’une ligne existante.
+
+Pour détecter un changement du mode de cantonnement, il faut regarder le résumé des modifications dans le préambule sur la nouvelle version du Renseignement Technique (RT), les modifications sont repérées par des tirets dans le paragraphe concerné. Veillez à faire les modifications à la date de la nouvelle version du RT en vigueur.
+
+Il faut impérativement s’assurer que la ou les valeurs renseignées ne génèrent pas de trou dans la continuité de la voie et ou de chevauchement.
+
+5.3.	Modification du mode de cantonnement
+
+La modification est possible qu’en cas d’erreur de saisie par le gérant.
+
+6.	Cas particulier
+
+6.1.	Différence de mode de cantonnement sur chacune des voies d’une même ligne
+
+Dans certains cas, l’information donnée par le RT peut être différente sur chacune des voies d’une même ligne (Sens pair/impair).
+Dans ce cas la valeur à renseigner est la moins permissive.
+
+Mode de cantonnement de moins permissif au plus permissif :
+
+1	Cantonnement Téléphonique (CT)
+2	Block Manuel de double voie ou de voie unique (BMV ; BMVU)
+3	Block Automatique à Permissivité Restreinte (BAPR)
+4	Block automatique Lumineux (BAL)
+
+
+
+
+
+
+
+
+
+
+
+
+Exemple :
+
+Dans ce cas la description (en lisant du haut vers le bas) du mode de cantonnement de la ligne sera BAPR jusqu’ au signal 2 au KM 62,0 et BMCV ensuite.
+
+ 
+
+
+
+6.2.	Imprécision du RT sur les transitions de mode de cantonnement 
+
+
+Dans certain cas, le RT ne suffit pas pour déterminer précisément les transitions de mode de cantonnement. Dans ce cas il faut vérifier sur le PT, le positionnement des signaux comportant des plaques de cantonnement.
+ 
+
+Exemple : 
+
+Sur la zone Gare de Serqueux, le RT nous renvoie vers l’annexe bien qu’elle ne présente pas de spécification sur les transitions de mode de cantonnement.
+Sur le PT nous avons l’indication qu’une plaque d’identification PR  est presentée sur le signal C 9166  dans le sens pair au PK 117+120, ce signal correspond à la transition BAPR-BAL dans le sens Croissant des PK. (voir ci-dessous) 
+   
+
+
+
+
+
+
+
+
+
+7.	Forme de remontée
+
+•	Rectificatifs aux RT (vérification possible avec les schémas de signalisation correspondants).
+8.	Périodicité
+•	Dès connaissance de l’information .
+9.	Impacts à contrôler
+
+•	Les signaux.
+•	Les itinéraires.
+10.	Observations particulières
+
+
+N/A
+

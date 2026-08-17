@@ -1,0 +1,253 @@
+{
+    "enums": [
+        {
+            "nom": "EnumCategorieCommercialeSaf",
+            "valeurs": [
+                "C1",
+                "C2",
+                "C3",
+                "C4",
+                "NA"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Gare",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RattachementVoieDeSafSaf",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Consigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementADateAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationIdentifiantSafSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "positionSignificative",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sousSaf",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Saf",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "categorieCommerciale",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "codeUic",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "gareIdReseau",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationSafPere",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationIdentifiantSafGare",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationIdentifiantSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeSafADate",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "RelationIdentifiantSafSaf",
+            "cible": "RelationIdentifiantSaf"
+        },
+        {
+            "source": "TypeSaf",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "RelationSafPere",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "RelationIdentifiantSafGare",
+            "cible": "RelationIdentifiantSaf"
+        },
+        {
+            "source": "RelationIdentifiantSaf",
+            "cible": "ElementADateAbstrait"
+        }
+    ],
+    "relations": [
+        {
+            "source": "RelationIdentifiantSafSaf",
+            "type": "ASSOCIE_A",
+            "cible": "Saf",
+            "role": "saf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeSafADate",
+            "type": "ASSOCIE_A",
+            "cible": "TypeSaf",
+            "role": "typeSaf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "ASSOCIE_A",
+            "cible": "TypeSaf",
+            "role": "typeSaf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeSaf",
+            "type": "ASSOCIE_A",
+            "cible": "TypeSaf",
+            "role": "typeSafRattachement",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationSafPere",
+            "type": "ASSOCIE_A",
+            "cible": "Saf",
+            "role": "safPere",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "AGREGE",
+            "cible": "RelationIdentifiantSaf",
+            "role": "identifiants",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "ASSOCIE_A",
+            "cible": "Gare",
+            "role": "IdentifiantId",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RattachementVoieDeSafSaf",
+            "type": "ASSOCIE_A",
+            "cible": "Saf",
+            "role": "saf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "ASSOCIE_A",
+            "cible": "Consigne",
+            "role": "consignesEmbranchementIds",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "COMPOSE_DE",
+            "cible": "TypeSafADate",
+            "role": "typesSaf",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "COMPOSE_DE",
+            "cible": "RelationSafPere",
+            "role": "relationsSafPere",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Saf",
+            "type": "ASSOCIE_A",
+            "cible": "Saf",
+            "role": "safIdentifiantId",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationIdentifiantSafGare",
+            "type": "ASSOCIE_A",
+            "cible": "Gare",
+            "role": "gare",
+            "cardinalite": "0..*"
+        }
+    ]
+}

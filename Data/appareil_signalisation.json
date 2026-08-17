@@ -1,0 +1,251 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "LigneProduit",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueElement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceStructurelleTypeComposite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueAutre",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "NatureRestriction",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeConnectique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourcePhysiqueUnitaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementSignalisation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationRessourcePhysique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeRessourceStructurelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueSerie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteristiqueFonction",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ModeleAppareilSignalisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RestrictionAppareilSignalisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "restriction",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AppareilSignalisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SerieAppareilSignalisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CaracteritiqueReformage",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "categorie",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "periode",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AssociationRessourcePhysiqueCaracterisee",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ParametreAppareilSignalisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "noria",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "noriaEnCours",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "prochaineDateReformage",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "CaracteristiqueNORIA",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "designation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "numeroSerieDebut",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "numeroSerieFin",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "referentiel",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "CaracteristiqueFonction",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "ModeleAppareilSignalisation",
+            "cible": "RessourceStructurelleTypeComposite"
+        },
+        {
+            "source": "RestrictionAppareilSignalisation",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "AppareilSignalisation",
+            "cible": "RessourcePhysiqueUnitaire"
+        },
+        {
+            "source": "SerieAppareilSignalisation",
+            "cible": "ElementSignalisation"
+        },
+        {
+            "source": "CaracteritiqueReformage",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "AssociationRessourcePhysiqueCaracterisee",
+            "cible": "AssociationRessourcePhysique"
+        },
+        {
+            "source": "ParametreAppareilSignalisation",
+            "cible": "CaracteristiqueElement"
+        },
+        {
+            "source": "CaracteristiqueNORIA",
+            "cible": "CaracteristiqueElement"
+        }
+    ],
+    "relations": [
+        {
+            "source": "RestrictionAppareilSignalisation",
+            "type": "ASSOCIE_A",
+            "cible": "NatureRestriction",
+            "role": "nature",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationRessourcePhysiqueCaracterisee",
+            "type": "AGREGE",
+            "cible": "CaracteristiqueElement",
+            "role": "caracteristiques",
+            "cardinalite": "0..*"
+        }
+    ]
+}

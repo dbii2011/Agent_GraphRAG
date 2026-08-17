@@ -1,0 +1,421 @@
+1.	Définition 
+
+Le Circuit de Voie (CdV) est un système de détection permanente et continue de la présence ou du passage d’une circulation sur une portion de voie déterminée, appelée zone. Il est utilisé dans de nombreuses installations pour réaliser des fonctions de sécurité, notamment pour l’immobilisation électrique des aiguilles, l’espacement des trains, l’annonce des circulations (PN etc…).
+Il permet généralement de s’assurer de la continuité mécanique longitudinale des rails par contrôle de leur continuité électrique.
+ 
+Figure 1 : représentation CdV sur schéma de signalisation
+
+Le Compteur d’Essieux (CE) est destiné à surveiller l’occupation et la libération d’une section de voie. Leur fonctionnement est indépendant de la longueur de la partie de voie contrôlée et de l’isolement entre rails.
+Cette détection est réalisée par comparaison entre le nombre d’essieux qui entrent dans la section de voie considérée et le nombre d’essieux qui en sortent. Le système est réversible et fonctionne donc quel que soit le sens de parcours de la section de voie.
+ 
+Figure 2 : représentation CE sur schéma de signalisation
+
+La traduction de ces 2 objets est définie dans Gaïa comme Installation Fixe sur Voie « zone de détection des trains ».
+ 
+2.	Caractéristiques de l’objet
+
+Choisir le type d’objet permettant la détection des trains :
+	CdV
+	CE
+
+Les CdV (circuits de voie) et les CE (compteurs d’essieux) sont répartis en 2 classes :
+
+•	Zones principales sur VP ou VS 
+o	Libellé
+o	Poste de rattachement (voir §4.8)
+o	Pk début et d’un Pk fin
+o	Date de Début et de Fin
+
+•	Zones surimposées  
+o	Libellé de la zone surimposée
+o	Rattachement à la zone principale 
+o	PN de rattachement
+o	Pk début et d’un Pk fin
+o	Date de Début et de Fin
+3.	Règles de nommage de l’objet 
+3.1.	Nommage classique
+
+•	Zones principales sur VP ou VS 
+o	Libellé z--- suivi du numéro de la zone repris sur le schéma de signalisation (exemple z101)
+•	Zones surimposées  
+o	Libellé de la zone surimposée z---.- repris sur le schéma de signalisation  (exemple z101.1)
+ 
+3.2.	Nommage des zones avec des informations complémentaires
+
+Le nommage des zones doit être identique et conforme au plan technique.
+Les majuscules et les minuscules doivent être strictement respectées.
+Les exposants seront précédés par tiret (tiret du 8) par exemple :
+
+ 
+Figure 3 : libellé avec exposants         
+3.3.	Nommage des zones surimposés avec des informations complémentaires 
+
+Les règles de nommage sont identiques aux règles de nommage des zones.
+
+Attention : La zone surimposée est toujours rattachée à la zone principale dont elle dépend.
+3.4.	Renommage des objets pour une date d’application future
+
+Lors d’un renommage d’un objet dans une date future, il faut renseigner la nouvelle DDA et DFA en respectant les dates prévues par les documents.
+ 
+4.	Règles générales pour la gestion 
+4.1.	Règles de bornage/création de l’intégralité d’une zone
+
+L’intégralité de la zone est à borner/créer dans les cas suivants :
+
+•	Si l’intégralité de la zone est entourée en jaune et reprise en rouge. 
+
+ 
+Figure 4 : dépose/pose intégralité zone – exemple 1
+
+•	Si TOUS les joints de TOUTES les branches de la zone sont encadrés en jaune et rouge.
+
+ 
+Figure 5 : dépose/pose intégralité zone – exemple 2
+ 
+4.2.	Règles de gestion d’un redécoupage d’une zone en 2 zones
+
+Exemple :
+
+•	La zone 1 est redécoupée en z113A et z113B
+•	Les localisations sont identiques 
+•	On borne le CdV z1
+•	On crée les 2 nouveaux CdV (z113A et z113B)
+•	On indique les nouvelles DDA et DFA 
+
+ 
+Figure 6 : redécoupage d’une zone en 2 zones
+4.3.	Bornage/création d’une ou plusieurs localisations de branches d’une zone
+
+•	Si au moins un joint d’extrémité d’une branche d’une zone est entouré ou barré en jaune sur le PT, on borne la localisation de la branche du circuit de voie en respectant la date.
+
+•	Si au moins un joint d’extrémité d’une branche d’une zone est entouré en rouge sur le PT, on créé la localisation de la branche du circuit de voie en respectant la date et on rattache la localisation au circuit de voie existant.
+
+Les localisations de branches des zones connexes à celle touchée par le « rouge et jaune » doivent également être bornées et crées.
+
+Attention : Dans le cas de figure d’une zone « mono branche » il faut d’abord créer la nouvelle localisation de branche avant de borner l’ancienne.
+
+ 
+Exemple 1 :
+ 
+Figure 7 : dépose/pose d’une extrémité d’une branche d’une zone
+
+
+Exemple 2 :
+
+Dans ce cas de figure on borne et on créé les 2 localisations de branches de la zone « z3 » impactée.
+Il faut également créer la nouvelle localisation et borner l’ancienne de la localisation branche de la zone « z1 ». Idem pour la zone « z4 ».
+
+
+ 
+Figure 8 : dépose/pose de plusieurs extrémités de branches d’une zone
+
+ 
+Exemple n°3 : Dépose d’une jonction
+
+Dans le cas ci-dessous il faut borner la localisation de la branche en respectant la date de chacun des circuits de voie qui pointait sur la voie de jonction.
+
+ 
+Figure 9 : dépose jonction
+
+Exemple n°4 : Dépose d’une VS
+
+Dans le cas ci-dessous il faut borner la localisation de la branche en respectant la date du circuit de voie qui pointait sur la voie de service.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Situation travaux
+
+
+
+
+
+
+
+
+
+
+
+Situation MES
+
+ 
+Exemple n°5 : Suppression d’une ligne 
+Dans ce cas, on borne uniquement les branches localisées sur la ligne 446000
+
+
+
+
+
+
+
+
+
+Situation travaux
+
+
+
+
+
+Situation MES
+
+ 
+4.4.	Règle de modifications d’une zone
+
+Les seuls cas de modifications d’une zone sont les suivants :
+
+•	Les Pk des joints de zone sont encadrés en jaune et rouge et sont différents
+•	Le libellé des zones sont encadrés en jaune et rouge
+
+Important : Les Pk des joints de zones sont encadrés en jaune et rouge et sont identiques, dans ce cas précis on ne borne pas le CDV pour le recréer à l’identique.
+
+
+Attention en cas de modifications d’une zone, on ne modifie pas la DDA et DFA.
+
+ 
+Figure 12 : modification d'une zone
+4.5.	Règles générales de cotation des Pk
+
+Il faut indiquer le Pk repris sur le Plan Technique et à défaut :
+
+Sur LIGNES LGV : 
+•	Appliquer le paragraphe Implantation des joints de circuits de voie repris dans le NOTA du schéma de signalisation.
+
+Sur LIGNES CLASSIQUES :
+1.	Joint commun au signal et à la pointe de l’aiguille : joint à 15 m du signal.
+2.	Joint commun au signal et au talon de l’aiguille : joint à 15 m du signal.
+3.	Joint signal seul non équipé ETCS, équipé ETCS ou repère ETCS : joint du CdV ou CE à 15 m du signal.
+  
+Figure 13 : règle implantation zone par rapport au signal
+4.	Joint au droit du signal : joint au Pk du signal. 
+ 
+Figure 14 : règle implantation zone au droit du signal
+5.	Joint aiguille seule, côté pointe : joint à 10 m de la pointe. 
+ 
+Figure 15 : règle implantation zone par rapport à la pointe d'aiguille
+6.	Joint aiguille seule, côté talon (GF) : joint à 15 m du GF. (Le GF est à 62 m de la pointe d’Aiguille) 
+ 
+Figure 16 : règle implantation zone par rapport au garage franc
+7.	Joint seul : Pk à mesurer.
+8.	Joint d’une communication simple : joint au milieu de la COM (Pk à calculer)
+ 
+Figure 17 : règles implantation zone sur une jonction
+9.	Zones courtes surimposées ou zone de PN, la longueur totale de la zone égale à 50 m. S’il n’y a pas de PK indiqués pour la zone courte surimposée alors il faut la renseigner 25 m en amont et 25 m en aval de l’installation. La zone de 50 mètres est à titre indicative, elle peut par souci de cohérence être adaptée (plus ou moins).
+ 
+4.6.	Règles générales de calcul des zones sur voie de jonction si et seulement si aucun Pk n’est indiqué
+
+
+
+	
+
+
+
+
+
+
+1/ Prendre le Pk début de la voie de jonction en respectant l’ordre croissant
+2/ Prendre le Pk fin de la voie de jonction en respectant l’ordre croissant
+3/ Soustraire le Pk fin au Pk début
+4/ Diviser le nombre obtenu par 2 
+5/ Ajouter le résultat au Pk début 
+4.7.	Joint de zone localisé sur l’aiguille 
+
+Lorsque sur le plan technique le joint de zone est dessiné sur l’aiguille elle-même, le joint de zone ne doit pas être localisé au même PK que l’aiguille.
+Dans ce cas précis la localisation du joint de zone doit être décalée de 1 mètre en amont de l’aiguille en respectant le sens croissant ou décroisant des Pk.
+
+Exemple : 
+
+Le Joint de zone positionné entre l’appareil de voie 206 et de l’adv 211 devra être décalé de 1m par rapport à la localisation de l’adv 206 et l’adv 211 sera positionné 1m derrière le joint de zone. 
+
+Extrait schéma de signalisation				vue schématique de ce qu’il faut 								saisir dans Gaia Admin
+
+ 
+Figure 19 : règle description lorsque la zone est localisée sur l'aiguille
+              
+
+4.8.	Rattachement des zones et des zones surimposées
+
+Les zones doivent être rattachées au poste, au PN ou non rattachée, suivant les cas ci-dessous :
+
+Tableau 1 : rattachement des zones
+Type de zone	Rattachement
+CdV ou CE de poste	Poste
+CdV ou CE de pleine voie	Pas de rattachement au poste
+CdV ou CE* surimposé de PN en gare	PN
+CdV ou CE* surimposé ou zone courte de PN en pleine voie	PN
+* : CE surimposé en cours d’étude à DGII-DTR-GE-SF.
+
+	Zone de gare 
+
+-	Sur les nouveaux postes : la zone a pour préfixe le n° du poste dans son libellé, il est donc facile de connaitre la dernière zone à rattacher au poste.
+Exemple : poste 68 type PAI 2006 - Montélimar 
+Figure 20 : rattachement poste technologie récente
+
+-	Sur les anciens schémas de signalisation, la règle de rattachement est la suivante :
+	Il faut rattacher les zones immédiatement en aval du premier signal commandé par le Poste 	concerné, quel que soit le sens de circulation.
+-	S’il n’y a pas de signal, la dernière zone à rattacher au poste sera celle se trouvant au niveau de la dernière aiguille enclenchée par le poste concerné. 
+Exemple :  
+Figure 21 : rattachement poste ancienne technologie
+ 
+	Zone surimposée
+
+ 
+Figure 22 : rattachement zone surimposée
+4.9.	Informations particulières concernant l’indication « nombre de VS »
+
+L’indication « nombre de VS » renseigne le nombre de VS impactées par la zone et non le nombre de branche.
+
+Exemple : Nombre de VS = 1
+
+
+
+
+
+
+
+
+Exemple : Nombre de VS = 1
+
+
+
+
+
+
+
+ 
+4.10.	Passage d’un CdV à joints isolants à un CdV court sans joint isolant 
+
+Un CdV à joints est décrit par ses extrémités (PK Joint isolant) ; les CdV court sans joint isolant n’ont pas de description précise pour ses extrémités (zone d’incertitude de shuntage). 
+Afin de décrire ce type de CdV, la règle à appliquer (par défaut) est un Pk début 25 m en amont du Pk du PN et un Pk fin à 25 m en aval du Pk du PN.
+Exemple :
+ Cdv avec joints isolants                Cdv court sans joint décrit avec un PKD : 170+950 et PKF : 171+000
+
+ 
+Figure 24 : passage d'un CdV à JI à un CdV sans JI
+                                       
+ 
+4.11.	Cas des zones de Compteur d’Essieux
+
+La fonction zone peut être réalisée par l’intermédiaire de compteurs d’essieux (CE), nommé CPE dans l’interface Netgéo. 
+
+4.11.1.	Cas général
+
+Description des zones de type CPE entre les points de comptage.
+
+Figure 25 : cas général de description des zones composées par CE
+
+
+Libellé : z52204
+Type zone : CPE
+Voie UNIQUE (A)
+PkD = 11+530
+PkF = 11+638
+Voie B
+PkD = 11+540
+PkF = 11+638
+
+
+Libellé : z52203
+Type zone : CPE
+Voie UNIQUE (A)
+PkD = 11+638
+PkF = 11+925
+
+Libellé : z52202
+Type zone : CPE
+Voie B
+PkD = 11+638
+PkF = 11+925
+ 
+4.11.2.	Cas mixtes
+
+Exemple 1 :  la fonction z5312 est à décrire en CPE (Cf renvoi 1 souligné en rouge sur le schéma) 
+
+ 
+Figure 26 : cas des zones CdV et CE (exemple 1)
+
+
+Libellé : z5311
+Type zone : Cdv
+PkF = 369+313
+
+Libellé : z5312
+Type zone : CPE
+PkD = 369+280 (mesuré)
+PkF = 370+030 (mesuré)
+
+Libellé : z5326
+Type zone : Cdv
+PkD = 370+018
+
+
+	Les chevauchements entre les 2 types de détections de zones (CdV et CPE) sont admis.
+
+ 
+Exemple 2 :  la fonction z41_(1) est à décrire en CE et la zone courte z41/43 est de type CdV
+
+Figure 27: cas des zones CdV et CE (exemple 2)
+Libellé : zT
+Type zone : Cdv
+PkD = 69+088
+PkF = 69+620 (mesuré)
+
+Libellé : z41_(1)
+Type zone : CE
+PkD = 69+576 	=> règle des 15m du signal
+PkF = 81+915	=> règle des 15m du signal
+
+Libellé : z41/43
+Type zone : Cdv
+PkD = 81+890	 => règle des 15m du signal et +/-25m de l’axe du CE
+PkF = 81+940 	 => règle des 15m du signal et +/-25m de l’axe du CE
+	Règles de saisies  : 
+
+-	CE à proximité d’un signal => +/- 15 m
+-	CE coté sur schéma => utiliser la cotation indiquée
+-	CE non coté, ni à proximité d’un signal => mesurer tout en respectant l’ordonnancement des différentes installations présentes
+-	Zone courte CdV implantée entre signal et zone de type CPE => +/- 15 m du signal (détermine l’axe du CE) puis +/- 25m de l’axe du CE pour déterminer le Pk D et Pk F de la zone courte.
+
+D’autres part, les zones courtes ou de PN de type CdV présentes « sur » une zone de type CE sont à collecter mais elles ne sont pas surimposées à la zone de type CE.
+
+Le libellé des zones doit être celui repris sur le schéma, la différentiation de technologie des zones (CdV ou CPE) s’effectuera à partir du type sélectionné.
+4.11.3.	Cas des zones de PN
+ 
+ Figure 28 : cas des zones de PN composées par CE
+Exemple PN 30bis
+Libellé : zPN30bis
+Type zone : CE
+PkD = 129+545 	=> règle des 25m de l’axe du PN
+PkF = 129+595	=> règle des 25m de l’axe du PN
+
+	Si présence du libellé de zone PN sur le schéma => indiquer le libellé repris sur le schéma
+	Si absence de libellé pour la zone PN sur le schéma => indiquer la zone suivie du libellé du PN (ex PN31 => zPN31)
+5.	Forme de remontée
+
+-	Pièce 1 ou Schéma de Signalisation ou Schéma d’implantation des signaux
+-	Pièce 11 Ou « Programme schématique des annonces au PN ». Certaines fois le schéma d’implantation des signaux et le programme schématique sont dans la même pièce.
+(L’IG90169 explique la Dénominations et symboles pour programme schématique et le schéma d'implantation pour les Installations de sécurité dont les PN font partie)
+-	Schéma d’exécution
+
+Dans le cas où des CdV n’apparaissent dans aucune de ces pièces, le demandeur doit contacter le PRI en question pour la mise à jour de la documentation. 
+6.	Périodicité
+
+Dés connaissance de l’information et à chaque MES et ET (Etudes et Travaux) du Plan Technique. 
+
+Les schémas MES situation temporaire de plus de 6 mois sont également à prendre en compte.
+7.	Impacts à contrôler
+
+Lors d’une création / modification / suppression de cet objet, il faut vérifier les impacts sur les objets suivants :
+
+	Vérifier les zones encadrantes
+	Vérifier l’impact sur IF Ligne (PN…)
+	Vérifier l’impact lors de modification de SR (sur voies et jonctions)
+	Vérifier l’impact sur les Domaines de Protection (DP)

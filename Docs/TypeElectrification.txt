@@ -1,0 +1,175 @@
+1.	Définition 
+
+•	 Cet habillage indique pour une ligne, la tension délivrée par la caténaire. L’Indication est présente dans le RT § 1 voir l’exemple ci-dessous :
+
+Exemple de l’article A111 du paragraphe $ 1 d’un RT
+
+ 
+2.	Caractéristiques obligatoires  du mode d’électrification
+
+
+•	Il est défini par les informations suivantes :
+o	code ligne
+o	numéro du tronçon de ligne (le rang)
+o	PK début
+o	PK fin
+o	Valeur possibles (Cf chapitre 3)
+o	Une DDA (correspondant à la date de l’électrification de la ligne)
+o	Une DFA
+3.	Valeurs possibles du mode d’électrification
+
+•	Les valeurs utilisables sont :
+o	1500 volts continus
+o	3000 volts continus
+o	15000 volts 16 2/3 alternatif
+o	25000 volts alternatifs
+o	750 volts continus (voir Nantes Châteaubriant)
+o	800 volts continus par 3ème rail
+o	850 volts continus par 3ème rail
+
+
+
+
+4.	Règles générales pour la gestion 
+
+4.1.	Suppression du mode d’électrification 
+
+
+Procédure. Suppression 
+
+Sélectionner le tronçon de ligne demandé 
+
+
+Dans la section « Habillages Ligne » choisissez le « Mode d’Electrification »
+	
+
+Supprimer la valeur en respectant la date 
+
+
+Enregistrer 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4.2.	Création du mode d’électrification
+
+
+
+Procédure : Création du mode d’électrification
+Création du mode d’électrification est possible dans les cas suivants :
+•	Création d’une nouvelle ligne
+•	Modernisation d’une ligne existante (électrification)
+
+Lors d’une modernisation d’une ligne ou suite à la connaissance de l’information 
+
+
+
+Dans la section « Habillages Ligne » choisissez le  « Mode d’Electrification »
+	
+
+
+Renseigner les caractéristiques obligatoires 
+
+
+
+Enregistrer 
+
+
+
+4.3.	Modification du mode d’électrification
+
+Procédure. Modification  du mode d’électrification
+
+
+Localiser les tronçons de ligne impactés
+
+
+Dans les Habillages Ligne, modifier dans « Mode d’Electrification » la valeur 
+	
+
+Vérifier que le Pk début et le Pk fin sont impactés en totalité par la modification 
+Vérifier les dates d’application de la modification 
+
+
+
+Enregistrer
+
+5.	Cas particulier
+
+Dans certains cas, l’information donnée par le RT peut être différentes sur chacune des voies d’une même ligne
+Dans ce cas la valeur à renseigner est la plus restrictive :
+Exemple :
+
+
+
+
+
+
+
+
+
+
+
+
+Dans cet exemple la valeur à renseigner sur la ligne est le PK 100+000
+
+Il faut impérativement s’assurer que la ou les valeurs renseigner ne génèrent pas de :
+ 	Chevauchement
+ 	De trou dans la continuité de la voie 
+
+
+6.	Forme de remontée
+
+•	Rectificatifs aux RT suite à des travaux importants ou à réédition du RT
+7.	Périodicité
+
+•	Dès connaissance de l’information 
+•	A chaque modernisation de la ligne suite à des travaux.
+8.	Impacts à contrôler
+
+•	Impact sur les domaines de protection Caténaire données S11
+
+
+
+
+9.	Observations particulières
+
+
+Dans certain cas et pour une même ligne le mode d’électrification peut être différente 
+Dans ce cas il faut respecter les Pk des différentes valeurs possible
+
+
+Exemple
+
+ 
+

@@ -1,0 +1,1049 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "TypeAutorisation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ProfilConfigurationExploitation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Segmentation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ConfigurationExploitation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Segment",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeSegmentAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteOperateurTransport",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationIndentiteNumeriqueObjet",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRoleIdentiteNumerique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRoleAmortissement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationEntite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PriseDePoste",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "FinPriseDePoste",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PosteOperateurIHM",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ProfilAutorisationRoleStructure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatObservationSecurite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatEvenementSecurite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ComplementAnalyse",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatTraitementParEntite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Structure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRoleContributeurMesure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ConfigurationArchitecture",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ConfigurationCongnitive",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RPOSpecialise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatProcedeProtection",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRoleOperationnelSurStructure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationOrganisationtRoleExerce",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpPlancheAccordVoieRPO",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpPlancheAccordVoieContrainteHoraireRPO",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRoleExploitant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRoleResponsableMesure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationPosteOperateur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Zone",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZG 1 de Mâlain_Poste 32 Baulme-la-Roche_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentZoneAgregeant",
+            "abstraite": false,
+            "description": "<b><u>Pour pouvoir  gérer les segmentations à date</u></b> c'est pour ça qu'on n'utilise pas une association reflexisve sur la classe zone\nPermet de gérer le concept de poupées russes",
+            "attributs": []
+        },
+        {
+            "nom": "ZG 1 de Plombières_Poste 36 Bif du Km 307,325_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ModeDeChargement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeSegmentZone",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentZoneExclu",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZG 1 de Plombières_Poste 37_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "identifiantExterne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeRole",
+            "abstraite": false,
+            "description": "Exemple :\nAgent SNCF RESEAU,\nAgent E,\nAC détenteur carnet,\nRegulateur,\nCCL,\nGLOC,\nCOORTT",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ZoneDInstallationFixe",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationIdentifiantExterneRolePosteOperateur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeZone",
+            "abstraite": false,
+            "description": "Quelques valeurs possibles :\nZone Geographique\nZone Eclairage\nZone De Gare\nZone VUTR\nZone SAF\nZone de poste technique",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Poste_Operateur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PosteOperateur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZG 1 de Lantenay_Poste 34 Bif du Km 298,150_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Implantation_sur_v3",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZG 3 de Dijon-Ville_Poste 1 (IHM N°1)_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneDeProgrammation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Modèle Structure et Zone de Compétence",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZG 2 de Dijon-Ville_Poste 1 (IHM N°1)_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentZone",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RoleSurStructure",
+            "abstraite": false,
+            "description": "La classe Rôle Sur Structure sera utilisée epour décrire l’ensemble des rôles possibles au sein d’une structure.\nPar exemple pour l'EIC de BFC on avoir les rôles sur structure avec les Types Rôle Sur Structure suivants : Agent Circulation, Aiguilleur, Régulateur, ...",
+            "attributs": []
+        },
+        {
+            "nom": "ZG 1 de Blaisy-Bas_Poste 31_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RolePosteOperateur",
+            "abstraite": false,
+            "description": "L'objet  Rôle Poste Opérateur va permettre de définir les les rôles que l on peut exercer et les zones de compétences associé à ce rôle pour chaque poste opérateur.\n\nPar exemple pour le poste opérateur 1 on va lui associer deux rôles exercés AC sur la zone 1 et 2 et Régulateur sur la zone 3.\n\nPour le poste opérateur 2 de on va lui affecter 2 rôles exercés AC sur la zone 3 et Aiguilleurs sur la zone 1.\n\nCinématique envisagée pour l’instant : je me connecte dans CAIMEN en tant que AC rattaché à l’UO Circulation (UOC) X de l'EIC Y.\nDans GOC, on m’affiche les zones liées à cette UOC\nJe sélectionne les zones sur lesquelles je veux travailler",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentZoneAgregeantExclu",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ZG 1 de Mâlain_Poste 33_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "G 1 de Velars_Poste 35_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Role Exerce Personne SGC",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type de Rôle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Groupe Role Exerce Personne SGC",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type de Configuration",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Segment de Zone",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Implantation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Type Zone",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Segment de Zone Agrégeant",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Configuration Zone de Compétence",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Zone Géographique 4",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Role1",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Itinéraire : C7101-C7123",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Poste Fonctionnel : Dijon-Ville_Poste 1 (IHM N°1)_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "type de zone",
+                    "type": "P-String",
+                    "description": "",
+                    "defaut": "Poste Fonctionnel"
+                }
+            ]
+        },
+        {
+            "nom": "Itinéraire : C7003-(Voie 25)",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Secteur circulation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Itinéraire : 6901-6911",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Itineraire : C7001-C7003",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Zone géographique 5",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Role AC",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Secteur Circulation - Blaisy-Dijon Nord",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Poste Fonctionnel - Blaisy-Bas_Poste 31_PAI",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImageAsset",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ZoneDInstallationFixe",
+            "cible": "Zone"
+        },
+        {
+            "source": "Zone",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "SegmentZoneAgregeant",
+            "cible": "Segment"
+        },
+        {
+            "source": "SegmentZoneAgregeantExclu",
+            "cible": "SegmentZoneAgregeant"
+        },
+        {
+            "source": "ModeDeChargement",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "TypeSegmentZone",
+            "cible": "TypeSegmentAbstrait"
+        },
+        {
+            "source": "SegmentZoneExclu",
+            "cible": "SegmentZone"
+        },
+        {
+            "source": "TypeRole",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "ZoneDeProgrammation",
+            "cible": "ZoneDInstallationFixe"
+        },
+        {
+            "source": "AssociationIdentifiantExterneRolePosteOperateur",
+            "cible": "AssociationEntite"
+        },
+        {
+            "source": "TypeZone",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "PosteOperateur",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "PosteOperateurIHM",
+            "cible": "PosteOperateur"
+        },
+        {
+            "source": "SegmentZone",
+            "cible": "Segment"
+        },
+        {
+            "source": "RoleSurStructure",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "RPOSpecialise",
+            "cible": "RolePosteOperateur"
+        },
+        {
+            "source": "RolePosteOperateur",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "RPOSpecialise",
+            "cible": "RolePosteOperateur"
+        },
+        {
+            "source": "Itinéraire : 6901-6911",
+            "cible": "Zone Géographique 4"
+        },
+        {
+            "source": "Zone Géographique 4",
+            "cible": "Poste Fonctionnel : Dijon-Ville_Poste 1 (IHM N°1)_PAI"
+        },
+        {
+            "source": "Itinéraire : C7101-C7123",
+            "cible": "Zone Géographique 4"
+        },
+        {
+            "source": "Role AC",
+            "cible": "Poste Fonctionnel : Dijon-Ville_Poste 1 (IHM N°1)_PAI"
+        },
+        {
+            "source": "Zone géographique 5",
+            "cible": "Poste Fonctionnel : Dijon-Ville_Poste 1 (IHM N°1)_PAI"
+        },
+        {
+            "source": "Itinéraire : C7003-(Voie 25)",
+            "cible": "Zone géographique 5"
+        },
+        {
+            "source": "Itineraire : C7001-C7003",
+            "cible": "Zone géographique 5"
+        }
+    ],
+    "relations": [
+        {
+            "source": "RolePosteOperateur",
+            "type": "AGREGE",
+            "cible": "Zone",
+            "role": "zones",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProfilConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "Zone",
+            "role": "zones",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Zone",
+            "type": "ASSOCIE_A",
+            "cible": "TypeZone",
+            "role": "typeZone",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Zone",
+            "type": "COMPOSE_DE",
+            "cible": "Segmentation",
+            "role": "segmentation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "Zone",
+            "role": "zones",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentZoneAgregeant",
+            "type": "AGREGE",
+            "cible": "Zone",
+            "role": "zone",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneDeProgrammation",
+            "type": "ASSOCIE_A",
+            "cible": "ModeDeChargement",
+            "role": "modeDeChargement",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteOperateurTransport",
+            "type": "ASSOCIE_A",
+            "cible": "TypeRole",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationIndentiteNumeriqueObjet",
+            "type": "ASSOCIE_A",
+            "cible": "TypeRole",
+            "role": "typeRole",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRoleIdentiteNumerique",
+            "type": "ASSOCIE_A",
+            "cible": "TypeRole",
+            "role": "typeRole",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRoleAmortissement",
+            "type": "ASSOCIE_A",
+            "cible": "TypeRole",
+            "role": "typeRole",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RoleSurStructure",
+            "type": "ASSOCIE_A",
+            "cible": "TypeRole",
+            "role": "typeRole",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneDInstallationFixe",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationIdentifiantExterneRolePosteOperateur",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeZone",
+            "type": "ASSOCIE_A",
+            "cible": "TypeZone",
+            "role": "typeZoneParent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PriseDePoste",
+            "type": "ASSOCIE_A",
+            "cible": "PosteOperateur",
+            "role": "posteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProfilConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "PosteOperateur",
+            "role": "posteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "FinPriseDePoste",
+            "type": "ASSOCIE_A",
+            "cible": "PosteOperateur",
+            "role": "posteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PosteOperateur",
+            "type": "AGREGE",
+            "cible": "RolePosteOperateur",
+            "role": "roles",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentZone",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProfilAutorisationRoleStructure",
+            "type": "ASSOCIE_A",
+            "cible": "RoleSurStructure",
+            "role": "roleSurStructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RolePosteOperateur",
+            "type": "ASSOCIE_A",
+            "cible": "RoleSurStructure",
+            "role": "roleSurStructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatObservationSecurite",
+            "type": "ASSOCIE_A",
+            "cible": "RoleSurStructure",
+            "role": "signalant",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatEvenementSecurite",
+            "type": "ASSOCIE_A",
+            "cible": "RoleSurStructure",
+            "role": "declarant",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RoleSurStructure",
+            "type": "ASSOCIE_A",
+            "cible": "RoleSurStructure",
+            "role": "roleSurStructureParent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ComplementAnalyse",
+            "type": "ASSOCIE_A",
+            "cible": "RoleSurStructure",
+            "role": "roleSurStructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatTraitementParEntite",
+            "type": "AGREGE",
+            "cible": "RoleSurStructure",
+            "role": "rolesSurStructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatObservationSecurite",
+            "type": "ASSOCIE_A",
+            "cible": "RoleSurStructure",
+            "role": "declarant",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatEvenementSecurite",
+            "type": "ASSOCIE_A",
+            "cible": "RoleSurStructure",
+            "role": "signalant",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RoleSurStructure",
+            "type": "ASSOCIE_A",
+            "cible": "Structure",
+            "role": "structure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRoleContributeurMesure",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "operateurContributeurs",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ConfigurationArchitecture",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "postesOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ConfigurationCongnitive",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatProcedeProtection",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRoleOperationnelSurStructure",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationOrganisationtRoleExerce",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheAccordVoieRPO",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheAccordVoieContrainteHoraireRPO",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRoleExploitant",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "operateurExploitant",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProfilConfigurationExploitation",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "rolePosteOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRoleResponsableMesure",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "operateurResponsable",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationPosteOperateur",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "role",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RPOSpecialise",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Role Exerce Personne SGC",
+            "type": "ASSOCIE_A",
+            "cible": "Structure",
+            "role": "est exercé au sein d'une",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Zone",
+            "type": "ASSOCIE_A",
+            "cible": "Segmentation",
+            "role": "possède une et une seule segmentation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Zone",
+            "type": "ASSOCIE_A",
+            "cible": "Type Zone",
+            "role": "est obligatoirement typee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Configuration Zone de Compétence",
+            "type": "ASSOCIE_A",
+            "cible": "Zone",
+            "role": "concerne une ou plusieurs",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Segmentation",
+            "type": "ASSOCIE_A",
+            "cible": "Segment",
+            "role": "est constituee d'un ensemble de",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Role Exerce Personne SGC",
+            "type": "ASSOCIE_A",
+            "cible": "Groupe Role Exerce Personne SGC",
+            "role": "peut appartenir à des",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Role Exerce Personne SGC",
+            "type": "ASSOCIE_A",
+            "cible": "Role Exerce Personne SGC",
+            "role": "peut être rattache à un rôle parent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Role Exerce Personne SGC",
+            "type": "ASSOCIE_A",
+            "cible": "Type de Rôle",
+            "role": "possède un et un seul",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Role Exerce Personne SGC",
+            "type": "ASSOCIE_A",
+            "cible": "Configuration Zone de Compétence",
+            "role": "peut donner acces à une",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Segment de Zone Agrégeant",
+            "type": "ASSOCIE_A",
+            "cible": "Segment",
+            "role": "Agrège d'autres",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Groupe Role Exerce Personne SGC",
+            "type": "ASSOCIE_A",
+            "cible": "Configuration Zone de Compétence",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Configuration Zone de Compétence",
+            "type": "ASSOCIE_A",
+            "cible": "Type de Configuration",
+            "role": "possède obligatoirement un",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Segment de Zone",
+            "type": "ASSOCIE_A",
+            "cible": "Implantation",
+            "role": "peut avoir plusieurs",
+            "cardinalite": "0..*"
+        }
+    ]
+}

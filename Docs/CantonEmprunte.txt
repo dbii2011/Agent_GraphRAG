@@ -1,0 +1,92 @@
+1.	Définition
+
+Pour prévenir le risque de rattrapage, un dispositif d’espacement des trains appelé « cantonnement » est mis en place selon les principes suivants : 
+
+-	La ligne est divisée en portions de voie appelées « cantons » ; 
+-	L’entrée de chaque canton est normalement commandée par un signal ; 
+-	Un seul train est normalement admis dans chaque canton. 
+-	Aucun train ne peut normalement pénétrer dans un canton occupé, du fait du maintien à la fermeture du signal d’entrée du canton durant tout le temps de son occupation.
+
+Dans certains cas particuliers, la pénétration d’un train dans un canton occupé ainsi que les modalités de franchissement du signal d’entrée du canton sont prévues dans une procédure propre à chaque mode de cantonnement.
+
+Afin de décrire la totalité du réseau, le terme canton a été élargi dans le but de découper l’ensemble du réseau en cantons (SAF gares, faisceaux…) et de créer les itinéraires.
+1.1.	Caractéristiques de l’objet
+
+Un canton est composé d’un signal origine et d’un signal de fin. 
+Dans certain cas l’origine et la fin du canton peut être :
+-	Un heurtoir
+-	Un joint de zone
+-             Fin d’exploitation (nommé provisoirement fin de service) limite au-delà de laquelle les trains ne circulent plus ou sont exploités manuellement.
+
+Un canton est composé de :
+
+-	Libellé
+-	Origine (signal ou assimilé)
+-	Destination (signal ou assimilé)
+-	Cantonnement (BAL, BAPR, BM …)
+-	DDA
+-	DFA
+
+
+
+
+
+
+
+1.2.	Signaux origine ou destination de canton
+
+Les signaux pouvant être origine ou destination de canton sont :
+-	Carré
+-	Sémaphore
+-	Carré violet
+-	Carré violet type bas
+-	Guidon d’arrêt (destination)
+-	Repère Nf de la TVM
+-	Repère F de la TVM
+-	Jalon de manœuvre de la TVM
+
+En l’absence de signal, le canton peut avoir pour origine ou destination :
+-	Fin d’exploitation (provisoirement fin de service)
+-	Joint de zone
+-	Heurtoir 
+1.3.	Cas du Carré violet type bas
+
+Lorsqu’un itinéraire a pour origine ou destination un Cv type bas, il faut créer un canton spécifique pour l’itinéraire, celui-ci sera indépendant des cantons liés au cantonnement de la voie.
+1.4.	Cas d’absence de signal sur VS
+
+Afin de décrire certains itinéraires, il est nécessaire de créer des cantons qui ont pour origine ou fin des voies de service. Les voies de service ne sont pas toutes porteuses de signaux d’entrée et de sortie, dans ce cas, il faut sélectionner un joint de zone si la voie en est équipée.
+
+Au cas où la voie d’origine ne serait ni porteuse de joint de zone, ni de signal alors il faut sélectionner « fin de service » et indiquer le PK : 50m en amont de la première aiguille.
+
+Au cas où la voie de destination ne serait ni porteuse de joint de zone, ni de signal alors il faut sélectionner « fin de service » et indiquer le PK : 50m en aval de la dernière aiguille.
+1.5.	Création de canton
+
+Un seul canton doit être décrit malgré le nombre d’itinéraires l’empruntant et de jalonnement possible pour aller du signal d’origine vers le signal destination.
+
+
+
+
+
+
+2.	Règles de nommage de l’objet 
+
+
+Le champ libellé doit reprendre la désignation du signal Origine-signal destination. 
+3.	Règles générales pour la gestion 
+
+3.1.	Création 
+
+3.2.	Modification 
+
+3.3.	Suppression (bornage)
+
+
+4.	Forme de remontée 
+
+Plan technique pièce 1 et 2
+5.	Périodicité
+
+Dès connaissance de l’information.
+6.	Impact à contrôler
+
+-	Itinéraire

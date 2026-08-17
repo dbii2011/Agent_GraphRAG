@@ -1,0 +1,137 @@
+1.	Définition
+
+Point Remarquable (PR) : Point géographique identifié par son code CI et son code CH. Le PR est essentiellement utilisé pour le calcul des horaires théoriques. Il est parfois utilisé pour délimiter des travaux ou un segment de tarification. 
+
+Code Infrastructure (CI) : code à 6 chiffres propre à chaque site. 
+
+Code Chantier (CH) : code alphanumérique à 2 caractères précisant un point particulier d’un lieu identifié par son libellé ou son code CI (par exemples BV pour Bâtiment Voyageur, AN pour Aiguille Nord, etc.). 
+2.	Caractéristiques 
+
+2.1.	Caractéristiques de l’objet
+
+Caractéristiques	Compléments d’informations
+Libellé 	30 caractères max, correspond au libellé CI
+Code CI	Donnée présente dans la procédure PR, ce code est immuable. 
+Code CH	Donnée présente dans la procédure PR, ce code est immuable.
+CH court	15 caractères max 
+Liste des principales abréviations utilisées dans le cadre des saisies de PR. (voir chapitre 2.2)
+CH long	Libellé long normalisé (50 caractères)
+GSMR	Cet indicateur doit avoir la valeur « Oui » ou « Non ». La valeur dépend de l'habillage LIGNE [Radio Sol-Train] : si le PR est localisé à la LIGNE sur une portion où cet habillage est = à [GSMR], alors on met [GSMR] = [OUI] pour le PR
+Particulier	-Horairisé : à sélectionner par défaut.
+-Tarification (RFF dans NETGEO) : Ils sont repérables par un code chantier spécifique de valeur « RF ».
+-Travaux : demande spécifique en dehors de la procédure PR.
+Numéro lieu	Il s’agit d’un identifiant unique à destination de la base européenne des codes lieu (CRD).
+Un fichier Excel est tenu à jour au GUC, il faut y noter la région, le code CI, le code CH, le libellé CI et ajouter le code lieu en incrémentant de 1 en 1.
+Exemple :
+  
+
+Région	En fonction de la localisation à la ligne et de l’habillage région SNCF dans GAIA.
+Localisations à la Ligne 	Le PK à la ligne correspond à la localisation de l’installation Ligne choisi (ex : nœud de ligne, gare, poste…).
+En l’absence d’installation ligne il faut faire la moyenne des localisations à la voie (ex : signaux, Jdz …).
+Localisations à la voie	A saisir en fonction de l’analyse faite dans le fichier technique, dans la mesure du possible il faut sélectionner une installation existante.
+
+Dans certain cas, sur VS ou en pleine ligne il faut créer une « installation virtuelle ».
+
+Les PR sont gérés dans le futur or il est possible que les installations futures ne soient pas encore saisies dans GAIA, dans ce cas il faut créer une « installation virtuelle » en attendant la saisie de l’objet. Le gérant doit mettre à jour un tableau Excel et vérifier régulièrement l’avancement du projet via JIRA GUF et l’ID GUF.
+Exemple de tableau :
+ 
+DDA	Elle correspond en général à la date du Service Annuel (SA) des horaires ou d’un rectificatif. Cette date est fournie dans la procédure PR.
+Exemple : pour le SA2024, il faut noter le 10/12/2023
+DFA	Elle correspond en général à la date du Service Annuel (SA) des horaires ou d’un rectificatif. Cette date est fournie dans la procédure PR.
+Exemple : pour le SA2024, il faut noter le 10/12/2023
+
+2.2.	Libellés CH Court
+
+ L’objectif est de créer un libellé à partir du libellé CH donnée par le demandeur, comportant au maximum 15 caractères.
+
+Exemple d’abréviations à utiliser pour les créations :
+
+Mot	Abréviation	Mot	Abréviation
+Bifurcation 
+Signaux 
+Faisceau
+Sémaphore
+Aiguille 
+Section 
+Raccordement 
+Service 
+Maintenance	
+Changement	
+Jonction
+Entrée	
+Sortie	
+Travaux 
+Passage à Niveau	Bif
+Sig
+Fsc
+S
+Aig
+Sct
+Rac
+Sce 
+Maint.
+Chgt
+Jct
+Ent
+Sort
+Trvx
+PN	Accès
+Caténaire
+Rebroussement 
+Carré
+Carré Violet 
+Tiroir 
+Périphérique 
+Garage 
+Voie 
+Chantier
+Bâtiment voyageur 
+Technique	
+Zone industrielle 
+Technicentre	
+Itinéraire	
+Sous station	Acc
+Cat
+Rbt
+C
+Cv
+Tir.
+Périph.
+Gge
+V
+Ch
+BV
+Tech
+ZI
+Tc
+Iti
+SSt
+
+
+3.	Règles générales pour la gestion 
+
+
+Les cas de création, modification et suppression se font essentiellement sur demande via une PPR (Procédure Point Remarquable).
+3.1.	Lecture de la procédure PR
+
+
+La description du PR est fournie dans la fiche technique associée à la PPR.
+
+ Exemple de fiche technique :
+
+ 
+
+Un onglet par PR dans le cas ci-dessus il y aura des actions sur les PR TOEC AG et LARDENNE AG (création, modification ou suppression). Dans notre exemple il y’a un extrait de Schéma permettant une aide au repérage.
+
+La colonne E est créée par le gérant GAIA FAB, l’action consiste à traduire la partie « type d’opération » en analysant le Schéma de signalisation et en cherchant les installations existantes correspondantes au PK demandé.
+
+4.	Forme de remontée 
+
+Procédure PR Horairisé et création d’un ticket JIRA GUC.
+Pour les PR tarification se reporter à la fiche procédure correspondante.
+5.	Périodicité
+
+Dès connaissance de l’information.
+6.	Impact à contrôler
+
+Sans objet.

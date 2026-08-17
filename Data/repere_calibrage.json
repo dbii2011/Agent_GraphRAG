@@ -1,0 +1,146 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperageGeodesique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperage",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperagePk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetPersistant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationCartographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PointDeCalibrageIFX",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RepereDeCalibragePkGeo",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "PointDeCalibragePK",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "exclu",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "PointDeCalibrageIFX",
+            "cible": "PointDeCalibragePK"
+        },
+        {
+            "source": "RepereDeCalibragePkGeo",
+            "cible": "SystemeReperage"
+        },
+        {
+            "source": "PointDeCalibragePK",
+            "cible": "ObjetPersistant"
+        }
+    ],
+    "relations": [
+        {
+            "source": "PointDeCalibrageIFX",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RepereDeCalibragePkGeo",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperageGeodesique",
+            "role": "srGeodesique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RepereDeCalibragePkGeo",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "srPk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RepereDeCalibragePkGeo",
+            "type": "AGREGE",
+            "cible": "PointDeCalibragePK",
+            "role": "pointsDeCalibrage",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointDeCalibragePK",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "geo",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointDeCalibragePK",
+            "type": "AGREGE",
+            "cible": "ImplantationPonctuelle",
+            "role": "pk",
+            "cardinalite": "0..*"
+        }
+    ]
+}

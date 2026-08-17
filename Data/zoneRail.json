@@ -1,0 +1,109 @@
+{
+    "enums": [
+        {
+            "nom": "EnumIndicateur",
+            "valeurs": []
+        }
+    ],
+    "classes": [
+        {
+            "nom": "RessourcePhysiqueMesurable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceStructurelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ValeurNomenclature",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Zone Plancher",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceStructurelleZoneRail",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "etatPose",
+                    "type": "ValeurNomenclature",
+                    "description": ""
+                },
+                {
+                    "nom": "indGalvanise",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indGraisseur",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indPatinRabote",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "indPresenceCordonChampignon",
+                    "type": "EnumIndicateur",
+                    "description": ""
+                },
+                {
+                    "nom": "largeurPatin",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "longueurElementaire",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "position",
+                    "type": "ValeurNomenclature",
+                    "description": ""
+                },
+                {
+                    "nom": "typeDePose",
+                    "type": "ValeurNomenclature",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "Zone Plancher",
+            "cible": "RessourcePhysiqueMesurable"
+        },
+        {
+            "source": "RelationRessourceStructurelleZoneRail",
+            "cible": "RelationRessourceStructurelle"
+        }
+    ],
+    "relations": []
+}

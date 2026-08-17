@@ -1,0 +1,172 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "ObjetPersistant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PlanTechnique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatObjetProcessusAbstrait",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatProcessusAbandonne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatObjetProcessusAValider",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatObjetProcessusValide",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatObjetProcessusSupprime",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatObjetProcessusNonValide",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetProcessusArbre",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetProcessusGenerique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetProcessusAbstrait",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatObjetProcessusBrouillon",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EtatProcessusPublie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "EtatObjetProcessusSupprime",
+            "cible": "EtatObjetProcessusAbstrait"
+        },
+        {
+            "source": "EtatObjetProcessusAValider",
+            "cible": "EtatObjetProcessusAbstrait"
+        },
+        {
+            "source": "EtatObjetProcessusBrouillon",
+            "cible": "EtatObjetProcessusAbstrait"
+        },
+        {
+            "source": "EtatProcessusAbandonne",
+            "cible": "EtatObjetProcessusAbstrait"
+        },
+        {
+            "source": "EtatObjetProcessusAbstrait",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "EtatObjetProcessusValide",
+            "cible": "EtatObjetProcessusAbstrait"
+        },
+        {
+            "source": "EtatProcessusPublie",
+            "cible": "EtatObjetProcessusAbstrait"
+        },
+        {
+            "source": "EtatObjetProcessusNonValide",
+            "cible": "EtatObjetProcessusAbstrait"
+        },
+        {
+            "source": "ObjetProcessusArbre",
+            "cible": "ObjetProcessusAbstrait"
+        },
+        {
+            "source": "ObjetProcessusGenerique",
+            "cible": "ObjetProcessusAbstrait"
+        },
+        {
+            "source": "ObjetProcessusAbstrait",
+            "cible": "ObjetPersistant"
+        }
+    ],
+    "relations": [
+        {
+            "source": "EtatObjetProcessusAbstrait",
+            "type": "ASSOCIE_A",
+            "cible": "ObjetProcessusAbstrait",
+            "role": "objetProcessus",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ObjetProcessusArbre",
+            "type": "AGREGE",
+            "cible": "ObjetProcessusAbstrait",
+            "role": "objetsProcessus",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ObjetProcessusAbstrait",
+            "type": "AGREGE",
+            "cible": "ObjetPersistant",
+            "role": "objets",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ObjetProcessusAbstrait",
+            "type": "AGREGE",
+            "cible": "ObjetPersistant",
+            "role": "objets",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ObjetProcessusAbstrait",
+            "type": "ASSOCIE_A",
+            "cible": "PlanTechnique",
+            "role": "planTechnique",
+            "cardinalite": "0..*"
+        }
+    ]
+}

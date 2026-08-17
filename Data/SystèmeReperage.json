@@ -1,0 +1,466 @@
+{
+    "enums": [
+        {
+            "nom": "EnumTypeAnomaliePk",
+            "valeurs": [
+                "V",
+                "A",
+                "S"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "RepereDeCalibragePkGeo",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationSR",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Geometrie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationSRLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementADateAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Gare",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationSRVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementHabillageParcours",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementParcours",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RupturePk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLineaireSRPk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPonctuelleSRPk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperage",
+            "abstraite": true,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperageLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SystemeReperageGeodesique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperageAdministratif",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ReferenceSRLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "WGS84",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Pk",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AnomalieSR",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rkPrecedent",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "typeAnomalie",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "valeur",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SystemeReperageGare",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AnomalieSRVoieDeLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperageVoieDeSaf",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperageVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperageNul",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RGF93",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AnomalieSRLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperagePk",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "pkDebut",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pkFin",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SystemeReperageVoieDeLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "pkProjeteDebut",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pkProjeteFin",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "RepereDeCalibragePkGeo",
+            "cible": "SystemeReperage"
+        },
+        {
+            "source": "SystemeReperageGeodesique",
+            "cible": "SystemeReperage"
+        },
+        {
+            "source": "SystemeReperage",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "SystemeReperageNul",
+            "cible": "SystemeReperage"
+        },
+        {
+            "source": "SystemeReperagePk",
+            "cible": "SystemeReperage"
+        },
+        {
+            "source": "SystemeReperageGare",
+            "cible": "SystemeReperage"
+        },
+        {
+            "source": "SystemeReperageLigne",
+            "cible": "SystemeReperagePk"
+        },
+        {
+            "source": "RGF93",
+            "cible": "SystemeReperageGeodesique"
+        },
+        {
+            "source": "WGS84",
+            "cible": "SystemeReperageGeodesique"
+        },
+        {
+            "source": "SystemeReperageAdministratif",
+            "cible": "SystemeReperagePk"
+        },
+        {
+            "source": "ReferenceSRLigne",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "AnomalieSRVoieDeLigne",
+            "cible": "AnomalieSR"
+        },
+        {
+            "source": "AnomalieSRLigne",
+            "cible": "AnomalieSR"
+        },
+        {
+            "source": "AnomalieSR",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "SystemeReperageVoieDeSaf",
+            "cible": "SystemeReperageVoie"
+        },
+        {
+            "source": "SystemeReperageVoie",
+            "cible": "SystemeReperagePk"
+        },
+        {
+            "source": "SystemeReperageVoieDeLigne",
+            "cible": "SystemeReperageVoie"
+        }
+    ],
+    "relations": [
+        {
+            "source": "LocalisationSR",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperage",
+            "role": "systemeReperage",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Geometrie",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperage",
+            "role": "systemeReperage",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReferenceSRLigne",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperageLigne",
+            "role": "systemeReperageLigne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationSRLigne",
+            "type": "AGREGE",
+            "cible": "SystemeReperageLigne",
+            "role": "systemesReperageLigne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SystemeReperageLigne",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperageAdministratif",
+            "role": "systemeReperageAdministratif",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RepereDeCalibragePkGeo",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperageGeodesique",
+            "role": "srGeodesique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SystemeReperageVoieDeLigne",
+            "type": "COMPOSE_DE",
+            "cible": "ReferenceSRLigne",
+            "role": "referencesSrLigne",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SystemeReperagePk",
+            "type": "AGREGE",
+            "cible": "AnomalieSR",
+            "role": "anomalies",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SystemeReperageGare",
+            "type": "ASSOCIE_A",
+            "cible": "Gare",
+            "role": "gare",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationSRVoie",
+            "type": "AGREGE",
+            "cible": "SystemeReperageVoie",
+            "role": "systemesReperageVoie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementHabillageParcours",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperageVoie",
+            "role": "systemeDeReperage",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementTopologique",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RupturePk",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLineaireSRPk",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeDeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPonctuelleSRPk",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeDeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPonctuelleSRPk",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeDeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RepereDeCalibragePkGeo",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "srPk",
+            "cardinalite": "0..*"
+        }
+    ]
+}

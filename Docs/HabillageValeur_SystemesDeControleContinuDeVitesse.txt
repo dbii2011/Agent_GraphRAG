@@ -1,0 +1,79 @@
+1.	Définition
+Le KCVB est un système destiné à améliorer la sécurité des circulations par un contrôle continu de la vitesse des trains par rapport à celle autorisée par la signalisation latérale et le livret de marche des trains. Ce système d’aide à la conduite a permis de réduire l’espacement des trains de 150s à 120s ; ce système a permis d’augmenter la capacité de la ligne de plus de 25%. (DES270)
+Le KCVP est un système destiné à améliorer la sécurité des circulations par un contrôle continu de la vitesse des trains par rapport à celle autorisée par la signalisation latérale. Le système est articulé autour d’une transmission continue sol/bord qui permet d’exploiter au mieux les informations de la signalisation par une prise en compte en temps réel des changements d’états. (DES271)
+Le KVBP a pour fonction de transmettre en permanence au mobile, par la voie, les informations de réouverture du contrôle de vitesse KVB. (DES266)
+En outre, le KCVB et KCVP autorisent la prise en compte de la réouverture et de la fermeture d’urgence des signaux par les trains équipés du dispositif KVBP.
+Actuellement ces 3 Systèmes de contrôle continu de vitesse (KCVB, KCVP et KVBP) ont été déployés en zones de circulation dense sur des portions de lignes du Réseau Express Régional d’Ile de France.
+2.	Caractéristiques des Systèmes de contrôle continu de vitesse (KCVB, KCVP et KVBP)
+
+La description de zones lié aux systèmes de contrôle continu de vitesse dans GAÏA sera exclusivement effectuée au sein de l’habillage voie.
+
+	Code Ligne
+	Rang de Ligne
+	Voie
+	Rang de Voie
+	Pk Début
+	Pk Fin
+	Valeur
+	Sens de contrôle
+	Date Début Activité (DDA)
+	Date Fin Activité (DFA)
+3.	Valeurs disponibles
+
+	KCVB : pour une voie ou un tronçon de voie équipé de KCVB (PkD au PkF).
+	KCVP : pour une voie ou un tronçon de voie équipé de KCVP (PkD au PkF).
+	KVBP : pour une voie ou un tronçon de voie équipé de KVBP (PkD au PkF).
+
+Nota : Les PkD et PkF seront déterminés à partir des Signaux et des NdV.
+4.	Sens de contrôle
+
+Caractéristique obligatoire liée à l’utilisation des Systèmes de contrôle continu de vitesse reprenant les attributs suivants :
+
+	Sens croissant
+	Sens décroissant
+	Deux sens
+
+5.	Représentation métier
+
+5.1.	KCVB et KCVP
+
+Ces 2 systèmes de contrôle sont représentés par des traits gras tiretés ou pleins accompagnés du sens de contrôle sur la pièce 25 du PT. Une légende est reprise sur la pièce technique.
+Il conviendra de décrire les voies ainsi que le ou les sens de contrôles : VPL, VPA (y compris les voies de jonctions), VS.
+
+
+5.2.	KVBP
+
+Ce système de contrôle est identifiable sur les signaux à partir de la pièce 25 des PT ; en effet seuls les cantons amonts des signaux munis d’un numéro hexa sont à considérer comme équipés de KVBP. Par conséquent, selon le sens des Pk, le signal origine à renseigner sera celui en amont du premier signal muni d’un numéro hexa. 
+Il conviendra d’habiller les voies : VPL, VPA (y compris les voies de jonctions), VS.
+Le sens de contrôle sera à définir à partir des signaux concernés ; le schéma de signalisation devra être consulté pour le sens des Pk et définir ou vérifier le Pk des installations.
+6.	Règles générales pour la gestion 
+
+L’habillage linéaire des voies concernera l’intégralité des voies concernées par un des contrôles continus de vitesse : VPL, VPA (y compris voies de jonctions), VS.
+
+Important : 
+Les 3 systèmes sont à renseigner dans Gaïa (KCVB ou KCVP ou KVBP), la superposition des systèmes est également à décrire (KCVB+KVBP ou KCVP+KVBP). Sur une même voie, deux valeurs d’habillages différentes peuvent exister et par conséquent doivent être décrit distinctement dans Netgéo.
+
+6.1.	Création
+
+Les nouvelles zones équipées d’un système de contrôle continu de vitesse seront créées lors de la parution d’un nouvel indice du Plan Technique.
+La DDA correspondra à la MES des installations.
+
+6.2.	Suppression (Bornage)
+
+La « suppression » ou « bornage » de zones équipées d’un système de contrôle continu de vitesse sera effectuée lors de la parution d’un nouvel indice du Plan Technique. 
+La DFA correspondra à la MES des installations.
+
+6.3.	Modification
+
+Seulement autorisée pour la reprise d’une erreur effectuée lors de la saisie en collecte ou lors d’une création d’un objet (exemple : faute de frappe etc)
+A ce titre il ne sera pas nécessaire d’historiser la modification.
+7.	Impact entre les données
+
+
+Impact sur les données du Système de contrôle de vitesse :
+
+•	Suppression/Création/Modification de la Signalisation
+•	Suppression/Création/Modification du Plan de Voie
+
+
+

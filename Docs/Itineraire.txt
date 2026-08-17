@@ -1,0 +1,159 @@
+1.	Définitions
+
+ Itinéraire : Section de voie empruntée par un train pouvant comprendre plusieurs aiguilles et dont l’origine est protégée par un signal. (Source EPSF)
+
+Jalonnement d’un itinéraire : Le jalonnement d’un itinéraire est la succession des aiguilles empruntées par une circulation ferroviaire.
+Il reprend le nombre d’aiguilles et leurs rangs de jalonnement.
+Il reprend également la position de chaque aiguille (Gauche ou droite).
+
+Canton :
+Un canton est la description d’un tronçon de voie de l’infrastructure permettant l’espacement des circulations de même sens.
+Les cantons sont matérialisés par un signal de début et par un signal de fin. 
+Ils sont associés à un mode de cantonnement.
+Normalement, un seul train circule dans un canton, néanmoins certains types de cantonnement permissifs autorisent la circulation d’autres trains dans un même canton.
+Il faut distinguer 2 types de canton :
+-	Canton de pleine voie
+-	Canton d’itinéraire généralement en gare 
+
+Important : le signal origine d’un canton doit obligatoirement avoir le même sens que le signal fin du canton (croissant ou décroissant)
+
+2.	Caractéristiques de l’objet
+
+2.1.	Itinéraire
+
+Caractéristiques	Commentaires
+Libellé
+(Gestion à date)	Règle générale : Indiquer le libellé repris sur la pièce 2, colonne Désignation.
+ 
+
+En l’absence de pièce 2 :
+-	Indiquer le Macaron début-Macaron fin. En l’absence de macarons indiquer le Libellé du signal origine - libellé du signal fin (sur VP) 
+-	Pour les VS voir Chapitre 2.2 et 2.3
+Macaron Origine
+	Exemple : 
+
+  
+Macaron Destination
+	
+Signal origine	Les signaux origines d’itinéraire sont : les Carrés et les Carrés violets.
+Sur les lignes en Block manuel, ce peut être des Sémaphores.
+
+Le Disque n’est pas signal origine d’itinéraire.
+Exemple : dans ce cas l’itinéraire est porté par le Carré ou le Sémaphore de cantonnement précédent.
+  
+Signal destination	Les signaux destinations d’itinéraire sont : les Carrés et les Carrés violets et heurtoir.
+Sur les lignes en Block manuel, ce peut être des Sémaphores.
+Pour les itinéraires de sortie de gare en ligne le signal de destination est le prochain signal origine d’itinéraire rencontré (exemple au chapitre 2.5)
+Pour les voies de service ce peut être des Heurtoirs, des « Jdz », Feux violets et Signaux à main, chevrons.
+Poste commande
+(Gestion à date)	
+L’itinéraire doit obligatoirement être rattaché à un poste d’aiguillage.
+Le poste d’aiguillage est celui ou le signal origine est rattaché.
+
+Indications présentées pour certains itinéraires	Certains itinéraires comportent une signalisation particulière pour une direction donnée.
+Ces indications se trouvent sur le plan technique au niveau des indications des itinéraires depuis le carré origine
+Exemple :
+
+ Dans ce cas il faut sélectionner seulement le M puisque présenté au franchissement du signal.
+
+NB : Il ne faut pas confondre les indications portées par le signal (voir fiche procédure signalisation) et les indications présentées par le signal pour un itinéraire et pour une direction précise.
+Exemple :
+      L’indication présentée est le     et le TSCS est un signal associé.
+Type de transit	-	Souple : tous les postes électriques et informatiques sont des postes à transit souple.
+-	Rigide : tous les postes mécaniques sont considérés, poste à transit rigide. Le seul moyen de connaitre l’information est la consultation de la pièce enclenchements électriques.
+Mode de gestion	Poste électrique ou informatique :
+Il faut se référer à la Pièce 2.
+ Exemple :  
+Poste mécanique :
+FA= fermeture automatique.
+FA annul= Fermeture automatique annulable 
+on retrouve l’information sur le schéma de signalisation.
+ Exemple :
+  
+Cantonnement	 Sélection automatique suivant la Ligne
+Bande jaune	-	Non renseigné
+-	Oui : si présence de l’indication ci-dessous  
+ (Peut être noté BJ)
+-	Non
+Période d’activité	DDA, DFS, DFA : voir chapitre création, modification et suppression.
+Jalonnement	La description de l’itinéraire est à prendre sur le schéma de signalisation et la pièce 2.
+Il reprend le nombre d’aiguilles et leurs rangs de jalonnement.
+Il reprend également la position de chaque aiguille (Gauche ou droite), les positions des aiguilles sont déterminées à partir de la pointe.
+
+Attention dans la pièce 2, les aiguilles non empruntées par l’itinéraire sont soulignées, elles ne sont pas prises en compte dans le jalonnement.
+
+Toutes modifications de communication doivent être suivies d’un relancement du jalonnement pour chaque itinéraire traversant l’Adv.
+
+Signaux associés	Certains signaux origine d’itinéraires sont associés à d’autres signaux pour un itinéraire pour une direction précise.
+Ces indications se trouvent sur le plan technique au niveau des indications des itinéraires.
+
+
+Exemple :
+     On identifie clairement A en   indication présentée dans la cible du C251 et les signaux associés G et les ID et indiquer la valeur (1,2 ou 3…).
+
+2.2.	Particularité sur LGV
+
+En LGV, il n’y a pas réellement d’indication portée par les repères, par assimilation à la signalisation classique l’indication M sur le plan technique correspond à l’allumage du feu blanc de franchissement. Il faut sélectionner, en indication portée par l’itinéraire, le « M LGV- Feu de Franchissement ». 
+Sur certains schémas, on retrouve des itinéraires « train » et itinéraires « Manœuvre ». Les itinéraires figurants sur la pièce 2 doivent tous être décrits.
+
+
+2.3.	Faisceau de voies convergentes vers un signal annonçant une manœuvre ou un départ en ligne
+
+Décrire les itinéraires qui sont origine du signal depuis l’ensemble des voies sur lesquelles le signal est localisé. 
+Exemple : L’itinéraire C23-FPN sera décrit jusqu’au joint de zone du Cv22. 
+Le libellé des itinéraires entrant vers le faisceau doit être celui repris sur la pièce 2 ou à défaut de pièce 2 celui du schéma. 
+
+ 
+
+2.4.	Faisceaux de voies convergentes comportant un signal d’arrêt sur chaque voie.
+
+L’ensemble des itinéraires repris dans la pièce 2, doivent être décrits.
+
+2.5.	Signal de destination sur itinéraire de sortie de gare.
+
+Les « Macarons » existent depuis les Postes PRS :
+-	En PRS et PRG, ils ne permettent pas d’identifier le signal car ils correspondent à des appellations de voie, d’origine ou de destination,
+-	En PRCI, PIPC et PAI, ils correspondent aux appellations des signaux d’origine et de destination d’itinéraire.
+Pour les itinéraires à destination de faisceaux ou de voies en impasse, le macaron de destination est soit celui mentionné à l’entrée du faisceau soit celui du signal de sortie du faisceau ou de la voie en impasse.
+
+Pour les signaux destinations d’itinéraires des Postes sans macaron ou ceux avec les macarons ne permettant pas d’identifier le signal, il faut aller chercher le prochain signal origine d’itinéraire.
+
+Exemple :
+Pour l’itinéraire C5515-8, le signal destination est le C8 du poste 1 de Mouchard.
+ 
+ 
+Itinéraire C2731-1 le signal destination se trouve sur le schéma de ligne et le schéma de gare de Bréauté Beuzeville
+  
+
+
+
+
+
+
+
+2.6.	Itinéraires réservés
+
+Les itinéraires réservés ne doivent pas être décrit.
+Exemple :
+ 
+
+3.	Règles générales pour la gestion 
+
+3.1.	Création 
+
+3.2.	Modification 
+
+3.3.	Suppression 
+
+
+4.	Documents sources
+
+Schéma de signalisation et pièce 2
+5.	Périodicité
+
+Dès connaissance de l’information et à chaque MES du Plan Technique (schéma de signalisation et pièce 2). 
+6.	Impacts à contrôler
+
+Lors d’une création / modification / suppression d’un itinéraire, il faut vérifier les impacts sur les objets suivants :
+
+-	Les cantons

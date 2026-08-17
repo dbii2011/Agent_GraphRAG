@@ -1,0 +1,125 @@
+1.	Définition 
+
+•	Cet habillage décrit les différentes catégories de lignes du Réseau Ferré National.
+2.	Caractéristiques de l’objet
+
+
+•	Il est défini par les informations suivantes :
+•	code ligne
+•	numéro du tronçon de ligne (rang)
+•	PK début
+•	PK fin
+•	Valeur 
+3.	Règles de nommage de l’objet 
+
+•	Les valeurs utilisables sont : 
+
+o	LGV pour Ligne à Grande Vitesse
+o	NORMAL pour Ligne du réseau conventionnel à écartement normal
+o	ETROIT pour Ligne du réseau conventionnel à voie étroite
+4.	Règles générales pour la gestion 
+
+4.1.	Suppression de la catégorie des lignes
+
+
+Procédure. Suppression (ici sans objet)
+
+
+
+
+
+
+
+
+
+
+4.2	Création de la catégorie des lignes 
+
+
+Procédure. : Création 
+
+Lors d’une création d’un nouveau système de repérage d’une  ligne ou d’un raccordement 
+
+
+
+Dans la section « Habillages Ligne » se positionner sur la  « Catégorie de ligne »
+	
+
+    Rentrer la valeur de la catégorie dans l’outils en respectant la date de création du SR
+	
+
+
+La saisie se fait  par tranche de PK du SR (ex : du 0+000 au 60+597 - LGV)  puis Enregistrer 
+
+
+
+
+4.3 Modification de la catégorie des lignes
+Procédure. Modification (ici sans objet)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5.	Cas particulier
+6.	Sourcing
+
+
+1.	Pour les lignes métriques : information donnée par les établissements (INFP)
+2.	Pour les lignes à écartement normal et les lignes LGV, c'est le schéma de signalisation. Si la ligne est équipée de signalisation LGV alors catégorie "LGV" sinon ligne "à écartement normal"
+7.	Périodicité
+
+
+•	Dès connaissance de l’information 
+8.	Impacts à contrôler
+
+
+•	N/A
+9.	Observations particulières
+
+
+•	Il est à initialiser lors de la création du système de repérage de la ligne 
+•	Ce découpage n’évolue pas dans le temps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cas de figure de suppression de l’objet
+
+NA
+
+Cas de figure création de l’objet
+
+NA
+
+
+Cas de figure modification de l’objet
+
+NA
+ 

@@ -1,0 +1,1592 @@
+{
+    "enums": [
+        {
+            "nom": "EnumPositionAmontAval",
+            "valeurs": [
+                "AM",
+                "AV",
+                "NA",
+                "B",
+                "P"
+            ]
+        },
+        {
+            "nom": "EnumPositionFile",
+            "valeurs": [
+                "D",
+                "G",
+                "A"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "Signal",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationType",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLineaireSRPk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationAdressageIfxLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationTexteLibre",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpPlancheTvxDernierTrainRecu",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteProvenance",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPonctuelleSRPk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationEtendue",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationTypeVoieLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLibreLigneVoiePkPonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementArmement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ProfilEnLongRoutier",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignaletiqueSousChantierTravauxCapacite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationProche",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CentreTechnique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationStructure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationLocalisationDeReferenceInstallationRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationSpatiale",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatEvenementSecurite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLibreLigneVoiePkSpecifique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleEspacement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationVoieLocale",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationSR",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignaletiqueChantierTravauxCapacite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentImplante",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpZchMesureProtectionBouclage",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Espace",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementLocalisation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatOrganisationTravaux",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EvtLocalisationCirculationPourOrdre",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationIfxSpatiale",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLibreLigneVoiePkLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Contexte",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationTypeVoieIFX",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteDestination",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ContrainteVia",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EvtIncidentBrehat",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationRessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLibre",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationCartographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ActionOperateurDegagementMobileTravaux",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationGeometrique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ContexteEvtMesureSurveillanceVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatConfigurationInfrastructure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Equipe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementSignaletiqueProjet",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationTCAPLocalisation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceMouvement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationRelativeInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpPlancheRestitutionTTXPretAuDepart",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationLocalisationDeReference",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatChantier",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "NiveauAccelerationIfx",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpTvxTTXDegagement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLibreLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementAnomalie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleDelaisDeCisaillement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpTvxDispositifImmobilisationPhysique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpTvxDispositifAdditionnelDAttention",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentZone",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLineaireRessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpPlancheAccordVoieTTXDeclencheur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationRegionSNCF",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ZERExistante",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationTopologiqueLinaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourcePhysiqueMesurable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignaletiqueRalentissementPatrimoine",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleVoiePreferentielleContrainteAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ConsistancePhysiqueProgrammee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ContexteMesureDBC",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationReportPolarite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpTvxTTXEngagement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationSegment",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AnnonceCirculation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPonctuelleRelative",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "QuantiteRealisationPhysique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationSegmentation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatObservationSecurite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpTvxDispositionParticuliereOriginesItineraire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationIfxExplicite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PerimetreLocalise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationCommentaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationRessourceParcoursInfrastructureLibre",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationMultiPonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationImplantationRessource",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignalitiqueIntervention",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SignaletiqueRalentissementTravaux",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpPlancheTvxDernierTrainExpedie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpTvxMesureDeProtection",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpPlancheTvxDegagementTTXDirection",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EvtEvtCirculationBrehat",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpTvxTTXRestitutionZepOccupee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneAnnonceCirculationIfx",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ProcessusReconnaissance",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationInstallationFixePonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpPlancheTvxRestitutionMRStationneEtImobilise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPointRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExpPlancheTvxAccordMRStationneEtImobilise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationSRLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationStructureOrganisationnelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationGeographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Eurobalise ETCS",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Ressource Abstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationAxe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationHorsRFN",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeImplantation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationAdresse",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "cedex",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "codePostal",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "numeroLibelleVoie",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "pays",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "ville",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationAbstraite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "TypeImplantation",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "ImplantationAdresse",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLineaireSRPk",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationAdressageIfxLineaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationTexteLibre",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationPonctuelleSRPk",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationTypeVoieLigne",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationPonctuelle",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkPonctuelle",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationStructure",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationSpatiale",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkSpecifique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationVoieLocale",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationSR",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationIfxSpatiale",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkLineaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationTypeVoieIFX",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationRessourceParcoursTopologique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLibre",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationCartographique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationGeometrique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationRelativeInstallationFixe",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLibreLineaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLineaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationType",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLineaireRessourceParcoursTopologique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationRegionSNCF",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationTopologiqueLinaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationInstallationFixe",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationSegment",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationPonctuelleSRPk",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationPonctuelleRelative",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationSegmentation",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationIfxExplicite",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationRessourceParcoursInfrastructureLibre",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationMultiPonctuelle",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationInstallationFixePonctuelle",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationPointRemarquable",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationAbstraite",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "ImplantationSRLineaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationStructureOrganisationnelle",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationGeographique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationAbstraite",
+            "cible": "Ressource Abstraite"
+        },
+        {
+            "source": "ImplantationAxe",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationHorsRFN",
+            "cible": "ImplantationAbstraite"
+        }
+    ],
+    "relations": [
+        {
+            "source": "Signal",
+            "type": "ASSOCIE_A",
+            "cible": "TypeImplantation",
+            "role": "typeImplantation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationType",
+            "type": "ASSOCIE_A",
+            "cible": "TypeImplantation",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheTvxDernierTrainRecu",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "destinations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteProvenance",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationEtendue",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantationFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementArmement",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProfilEnLongRoutier",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignaletiqueSousChantierTravauxCapacite",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationProche",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CentreTechnique",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": "zonesDAction",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLocalisationDeReferenceInstallationRemarquable",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatEvenementSecurite",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheTvxDernierTrainRecu",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "provenances",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleEspacement",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "pkAarretCirculation2",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignaletiqueChantierTravauxCapacite",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentImplante",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpZchMesureProtectionBouclage",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Espace",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementLocalisation",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatOrganisationTravaux",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EvtLocalisationCirculationPourOrdre",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Contexte",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleEspacement",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "pkAarretCirculation1",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteDestination",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContrainteVia",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EvtIncidentBrehat",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantationFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ActionOperateurDegagementMobileTravaux",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "directions",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContexteEvtMesureSurveillanceVoie",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": "implantation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatConfigurationInfrastructure",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationEtendue",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantationDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Equipe",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "localisation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementSignaletiqueProjet",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationTCAPLocalisation",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceMouvement",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "origines",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementLocalisation",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": "implantation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheRestitutionTTXPretAuDepart",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLocalisationDeReference",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatChantier",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "NiveauAccelerationIfx",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "destination",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "NiveauAccelerationIfx",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "origine",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpTvxTTXDegagement",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "destinations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ActionOperateurDegagementMobileTravaux",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "directions",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementAnomalie",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleDelaisDeCisaillement",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "zoneArretCirculationSortante",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ActionOperateurDegagementMobileTravaux",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpTvxDispositifImmobilisationPhysique",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "lieuDepot",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpTvxDispositifAdditionnelDAttention",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": "lieuDepot",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementLocalisation",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": "pFRAmont",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EvtIncidentBrehat",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantationDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentZone",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheAccordVoieTTXDeclencheur",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "stationnement",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZERExistante",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourcePhysiqueMesurable",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantationFonctionnelle",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignaletiqueRalentissementPatrimoine",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implnatations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleVoiePreferentielleContrainteAbstrait",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "pkApresArret",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ConsistancePhysiqueProgrammee",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ContexteMesureDBC",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationReportPolarite",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpTvxTTXEngagement",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "provenances",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AnnonceCirculation",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "destination",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "QuantiteRealisationPhysique",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceMouvement",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "destinations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EtatObservationSecurite",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpTvxDispositionParticuliereOriginesItineraire",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PerimetreLocalise",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationCommentaire",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationImplantationRessource",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignalitiqueIntervention",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SignaletiqueRalentissementTravaux",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheTvxDernierTrainExpedie",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "provenances",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpTvxMesureDeProtection",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheTvxDegagementTTXDirection",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "directions",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "EvtEvtCirculationBrehat",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantationFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpTvxTTXRestitutionZepOccupee",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneAnnonceCirculationIfx",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "destination",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ProcessusReconnaissance",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZoneAnnonceCirculationIfx",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "origine",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Equipe",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "localisation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementLocalisation",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": "pFRAval",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementLocalisation",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheTvxDernierTrainExpedie",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "destinations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheTvxRestitutionMRStationneEtImobilise",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheTvxAccordMRStationneEtImobilise",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceInstallationFixe",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleDelaisDeCisaillement",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "zoneArretCirculationEntrante",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleVoiePreferentielleContrainteAbstrait",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "pkAvantArret",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Espace",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Eurobalise ETCS",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationAbstraite",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpTvxTTXDegagement",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "destinations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ActionOperateurDegagementMobileTravaux",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExpPlancheTvxDegagementTTXDirection",
+            "type": "AGREGE",
+            "cible": "ImplantationAbstraite",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Equipe",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "localisation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Equipe",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationAbstraite",
+            "role": "localisation",
+            "cardinalite": "0..*"
+        }
+    ]
+}

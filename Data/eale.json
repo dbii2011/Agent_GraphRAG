@@ -1,0 +1,78 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "RessourcePhysiqueUnitaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTechnique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationRessourcePhysique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceStructurelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "OrganeEALE",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ReferentielTypeOrganeEALE",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationRessourcePhysiqueOrganeEALE",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceStructurelleEALE",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "OrganeEALE",
+            "cible": "RessourcePhysiqueUnitaire"
+        },
+        {
+            "source": "ReferentielTypeOrganeEALE",
+            "cible": "ReferentielTechnique"
+        },
+        {
+            "source": "AssociationRessourcePhysiqueOrganeEALE",
+            "cible": "AssociationRessourcePhysique"
+        },
+        {
+            "source": "RelationRessourceStructurelleEALE",
+            "cible": "RelationRessourceStructurelle"
+        }
+    ],
+    "relations": []
+}

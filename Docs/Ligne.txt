@@ -1,0 +1,424 @@
+1.	Définition 
+
+Réseau des lignes
+
+•	Le réseau des lignes est l’élément fondamental de la base de données RESEAU/GAIA. Toutes les autres données contenues dans la base de données utilisent comme point de départ le réseau des lignes.
+
+•	Le réseau des lignes permet en effet de pouvoir positionner physiquement toutes les autres informations contenues dans RESEAU/GAIA. Il correspond aux fondations sur lesquelles les différentes couches pourront venir se poser.
+
+•	Une ligne est une voie ferrée ou un ensemble de voies ferrées présentant des caractéristiques de tracé, d’exploitation et d’installation entre un point origine et un point de destination et sur lequel peut être assuré un service de transport. Une ligne est constituée d’un ou de plusieurs tronçons de ligne (mais le plus souvent, d’un seul). Elle est délimitée par ses deux extrémités (début et fin).
+
+- Un tronçon de ligne est une partie physiquement continue d’une ligne, délimitée par deux nœuds d’extrémités (origine et fin) de tronçon de ligne, et possédant un système de repérage cohérent.
+
+2.	Caractéristiques 
+
+2.1.	Caractéristiques générales  
+
+2.1.1.	Tronçon de ligne
+
+•	Une ligne est définie par : 
+o	Un type.
+o	Un code ligne (sur 6 caractères) et son rang.
+o	Un libellé.  
+o	Un Pk début et un Pk fin.
+o	Date du tronçon de ligne (TL)
+
+
+
+
+•	Le TL est défini par :
+
+o	Un rang (numéroté de 1 en 1 de l’origine vers la fin)
+
+
+
+
+
+
+
+
+
+
+
+•	La terminologie utilisée :
+
+TERME	DÉFINITION
+	
+PK 	POINT KILOMETRIQUE : EXPRESSION DE LA LOCALISATION PONCTUELLE D’UN OBJET SUR LE RESEAU DES LIGNES, CONFORMEMENT AU SYSTEME DE REPERAGE.
+PCR 	Portion constante de RESEAU
+RK	Repère kilométrique
+	
+TL	Tronçon de ligne : partie physiquement continue d’une ligne, délimitée par deux nœuds d’extrémités (origine et fin) de tronçon de ligne et possédant un système de repérage cohérent.
+	
+
+
+•	L’ouverture d’une ligne est indépendante de la présence de voies sur la ligne. Cette ouverture est définie par un décret ministériel afin de définir sa géographie. Il est très important de dissocier la notion de ligne et la notion de voie.
+•	Sur ce décret apparaissent les limites administratives associées à la ligne. Elles seront stockées en tant que PK administratifs dans GAIA/RESEAU. Le tronçon de ligne sera complété par les PK physiques de la ligne qui absorbent la totalité de la plateforme des voies de cette ligne.
+
+
+
+
+
+
+
+
+•	Ci-dessous L1 est décomposée de 2 tronçons de ligne et possède 2 PK extrémités pour chaque d’entre eux :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.1.2.	Le type de la ligne
+
+•	Les différents types de lignes rencontrés sont :
+
+o	ligne proprement dite : infrastructure ferroviaire reliant deux nœuds de tronçons de ligne extrémités via des nœuds de tronçons de ligne intermédiaires.
+	exemples : L 420000 – L 001000 – L 070000 
+o	raccordement : infrastructure ferroviaire permettant la jonction entre deux lignes quel que soit leur type.
+	exemple : L 420306 – L 830900
+o	voie-mère d’embranchement : liaison ferroviaire avec une ou plusieurs zones d’activité disposant chacune de sa propre infrastructure ferroviaire interne. 
+	exemple : L 570606
+o	voie de desserte de port : liaison ferroviaire avec une zone portuaire disposant de sa propre infrastructure ferroviaire interne.
+	Exemple : L 570506
+
+
+-	synoptique proposant des configurations diverses :
+
+o	L1 et L3 ---- Lignes classiques
+o	L2 ---- Raccordement entre L1 et L3
+o	L4 ---- Voie mère d’embranchement 
+o	L5 ---- Voies de desserte de port 
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                            
+
+
+
+
+2.1.3.	Le code ligne 
+
+•	Les lignes sont identifiées de façon unique par un code à six chiffres. A l’origine une règle de principe existait pour l’affectation des codes mais il peut avoir eu des dérogations.
+
+•	Cette règle préconise selon le type de ligne :
+
+o	ligne proprement dite : trois derniers chiffres à zéro. 
+	exemples : L 420000 – L 001000 – L 070000 
+o	raccordement : le quatrième chiffre à trois (ou neuf lorsque les règles prévues au chapitre 6 ne s’appliquent pas avec le chiffre 3)
+	exemple : L 420306 – L 830900
+o	voie-mère d’embranchement : le quatrième chiffre à six.
+	exemple : L 570606
+o	voie de desserte de port : le quatrième chiffre à cinq.
+	Exemple : L 570506
+2.1.4.	Le libellé de ligne
+
+•	La désignation de la nouvelle ligne reprend le plus souvent le nom des gares extrêmes desservies 
+o	Lignes de …… à …….
+o	Raccordement de …….
+3.	Règles générales pour la gestion 
+
+3.1.	Suppression d’une ligne 
+
+
+
+Procédure. Suppression d’une Ligne
+
+Une ligne ne peut pas être supprimée, seul son statut peut modifier
+Exemple : d’une ligne exploitée à une ligne non exploitée
+
+
+Le changement du statut de la ligne se fait à date
+
+
+Enregistrer et vérifier si les habillages associés ont bien été borné
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.2.  Création d’une ligne 
+
+
+Procédure. Création d’une Ligne
+
+Définir :
+•	type
+•	Code ligne (6 caractères)
+•	Libellé
+•	Pk début
+•	Pk fin
+•	Date de validité
+
+La création d’un nouveau code ligne sera OBLIGATOIREMENT attribué par le Responsable des vérificateurs (SPDF).
+A cette occasion, SPIQ pourra être consulté.
+Procédure. Modification d’une Ligne
+
+Une modification est possible sur une ligne existante lorsque celle-ci est rallongée ou raccourcie (rallongement d’une ligne LGV par exemple) 
+
+
+Il convient d’adapter dans ce cas les nouveaux paramètres à savoir :
+o	Libellé
+o	PK début ou/et fin
+o	La date d’application 
+	
+
+Attention : 
+
+o	Les PK Administratifs ne sont pas MODIFIABLE (seul les PK réels sont modifiables)
+3.3.  Modification de l’objet
+
+
+
+
+
+
+4.	Fermeture d’une ligne ou d’une voie temporairement suite à travaux S9A
+
+Afin de réaliser des travaux importants, une ligne ou une voie peut être fermée temporairement aux circulations ferroviaires.
+
+4.1.	Fermeture temporaire d’une ligne ou voie depuis une installation fixe
+
+•	Pour les lignes : Habillage statut « Neutralisée » 
+•	Pour la voie : Habillage état de la voie « voie non exploitée »
+•	Renseigner le PK de l’installation fixe pour le Pk début
+•	Renseigner le PK Fin indiqué sur le plan technique délimitant la fin de la fermeture temporaire
+•	Renseigner la date de début (DDA) de la fermeture temporaire
+•	Renseigner la date de fin (DFA) de le fermeture temporaire
+
+
+4.2.	Fermeture temporaire d’une ligne ou d’une voie depuis une traverse en croix cadenassée 
+
+•	Pour les lignes : Habillage statut « Neutralisée » 
+•	Pour la voie : Habillage état de la voie « voie non exploitée »
+•	Renseigner le PK de la traverse en croix pour le Pk début
+•	Renseigner le PK Fin indiqué sur le plan technique délimitant la fin de la fermeture temporaire
+•	Renseigner la date de début (DDA) de la fermeture temporaire
+•	Renseigner la date de fin (DFA) de le fermeture temporaire
+
+
+
+
+
+
+
+
+
+
+5.	Système de repérage ligne
+
+
+5.1.	Définition du système de repérage
+
+Le système de repérage est le dispositif qui permet, d’une part, de définir la localisation de tout point sur le réseau des lignes et, d’autre part, de calculer la distance entre deux points d’un même tronçon de ligne.
+Toute ligne du réseau possède un système de repérage orienté et ordonné selon des repères kilométriques (RK) formant une suite ordonnée et croissante. Lorsque que le système de repérage d'une ligne n'est pas ordonné et croissant de bout en bout de la ligne, il est nécessaire de créer des tronçons de ligne. 
+
+La précision du système de repérage est le mètre.
+
+5.2.	Principe du système de repérage
+
+Le RK est un PK particulier dont la distance est égale à zéro. Par abus de langage, sur le terrain, un RK est appelé PK.
+
+Un tronçon de ligne est une partie physiquement continue d’une ligne, possédant un système de repérage cohérent.
+Le système de repérage permet de définir la localisation de tout point sur le réseau des lignes d’une part et d’autre part de calculer la distance entre deux points d’un même tronçon de ligne.
+L'expression de la localisation d'un point sur un tronçon de ligne est traduite par un point kilométrique (PK) 
+Les termes « précédent » et « suivant » sont utilisés pour désigner une position relative par rapport à un point selon le sens du système de repérage. Le sens du système de repérage est le sens qui sert de référence.
+
+5.3.	Caractéristiques du système de repérage 
+Il est défini par :
+-	le code ligne de la ligne concernée ;
+-	le N° du tronçon ;
+-	le PK début ;
+-	le PK fin
+
+
+
+6.	Règles de numérotation d’une ligne
+6.1.	3 premiers chiffres du code ligne de Raccordement
+Une ligne est composée de 6 caractères alphanumériques.
+Les 3 premiers caractères alphanumériques sont définis en appliquant la règle suivante :
+
+Exemple pour la ligne 408370
+
+	Il faut orienter la ligne du raccordement.
+	Prendre le Pk 0+000 du raccordement quand il existe sur le plan technique
+	En cas d’absence du Pk 0+000, prendre les Pks des 2 nœuds de ligne (NDL) des 2 lignes concernées par le raccordement
+	Exemple ci-dessous, le Pk du NDL de la ligne 40800 est situé au Pk 124+145, le Pk du NDL de la ligne 420000 est situé au Pk 305+713
+	Dans cet exemple le Pk du NDL le plus petit est sur la ligne 408000
+	La numérotation du raccordement commencera donc par 408
+ 
+6.2.	4 eme chiffre du code ligne de Raccordement
+408370
+3 = le quatrième chiffre à trois (ou neuf lorsque les règles prévues au chapitre 6 ne s’appliquent pas avec le chiffre 3)
+6.3.	2 derniers chiffres du code ligne de Raccordement 
+
+408370
+
+Pour déterminer les 2 derniers chiffres du code ligne, les règles suivantes doivent être appliquées : 
+
+	Prendre la longueur totale de la ligne 408000 = 181+635
+	Prendre la valeur du Pk du NDL 124+145 qui correspond au Pk 0+000 de la ligne de raccordement
+	Diviser la valeur 124+145 : par la valeur totale de la ligne 408000 (181+635)
+	124+145 :181+635 = 0,68 arrondi à la dizaine supérieur = 70%
+	La valeur de 70% équivaut au pourcentage du NDL indiquant le PK 0+000 
+	IL est donc situé à 70% de la longueur total de la ligne 408000 (181+635) 
+
+
+Exemple pour la ligne 408360
+
+
+	Il faut orienter la ligne du raccordement.
+	Prendre le Pk 0+000 du raccordement quand il existe sur le plan technique
+	En cas d’absence du Pk 0+000, prendre les Pks des 2 nœuds de ligne (NDL) des 2 lignes concernées par le raccordement
+	Exemple ci-dessous, le Pk du NDL de la ligne 40800 est situé au Pk 102+567, le Pk du NDL de la ligne 420000 est situé au Pk 297+568
+	Dans cet exemple le Pk du NDL le plus petit est sur la ligne 408000
+	La numérotation du raccordement commencera donc par 408
+ 
+
+408360
+3 = le quatrième chiffre à trois (ou neuf lorsque les règles prévues au chapitre 6 ne s’appliquent pas avec le chiffre 3)
+
+
+408360
+
+Pour déterminer les 2 derniers chiffres du code ligne, les règles suivantes doivent être appliquées : 
+
+	Prendre la longueur totale de la ligne 408000 = 181+635
+	Prendre la valeur du Pk du NDL 102+567 qui correspond au Pk 0+000 de la ligne de raccordement
+	Diviser la valeur 102+567 : par la valeur totale de la ligne 408000 (181+635)
+	102+567 :181+635 = 0,56 arrondi à la dizaine supérieur = 60%
+	La valeur de 60% équivaut au pourcentage du NDL indiquant le PK 0+000 
+	IL est donc situé à 60% de la longueur total de la ligne 40800 (181+635) 
+7.	Règles des troncs communs
+
+Les troncs communs ne doivent être mis en place seulement pour des distances supérieures à 2km.
+
+Exemple :
+Cas où il ne faut pas respecter les limites précisées sur le Schéma de signalisation, on ne crée pas de tronc commun entre l’Adv 92 et 93 pour les Lignes 660000 et 650000. Le découpage sera celui représenté ci-dessous, la Ligne 660000 à pour extrémité l’Adv 93.
+ 
+
+
+
+
+8.	Cas particuliers 
+
+8.1.	PK Négatif
+
+Certaine portion de voie son en amont du PK 0+000 de la Ligne, Il existe une tolérance entre les Pk Administratifs et les Pk réels ; par conséquent les Pk négatifs sont acceptés.
+
+Exemple : La voie 2 à pour extrémité un Heurtoir au PK 0-022 de la ligne 525000.
+
+ 
+
+8.2.	Frontières 
+Pour des raisons de maintenance, les lignes peuvent être amenées à dépasser physiquement la représentation des frontières reprise sur les PT
+
+
+Exemple :
+  
+9.	Forme de remontée
+
+•	Le format « papier » reste privilégié. Un abonnement auprès de tous les PRI assure la fourniture automatique des schémas de signalisation pour la réalisation
+
+10.	Périodicité
+
+•	Dés connaissance de l’information ou à la création d’une ligne nouvelle
+11.	Impacts à contrôler
+
+
+o	Les habillages ligne
+o	Structures et compétences
+o	Les points Remarquables (PR)
+o	Les sections de ligne et les fiches de détournement ARTIC
+o	Installations fixes ligne
+o	Les voies
+o	Les habillages voie
+o	Les NdL et NdV
+o	Les SAF
+12.	Observations particulières
+
+•	L’ouverture d’une ligne est indépendante de la présence de voies sur la ligne. Cette ouverture est définie par un décret ministériel afin de définir sa géographie. Il est très important de dissocier la notion de ligne et la notion de voie.
+•	Sur ce décret apparaissent les limites administratives associées à la ligne. Elles seront stockées en tant que PK administratifs (non modifiables). Le tronçon de ligne sera complété par les PK physiques de la ligne qui absorbent la totalité de la plateforme des voies de cette ligne.
+13.	Annexes 
+
+Cas de figure de suppression d’une ligne
+
+NA
+
+
+
+Cas de figure création d’une ligne
+
+•	Ci-dessous le synoptique de la nouvelle ligne TGV Bretagne/Pays de Loire :
+o	La nouvelle ligne L408000 
+o	La ligne classique L420000
+o	Les 2 raccordements (L408360 – L408370) qui permettent de passer d’une ligne à une autre 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Cas de figure modification d’une ligne 
+
+
+•	Ci-dessous le synoptique de la nouvelle ligne CNM (Contournement de Nîmes Montpellier) :
+o	La ligne L834000 est prolongée (modification de libellé, de SR, …) 
+o	Les lignes classiques L810000 – L800000 et les RACC 834310 et 834311 sont modifiés par le rallongement 
+o	Plusieurs raccordements sont créés (L810310 – L800390 – 800395) 
+
+	En trait continu ----- lignes anciennes
+	En trait discontinu ----- lignes nouvelles ou rallongées
+
+
+ 
+
+   
+ 

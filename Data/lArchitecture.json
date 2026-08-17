@@ -1,0 +1,118 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RolePosteOperateur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "GroupementDeZoneDeDetection",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ZoneDeDetection",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Module",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationInstallationFixeExtremite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "DomaineSystemeProtection",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ConfigurationArchitecture",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeCK",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeConfiguration",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ModuleImage",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ConfigurationArchitecture",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "SystemeCK",
+            "cible": "Module"
+        },
+        {
+            "source": "TypeConfiguration",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "ModuleImage",
+            "cible": "Module"
+        }
+    ],
+    "relations": [
+        {
+            "source": "ConfigurationArchitecture",
+            "type": "ASSOCIE_A",
+            "cible": "RolePosteOperateur",
+            "role": "postesOperateur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SystemeCK",
+            "type": "ASSOCIE_A",
+            "cible": "ConfigurationArchitecture",
+            "role": "configuration",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ConfigurationArchitecture",
+            "type": "ASSOCIE_A",
+            "cible": "TypeConfiguration",
+            "role": "typeConfiguration",
+            "cardinalite": "0..*"
+        }
+    ]
+}

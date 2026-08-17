@@ -1,0 +1,88 @@
+1.	Définition 
+
+
+•	Cet habillage indique les limites officielles des régions traversées pour les lignes classiques.
+•	Pour les lignes LGV, la responsabilité à la région qui gère le suivi des circulations.
+•	L’habillage région SNCF n’a pas de corrélation avec les compétences territoriales.  
+2.	Caractéristiques générales
+
+2.1.	Caractéristiques obligatoires
+
+
+•	Il est défini par les informations suivantes :
+o	Code ligne
+o	Système de repérage ligne
+o	PK début
+o	PK fin
+o	Région SNCF 
+o	Dates de validité 
+
+•	ce découpage est renseigné à l’aide de la liste des 23 régions SNCF :
+
+	Paris-Est
+	Champagne-Ardenne
+	Lorraine
+	Alsace
+	Paris-Nord
+	Nord-Pas-de-Calais
+	Picardie
+	Paris-Saint-Lazare
+	Normandie
+	Paris-Rive-Gauche
+	Bretagne
+	Pays-de-Loire
+	Poitou-Charentes Aquitaine
+	Limousin
+	Centre
+	Midi-Pyrénées
+	Paris-Sud-Est
+	Bourgogne-Franche-Comté
+	Rhône-Alpes
+	Auvergne
+	Alpes
+	Provence-Alpes-Côte-D’azur
+	Languedoc-Roussillon
+3.	Règles générales pour la gestion 
+
+
+Pour modifier les limites de régions SNCF :
+	Borner les informations existantes.
+	Créer les nouvelles limites en respectant les Pk et les dates.
+
+
+
+
+4.	Forme de remontée
+•	Demande émise par le CRR
+5.	Périodicité
+
+NA
+6.	Impacts à contrôler
+
+En cas de modification des limites de région SNCF sur ligne, il faut reporter ces modifications sur les voies impactées.
+7.	Observations particulières
+
+
+•	L’habillage « Région SNCF » est obligatoire 
+
+
+
+
+
+
+
+
+8.	Annexe 
+
+
+Cas de figure de suppression de l’objet
+
+NA
+
+Cas de figure création de l’objet
+
+NA
+
+Cas de figure modification de l’objet
+
+NA

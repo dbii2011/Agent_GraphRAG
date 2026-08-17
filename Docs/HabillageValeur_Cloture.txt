@@ -1,0 +1,123 @@
+1.	Définition 
+
+•	Tout obstacle fermant l’accès aux emprises ferroviaire afin de matérialiser les limites et d’empêcher toutes personnes d’y entrer.
+•	Indique quel type de clôture installé en précisant sa position (Droite ou Gauche) en respectant le sens des PK croissants de la ligne.
+	Clôture à droite de la ligne
+	Clôture à gauche de la ligne
+2.	Généralités de l’objet  « Clôture »
+
+2.1.	Localisation de la clôture 
+
+La localisation de la clôture est obligatoire avec les informations suivantes :
+	Pk début et fin sur une portion de ligne 
+	Position de la clôture (Gauche ou droite)
+
+
+Particularité : 
+•	Pas de chevauchement possible d’un même côté de la ligne 
+•	Deux portions de clôture successives doivent être de type diffèrent 
+2.2.	Caractéristiques obligatoires 
+	Type de clôture « voir liste chapitre 3 »
+	DDA
+	DFA
+
+3.	Liste des types de clôtures
+
+
+	Clôture appartenant à un tiers
+	Clôture LGV avec bavolet ou rehausse (Hauteur = 2,50 m cc type 6)
+	Clôture LGV simple (Hauteur = 2m cc type 5)
+	Clôture LGV souple (Hauteur < 2m)
+	Clôture défensive haute protection (Hauteur = 3m cc type 4)
+	Clôture défensive rigide (cc type 3)
+	Clôture défensive rigide (2m < = hauteur < 2,20m cc type 2)
+	Clôture limitative ancienne béton ou acier
+	Clôture limitative souple (2m < hauteur< 2,20m cc type1)
+	Clôture limitative (hauteur < 2m)
+
+
+ 
+4.	Règles générales pour la gestion 
+
+
+4.1.	Suppression de l’objet 
+
+Pour détecter une suppression de clôture, prendre le fichier Excel envoyé par les CRR et réceptionné par le GUF. Si le tableau fourni présente une information sur l’objet clôture  en jaune ou mentionné « supprimé », il faut supprimer l’objet.
+
+
+
+Procédure. Suppression d’une clôture
+
+Le tableau fourni présente une information sur l’objet  en jaune ou mentionné « supprimé » 
+
+
+Localiser la ligne (code) puis localiser la clôture (à droite ou à gauche) dans l’application.
+	
+
+Borner l’objet (DFA= à la date du jour du travail)
+	
+
+Enregistrer 
+
+                                      
+ 
+4.2.	Création de l’objet 
+
+Pour détecter une création de clôture, prendre le fichier Excel envoyé par les CRR et réceptionné par le GUF. Si le tableau fourni présente une information sur l’objet clôture  en rouge ou mentionnée « créer, nouveau … », il faut ajouter l’objet.
+
+
+
+
+Procédure. Création d’une clôture
+
+Le tableau fourni présente une information sur l’objet en rouge ou mentionnée « créer, nouveau … »
+
+
+Localiser la ligne (code) puis localiser la clôture (à droite ou à gauche) dans l’application
+	
+
+
+	Créer le nouveau découpage à la date de travail prévu
+	Positionner la clôture (gauche ou droite)
+	Indiquer le Pk début et fin en respectant les Pk croissant de la ligne
+	Sélectionné la valeur de la clôture
+
+	
+
+Enregistrer 
+ 
+4.3.	Modification de l’objet
+
+Procédure. Modification d’une clôture
+
+Dans le tableau fourni, SI présence d’une modification de l’objet (en rouge ou en jaune) 
+
+-	Pk modifiés (fin et/ou début) 
+-	Type de clôture modifié  
+.
+
+
+
+Localiser la ligne (code) puis localiser la clôture (à droite ou à gauche) dans l’application
+	
+
+Modifier l’actif  à la date de travail prévue
+	
+
+Enregistrer
+Pour détecter une modification de clôture, prendre le fichier Excel envoyé par les CRR et réceptionné par le GUF. Si le tableau fourni présente des informations sur l’objet clôture sont  en rouge et/ou en jaune, il faut modifier l’objet.
+
+
+ 
+
+4.4.	Cas particulier
+
+	Si la date de création n’est pas connue, il faut contacter le Crr de la région concernée pour connaitre la date réelle.
+	Pour toute valeur inférieure à 2m, la valeur minimale retenue dans le référentiel est  <2,00m »
+5.	Forme de remontée
+
+•	Tableau EXCEL 
+6.	Périodicité
+
+•	Dés connaissance de l’information. 
+7.	Impacts à contrôler

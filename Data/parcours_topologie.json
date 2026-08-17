@@ -1,0 +1,702 @@
+{
+    "enums": [
+        {
+            "nom": "EnumTypeParcours",
+            "valeurs": [
+                "D",
+                "V",
+                "T",
+                "L"
+            ]
+        },
+        {
+            "nom": "EnumUtilisationElementTopologique",
+            "valeurs": [
+                "D",
+                "C",
+                "A"
+            ]
+        },
+        {
+            "nom": "EnumSensVisible",
+            "valeurs": [
+                "D",
+                "C",
+                "B"
+            ]
+        },
+        {
+            "nom": "EnumSensParcours",
+            "valeurs": [
+                "D",
+                "C",
+                "N"
+            ]
+        },
+        {
+            "nom": "EnumMouvementPossible",
+            "valeurs": [
+                "BA",
+                "AB",
+                "I",
+                "D"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "LocalisationPk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperagePk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Entreprise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ExtremiteLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ExtremiteVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Ligne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationTypeVoieLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Voie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageParcours",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationRessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceParcoursInfrastructureLibre",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TronconDItineraireVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoPonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoPonctuelleRelative",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TripletDeVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AppareilDeVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Noeud",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementADateAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ObjetPersistant",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ParcoursTopologiqueHabille",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TronconDItineraireLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Portion",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementParcours",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ExtremiteReseau",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementTopologique",
+            "abstraite": false,
+            "description": "TIV, TIL",
+            "attributs": []
+        },
+        {
+            "nom": "DetailParcours",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RessourceConnexion",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "TypeExtremiteReseau",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mnemo",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RessourceConnexionOrientee",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "utilisationElementTopologiqueA",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "utilisationElementTopologiqueB",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ElementTopologiquePonctuel",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RupturePk",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceParcoursTopologiqueADate",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ElementParcoursBase",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ParcoursTopologique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "typeParcoursTopologique",
+                    "type": "EnumTypeParcours",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ElementTopologiqueLineaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationParcoursElementTopologique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "MouvementPossible",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "mouvementPossible",
+                    "type": "EnumMouvementPossible",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ElementParcours",
+            "cible": "ElementParcoursBase"
+        },
+        {
+            "source": "ExtremiteReseau",
+            "cible": "ElementTopologiquePonctuel"
+        },
+        {
+            "source": "ExtremiteLigne",
+            "cible": "ExtremiteReseau"
+        },
+        {
+            "source": "ExtremiteVoie",
+            "cible": "ExtremiteReseau"
+        },
+        {
+            "source": "Ligne",
+            "cible": "RessourceParcoursTopologique"
+        },
+        {
+            "source": "Voie",
+            "cible": "RessourceParcoursTopologique"
+        },
+        {
+            "source": "RessourceParcoursTopologique",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "ElementTopologiquePonctuel",
+            "cible": "ElementTopologique"
+        },
+        {
+            "source": "ElementTopologiqueLineaire",
+            "cible": "ElementTopologique"
+        },
+        {
+            "source": "ElementTopologique",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "TripletDeVoie",
+            "cible": "ElementTopologique"
+        },
+        {
+            "source": "RessourceConnexionOrientee",
+            "cible": "RessourceConnexion"
+        },
+        {
+            "source": "RessourceConnexion",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "TypeExtremiteReseau",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "RupturePk",
+            "cible": "ElementTopologiquePonctuel"
+        },
+        {
+            "source": "RessourceParcoursTopologiqueADate",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "ElementParcoursBase",
+            "cible": "ObjetPersistant"
+        },
+        {
+            "source": "ParcoursTopologique",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "TronconDItineraireVoie",
+            "cible": "ElementTopologiqueLineaire"
+        },
+        {
+            "source": "TronconDItineraireLigne",
+            "cible": "ElementTopologiqueLineaire"
+        },
+        {
+            "source": "MouvementPossible",
+            "cible": "ElementADateAbstrait"
+        }
+    ],
+    "relations": [
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ExtremiteReseau",
+            "type": "ASSOCIE_A",
+            "cible": "TypeExtremiteReseau",
+            "role": "typeExtremite",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ExtremiteReseau",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "entrepriseLimite",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationTypeVoieLigne",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageParcours",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "parcoursInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceParcoursTopologique",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursTopo",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationRessourceParcoursTopologique",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursTopo",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceParcoursTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "RessourceParcoursTopologiqueADate",
+            "role": "ressourcesInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceParcoursInfrastructureLibre",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoPonctuelle",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoPonctuelleRelative",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPonctuelle",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceConnexionOrientee",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "elementTopologiqueA",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceConnexionOrientee",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "elementTopologiqueB",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationParcoursElementTopologique",
+            "type": "AGREGE",
+            "cible": "ElementTopologique",
+            "role": "ressourceInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "DetailParcours",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "elementTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcoursBase",
+            "type": "COMPOSE_DE",
+            "cible": "DetailParcours",
+            "role": "detailsParcours",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AppareilDeVoie",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceConnexion",
+            "role": "connexions",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Noeud",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceConnexion",
+            "role": "connexions",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceConnexionOrientee",
+            "type": "COMPOSE_DE",
+            "cible": "MouvementPossible",
+            "role": "mouvementsPossibles",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementTopologiquePonctuel",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RupturePk",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RessourceParcoursTopologiqueADate",
+            "type": "COMPOSE_DE",
+            "cible": "RelationParcoursElementTopologique",
+            "role": "ressourceInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ParcoursTopologique",
+            "type": "AGREGE",
+            "cible": "ElementParcoursBase",
+            "role": "elementsParcours",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ParcoursTopologiqueHabille",
+            "type": "ASSOCIE_A",
+            "cible": "ParcoursTopologique",
+            "role": "parcoursDemande",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementTopologiqueLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementTopologiqueLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Portion",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologiqueLineaire",
+            "role": "ressource",
+            "cardinalite": "0..*"
+        }
+    ]
+}

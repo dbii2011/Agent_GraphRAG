@@ -1,0 +1,115 @@
+1.	Définition 
+
+•	Cet habillage indique les lignes aptes à la circulation des trains de marchandises transportant des matières dangereuses 
+•	Toutes les lignes transportant des voyageurs sont aptes à recevoir des trains transportant des MD
+•	Pour les autres lignes, seule les lignes suivantes sont aptes à recevoir des trains transportant des matières dangereuses
+•	7 SV
+•	8 SV
+•	9 SV 
+*SV = Sans Voyageur
+•	Sont concernées aussi certaines lignes dont le statut est transféré en voie de service (Voies de Circulation et voies de stationnement)
+
+Pour les voies de service situées dans les SAF la notion de matières dangereuses concerne uniquement si la voie de service est apte à réceptionner des trains transportant des matières dangereuses
+Les valeurs utilisées pour les voies de service sont différentes
+•	Non renseigné
+•	Oui 
+•	Non 
+2.	Caractéristiques de l’objet
+
+•	Il est défini par les informations suivantes :
+o	code ligne 
+o	numéro du tronçon de ligne 
+o	PK début 
+o	PK fin 
+o	La valeur 
+o	DDA
+o	DFA
+
+Voir IN 1854 : Transport de Marchandises Dangereuses - Désignation des lignes et des sites pour l’application des normes de maintenance Voie.
+
+
+
+
+
+
+3.	Règles de gestion des lignes aptes à la circulation des trains transportant des MD
+
+3.1.	Valeurs utilisées
+« Oui »
+Ou
+« Non »
+.
+ 
+4.	Règles générales pour la gestion 
+
+
+4.1.	Suppression de l’habillage
+
+Pour la suppression de MD (fichiers Excel envoyé par les CRR et réceptionné par le GUF)
+
+
+
+Procédure. Suppression 
+
+Si l’information sur l’objet est à supprimée 
+
+
+Localiser la ligne (code), se positionner sur « Matières dangereuses »
+	
+
+Borner l’objet (DFA= à la date de fin de travail)
+	
+
+Enregistrer
+
+                                      
+
+4.2.	Création de l’habillage
+
+Pour la création de MD (fichiers Excel envoyé par les CRR et réceptionné par le GUF)
+
+
+Procédure. Création 
+
+Si l’information sur l’objet  est a créé 
+
+
+Localiser la ligne (code) puis la tranche de Pk à saisir dans l’application « Matières dangereuses »
+	
+
+                                       Créer le nouveau découpage à la date de travail 
+	
+
+Enregistrer
+ 
+4.3.	Modification de l’habillage
+
+Pour la modification de MD (fichiers Excel envoyé par les CRR et réceptionné par le GUF)
+Procédure. Modification 
+
+Dans le tableau fourni, si présence d’une modification de l’objet (en rouge ou en jaune) 
+-	Pk modifiés « Extrémité »
+
+
+Localiser la ligne (code) puis corriger la donnée dans l’application « Matières dangereuses »
+	
+
+Modifier l’actif à la date de travail 
+	
+
+Enregistrer -  
+
+
+4.4.	Cas particulier
+
+RESERVE
+5.	Forme de remontée
+
+•	Forme informatique 
+•	Correspondant régional réseau pour les lignes et pour les voies de service
+6.	Périodicité
+
+•	Dès connaissance de l’information. 
+7.	Impacts à contrôler
+
+8.	Annexe

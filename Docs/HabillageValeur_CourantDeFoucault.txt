@@ -1,0 +1,52 @@
+1.	Définition
+
+Le frein à courant de Foucault est un électroaimant, il fonctionne grâce à des courants électriques créant un champ magnétique. Il joue un rôle de ralentisseur.
+Aujourd'hui il existe une possibilité de faire circuler les engins à courant de Foucault sur certaines lignes du RFN.
+Les lignes compatibles sont celles où les installations de signalisation sont adaptées à recevoir ces véhicules.
+
+2.	Caractéristiques
+
+La description de l’utilisation des freins à courant de Foucault dans GAÏA sera exclusivement effectuée au sein de l’habillage ligne.
+
+	Code Ligne
+	Rang de Ligne
+	Valeur
+	Pk Début
+	Pk Fin
+	Date Début Activité (DDA)
+	Date Fin Activité (DFA)
+
+3.	Valeurs disponibles
+
+	Autorisée : pour une ligne ou portion de ligne permettant l’utilisation des freins à courant de
+	 Foucault
+	Non Autorisée : pour une ligne ou portion de ligne ne permettant pas l’utilisation des freins à
+	 courant de Foucault
+4.	Règles générales pour la gestion 
+
+
+Une adaptation de description de l’habillage « utilisation des freins à courant de Foucault » devra être apportée par la Division Description du Réseau (DDR) si le découpage des lignes repris dans GAÏA est différent de celui présent dans le document source. L’habillage reposera sur la description GAÏA effectuée à partir du document référence, le schéma de signalisation du Plan Technique.
+
+4.1.	Création
+
+Une nouvelle description de l’utilisation des freins à courant de Foucault sera créée lors de la parution d’une nouvelle version du ou des textes de références avec une DDA correspondant à la date d’application de cette version.
+
+4.2.	Bornage
+
+Une description de l’utilisation des freins à courant de Foucault sera bornée lors de la parution d’une nouvelle version du ou des textes de références avec une DFA correspondant à la date d’application de cette version.
+
+4.3.	Modification
+
+Seulement autorisée pour la reprise d’une erreur effectuée lors de la saisie en collecte ou lors d’une création d’un objet (exemple : faute de frappe)
+A ce titre il ne sera pas nécessaire d’historiser la modification.
+
+5.	Impact entre les données
+
+Néant
+6.	Forme de remontée 
+
+Evolution des textes suivants :
+•	RFN-CG-SE 02 C-00-n°007 (OP00576)
+•	IG02037
+
+

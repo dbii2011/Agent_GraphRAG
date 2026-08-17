@@ -1,0 +1,718 @@
+{
+    "enums": [
+        {
+            "nom": "EnumSensHabillage",
+            "valeurs": [
+                "D",
+                "C",
+                "B",
+                "N"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "RegionSNCF",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleDureeCorrespondance",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleTempsMinModifVoieAQuai",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleDelaisDeCisaillement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleExploitationGareAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationVoieLocale",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Entreprise",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "StructureGeographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "CritereReferentielHabillageTypeValeur",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraiteNommee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementReferentielGopeqAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PerimetreHabillage",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegleEspacement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Critères Vitesse",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationPk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Declivite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageNatureUsageVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Trace",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "VitesseElementParcours",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageRegionSNCF",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageParcours",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "NomLocalDeVoie",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nomLocal",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "nomThor",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "HabillageEntreprise",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageStructureAdministrative",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageCourantMaxCatenaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "courantMax",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "HabillageValeur",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "indCarto",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "libelle_2",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "HabillageTypeValeur",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "docOpposable",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemonique",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "numDocumentOP",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AssociationHabillage",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "pkDebut",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pkFin",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "HabillageRegle",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "VitesseParCodeComposition",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "libelle",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "HabillageOriente",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "oriente",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumSensHabillage",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeHabillage",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurAffichage",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurCartographie",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurEntreprise",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurIcCc",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurLimNoeud",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurListValeur",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurOuiNon",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurRegionSncf",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurSelection",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurSens",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurStructureAdministrative",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurTypeDecoup",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "indicateurVal",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "mnemonique",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "numNiniv",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "numOrdreAffichage",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "typeLvd",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "typeSdn",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "TypeHabillageOriente",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "code",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "HabillageRegionSNCF",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "HabillageParcours",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "NomLocalDeVoie",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "HabillageEntreprise",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "HabillageStructureAdministrative",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "HabillageCourantMaxCatenaire",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "HabillageValeur",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "HabillageTypeValeur",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "AssociationHabillage",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "HabillageRegle",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "VitesseParCodeComposition",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "HabillageOriente",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "HabillageOriente",
+            "cible": "RessourceAbstraite"
+        },
+        {
+            "source": "Declivite",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "HabillageNatureUsageVoie",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "Trace",
+            "cible": "HabillageOriente"
+        },
+        {
+            "source": "TypeHabillage",
+            "cible": "RessourceAbstraiteNommee"
+        },
+        {
+            "source": "TypeHabillageOriente",
+            "cible": "RessourceAbstraiteNommee"
+        }
+    ],
+    "relations": [
+        {
+            "source": "HabillageRegionSNCF",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "regionInterconnectee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageParcours",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "parcoursInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleDureeCorrespondance",
+            "type": "ASSOCIE_A",
+            "cible": "NomLocalDeVoie",
+            "role": "voieLocaleAlternative",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleTempsMinModifVoieAQuai",
+            "type": "ASSOCIE_A",
+            "cible": "NomLocalDeVoie",
+            "role": "voieLocaleAlternative",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleDelaisDeCisaillement",
+            "type": "ASSOCIE_A",
+            "cible": "NomLocalDeVoie",
+            "role": "voieLocaleCircuSortante",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleExploitationGareAbstraite",
+            "type": "ASSOCIE_A",
+            "cible": "NomLocalDeVoie",
+            "role": "nomLocalVoie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationVoieLocale",
+            "type": "ASSOCIE_A",
+            "cible": "NomLocalDeVoie",
+            "role": "nomLocalDeVoie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageEntreprise",
+            "type": "ASSOCIE_A",
+            "cible": "Entreprise",
+            "role": "entrepriseInterconnectee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageStructureAdministrative",
+            "type": "ASSOCIE_A",
+            "cible": "StructureGeographique",
+            "role": "structureInterconnectee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "VitesseParCodeComposition",
+            "type": "ASSOCIE_A",
+            "cible": "HabillageValeur",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageValeur",
+            "type": "AGREGE",
+            "cible": "HabillageTypeValeur",
+            "role": "valeur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "CritereReferentielHabillageTypeValeur",
+            "type": "ASSOCIE_A",
+            "cible": "HabillageTypeValeur",
+            "role": "typeValeur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageTypeValeur",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "region",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementReferentielGopeqAbstrait",
+            "type": "ASSOCIE_A",
+            "cible": "HabillageTypeValeur",
+            "role": "typeLigneDeLaVoie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeHabillage",
+            "type": "AGREGE",
+            "cible": "HabillageTypeValeur",
+            "role": "valeur",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PerimetreHabillage",
+            "type": "ASSOCIE_A",
+            "cible": "HabillageTypeValeur",
+            "role": "valeurTypeHabillage",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationHabillage",
+            "type": "ASSOCIE_A",
+            "cible": "HabillageOriente",
+            "role": "habillage",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationHabillage",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleEspacement",
+            "type": "ASSOCIE_A",
+            "cible": "VitesseParCodeComposition",
+            "role": "vitesseCodeCompoCirculation2",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RegleEspacement",
+            "type": "ASSOCIE_A",
+            "cible": "VitesseParCodeComposition",
+            "role": "vitesseCodeCompoCirculation1",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "VitesseParCodeComposition",
+            "type": "ASSOCIE_A",
+            "cible": "Critères Vitesse",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageOriente",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "localisationsPkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageOriente",
+            "type": "ASSOCIE_A",
+            "cible": "TypeHabillageOriente",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageOriente",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "localisationsPkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageOriente",
+            "type": "ASSOCIE_A",
+            "cible": "TypeHabillage",
+            "role": "typeHabillage",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PerimetreHabillage",
+            "type": "ASSOCIE_A",
+            "cible": "TypeHabillage",
+            "role": "typeHabillage",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "VitesseElementParcours",
+            "type": "ASSOCIE_A",
+            "cible": "TypeHabillage",
+            "role": "habillageReference",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeHabillage",
+            "type": "ASSOCIE_A",
+            "cible": "TypeHabillage",
+            "role": "typeHabillageParent",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "TypeHabillage",
+            "type": "ASSOCIE_A",
+            "cible": "TypeHabillage",
+            "role": "typeHabillagePere",
+            "cardinalite": "0..*"
+        }
+    ]
+}

@@ -1,0 +1,1068 @@
+{
+    "enums": [
+        {
+            "nom": "EnumSensLecture",
+            "valeurs": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ]
+        },
+        {
+            "nom": "EnumSensPK",
+            "valeurs": [
+                "D",
+                "C",
+                "B"
+            ]
+        },
+        {
+            "nom": "EnumPositionLocalisation",
+            "valeurs": [
+                "D",
+                "G",
+                "H",
+                "B",
+                "NA",
+                "A",
+                "L",
+                "T",
+                "FD",
+                "FG",
+                "TA",
+                "P"
+            ]
+        },
+        {
+            "nom": "EnumPositionSupNoeudsP",
+            "valeurs": [
+                "A",
+                "E"
+            ]
+        },
+        {
+            "nom": "EnumPositionOT",
+            "valeurs": [
+                "D",
+                "G"
+            ]
+        },
+        {
+            "nom": "EnumOrigineLocalisation",
+            "valeurs": [
+                "IF",
+                "IF_PR",
+                "PR",
+                "NA"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "ImplantationCartographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "OrdreAVEN",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "OrdreOCAR",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "OrdreAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationPointCartographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointDeReferenceMF",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "GeometrieCartographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointDeCalibragePK",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementCollecteMedia",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementHabillageParcours",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationSR",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementParcours",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "HabillageOriente",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementHabillageParcoursVitesse",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementTopologiqueLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationLocalisationExtremite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationSRLineaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoPonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AssociationSegmentationTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReferenceLocalisation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ReportDePolarite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementPointHoraire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoPonctuelleRelative",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationLigne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPonctuelle",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationSpatiale",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentHomogeneVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementTopologiquePonctuel",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationLocalisationExtremiteDeZone",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperage",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementADateAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Quai",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationGeometrique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationCartesienne",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "coordonneeX",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "coordonneeY",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "coordonneeZ",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LocalisationCartographique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "coordonneeX",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "coordonneeY",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "coordonneeZ",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LocalisationGeographique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "altitude",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "latitude",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "longitude",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LocalisationPk",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "indicCalcule",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "indicPkFictif",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "origineLocalisation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pk",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "positionLocalisation",
+                    "type": "EnumPositionLocalisation",
+                    "description": ""
+                },
+                {
+                    "nom": "sensLecture",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LocalisationPkOuvrageTerre",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "position",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LocalisationPkTunnel",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationPkNiveau",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "positionSupNœudsP",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LocalisationSR",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationCurviligne",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "coordonneeS",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "Localisation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "ordre",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LocalisationQuai",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "lgQuai",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "lgUtile",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "nomLocalVoie",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LocalisationNul",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationPkPR",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nomVoie",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LocalisationGeometrique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "coordonneeX",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "coordonneeY",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "coordonneeZ",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "LocalisationGare",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "LocalisationCartesienne",
+            "cible": "LocalisationSR"
+        },
+        {
+            "source": "LocalisationCartographique",
+            "cible": "LocalisationSR"
+        },
+        {
+            "source": "LocalisationGeographique",
+            "cible": "LocalisationSR"
+        },
+        {
+            "source": "LocalisationPkPR",
+            "cible": "LocalisationPk"
+        },
+        {
+            "source": "LocalisationPkOuvrageTerre",
+            "cible": "LocalisationPk"
+        },
+        {
+            "source": "LocalisationPkNiveau",
+            "cible": "LocalisationPk"
+        },
+        {
+            "source": "LocalisationPkTunnel",
+            "cible": "LocalisationPk"
+        },
+        {
+            "source": "LocalisationPk",
+            "cible": "LocalisationSR"
+        },
+        {
+            "source": "LocalisationGeometrique",
+            "cible": "LocalisationSR"
+        },
+        {
+            "source": "LocalisationNul",
+            "cible": "LocalisationSR"
+        },
+        {
+            "source": "LocalisationCurviligne",
+            "cible": "LocalisationSR"
+        },
+        {
+            "source": "LocalisationSR",
+            "cible": "ElementADateAbstrait"
+        },
+        {
+            "source": "LocalisationGare",
+            "cible": "LocalisationSR"
+        },
+        {
+            "source": "LocalisationQuai",
+            "cible": "Localisation"
+        },
+        {
+            "source": "Localisation",
+            "cible": "RessourceAbstraite"
+        }
+    ],
+    "relations": [
+        {
+            "source": "ImplantationCartographique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreAVEN",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonneeFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreOCAR",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonneeFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreAbstrait",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonnee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreOCAR",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonneeFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreOCAR",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonneeFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreAbstrait",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonnee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreAVEN",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonneeFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationPointCartographique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonnee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreOCAR",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonneeDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreOCAR",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonneeFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointDeReferenceMF",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "localisationCartographique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "GeometrieCartographique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "localisationCartographiques",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreAbstrait",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonnee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointDeCalibragePK",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "geo",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "OrdreAVEN",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "coordonneeFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointDeReferenceMF",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationGeographique",
+            "role": "coordonnee",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementCollecteMedia",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationGeographique",
+            "role": "localisationGeogaphique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementHabillageParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationSR",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageOriente",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "localisationsPkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkMax",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementHabillageParcoursVitesse",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkAnnonce",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementTopologiqueLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLocalisationExtremite",
+            "type": "ASSOCIE_A",
+            "cible": "LocalisationPk",
+            "role": "localisationPk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationSRLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementHabillageParcoursVitesse",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkAnnonce",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementHabillageParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementHabillageParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoPonctuelle",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementHabillageParcoursVitesse",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkAnnonce",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationSegmentationTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReferenceLocalisation",
+            "type": "ASSOCIE_A",
+            "cible": "LocalisationPk",
+            "role": "pkId",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReportDePolarite",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkSectionA",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationSRLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementPointHoraire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementTopologiqueLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementPointHoraire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementHabillageParcoursVitesse",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkAnnonce",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoPonctuelleRelative",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLigne",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceParcoursTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkMin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLigne",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationSegmentationTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementPointHoraire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPonctuelle",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceParcoursTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkMax",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationSpatiale",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointDeReferenceMF",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "localisationPk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationSegmentationTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkMin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "HabillageOriente",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "localisationsPkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ReportDePolarite",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkSectionB",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkMax",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementHabillageParcours",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentHomogeneVoie",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementTopologiquePonctuel",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentHomogeneVoie",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "AssociationSegmentationTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationLocalisationExtremiteDeZone",
+            "type": "ASSOCIE_A",
+            "cible": "LocalisationPk",
+            "role": "localisationPk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "LocalisationSR",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperage",
+            "role": "systemeReperage",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Localisation",
+            "type": "ASSOCIE_A",
+            "cible": "LocalisationSR",
+            "role": "localisationsSR",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Quai",
+            "type": "ASSOCIE_A",
+            "cible": "LocalisationQuai",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationGeometrique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationGeometrique",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        }
+    ]
+}

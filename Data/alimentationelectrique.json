@@ -1,0 +1,230 @@
+{
+    "enums": [],
+    "classes": [
+        {
+            "nom": "Cable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementITEAncrage",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeEtat",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "OrganeCK",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Portee",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementCatenaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Equipement",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypePropriete",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementITETensionMecanique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EtatOrganeCK",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Poteau",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLigneAerienneDeContact",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementITE",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Porteur",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImageAsset",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "FilDeContact",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CableDeProtection",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "nombre",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "SectionDeSeparation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CableFeeder",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Anticheminement",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "EquipementDeSecurite",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "SectionnementCatenaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "ecartement",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "AppareilInterruptionElectrique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "CableTransversal",
+            "abstraite": false,
+            "description": "Les principales fonctions des c&#226;bles :\nCableTransversal",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "Porteur",
+            "cible": "Cable"
+        },
+        {
+            "source": "FilDeContact",
+            "cible": "Cable"
+        },
+        {
+            "source": "CableDeProtection",
+            "cible": "Cable"
+        },
+        {
+            "source": "SectionDeSeparation",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "CableFeeder",
+            "cible": "Cable"
+        },
+        {
+            "source": "Anticheminement",
+            "cible": "Cable"
+        },
+        {
+            "source": "EquipementDeSecurite",
+            "cible": "Equipement"
+        },
+        {
+            "source": "SectionnementCatenaire",
+            "cible": "RessourceInstallationFixe"
+        },
+        {
+            "source": "AppareilInterruptionElectrique",
+            "cible": "OrganeCK"
+        },
+        {
+            "source": "CableTransversal",
+            "cible": "Cable"
+        }
+    ],
+    "relations": [
+        {
+            "source": "AppareilInterruptionElectrique",
+            "type": "ASSOCIE_A",
+            "cible": "EtatOrganeCK",
+            "role": "etatParDefaut",
+            "cardinalite": "0..*"
+        }
+    ]
+}

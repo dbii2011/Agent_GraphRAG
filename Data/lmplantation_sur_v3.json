@@ -1,0 +1,1552 @@
+{
+    "enums": [
+        {
+            "nom": "EnumSensLecture",
+            "valeurs": []
+        },
+        {
+            "nom": "EnumPositionLocalisation",
+            "valeurs": []
+        },
+        {
+            "nom": "Enumeration1",
+            "valeurs": []
+        },
+        {
+            "nom": "EnumTypeNumerotationPK",
+            "valeurs": [
+                "STANDARD",
+                "RER_C"
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "nom": "RessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Structure",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementTopologique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RessourceInstallationFixe",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationPk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationAbstraite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "AxeAbstrait",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationCartographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RGF93",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationGeographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "StructureGeographique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationGeometrique",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ZEP",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RegionSNCF",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Segment",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "Segmentation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationTCAPSegmentation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SystemeReperagePk",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "ElementCollecteMedia",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SectionPolarite",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "SegmentInterne",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointDeCalibragePK",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeImplantation",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeDeVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "NomLocalDeVoie",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "TypeLieuSecondaire",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "PointFacilementRemarquable",
+            "abstraite": false,
+            "description": "Élément externe (Class)",
+            "attributs": []
+        },
+        {
+            "nom": "EARootClass",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImageAsset",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "base",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "Adressage",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationAdressageIfxLineaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "adressage",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "max",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "min",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationAxe",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationAxe",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationCartographique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationGeographique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationGeographique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationGeometrique",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationHorsRFN",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationRelativeInstallationFixe",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "distanceLongitudinale",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceTransversale",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationInstallationFixe",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationInstallationFixePonctuelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationInstallationFixePonctuelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationIfxExplicite",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "positionLocalisation",
+                    "type": "EnumPositionLocalisation",
+                    "description": ""
+                },
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationImplantationInstallationFixe",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationRessourceParcoursInfrastructureLibre",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationRessourceParcoursInfrastructureLibre",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "description",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationLibreLigneVoiePkPonctuelle",
+            "abstraite": false,
+            "description": "A la cible, l'implantation libre sera supprimée.",
+            "attributs": [
+                {
+                    "nom": "localisation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationTexteLibre",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "implantation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationLibreLigneVoiePkSpecifique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "localisation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "typeNumerotationPK",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationLibre",
+            "abstraite": false,
+            "description": "A la cible, l'implantation libre sera supprimée.",
+            "attributs": [
+                {
+                    "nom": "libelleVoie",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "localisation",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationLibreLigneVoiePkLineaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLibreLineaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "LocalisationLigneVoiePk",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "ligne",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                },
+                {
+                    "nom": "pk",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "voie",
+                    "type": "TypeLieuSecondaire",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationRessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationLineaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationLineaireRessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "A utiliser pour les enveloppes travaux",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationRessourceParcoursTopologique",
+            "abstraite": false,
+            "description": "RessourceParcoursInfrastructure pour r&#233;cup&#233;rer la r&#233;f&#233;rene vers la ligne ou la voie",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoLineaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationPointRemarquable",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationPointRemarquable",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "RelationImplantationRegionSNCF",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationRegionSNCF",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationSegment",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationSegment",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationSegmentation",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationSegmentation",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationSpatiale",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "angleOrientation",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationIfxSpatiale",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "angleOrientation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "elevation",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "exterieur",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationPonctuelleSRPk",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "pk",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                },
+                {
+                    "nom": "pkDebut",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pkFin",
+                    "type": "P-String",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationLineaireSRPk",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "pkDebut",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "pkFin",
+                    "type": "P-String",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationSR",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationSRLineaire",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationStructure",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationStructure",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationStructureOrganisationnelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationStructureOranisationnelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationTopologiqueLinaire",
+            "abstraite": false,
+            "description": "RessourceParcoursInfrastructure pour\nr&#233;cup&#233;rer la r&#233;f&#233;rence vers la ligne ou la voie",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoPonctuelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationMultiPonctuelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPonctuelle",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationPonctuelleRelative",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationImplantationRessourceTopoPonctuelleRelative",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "distanceLongitudinale",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "distanceTransversale",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationType",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationTypeVoieIFX",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "ImplantationTypeVoieLigne",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        },
+        {
+            "nom": "RelationVoieLocale",
+            "abstraite": false,
+            "description": "",
+            "attributs": [
+                {
+                    "nom": "rang",
+                    "type": "PointFacilementRemarquable",
+                    "description": ""
+                },
+                {
+                    "nom": "sens",
+                    "type": "EnumSensLecture",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "nom": "ImplantationVoieLocale",
+            "abstraite": false,
+            "description": "",
+            "attributs": []
+        }
+    ],
+    "generalizations": [
+        {
+            "source": "ImplantationAdressageIfxLineaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationAxe",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationCartographique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationGeographique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationGeometrique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationHorsRFN",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationRelativeInstallationFixe",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationInstallationFixe",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationInstallationFixePonctuelle",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationIfxExplicite",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationRessourceParcoursInfrastructureLibre",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkPonctuelle",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationTexteLibre",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkSpecifique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLibre",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkLineaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLibreLineaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLineaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLineaireRessourceParcoursTopologique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationRessourceParcoursTopologique",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationPointRemarquable",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationRegionSNCF",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationSegment",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationSegmentation",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationSpatiale",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationIfxSpatiale",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationPonctuelleSRPk",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationLineaireSRPk",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationPonctuelleSRPk",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationSR",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationSRLineaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationStructure",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationStructureOrganisationnelle",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationTopologiqueLinaire",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationMultiPonctuelle",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationPonctuelle",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationPonctuelleRelative",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationType",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationTypeVoieIFX",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationTypeVoieLigne",
+            "cible": "ImplantationAbstraite"
+        },
+        {
+            "source": "ImplantationVoieLocale",
+            "cible": "ImplantationAbstraite"
+        }
+    ],
+    "relations": [
+        {
+            "source": "Adressage",
+            "type": "COMPOSE_DE",
+            "cible": "Adressage",
+            "role": "adressageMin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationAdressageIfxLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "Adressage",
+            "role": "adressages",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "Adressage",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationAxe",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationAxe",
+            "role": "relationImplantationAxes",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationAxe",
+            "type": "ASSOCIE_A",
+            "cible": "AxeAbstrait",
+            "role": "axe",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationCartographique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationCartographique",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationGeographique",
+            "type": "ASSOCIE_A",
+            "cible": "StructureGeographique",
+            "role": "structureGeographique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationGeographique",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationGeographique",
+            "role": "structureGeographiques",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationGeometrique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationGeometrique",
+            "role": "localisations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationRelativeInstallationFixe",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationInstallationFixe",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationInstallationFixe",
+            "role": "implantationsIFXs",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ZEP",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationInstallationFixe",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationInstallationFixePonctuelle",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationInstallationFixePonctuelle",
+            "role": "implantationsIFXsPonctuelles",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationInstallationFixePonctuelle",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationIfxExplicite",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationInstallationFixe",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationRessourceParcoursInfrastructureLibre",
+            "type": "COMPOSE_DE",
+            "cible": "RelationRessourceParcoursInfrastructureLibre",
+            "role": "localisationsParcoursInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceParcoursInfrastructureLibre",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkPonctuelle",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationLigneVoiePk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkSpecifique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationLigneVoiePk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLibreLineaire",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationLibre",
+            "role": "debut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLibreLineaire",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationLibre",
+            "role": "fin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationLigneVoiePk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationLigneVoiePk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLibreLigneVoiePkPonctuelle",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationLigneVoiePk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLineaireRessourceParcoursTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "RelationRessourceParcoursTopologique",
+            "role": "localisationsParcoursTopo",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceParcoursTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkMin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceParcoursTopologique",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursTopo",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationRessourceParcoursTopologique",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkMax",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationRessourceTopoLineaire",
+            "role": "localisationsTopoLineaire",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationVoie",
+            "type": "AGREGE",
+            "cible": "ImplantationLineaireRessourceParcoursTopologique",
+            "role": "voie",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationVoie",
+            "type": "AGREGE",
+            "cible": "ImplantationLineaireRessourceParcoursTopologique",
+            "role": "voieAutre",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationRessourceParcoursTopologique",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursTopo",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkMax",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPointRemarquable",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationPointRemarquable",
+            "role": "pointsRemarquables",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationPointRemarquable",
+            "type": "ASSOCIE_A",
+            "cible": "PointRemarquable",
+            "role": "pr",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRegionSNCF",
+            "type": "ASSOCIE_A",
+            "cible": "RegionSNCF",
+            "role": "regionSNCF",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationRegionSNCF",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationRegionSNCF",
+            "role": "regionsSncfs",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationSegment",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationSegment",
+            "role": "relationImplantationSegments",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationSegment",
+            "type": "ASSOCIE_A",
+            "cible": "Segment",
+            "role": "segment",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationSegmentation",
+            "type": "ASSOCIE_A",
+            "cible": "Segmentation",
+            "role": "segmentation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationSegmentation",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationSegmentation",
+            "role": "segmentations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationTCAPSegmentation",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationSegmentation",
+            "role": "implantationSegmentation",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationSpatiale",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationIfxSpatiale",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPonctuelleSRPk",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeDeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationLineaireSRPk",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeDeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ElementCollecteMedia",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationLineaireSRPk",
+            "role": "implantationLineaireSRPk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPonctuelleSRPk",
+            "type": "ASSOCIE_A",
+            "cible": "SystemeReperagePk",
+            "role": "systemeDeReperagePk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationSR",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationSRLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkFin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationSRLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkDebut",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationStructure",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationStructure",
+            "role": "structures",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationStructure",
+            "type": "ASSOCIE_A",
+            "cible": "Structure",
+            "role": "structure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationStructureOrganisationnelle",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationStructureOranisationnelle",
+            "role": "structures",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkMax",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoLineaire",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pkMin",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationTopologiqueLinaire",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationRessourceTopoLineaire",
+            "role": "localisationsTopo",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SectionPolarite",
+            "type": "ASSOCIE_A",
+            "cible": "ImplantationTopologiqueLinaire",
+            "role": null,
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "SegmentInterne",
+            "type": "COMPOSE_DE",
+            "cible": "ImplantationTopologiqueLinaire",
+            "role": "implantations",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoPonctuelle",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoPonctuelle",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationMultiPonctuelle",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationRessourceTopoPonctuelle",
+            "role": "localisationsTopoPonctuelles",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPonctuelle",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPonctuelle",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "PointDeCalibragePK",
+            "type": "AGREGE",
+            "cible": "ImplantationPonctuelle",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationPonctuelleRelative",
+            "type": "COMPOSE_DE",
+            "cible": "RelationImplantationRessourceTopoPonctuelleRelative",
+            "role": "localisationsTopoPonctuellesRelatives",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoPonctuelleRelative",
+            "type": "ASSOCIE_A",
+            "cible": "ElementTopologique",
+            "role": "ressourceTopologique",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationImplantationRessourceTopoPonctuelleRelative",
+            "type": "COMPOSE_DE",
+            "cible": "LocalisationPk",
+            "role": "pk",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationType",
+            "type": "ASSOCIE_A",
+            "cible": "TypeImplantation",
+            "role": "type",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationTypeVoieIFX",
+            "type": "ASSOCIE_A",
+            "cible": "TypeDeVoie",
+            "role": "types",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationTypeVoieIFX",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceInstallationFixe",
+            "role": "ifx",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationTypeVoieLigne",
+            "type": "ASSOCIE_A",
+            "cible": "RessourceParcoursTopologique",
+            "role": "ressourceParcoursInfrastructure",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationTypeVoieLigne",
+            "type": "ASSOCIE_A",
+            "cible": "TypeDeVoie",
+            "role": "types",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "ImplantationVoieLocale",
+            "type": "COMPOSE_DE",
+            "cible": "RelationVoieLocale",
+            "role": "relationsVoiesLocales",
+            "cardinalite": "0..*"
+        },
+        {
+            "source": "RelationVoieLocale",
+            "type": "ASSOCIE_A",
+            "cible": "NomLocalDeVoie",
+            "role": "nomLocalDeVoie",
+            "cardinalite": "0..*"
+        }
+    ]
+}

@@ -1,0 +1,185 @@
+1.	Définition
+
+Zone élémentaire de protection (ZEP) : partie de voie résultant du découpage des voies du Réseau Ferré National (RFN) pour les besoins de la maintenance et des travaux.
+Source CG-SE 9A
+
+2.	Caractéristiques 
+
+2.1.	ZEP
+
+Caractéristiques	Obligatoire Facultative Conditionnelle	Compléments d’informations
+Libellé	O	Reprendre le libellé de la ZEP dans la consigne S9C, hors caractères spéciaux.
+
+Rattachement 	O	Poste : le poste de rattachement indiqué dans la consigne S9C ou exceptionnellement dans les fiches ZEP.
+
+Une ZEP est rattachée à un seul poste. Toutefois un autre poste peut intervenir dans les mesures de protections de cette ZEP après accord du poste de rattachement de la ZEP.
+Interdit isolément	O	Oui/Non
+Une ZEP de type (ZE) doit être interdit isolement
+Une ZEP de type (ZEP G) ou (ZEP L) ne doit pas être interdit isolément
+VS/VP		
+Type 	O	ZEP de type « G » (Gare)
+ZEP de type « L » (Ligne)
+ZE (Zone Elémentaire) ne pouvant être prise seule (Uniquement dans un groupement)
+
+Quand le type n’est pas renseigné mettre type « L ».           
+
+TTX interdits		Oui/Non 
+Quand TTX interdit n’est pas renseigné mettre Oui
+
+Attention : dans certaines consignes, on peut trouver la mention TTX Autorisés, dans ce cas quand TTX Autorisés = Oui alors TTX interdits = Non. Et TTX Autorisés = Non alors TTX interdits = Oui)  
+Localisations (gestion à date)	O	
+La localisation de la ZEP est composée d’un PK début et d’un PK fin sur chaque voie qui la définisse.
+
+Si le PK de l’installation en extrémité de ZEP n’est pas présent sur la consigne S9C :
+-	Indiquer le PK de l’installation à partir du PT.
+
+Si Le PK de l’installation n’est pas repris sur le PT (a été mesuré) et aucune installation à proximité n’est indiquée à un PK précis, alors il faut utiliser le PK de l’installation repris dans la S9c (s’il est précisé) comme extrémité de ZEP et corrigez la localisation de l’installation dans l’outil.
+
+En cas d’incohérence sur les PK des installations en extrémités de ZEP, entre la consigne S9C et le PT, il faut indiquer les PK repris sur le PT.
+Il faut signaler au GUF l’incohérence entre les deux documents, afin de le faire remonter au rédacteur de la S9C.
+
+Pour les ZEP localisées sur voies principales et voies de service, il faut obligatoirement désigner la ou les voies de services concernées par la ZEP.
+
+Choix du type d’extrémité :
+-	Signal
+-	Chevron
+-	Joint isolant
+-	Pancarte (PATC)
+-	Taquet dérailleur
+-	Garage franc (GF)
+-	Pointe aiguille
+-	Heurtoir
+-	Autres
+
+Localisations historiques sur voie de SAF (gestion à date)	O	
+Période d’activité DDA -DFA	O	
+2.2.	Groupement ZEP
+
+
+Caractéristiques	Obligatoire Facultative Conditionnelle	Compléments d’informations
+Libellé	O	Il faut reprendre le nom du groupement repris sur la consigne S9.
+Dans certain cas, le nommage est composé de plusieurs numéros reprenant plusieurs ZEP.
+Exemple : 1+3+31
+Dans d’autres cas le groupement est composé d’un seul numéro à plusieurs chiffres reprenant notamment entre parenthèse les numéros de ZEP qui le composent.
+Exemple : 1310 (regroupe les ZEP 1+3+31+8+30+10)
+  
+Attention : Le libellé de groupement de ZEP ne doit pas prendre en compte les numéros indiqués entre parenthèse de la consigne S9.
+Rattachement 	O	Poste: le poste de rattachement indiqué dans la consigne S9C ou exceptionnellement dans les fiches ZEP.
+VS/VP		
+TTX interdits	O	Oui/Non 
+DP voies	O	Rattacher toutes les ZEP composant le groupement
+Période d’activité DDA -DFA	O	
+
+
+2.3.	Caractéristiques non gérées dans GAIA
+
+Mesures à prendre par l’équipement.
+Outils de bouclage utilisés par l’équipement.
+3.	Cas particuliers
+3.1.	Extrémité d’une ZEP commençant ou terminant sur une Traversée Oblique (TO)
+
+ Lorsque la consigne S9C décrit le PK début ou le PK fin d’une ZEP sur une traversée oblique (TO), il faut choisir « autre » installation et non choisir « pointe d’aiguille ».
+3.2.	Type d’extrémité pour les TJS et TJD
+
+Lorsqu’une extrémité d’une ZEP se termine sur une TJS ou TJD la valeur à prendre en compte est « Pointe de l’aiguille ».
+3.3.	Extrémité d’une ZEP se terminant sur un joint de talon d’aiguille
+
+Lorsque la ZEP commence ou se termine sur un joint de talon d’aiguille le PK à renseigner est le PK de l’aiguille + 30 mètres.
+3.4.	Règles de calcul des garages francs (GF) pour les extrémités de ZEP
+
+Branchement 2 voies = 62 mètres par rapport à la pointe d’aiguille.
+
+Traversée oblique et TJS et TJD = 32 mètres par rapport à l’axe.
+
+Sur ligne à grande vitesse = 100 mètres par rapport à la pointe de l’aiguille.
+
+Exemple : 
+Description de la ZEP pour la branche partant de l’aiguille 56 vers l’aiguille 57 :
+Le GF se situe à  62 mètres de la pointe d’aiguille  57.
+Description de la ZEP pour la branche partant de l’aiguille 53 vers l’aiguille 55 :
+Le GF se situe à 62 mètres de la pointe d’aiguille 52.
+
+ 
+
+3.5.	Cas des DP Voie « Réservés »
+
+Cas n°1 : N° de ZEP présent dans la consigne avec mention « Réservée » et présence du corps du texte :
+
+Le gérant prend contact avec le rédacteur de la consigne. 
+-	Soit la ZEP est réservée temporairement et dans ce cas, la ZEP n’est pas à borner.
+-	Soit la ZEP est réservée définitivement et dans cas, la ZEP est à borner
+
+Et annoter dans l’outil de gestion de suivi des documents (JIRA) au niveau de la consigne S9C et en aucun cas dans la Version impactée.
+
+Cas n°2 : Page de ZEP présent dans la consigne avec mention « Réservée » et absence du corps du texte :
+
+Le gérant prend contact avec le rédacteur de la consigne. 
+	Soit la ZEP est réservée temporairement et dans ce cas, la ZEP n’est pas à borner.
+	Soit la ZEP est réservée définitivement et dans cas, la ZEP est à borner.
+
+Et annoter dans l’outil de gestion de suivi des documents (JIRA) au niveau de la consigne S9C et en aucun cas dans la Version impactée.
+3.6.	Description d’une ZEP en contre-sens
+
+Les ZEPs, et groupement de ZEP, de contre sens doivent être décrites comme toutes les autres ZEPs et groupement de ZEP. 
+
+Le rattachement au poste peut dans certains cas être différent. La consigne S9 (Annexe 5) précise pour chaque ZEP ou groupement de ZEP de contre-sens le poste de rattachement concerné. 
+
+ 
+
+
+ 
+
+
+
+
+3.7.	Signaux d’extrémités d’une ZEP situés sur la même potence
+
+Les signaux matérialisant les extrémités d’une ZEP situés sur la même potence doivent obligatoirement respecter le sens croissant ou décroissant de la description de la ZEP.
+
+Exemple : La description de la ZEP pour la voie B. 
+C 55
+Cv 46
+
+ 
+
+3.8.	Choix d’installation en extrémité de ZEP 
+
+Dans certain cas, le schéma de la S9C présente deux types d’installations, des jalons d’arrêts ou SAM avec d’autres installations (GF, Chevron, joint isolant, pancarte …).
+Il faut privilégier les installations fixes, le SAM et Jalon d’arrêt sont des dispositifs de sécurité provisoires. (Chantier, protection vis-à-vis d’un mauvais état de la voie …)
+
+Exemple :
+La description d’extrémité de La ZEP 41231 sera : 
+Voie 65 – GF Ag 630 et GF Ag 642 ; Voie 66 – GF Ag 630.
+Le SAM est une mesure de protection à mettre en place par le RPTX celui-ci n’est donc pas fixe d’où le choix du GF.
+  
+3.9.	Particularité de l’ouverture ou la fermeture d’un poste.
+
+Sur certaine consigne S9C, il est possible de voir deux fois la même ZEP ou le même groupement avec une spécificité « poste X ouvert » et l’autre « poste X fermé ».
+Dans ce cas il faut créer les deux ZEP en ajoutant la spécificité « poste X ouvert » ou « poste X fermé » dans le libellé des ZEP.
+4.	Règles générales pour la gestion 
+
+4.1.	Création 
+
+4.2.	Modification 
+4.2.1.	 Modification du libellé d’une ZEP et d’un groupement de ZEP
+
+Lorsque le libellé d’une ZEP change entre 2 versions de consigne S9C, on modifie le libellé si les informations suivantes ne changent pas :
+Type de ZEP
+Changement d’extrémité
+Poste de rattachement
+Indication TTX
+
+Si une de ces informations est différente entre les 2 consignes S9C, il faut borner la ZEP recréer l’objet avec le bon libellé et la prise en compte de la modification de sa description.
+
+Le groupement de ZEP peut être modifié seulement si seul le libellé change entre les consignes.
+4.3.	Suppression (bornage)
+
+5.	Forme de remontée 
+
+Consigne S9C 
+6.	Périodicité
+
+Dés connaissance de l’information et à chaque édition d’une nouvelle consigne S9C
+7.	Impacts à contrôler
+
+Sans objet

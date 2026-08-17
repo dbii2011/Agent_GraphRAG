@@ -1,0 +1,214 @@
+1.	Définition
+
+•	Installation, quelle que soit par ailleurs sa désignation administrative, comportant la manœuvre des signaux et des appareils de voie.
+•	Certains groupes de leviers de commande en campagne, sous la dépendance d’un poste, sont désignés « point ». 
+•	Dans la plupart des cas un poste est rattaché à un SAF de type gare, toutefois certains postes ne sont pas rattachés à un SAF, exemple : poste des LGV
+2.	Généralités de l’objet « Poste»
+
+
+•	Un poste est défini par : 
+o	un libellé 
+o	un type 
+o	le SAF de rattachement ( non obligatoire) 
+2.1.	Règle de nommage 
+
+•	Une ou plusieurs localisations à savoir pour chaque ligne sur lequel il est localisé :
+o	code ligne
+o	numéro du tronçon
+o	PK de l'axe du bâtiment projeté sur la ligne
+
+•	Poste : suivi du numéro du poste ou d’un nom  repris sur le schéma de signalisation :
+Exemple : 
+	Poste 1
+	Poste A
+	Poste Bif Empalot
+
+•	Les points de manœuvre : libellé point suivi du numéro
+Exemple : Point A  
+•	Les leviers individuels : Libellé : Levier suivi de la localisation exprimé en mètre
+Exemple : Levier 312818
+Exemple : Levier 005321
+
+
+
+2.2.	Règle de nommage des postes non rattachés à une gare 
+
+•	Poste : suivi du numéro du poste
+•	Nom du poste repris sur le plan technique 
+
+Exemple :
+:  
+2.3.	Types de poste 
+
+
+•	Pour les postes d’aiguillages, le typage est affiné selon leurs technologies, les valeurs possibles sont :
+
+o	Poste de VP électrique à enclenchement informatique ----- PAI 
+o	Poste de VP électrique à enclenchement informatique à base de technologie PC ----- PIPC 
+o	Poste de VP électrique à relais à commande informatique ----- PRCI 
+o	Poste de VP électrique tout relais à transit souple ----- PRS / PRA / PRAW 
+o	Poste de VP électrique tout relais à câblage géographique ----- PRG 
+o	Poste de VP électrique tout relais à manettes individuelles ----- PRMI 
+o	Poste de VP électrique commande centralisée ----- CC / CC-PC 
+o	Poste de VP électrique à leviers d’itinéraire ----- PLIT 
+o	Poste de VP électrique à leviers individuels unifiés ----- PELI 
+o	Poste de VP électrique à leviers individuels régionaux ou constructeur ----- PELI-R 
+o	Poste de VP électrique à manettes libres ----- PML 
+o	Poste de VP électrique à itinéraires câblés ---- PIC
+o	Poste de VP mécanique électromécaniques unifiés ----- EMU 
+o	Poste de VP mécanique électromécaniques type 45 ----- MU45 
+o	Poste de VP mécanique régional type SAXBY ----- MR-SAXBY 
+o	Poste de VP mécanique régional type VIGNIER ou TYER ----- MR-VIGNTY 
+o	Poste de VP mécanique régional à leviers à demi-révolution SAXBY ou POTRON ----- MR-LEV-DR 
+o	Poste de VP mécanique régional Ex-AL ----- MR-EX-AL 
+o	Poste de VP mécanique à serrures « S » de double voie ----- SS-DV 
+o	Poste de VP mécanique à serrures « S » de voie unique ou banalisée ----- SS-VUVB 
+o	Poste de VS de triage à commande automatique ----- PVS-TRI 
+o	Poste de VS électrique ----- PVS-ELEC 
+o	Poste de VS à enclenchement informatique ----- PVS-EI 
+o	Poste de VS à commande informatique ----- PVS-CI 
+o	Poste de VS mécanique non enclenché ----- PVS-MEC 
+o	Poste divers de moins de 10 leviers ----- P-10
+o	Poste divers levier isolé ----- LEVIER
+o	Poste divers point de manœuvre ----- POINT 
+
+Cas des Poste SEI : classé dans le type Poste de VP électrique à enclenchement informatique et ajouter l’information SEI dans le champ complémentaire.
+
+Remarque : lorsque le poste est multi technologies, cette information indiquée sur le plan technique doit obligatoirement figurée dans le champs commantaire. 
+
+3.	Caractéristiques du poste
+3.1.	Caractéristiques obligatoires 
+
+Poste de voie principale :
+
+•	Localisation : ligne, rang du tronçon et Pk
+•	Multi-localisation : dans certain cas, un poste peut être localisé sur plusieurs lignes 
+
+Poste de SAF
+•	Localisation : localisé par désignation du SAF dans lequel il se trouve 
+•	DDA
+•	DFA
+•	Date de fin de service(DFS) : un poste non détruit physiquement sur le terrain est déclaré hors service en renseignant cette date, dans ce cas la DFA n’est pas renseignée.
+
+3.2.	Caractéristiques non obligatoires 
+
+•	Sécurisation du poste : valeurs possibles Non sécurisé, protection périmétrique, protection périmétrique avec télé alarme  
+•	Mode de fonctionnement : valeurs possibles indépendant, de télécommande à distance, télécommandé ou asservi 
+
+Remarque : pour les postes télécommandés, préciser obligatoirement le poste qui télécommande et si la reprise locale est possible (oui/non)
+
+4.	Règles pour la création d’un poste
+
+Lorsqu’un plan technique évolue suite à la création d’un poste d’aiguillage, il est nécessaire que celui apparaisse dans la base RESEAU/GAIA.
+Dans ce cas, il faut se reporter au paragraphe 3.1 « caractéristiques obligatoires »
+
+Lorsqu’un plan technique évolue suite à la création d’une CCR, il est nécessaire que celle-ci apparaisse également dans la base RESEAU/GAIA.
+Néanmoins, la localisation de cette CCR peut ne pas correspondre à la règle édictée pour les postes d’aiguillages. (Exemple : CCR située en dehors d’une emprise ferroviaire)
+Dans, ce cas, il est nécessaire de se rapprocher du pôle développement (Bureau Etudes et Méthodes de la GAIA Fab’) afin d’analyser la localisation de la CCR.
+
+4.1.	Règles particulières pour la création des « points »
+
+Il existe plusieurs types de « Point » : représenté sur le schéma par une croix, ou dans certain par une mention «  Près de l’aiguille xxxx »
+
+•	Point donnant uniquement une ou des informations de contrôle (Non géré dans GAIA)
+
+Exemple : Contrôle d’un transmetteur
+ 
+
+•	Point donnant uniquement une ou des informations de contrôle et permettant également la manœuvre d’installations de sécurité (Aiguilles, taquets et signaux) (Géré dans GAIA)
+
+Exemple : Contrôle d’un transmetteur et de fermeture et d’ouverture de signaux.
+
+ 
+
+•	Point permettant uniquement la manœuvre d’installations de sécurité (Aiguilles, taquets et signaux)
+•	(Géré dans GAIA)
+
+Exemple : Contrôle de fermeture et d’ouverture de signal et d’aiguilles
+
+
+ 
+
+5.	Règles pour la modification d’un poste
+
+
+•	La modification d’un poste d’aiguillage est possible dans les cas suivants :
+o	Erreur du libellé du poste lors de la saisie
+o	Erreur de la localisation du poste lors de la saisie
+o	Changement de type de poste sans modification de la localisation.
+
+
+6.	Règles pour la suppression d’un poste
+
+
+•	La suppression d’un poste d’aiguillage est nécessaire lorsque celui-ci ne figure plus sur le plan technique suite à sa suppression physique.
+
+Attention : 
+Un poste peut être mis hors service. Dans ce cas, il faut renseigner la date de DFS sans renseigner la DDA.
+
+
+ 
+7.	Forme de remontée
+
+•	Le format « papier » reste privilégié. Un abonnement auprès de tous les PRI assure la fourniture automatique des schémas de signalisation.
+8.	Périodicité
+
+•	Dés connaissance de l’information et à chaque MES du Plan Technique.
+•	Les schémas MES situation temporaire de plus de 6 mois sont également à prendre en compte.
+9.	Impacts à contrôler
+
+
+•	Impact sur les installions fixes voies 
+•	Impact sur les domaines de protection voies et caténaires secondaires
+•	Impact sur les cantons et itinéraires
+•	Impact à vérifier sur les voies et les installations fixes sur voies
+•	Impact éventuellement sur les PR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10.	Annexes
+
+Cas de figure de suppression de l’objet
+    
+•	Suppression du point L 
+
+
+                                                   
+
+Cas de figure création de l’objet
+
+NA
+
+Cas de figure modification de l’objet
+
+
+•	Modification de libellé 
+
+ 
+
+
+•	Modification d’un poste « secteur Raccordement sud » dans la zone de MACON
+
+
+ 
+
+
+
