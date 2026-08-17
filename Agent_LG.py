@@ -9,6 +9,7 @@ import  re
 import logging
 import functools
 import time
+import httpx
 
 load_dotenv()
 
@@ -277,9 +278,20 @@ Règles :
             {"messages": messages},
             config={"recursion_limit": 15},
         )
+        except (httpx.ConnectError, httpx.TimeoutException) as e:
+            logger.error(f"Connexion au service Mistral impossible : {e}")
+            return (
+                "Le graphe Neo4j est disponible, mais le service Mistral est "
+                "actuellement inaccessible. Vérifie la connexion réseau ou le proxy."
+            )
+        except httpx.HTTPStatusError as e:
+            logger.error(f"Erreur HTTP Mistral ({e.response.status_code}) : {e}")
+            if e.response.status_code == 429:
+                return "Le service Mistral est temporairement surchargé. Réessaie dans quelques instants."
+            return "Le service Mistral a refusé la requête. Vérifie la clé API et la configuration."
         except Exception as e:
-            logger.error(f"Erreur lors de l'appel agent : {e}")
-            return "Le service est temporairement surchargé (limite de capacité atteinte). Réessaie dans quelques instants."
+            logger.exception("Erreur inattendue lors de l'appel agent")
+            return "Une erreur inattendue empêche l'agent de répondre. Consulte les journaux du serveur."
     
         logger.info(f"Temps total : {time.time() - debut:.2f}s")
         for i, m in enumerate(resultat["messages"]):
