@@ -36,13 +36,32 @@ class FakeMessage:
     tool_calls = []
 
 
-class FakeExecutor:
+class FakeLLM:
     def __init__(self):
-        self.payload = None
+        self.messages = None
 
-    def invoke(self, payload, config=None):
-        self.payload = payload
-        return {"messages": [FakeMessage()]}
+    def invoke(self, messages):
+        self.messages = messages
+        return FakeMessage()
+
+
+class FakeRetriever:
+    def __init__(self):
+        self.history = None
+
+    def retrieve(self, question, historique=None):
+        self.history = historique
+        return {
+            "mode": "STRUCTURE",
+            "classes_racines": ["Ligne"],
+            "sous_graphe": {"classes": [{"nom": "Ligne"}]},
+            "chunks": [],
+            "citations": [],
+        }
+
+    @staticmethod
+    def contexte_pour_llm(resultat):
+        return "contexte contrôlé"
 
 
 class CypherSecurityTests(unittest.TestCase):
@@ -70,7 +89,8 @@ class CypherSecurityTests(unittest.TestCase):
         self.assertIn("seule la lecture", result)
 
     def test_ask_passes_recent_history_to_executor(self):
-        self.agent.executor = FakeExecutor()
+        self.agent.llm = FakeLLM()
+        self.agent.retriever = FakeRetriever()
         history = [
             {"role": "user" if i % 2 == 0 else "assistant", "content": str(i)}
             for i in range(14)
@@ -78,11 +98,12 @@ class CypherSecurityTests(unittest.TestCase):
 
         result = self.agent.ask("question suivante", historique=history)
 
-        messages = self.agent.executor.payload["messages"]
+        messages = self.agent.llm.messages
         self.assertEqual("réponse", result)
-        self.assertEqual(13, len(messages))
-        self.assertEqual("2", messages[0]["content"])
-        self.assertEqual("question suivante", messages[-1]["content"])
+        self.assertEqual(history, self.agent.retriever.history)
+        self.assertEqual(10, len(messages))
+        self.assertEqual("6", messages[1]["content"])
+        self.assertIn("question suivante", messages[-1]["content"])
 
 
 if __name__ == "__main__":

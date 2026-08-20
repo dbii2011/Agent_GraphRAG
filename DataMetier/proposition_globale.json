@@ -1,0 +1,628 @@
+{
+  "domaine": "gestion des accès ferroviaires",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "acces",
+      "nom": "Acces",
+      "aliases": [
+        "accès"
+      ],
+      "description": "Point aménagé permettant d'accéder aux voies ferrées depuis l'infrastructure routière, autre qu'un passage à niveau, un ouvrage d'art ou une gare.",
+      "classes_arianes": [
+        "Acces"
+      ],
+      "documents": [
+        "Acces.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "bal",
+      "nom": "BAL",
+      "aliases": [],
+      "description": "Type de cantonnement (Block Automatique Lumineux).",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "bapr",
+      "nom": "BAPR",
+      "aliases": [],
+      "description": "Type de cantonnement (Block Automatique à Permutation de Voies).",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "bm",
+      "nom": "BM",
+      "aliases": [],
+      "description": "Type de cantonnement (Block Manuel).",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "canton",
+      "nom": "Canton",
+      "aliases": [],
+      "description": "Portion de voie définie pour l'espacement des trains, composée d'un signal origine et d'un signal de destination (ou assimilé).",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "cantonnement",
+      "nom": "Cantonnement",
+      "aliases": [],
+      "description": "Dispositif d'espacement des trains pour prévenir le risque de rattrapage en divisant la ligne en portions de voie appelées cantons.",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "carre",
+      "nom": "Carré",
+      "aliases": [],
+      "description": "Signal ferroviaire pouvant être origine ou destination de canton.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "carre_violet",
+      "nom": "Carré violet",
+      "aliases": [],
+      "description": "Signal ferroviaire pouvant être origine ou destination de canton, nécessitant un canton spécifique pour les itinéraires.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "carre_violet_type_bas",
+      "nom": "Carré violet type bas",
+      "aliases": [
+        "Cv type bas"
+      ],
+      "description": "Variante de carré violet pouvant être origine ou destination de canton, nécessitant un canton spécifique pour les itinéraires.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "dda",
+      "nom": "DDA",
+      "aliases": [],
+      "description": "Attribut d'un canton (non détaillé dans le document).",
+      "classes_arianes": [
+        "est"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "dfa",
+      "nom": "DFA",
+      "aliases": [],
+      "description": "Attribut d'un canton (non détaillé dans le document).",
+      "classes_arianes": [
+        "est"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "fin_d_exploitation",
+      "nom": "Fin d'exploitation",
+      "aliases": [
+        "fin de service"
+      ],
+      "description": "Limite au-delà de laquelle les trains ne circulent plus ou sont exploités manuellement, pouvant servir d'origine ou de destination de canton.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "guidon_d_arret",
+      "nom": "Guidon d’arrêt",
+      "aliases": [],
+      "description": "Signal ferroviaire pouvant être destination de canton.",
+      "classes_arianes": [
+        "Signal_Destination"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "heurtoir",
+      "nom": "Heurtoir",
+      "aliases": [],
+      "description": "Extrémité de voie sans issue pouvant servir d'origine ou de destination de canton.",
+      "classes_arianes": [
+        "Heurtoir"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "itineraire",
+      "nom": "Itinéraire",
+      "aliases": [],
+      "description": "Trajet défini entre un signal origine et un signal destination, pouvant emprunter un ou plusieurs cantons.",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "jalon_de_man_uvre_de_la_tvm",
+      "nom": "Jalon de manœuvre de la TVM",
+      "aliases": [],
+      "description": "Jalon de la TVM pouvant être origine ou destination de canton.",
+      "classes_arianes": [
+        "Repere"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "joint_de_zone",
+      "nom": "Joint de zone",
+      "aliases": [],
+      "description": "Limite entre zones pouvant servir d'origine ou de destination de canton en l'absence de signal.",
+      "classes_arianes": [
+        "Segment de Zone"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [],
+      "description": "Voie ferrée classée par l'entreprise, identifiée par un code et un libellé court.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Acces.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pk",
+      "nom": "Pk",
+      "aliases": [
+        "PK"
+      ],
+      "description": "Point kilométrique indiquant la localisation d'un accès sur une ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Acces.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "repere_f_de_la_tvm",
+      "nom": "Repère F de la TVM",
+      "aliases": [],
+      "description": "Repère de la TVM pouvant être origine ou destination de canton.",
+      "classes_arianes": [
+        "Repere"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "repere_nf_de_la_tvm",
+      "nom": "Repère Nf de la TVM",
+      "aliases": [],
+      "description": "Repère de la TVM pouvant être origine ou destination de canton.",
+      "classes_arianes": [
+        "Repere"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "semaphore",
+      "nom": "Sémaphore",
+      "aliases": [],
+      "description": "Signal ferroviaire pouvant être origine ou destination de canton.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_destination",
+      "nom": "Signal destination",
+      "aliases": [
+        "Destination (signal ou assimilé)"
+      ],
+      "description": "Signal marquant la sortie d'un canton.",
+      "classes_arianes": [
+        "Signal_Destination"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_origine",
+      "nom": "Signal origine",
+      "aliases": [
+        "Origine (signal ou assimilé)"
+      ],
+      "description": "Signal marquant l'entrée d'un canton, commandant normalement l'accès à celui-ci.",
+      "classes_arianes": [
+        "Signal_Origine"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "voie_de_service",
+      "nom": "Voie de service",
+      "aliases": [
+        "VS"
+      ],
+      "description": "Voie ne portant pas nécessairement de signaux d'entrée et de sortie, pouvant servir d'origine ou de destination de canton.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "wgs84",
+      "nom": "WGS84",
+      "aliases": [
+        "coordonnées GPS"
+      ],
+      "description": "Système de coordonnées géographiques utilisé pour localiser un accès.",
+      "classes_arianes": [
+        "WGS84"
+      ],
+      "documents": [
+        "Acces.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "acces",
+      "type": "COMPOSE_DE",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Acces.txt",
+        "lignes": "1-132",
+        "citation": "Un accès est un point aménagé permettant à partir de l’infrastructure routière d'accéder aux voies ferrées (classées par ligne) de l’entreprise."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "acces",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "Acces.txt",
+        "lignes": "1-132",
+        "citation": "La localisation de l’accès est obligatoire avec les informations suivantes : Code ligne, PK de localisation"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "acces",
+      "type": "LOCALISE_SUR",
+      "cible": "wgs84",
+      "preuve": {
+        "document": "Acces.txt",
+        "lignes": "1-132",
+        "citation": "Compléter éventuellement les Coordonnées géographiques, pour les valeurs voir chapitre 3 « Règles de coordonnées GPS»"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "cantonnement",
+      "type": "EST_UN",
+      "cible": "itineraire",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "un dispositif d’espacement des trains appelé « cantonnement » est mis en place"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "canton",
+      "type": "COMPOSE_DE",
+      "cible": "signal_origine",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Un canton est composé d’un signal origine et d’un signal de fin"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "canton",
+      "type": "COMPOSE_DE",
+      "cible": "signal_destination",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Un canton est composé d’un signal origine et d’un signal de fin"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "canton",
+      "type": "A_POUR_ORIGINE",
+      "cible": "heurtoir",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "l’origine et la fin du canton peut être : Un heurtoir"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "canton",
+      "type": "A_POUR_DESTINATION",
+      "cible": "heurtoir",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "l’origine et la fin du canton peut être : Un heurtoir"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "canton",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "bal",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Cantonnement (BAL, BAPR, BM …)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "canton",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "bapr",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Cantonnement (BAL, BAPR, BM …)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "canton",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "bm",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Cantonnement (BAL, BAPR, BM …)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "carre_violet_type_bas",
+      "type": "IMPACTE",
+      "cible": "canton",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Lorsqu’un itinéraire a pour origine ou destination un Cv type bas, il faut créer un canton spécifique pour l’itinéraire"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "voie_de_service",
+      "type": "LOCALISE_SUR",
+      "cible": "canton",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "il est nécessaire de créer des cantons qui ont pour origine ou fin des voies de service"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "voie_de_service",
+      "type": "A_POUR_ORIGINE",
+      "cible": "joint_de_zone",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "il faut sélectionner un joint de zone si la voie en est équipée"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "voie_de_service",
+      "type": "A_POUR_DESTINATION",
+      "cible": "joint_de_zone",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "il faut sélectionner un joint de zone si la voie en est équipée"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "voie_de_service",
+      "type": "A_POUR_ORIGINE",
+      "cible": "fin_d_exploitation",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Au cas où la voie d’origine ne serait ni porteuse de joint de zone, ni de signal alors il faut sélectionner « fin de service »"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "voie_de_service",
+      "type": "A_POUR_DESTINATION",
+      "cible": "fin_d_exploitation",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Au cas où la voie de destination ne serait ni porteuse de joint de zone, ni de signal alors il faut sélectionner « fin de service »"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "itineraire",
+      "type": "EMPRUNTE",
+      "cible": "canton",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Un seul canton doit être décrit malgré le nombre d’itinéraires l’empruntant"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    }
+  ],
+  "erreurs_validation": [
+    "Relation ligne/COMPOSE_DE/canton rejetée: concept source ou cible absent",
+    "Relation signal_origine/EST_UN/signal rejetée: concept source ou cible absent",
+    "Relation signal_destination/EST_UN/signal rejetée: concept source ou cible absent",
+    "Relation canton/A_POUR_ORIGINE/joint_de_zone rejetée: citation absente du passage",
+    "Relation canton/A_POUR_DESTINATION/joint_de_zone rejetée: citation absente du passage",
+    "Relation canton/A_POUR_ORIGINE/fin_exploitation rejetée: citation absente du passage",
+    "Relation canton/A_POUR_DESTINATION/fin_exploitation rejetée: citation absente du passage",
+    "Relation carre/EST_UN/signal rejetée: concept source ou cible absent",
+    "Relation semaphore/EST_UN/signal rejetée: concept source ou cible absent, citation absente du passage",
+    "Relation carre_violet/EST_UN/signal rejetée: concept source ou cible absent, citation absente du passage",
+    "Relation carre_violet_type_bas/EST_UN/signal rejetée: concept source ou cible absent, citation absente du passage",
+    "Relation guidon_arret/EST_UN/signal_destination rejetée: citation absente du passage",
+    "Relation repere_tvm_nf/EST_UN/signal rejetée: concept source ou cible absent, citation absente du passage",
+    "Relation repere_tvm_f/EST_UN/signal rejetée: concept source ou cible absent, citation absente du passage",
+    "Relation jalon_manoeuvre_tvm/EST_UN/signal rejetée: concept source ou cible absent, citation absente du passage"
+  ],
+  "documents_traites": [
+    "Acces.txt",
+    "CantonEmprunte.txt"
+  ],
+  "erreurs_documents": []
+}

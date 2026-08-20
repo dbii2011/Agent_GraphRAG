@@ -1,0 +1,14 @@
+[
+  {"question": "Quels sont les attributs de la classe Ligne ?", "mode": "STRUCTURE", "classes": ["Ligne"]},
+  {"question": "De quelle classe Ligne hérite-t-elle ?", "mode": "STRUCTURE", "classes": ["Ligne"]},
+  {"question": "Quelles relations relient Ligne et VoieDeLigne ?", "mode": "STRUCTURE", "classes": ["Ligne", "VoieDeLigne"]},
+  {"question": "Quels sont les sous-types de ZoneDeDetection ?", "mode": "STRUCTURE", "classes": ["ZoneDeDetection"]},
+  {"question": "Quelle est la cardinalité entre Itineraire et CantonEmprunte ?", "mode": "STRUCTURE", "classes": ["Itineraire", "CantonEmprunte"]},
+  {"question": "Comment fonctionne une zone de détection ?", "mode": "DOCUMENTAIRE", "classes": ["ZoneDeDetection"], "source": "ZoneDeDetection.txt"},
+  {"question": "Quelle procédure concerne le courant de Foucault ?", "mode": "DOCUMENTAIRE", "source": "CourantDeFoucault.txt"},
+  {"question": "Explique le rôle d'un passage à niveau et ses relations", "mode": "HYBRIDE", "classes": ["PassageANiveau"], "source": "PassageANiveau.txt"},
+  {"question": "Quels attributs possède Quai et comment est-il utilisé ?", "mode": "HYBRIDE", "classes": ["Quai"], "source": "Quai.txt"},
+  {"question": "Quelle est la procédure de gestion d'une ZEP ?", "mode": "DOCUMENTAIRE", "classes": ["ZEP"], "source": "ZEP.txt"},
+  {"question": "Et quels sont ses sous-types ?", "mode": "STRUCTURE", "contexte": "Quels sont les attributs de Ligne ?", "classes": ["Ligne"]},
+  {"question": "Quelle est la couleur réglementaire des licornes ferroviaires ?", "mode": "HYBRIDE", "sans_reponse_attendue": true}
+]

@@ -1,0 +1,99 @@
+{
+  "domaine": "Signalisation ferroviaire",
+  "racine": "poste_aiguillage",
+  "concepts": [
+    {
+      "id": "poste_aiguillage",
+      "nom": "Poste d'aiguillage",
+      "aliases": ["poste", "poste de signalisation"],
+      "description": "Installation qui commande et contrôle des installations de sécurité ferroviaire.",
+      "classes_arianes": ["Poste"],
+      "documents": ["Post.txt"]
+    },
+    {
+      "id": "aiguillage",
+      "nom": "Aiguillage",
+      "aliases": ["aiguille", "appareil de voie"],
+      "description": "Installation de voie pouvant être manœuvrée et contrôlée depuis un poste.",
+      "classes_arianes": ["Aiguillage"],
+      "documents": ["Post.txt", "Itineraire.txt"]
+    },
+    {
+      "id": "itineraire",
+      "nom": "Itinéraire",
+      "aliases": ["itineraire ferroviaire", "jalonnement"],
+      "description": "Section de voie protégée par un signal et jalonnée par les aiguilles empruntées.",
+      "classes_arianes": ["Itineraire"],
+      "documents": ["Itineraire.txt"]
+    },
+    {
+      "id": "signal",
+      "nom": "Signal",
+      "aliases": ["signal origine", "signal de destination"],
+      "description": "Installation de signalisation pouvant protéger l'origine d'un itinéraire.",
+      "classes_arianes": ["Signal"],
+      "documents": ["Itineraire.txt"]
+    },
+    {
+      "id": "zone_detection",
+      "nom": "Zone de détection",
+      "aliases": ["zone", "cdv", "circuit de voie"],
+      "description": "Zone assurant la détection d'une circulation et pouvant être rattachée à un poste.",
+      "classes_arianes": ["ZoneDeDetection", "CircuitDeVoie", "ZoneCompteurEssieux"],
+      "documents": ["ZoneDeDetection.txt"]
+    },
+    {
+      "id": "gare",
+      "nom": "Gare ou SAF",
+      "aliases": ["gare", "saf"],
+      "description": "Site auquel un poste est généralement rattaché.",
+      "classes_arianes": ["Gare", "Saf"],
+      "documents": ["Post.txt", "Gare.txt"]
+    },
+    {
+      "id": "technologie_poste",
+      "nom": "Technologie du poste",
+      "aliases": ["type de poste", "pai", "prs", "poste mécanique", "poste électrique"],
+      "description": "Typage du poste selon sa technologie et son mode de fonctionnement.",
+      "classes_arianes": ["TypeModeFonctionnementPoste"],
+      "documents": ["Post.txt"]
+    },
+    {
+      "id": "zep",
+      "nom": "Zone élémentaire de protection",
+      "aliases": ["zep", "zone de protection"],
+      "description": "Zone de protection rattachée à un poste selon les consignes applicables.",
+      "classes_arianes": ["ZEP"],
+      "documents": ["ZEP.txt"]
+    },
+    {
+      "id": "detecteur_boite_chaude",
+      "nom": "Détecteur de boîte chaude",
+      "aliases": ["dbc", "détecteur boite chaude"],
+      "description": "Installation de détection transmettant ses informations à un poste de rattachement.",
+      "classes_arianes": ["DetecteurBoiteChaude"],
+      "documents": ["DetecteurBoiteChaude.txt"]
+    },
+    {
+      "id": "plan_technique",
+      "nom": "Plan technique",
+      "aliases": ["schéma de signalisation", "schema de signalisation"],
+      "description": "Document de référence utilisé pour créer, modifier ou supprimer la description d'un poste.",
+      "classes_arianes": [],
+      "documents": ["Post.txt", "Itineraire.txt"]
+    }
+  ],
+  "relations": [
+    {"source": "poste_aiguillage", "type": "COMMANDE", "cible": "aiguillage", "preuve": "Post.txt:118-127"},
+    {"source": "poste_aiguillage", "type": "COMMANDE", "cible": "signal", "preuve": "Post.txt:118-127"},
+    {"source": "itineraire", "type": "RATTACHE_A", "cible": "poste_aiguillage", "preuve": "Itineraire.txt:48-51"},
+    {"source": "itineraire", "type": "PROTEGE_PAR", "cible": "signal", "preuve": "Itineraire.txt:3-7"},
+    {"source": "itineraire", "type": "EMPRUNTE", "cible": "aiguillage", "preuve": "Itineraire.txt:3-7"},
+    {"source": "zone_detection", "type": "RATTACHE_A", "cible": "poste_aiguillage", "preuve": "ZoneDeDetection.txt:246-264"},
+    {"source": "zep", "type": "RATTACHE_A", "cible": "poste_aiguillage", "preuve": "ZEP.txt:13-15"},
+    {"source": "detecteur_boite_chaude", "type": "TRANSMET_A", "cible": "poste_aiguillage", "preuve": "DetecteurBoiteChaude.txt:21"},
+    {"source": "poste_aiguillage", "type": "RATTACHE_A", "cible": "gare", "preuve": "Post.txt:4-5"},
+    {"source": "poste_aiguillage", "type": "A_POUR_TECHNOLOGIE", "cible": "technologie_poste", "preuve": "Post.txt:41-77"},
+    {"source": "poste_aiguillage", "type": "DECRIT_PAR", "cible": "plan_technique", "preuve": "Post.txt:100-106"}
+  ]
+}

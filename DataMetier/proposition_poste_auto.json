@@ -1,0 +1,697 @@
+{
+  "domaine": "gestion_des_postes_d_aiguillage",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "appareil_de_voie",
+      "nom": "Appareil de voie",
+      "aliases": [],
+      "description": "Élément manoeuvré par un poste, incluant les aiguillages et autres dispositifs de guidage.",
+      "classes_arianes": [
+        "Aiguillage",
+        "Appareil de voie"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "cantons_et_itineraires",
+      "nom": "Cantons et itinéraires",
+      "aliases": [],
+      "description": "Segments de voie et trajets définis pour la circulation ferroviaire.",
+      "classes_arianes": [
+        "Segment de Zone"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "circuit_de_voie",
+      "nom": "Circuit de voie",
+      "aliases": [],
+      "description": "Système de détection de présence de trains sur les voies.",
+      "classes_arianes": [
+        "Circuit de voie"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "domaine_de_protection_voies",
+      "nom": "Domaine de protection voies",
+      "aliases": [],
+      "description": "Zone sécurisée autour des voies ferrées.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "installations_fixes_voies",
+      "nom": "Installations fixes voies",
+      "aliases": [],
+      "description": "Équipements permanents liés aux voies ferrées.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "levier",
+      "nom": "Levier",
+      "aliases": [],
+      "description": "Élément individuel de commande localisé en mètres, utilisé dans certains types de postes.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "libelle_du_poste",
+      "nom": "Libellé du poste",
+      "aliases": [],
+      "description": "Nom ou identification d'un poste d'aiguillage.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "localisation",
+      "nom": "Localisation",
+      "aliases": [],
+      "description": "Donnée géographique d'un poste incluant la ligne, le tronçon et le PK.",
+      "classes_arianes": [
+        "Localisation"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "localisation_du_poste",
+      "nom": "Localisation du poste",
+      "aliases": [],
+      "description": "Position géographique d'un poste d'aiguillage.",
+      "classes_arianes": [
+        "Localisation"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "plan_technique",
+      "nom": "Plan technique",
+      "aliases": [],
+      "description": "Documentation technique représentant l'état du réseau ferroviaire.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "point",
+      "nom": "Point",
+      "aliases": [],
+      "description": "Groupe de leviers de commande en campagne sous la dépendance d'un poste, utilisé pour la manœuvre d'installations de sécurité ou le contrôle.",
+      "classes_arianes": [
+        "poste"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste",
+      "nom": "Poste",
+      "aliases": [],
+      "description": "Installation comportant la manœuvre des signaux et des appareils de voie, pouvant être rattachée ou non à un SAF.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_d_aiguillage",
+      "nom": "Poste d'aiguillage",
+      "aliases": [],
+      "description": "Équipement permettant la gestion des aiguillages dans un réseau ferroviaire.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_de_vp_electrique_a_enclenchement_informatique",
+      "nom": "Poste de VP électrique à enclenchement informatique",
+      "aliases": [
+        "PAI"
+      ],
+      "description": "Type de poste utilisant une technologie informatique pour l'enclenchement des appareils de voie.",
+      "classes_arianes": [
+        "Poste de VP électrique à enclenchement informatique"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_de_vp_electrique_a_leviers_d_itineraire",
+      "nom": "Poste de VP électrique à leviers d’itinéraire",
+      "aliases": [
+        "PLIT"
+      ],
+      "description": "Type de poste utilisant des leviers pour les itinéraires.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_de_vp_electrique_a_relais_a_commande_informatique",
+      "nom": "Poste de VP électrique à relais à commande informatique",
+      "aliases": [
+        "PRCI"
+      ],
+      "description": "Type de poste utilisant des relais et une commande informatique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_de_vp_electrique_commande_centralisee",
+      "nom": "Poste de VP électrique commande centralisée",
+      "aliases": [
+        "CC",
+        "CC-PC"
+      ],
+      "description": "Type de poste centralisant la commande électrique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_de_vp_electrique_tout_relais_a_transit_souple",
+      "nom": "Poste de VP électrique tout relais à transit souple",
+      "aliases": [
+        "PRA",
+        "PRAW",
+        "PRS"
+      ],
+      "description": "Type de poste utilisant des relais et un transit souple.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_de_vp_mecanique_electromecaniques_unifies",
+      "nom": "Poste de VP mécanique électromécaniques unifiés",
+      "aliases": [
+        "EMU"
+      ],
+      "description": "Type de poste mécanique utilisant des systèmes électromécaniques unifiés.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_de_vs_de_triage_a_commande_automatique",
+      "nom": "Poste de VS de triage à commande automatique",
+      "aliases": [
+        "PVS-TRI"
+      ],
+      "description": "Type de poste pour voies de service avec commande automatique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_de_vs_electrique",
+      "nom": "Poste de VS électrique",
+      "aliases": [
+        "PVS-ELEC"
+      ],
+      "description": "Type de poste pour voies de service utilisant une commande électrique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_divers_de_moins_de_10_leviers",
+      "nom": "Poste divers de moins de 10 leviers",
+      "aliases": [
+        "P-10"
+      ],
+      "description": "Type de poste divers avec moins de 10 leviers.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_divers_levier_isole",
+      "nom": "Poste divers levier isolé",
+      "aliases": [
+        "LEVIER"
+      ],
+      "description": "Type de poste divers avec un levier isolé.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_divers_point_de_man_uvre",
+      "nom": "Poste divers point de manœuvre",
+      "aliases": [
+        "POINT"
+      ],
+      "description": "Type de poste divers pour la manœuvre de points.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pr",
+      "nom": "PR",
+      "aliases": [
+        "Point de repère"
+      ],
+      "description": "Point de référence sur le réseau ferroviaire.",
+      "classes_arianes": [
+        "Type Extremite"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pri",
+      "nom": "PRI",
+      "aliases": [
+        "Priorité de remontée d'information"
+      ],
+      "description": "Entité assurant la fourniture automatique des schémas de signalisation.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "saf",
+      "nom": "SAF",
+      "aliases": [],
+      "description": "Structure de rattachement d'un poste, généralement de type gare, mais certains postes (ex : LGV) ne sont pas rattachés à un SAF.",
+      "classes_arianes": [
+        "Saf"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "schema_de_signalisation",
+      "nom": "Schéma de signalisation",
+      "aliases": [],
+      "description": "Représentation graphique des installations de signalisation.",
+      "classes_arianes": [
+        "Modele signalisation"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal",
+      "nom": "Signal",
+      "aliases": [],
+      "description": "Élément manoeuvré par un poste, utilisé pour la régulation du trafic ferroviaire.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "telecommande_asservi",
+      "nom": "Télécommandé (asservi)",
+      "aliases": [],
+      "description": "Mode de fonctionnement d'un poste où la commande est effectuée à distance avec asservissement.",
+      "classes_arianes": [
+        "Télécommandé (asservi)"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "type_de_poste",
+      "nom": "Type de poste",
+      "aliases": [],
+      "description": "Catégorie ou modèle d'un poste d'aiguillage.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_de_vp_electrique_a_enclenchement_informatique",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Cas des Poste SEI : classé dans le type Poste de VP électrique à enclenchement informatique"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_de_vp_electrique_a_relais_a_commande_informatique",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique à relais à commande informatique ----- PRCI"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_de_vp_electrique_tout_relais_a_transit_souple",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique tout relais à transit souple ----- PRS / PRA / PRAW"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_de_vp_electrique_commande_centralisee",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique commande centralisée ----- CC / CC-PC"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_de_vp_electrique_a_leviers_d_itineraire",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique à leviers d’itinéraire ----- PLIT"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_de_vp_mecanique_electromecaniques_unifies",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP mécanique électromécaniques unifiés ----- EMU"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_de_vs_de_triage_a_commande_automatique",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VS de triage à commande automatique ----- PVS-TRI"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_de_vs_electrique",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VS électrique ----- PVS-ELEC"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_divers_de_moins_de_10_leviers",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste divers de moins de 10 leviers ----- P-10"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_divers_levier_isole",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste divers levier isolé ----- LEVIER"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "EST_UN",
+      "cible": "poste_divers_point_de_man_uvre",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste divers point de manœuvre ----- POINT"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Dans la plupart des cas un poste est rattaché à un SAF de type gare, toutefois certains postes ne sont pas rattachés à un SAF, exemple : poste des LGV"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "point",
+      "type": "RATTACHE_A",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Certains groupes de leviers de commande en campagne, sous la dépendance d’un poste, sont désignés « point »."
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "signal",
+      "type": "GERE_PAR",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Installation, quelle que soit par ailleurs sa désignation administrative, comportant la manœuvre des signaux et des appareils de voie."
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "appareil_de_voie",
+      "type": "GERE_PAR",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Installation, quelle que soit par ailleurs sa désignation administrative, comportant la manœuvre des signaux et des appareils de voie."
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "circuit_de_voie",
+      "type": "GERE_PAR",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Installation, quelle que soit par ailleurs sa désignation administrative, comportant la manœuvre des signaux et des appareils de voie."
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "NECESSITE",
+      "cible": "plan_technique",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "La modification d’un poste d’aiguillage est possible dans les cas suivants"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "DEPEND_DE",
+      "cible": "localisation_du_poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Erreur de la localisation du poste lors de la saisie"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "DEPEND_DE",
+      "cible": "type_de_poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Changement de type de poste sans modification de la localisation"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "NECESSITE",
+      "cible": "plan_technique",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "La suppression d’un poste d’aiguillage est nécessaire lorsque celui-ci ne figure plus sur le plan technique"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "schema_de_signalisation",
+      "type": "UTILISE",
+      "cible": "pri",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Un abonnement auprès de tous les PRI assure la fourniture automatique des schémas de signalisation"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "installations_fixes_voies",
+      "type": "IMPACTE",
+      "cible": "poste_d_aiguillage",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les installions fixes voies"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "domaine_de_protection_voies",
+      "type": "IMPACTE",
+      "cible": "poste_d_aiguillage",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les domaines de protection voies et caténaires secondaires"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "cantons_et_itineraires",
+      "type": "IMPACTE",
+      "cible": "poste_d_aiguillage",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les cantons et itinéraires"
+      },
+      "statut": "A_REVOIR"
+    },
+    {
+      "source": "pr",
+      "type": "IMPACTE",
+      "cible": "poste_d_aiguillage",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact éventuellement sur les PR"
+      },
+      "statut": "A_REVOIR"
+    }
+  ],
+  "erreurs_validation": [
+    "Relation poste/LOCALISE_SUR/localisation rejetée: citation absente du passage",
+    "Relation poste/A_POUR_TECHNOLOGIE/telecommande rejetée: citation absente du passage",
+    "Relation poste_d_aiguillage/EST_UN/poste rejetée: concept source ou cible absent",
+    "Relation poste_d_aiguillage/EST_UN/aiguillage rejetée: concept source ou cible absent",
+    "Relation poste_d_aiguillage/EST_UN/poste rejetée: concept source ou cible absent"
+  ]
+}

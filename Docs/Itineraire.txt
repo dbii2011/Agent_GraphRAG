@@ -19,7 +19,7 @@ Important : le signal origine d’un canton doit obligatoirement avoir le même 
 
 2.	Caractéristiques de l’objet
 
-2.1.	Itinéraire
+2.1.	création itineraire 
 
 Caractéristiques	Commentaires
 Libellé

@@ -38,6 +38,13 @@ class ArianeGraphBuilder:
         "CREATE CONSTRAINT attr_key    IF NOT EXISTS FOR (a:Attribut) REQUIRE a.key IS UNIQUE",
         "CREATE CONSTRAINT doc_id      IF NOT EXISTS FOR (d:Document) REQUIRE d.id IS UNIQUE",
         "CREATE CONSTRAINT chunk_id    IF NOT EXISTS FOR (c:Chunk)    REQUIRE c.id IS UNIQUE",
+        "CREATE FULLTEXT INDEX chunk_fulltext IF NOT EXISTS FOR (c:Chunk) ON EACH [c.texte]",
+        """CREATE VECTOR INDEX chunk_embeddings IF NOT EXISTS
+           FOR (c:Chunk) ON c.embedding
+           OPTIONS {indexConfig: {
+             `vector.dimensions`: 1024,
+             `vector.similarity_function`: 'cosine'
+           }}""",
     ]:
             self._run(stmt)
 
