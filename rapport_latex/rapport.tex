@@ -1,0 +1,587 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\geometry{margin=2.5cm}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  citecolor=green!35!black,
+  urlcolor=blue!55!black,
+  pdftitle={Conception d'un agent GraphRAG pour le métamodèle Arianes},
+  pdfauthor={Nom de l'auteur}
+}
+
+\definecolor{sncfviolet}{RGB}{111,38,125}
+\definecolor{sncfrouge}{RGB}{205,0,55}
+\definecolor{codegray}{RGB}{245,245,245}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Agent GraphRAG Arianes}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+
+\lstset{
+  backgroundcolor=\color{codegray},
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  showstringspaces=false,
+  tabsize=4,
+  inputencoding=utf8,
+  extendedchars=true
+}
+
+\newcommand{\projectpath}[1]{\path{#1}}
+\newcommand{\capture}[2]{%
+  \begin{figure}[H]
+    \centering
+    \IfFileExists{figures/#1}{%
+      \includegraphics[width=0.92\textwidth,height=0.68\textheight,keepaspectratio]{figures/#1}%
+    }{%
+      \fbox{\begin{minipage}[c][5.3cm][c]{0.88\textwidth}
+        \centering
+        {\Large\textbf{Capture d'écran à insérer}}\\[0.5cm]
+        Déposer le fichier sous :\\[0.2cm]
+        \path{figures/#1}\\[0.5cm]
+        \emph{#2}
+      \end{minipage}}%
+    }
+    \caption{#2}
+  \end{figure}
+}
+
+\newcommand{\todo}[1]{\textcolor{sncfrouge}{\textbf{À personnaliser :} #1}}
+
+\title{%
+  \vspace{-2cm}
+  {\color{sncfviolet}\rule{\textwidth}{1.5pt}}\\[1.2cm]
+  \Huge\textbf{Conception et mise en oeuvre d'un agent GraphRAG}\\[0.4cm]
+  \LARGE Exploitation du métamodèle Arianes, des procédures documentaires et d'un graphe métier\\[1.2cm]
+  {\color{sncfrouge}\rule{\textwidth}{1.5pt}}
+}
+\author{%
+  \todo{Nom et prénom}\\
+  \todo{Équipe, direction ou établissement}\\
+  Projet réalisé dans le contexte SNCF
+}
+\date{\todo{Période du projet}}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+\chapter*{Remerciements}
+\addcontentsline{toc}{chapter}{Remerciements}
+\todo{Ajouter les remerciements destinés à l'encadrant, à l'équipe et aux personnes ayant contribué au projet.}
+
+\chapter*{Résumé}
+\addcontentsline{toc}{chapter}{Résumé}
+Ce projet vise à construire un assistant conversationnel capable de répondre à des questions techniques sur le métamodèle ferroviaire Arianes et sur des fiches de procédure. La solution associe un graphe de connaissances Neo4j, une recherche documentaire hybride, un grand modèle de langage Mistral et une application web multi-utilisateur. Le travail a d'abord consisté à distinguer la construction correcte du graphe de la logique de retrieval de l'agent. Une chaîne GraphRAG contrôlée a ensuite été mise en place afin de résoudre les entités citées, d'extraire un sous-graphe borné, de sélectionner les passages documentaires pertinents et de produire une réponse traçable. Une couche de concepts métier extraite des documents complète le métamodèle technique. Enfin, un prototype de reranking supervisé a permis d'étudier l'apport du machine learning ; ses premiers résultats ne dépassent pas encore la fusion déterministe et justifient la constitution d'un jeu d'annotations plus riche.
+
+\medskip
+\noindent\textbf{Mots-clés :} GraphRAG, graphe de connaissances, Neo4j, Arianes, RAG, Mistral, extraction d'information, reranking, machine learning.
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+This project develops a conversational assistant for technical questions about the Arianes railway metamodel and procedural documents. The system combines a Neo4j knowledge graph, hybrid document retrieval, a Mistral language model and a multi-user web application. A controlled GraphRAG pipeline resolves entities, extracts a bounded technical subgraph, retrieves supporting passages and generates traceable answers. A business-concept layer extracted from documents enriches the technical metamodel. An experimental supervised reranker was also implemented; current results show that more representative labelled data is required before it can replace the deterministic ranking baseline.
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter*{Liste des sigles}
+\addcontentsline{toc}{chapter}{Liste des sigles}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+  \item[API] Application Programming Interface.
+  \item[LLM] Large Language Model, ou grand modèle de langage.
+  \item[RAG] Retrieval-Augmented Generation.
+  \item[GraphRAG] Génération augmentée par une recherche structurée dans un graphe.
+  \item[XMI] XML Metadata Interchange.
+  \item[RRF] Reciprocal Rank Fusion.
+  \item[MRR] Mean Reciprocal Rank.
+  \item[nDCG] Normalized Discounted Cumulative Gain.
+\end{description}
+
+\chapter{Introduction}
+
+\section{Contexte}
+Les systèmes ferroviaires reposent sur des modèles techniques riches, des relations nombreuses entre objets et un corpus documentaire contenant des règles, des définitions et des procédures. Une recherche uniquement lexicale retrouve des mots, mais ne maîtrise pas nécessairement les relations du modèle. À l'inverse, un graphe structure efficacement les classes et leurs liens, mais ne contient pas toujours les explications détaillées présentes dans les documents.
+
+Le projet réunit donc deux sources complémentaires :
+\begin{itemize}
+  \item le métamodèle Arianes, initialement fourni sous forme XMI puis converti en JSON ;
+  \item les fiches de procédure textuelles, découpées en passages et indexées.
+\end{itemize}
+
+\section{Problématique}
+La problématique générale est la suivante :
+
+\begin{quote}
+Comment construire un assistant capable de comprendre les entités du métamodèle Arianes, de parcourir leurs relations et d'utiliser les procédures pertinentes, tout en conservant des réponses explicables, sourcées et isolées par utilisateur ?
+\end{quote}
+
+Cette question implique plusieurs difficultés : désambiguïser les noms de classes, ne pas envoyer l'intégralité du graphe au LLM, combiner structure et sémantique, conserver la mémoire d'une conversation, sécuriser les secrets et distinguer les relations techniques des relations métier extraites des textes.
+
+\section{Objectifs}
+Les objectifs du projet sont :
+\begin{enumerate}
+  \item transformer les données du métamodèle en graphe interrogeable ;
+  \item indexer les procédures sous forme de chunks munis d'embeddings ;
+  \item réaliser un véritable retrieval GraphRAG avant l'appel au LLM ;
+  \item garantir la provenance des informations utilisées dans la réponse ;
+  \item fournir une interface avec authentification et historique par utilisateur ;
+  \item enrichir le graphe avec une couche de concepts métier ;
+  \item expérimenter un reranking par machine learning.
+\end{enumerate}
+
+\capture{architecture_globale.png}{Vue synthétique de l'architecture complète du projet.}
+
+\chapter{Fondements théoriques}
+
+\section{Graphe de connaissances}
+Un graphe de connaissances représente l'information par des noeuds, des relations et des propriétés. Dans un graphe de propriétés tel que Neo4j, une classe Arianes peut être un noeud \texttt{Classe}, un attribut un noeud \texttt{Attribut}, et leur association une relation \texttt{A\_ATTRIBUT}. Cette représentation rend explicites les chemins sémantiques et autorise des requêtes locales, par exemple les attributs d'une classe, ses parents et ses associations.
+
+Le graphe apporte principalement :
+\begin{itemize}
+  \item une structure typée et navigable ;
+  \item la possibilité d'expliquer une réponse par les chemins parcourus ;
+  \item une meilleure maîtrise des dépendances que dans un texte linéaire.
+\end{itemize}
+
+\section{RAG et GraphRAG}
+Le RAG enrichit le prompt d'un modèle génératif avec des passages retrouvés dans une base externe \cite{lewis2020rag}. Le GraphRAG ajoute une recherche structurée : la question sert à identifier des entités, puis à extraire un voisinage pertinent dans le graphe avant la génération. Les approches GraphRAG montrent notamment l'intérêt de structurer les connaissances et leurs communautés pour répondre à des questions complexes \cite{edge2024graphrag}.
+
+Dans ce projet, GraphRAG ne désigne donc pas le simple fait de stocker des données dans Neo4j. Il faut que l'agent effectue réellement les opérations suivantes :
+\begin{enumerate}
+  \item analyser la question et résoudre les entités ;
+  \item choisir un mode de recherche ;
+  \item extraire un sous-graphe limité ;
+  \item rechercher des chunks documentaires ;
+  \item fusionner et ordonner les preuves ;
+  \item générer une réponse exclusivement à partir de ce contexte.
+\end{enumerate}
+
+\section{Embeddings et recherche hybride}
+Un embedding transforme un texte en vecteur. La proximité cosinus entre une question $q$ et un passage $d$ est donnée par :
+\begin{equation}
+  \mathrm{sim}(q,d)=\frac{q\cdot d}{\lVert q\rVert\,\lVert d\rVert}.
+\end{equation}
+La recherche vectorielle capture des proximités sémantiques, tandis que la recherche plein texte favorise les termes exacts et les noms techniques. Les deux classements sont fusionnés par RRF :
+\begin{equation}
+  \mathrm{RRF}(d)=\sum_{r\in R}\frac{1}{k+\mathrm{rang}_{r}(d)},
+\end{equation}
+où $R$ est l'ensemble des classements et $k$ une constante amortissant les écarts de rang. La recherche lexicale utilisée par Neo4j s'appuie sur des principes proches de BM25 \cite{robertson2009bm25}.
+
+\section{Reranking supervisé}
+Le reranking réordonne un petit ensemble de candidats après la recherche initiale. Un modèle supervisé apprend une probabilité de pertinence à partir de caractéristiques comme le score vectoriel, le score plein texte, le rang RRF, la présence d'une classe résolue ou le recouvrement lexical. Des modèles plus complexes utilisent directement des Transformers \cite{nogueira2019bert}; le prototype du projet choisit volontairement une régression logistique légère afin de valider la chaîne d'apprentissage.
+
+\section{Traçabilité et sécurité}
+Une réponse technique doit distinguer les faits du graphe, les extraits documentaires et l'interprétation du LLM. Les identifiants de documents et de chunks servent donc de citations. Les mots de passe ne sont jamais enregistrés en clair : ils sont dérivés par PBKDF2-HMAC-SHA256 avec sel et 600\,000 itérations. Les clés d'API et identifiants Neo4j sont chargés depuis l'environnement et exclus de Git.
+
+\chapter{Données et modélisation}
+
+\section{Sources}
+Le projet exploite trois familles de données :
+\begin{itemize}
+  \item les fichiers XMI du dossier \projectpath{XMI/} ;
+  \item les représentations JSON du dossier \projectpath{Data/} ;
+  \item les fiches textuelles du dossier \projectpath{Docs/}.
+\end{itemize}
+
+\capture{xmi_source.png}{Exemple d'une définition issue du fichier XMI Arianes.}
+\capture{json_converti.png}{Exemple du JSON obtenu après conversion du métamodèle.}
+
+\section{Schéma technique Neo4j}
+Le graphe technique repose notamment sur les labels \texttt{Classe}, \texttt{Attribut}, \texttt{Type}, \texttt{Enum}, \texttt{ValeurEnum}, \texttt{Document} et \texttt{Chunk}. Les relations principales sont présentées dans le tableau~\ref{tab:schema-relations}.
+
+\begin{table}[H]
+\centering
+\caption{Relations principales du graphe technique}
+\label{tab:schema-relations}
+\begin{tabularx}{\textwidth}{>{\ttfamily}l X}
+\toprule
+Relation & Interprétation \\
+\midrule
+A\_ATTRIBUT & Une classe possède un attribut. \\
+EST\_DE\_TYPE & Un attribut est associé à un type. \\
+HERITE\_DE & Une classe hérite d'une autre classe. \\
+ASSOCIE\_A & Association entre classes. \\
+COMPOSE\_DE & Relation forte de composition. \\
+AGREGE & Relation d'agrégation. \\
+A\_VALEUR & Une énumération possède une valeur. \\
+APPARTIENT\_A & Un chunk appartient à un document. \\
+DECRIT & Un document décrit une classe identifiée. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\capture{neo4j_schema.png}{Visualisation Neo4j du schéma technique et de quelques relations Arianes.}
+
+\section{Passage du XMI au JSON}
+Le script \projectpath{XmiToJson.py} analyse les éléments du métamodèle et produit une structure JSON plus simple à valider et à importer. Cette étape sépare la dépendance au format XMI de la construction du graphe. Elle facilite également l'inspection manuelle des classes, attributs, types, héritages et associations.
+
+\section{Chunking documentaire}
+Chaque fiche est enregistrée comme un noeud \texttt{Document}. Son contenu est découpé en chunks afin de limiter la taille des unités recherchées et de préserver un contexte local cohérent. Chaque chunk possède son texte, son ordre, sa référence au document et un embedding Mistral de dimension 1024. Ce découpage permet de citer précisément le passage ayant justifié une réponse.
+
+\chapter{Démarche d'analyse et diagnostic initial}
+
+\section{Analyse du système existant}
+L'analyse initiale a montré que le graphe construit contenait déjà la majorité des informations attendues. Le problème principal ne provenait donc pas du \emph{builder}, mais de la manière dont l'agent exploitait Neo4j. Disposer d'un graphe ne suffit pas à faire du GraphRAG : un agent qui récupère un contexte générique ou laisse le LLM décider seul des requêtes ne garantit ni couverture ni stabilité.
+
+Le diagnostic a conduit à distinguer clairement :
+\begin{itemize}
+  \item la phase hors ligne de construction et d'indexation ;
+  \item la phase en ligne de retrieval déterministe ;
+  \item la phase de génération par le LLM.
+\end{itemize}
+
+\section{Problèmes identifiés}
+Les principaux problèmes fonctionnels ou techniques étaient :
+\begin{itemize}
+  \item absence d'un retrieval structuré unique et testable ;
+  \item création possible de plusieurs instances de composants au lieu de partager les mêmes dépendances ;
+  \item mémoire insuffisante à l'intérieur d'une conversation ;
+  \item navigation front-end incomplète entre nouvelles et anciennes conversations ;
+  \item absence initiale d'isolation des conversations par utilisateur ;
+  \item secrets potentiellement présents dans le code ou l'historique Git ;
+  \item confusion entre classes du métamodèle et concepts métier extraits des documents.
+\end{itemize}
+
+\section{Démarche retenue}
+La correction a été réalisée progressivement : sécurisation de la configuration, centralisation du retrieval, ajout des tests, amélioration de l'API et de l'interface, puis enrichissement par un graphe métier et expérimentation ML. Cette démarche incrémentale évite d'ajouter un modèle d'apprentissage avant de disposer d'une baseline déterministe mesurable.
+
+\capture{arborescence_projet.png}{Arborescence du dépôt après les principales implémentations.}
+
+\chapter{Construction du graphe et indexation}
+
+\section{Rôle de \projectpath{GrapheBuilder_v3.py}}
+Le constructeur réalise les opérations suivantes :
+\begin{enumerate}
+  \item connexion à Neo4j depuis les variables d'environnement ;
+  \item création ou fusion des noeuds techniques ;
+  \item création des relations structurelles du métamodèle ;
+  \item import des documents et création des chunks ;
+  \item génération des embeddings par Mistral ;
+  \item création des index vectoriel et plein texte.
+\end{enumerate}
+
+L'utilisation de \texttt{MERGE} limite les doublons lors d'une réexécution. Les contraintes d'unicité et les identifiants stables restent essentiels, notamment lorsqu'un nom apparaît dans plusieurs espaces logiques ou lorsqu'une classe possède des attributs homonymes.
+
+\section{Index Neo4j}
+L'index vectoriel \texttt{chunk\_embeddings} utilise des vecteurs de dimension 1024 et une similarité cosinus. L'index \texttt{chunk\_fulltext} couvre la recherche lexicale. Ils jouent des rôles complémentaires et alimentent la fusion du retriever.
+
+\capture{neo4j_indexes.png}{Liste des contraintes et index créés dans Neo4j.}
+
+\section{État observé du graphe}
+Lors de l'audit fonctionnel, les volumes suivants ont été observés.
+
+\begin{table}[H]
+\centering
+\caption{Volumétrie observée dans Neo4j}
+\begin{tabular}{lr@{\hspace{1.5cm}}lr}
+\toprule
+Label & Nombre & Label & Nombre \\
+\midrule
+Classe & 998 & Attribut & 738 \\
+Chunk & 244 & ValeurEnum & 146 \\
+Enum & 47 & Document & 33 \\
+Type & 7 & Embeddings de chunks & 244 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Les 244 chunks contrôlés disposaient tous d'un vecteur de dimension 1024. Ces chiffres décrivent l'état audité et devront être actualisés après chaque reconstruction importante.
+
+\capture{neo4j_compteurs.png}{Résultat des requêtes de comptage des noeuds, relations et embeddings.}
+
+\chapter{Logique GraphRAG de l'agent}
+
+\section{Retriever centralisé}
+Le fichier \projectpath{graphrag_retriever.py} centralise la recherche. Ce choix évite que l'API, l'agent et les tests appliquent des règles différentes. La chaîne générale est représentée par :
+\begin{equation}
+  q \longrightarrow E(q) \longrightarrow M(q) \longrightarrow
+  \bigl(G_k(E),D_n(q,E)\bigr) \longrightarrow C \longrightarrow \mathrm{LLM},
+\end{equation}
+où $E(q)$ représente les entités résolues, $M(q)$ le mode de recherche, $G_k$ un sous-graphe borné, $D_n$ les passages sélectionnés et $C$ le contexte contrôlé.
+
+\section{Résolution des classes}
+Le retriever recherche d'abord les noms exacts cités dans la question, puis applique une normalisation et des correspondances maîtrisées. Il évite ainsi de demander au LLM d'inventer un nom de classe ou une requête Cypher. Si aucune classe n'est identifiable, la branche documentaire peut encore répondre à partir des fiches.
+
+\section{Trois modes de recherche}
+\begin{description}
+  \item[STRUCTURE] Questions sur une classe, ses attributs, types, héritages et relations.
+  \item[DOCUMENTAIRE] Questions portant surtout sur une procédure, une règle ou une définition textuelle.
+  \item[HYBRIDE] Questions nécessitant simultanément la structure Arianes et les explications documentaires.
+\end{description}
+
+\section{Sous-graphe borné}
+Pour chaque classe résolue, le retriever extrait un voisinage limité en profondeur et en quantité. Cette limite réduit le bruit, le coût en tokens et le risque de faire interpréter au modèle des relations sans rapport avec la question. Les types de relations sont explicitement autorisés et restitués avec leurs propriétés utiles.
+
+\section{Recherche documentaire et fusion}
+La question est encodée par le même modèle d'embedding que les chunks. Les résultats vectoriels et plein texte sont fusionnés par RRF. Les documents reliés aux classes résolues peuvent recevoir un signal supplémentaire. Cette procédure produit un ensemble ordonné de preuves avant toute génération.
+
+\section{Génération contrôlée et citations}
+Le fichier \projectpath{Agent_LG.py} transforme le résultat du retriever en contexte compact. Le prompt système impose de s'appuyer sur ce contexte, de signaler les informations absentes et de citer les documents ou chunks. Le LLM est donc utilisé pour synthétiser et expliquer, et non comme base de connaissances principale.
+
+\capture{reponse_structurelle.png}{Exemple de réponse à une question structurelle sur une classe Arianes.}
+\capture{reponse_documentaire.png}{Exemple de réponse documentaire avec citations des passages utilisés.}
+
+\chapter{Application web, utilisateurs et mémoire}
+
+\section{API FastAPI}
+Le fichier \projectpath{api.py} expose les routes de santé, d'authentification, de gestion des conversations et de questionnement de l'agent. Il partage les composants d'accès au graphe et au modèle afin d'éviter des instances incohérentes. Les erreurs Neo4j et Mistral sont distinguées pour fournir un diagnostic compréhensible à l'interface.
+
+\section{Authentification}
+L'application permet l'inscription, la connexion et la déconnexion. Les mots de passe sont salés et dérivés par PBKDF2 ; les sessions sont associées à des cookies. La base SQLite contient les utilisateurs, les conversations et les messages. Chaque accès à une conversation vérifie son propriétaire.
+
+\section{Mémoire conversationnelle}
+La mémoire ne doit pas être confondue avec le graphe de connaissances. Le graphe contient les connaissances Arianes, alors que l'historique SQLite contient les échanges propres à une conversation. Lors d'une nouvelle question, les messages récents de la conversation sont transmis à l'agent en complément du contexte GraphRAG. Cela permet de comprendre les reprises telles que « et ses attributs ? » sans mélanger les conversations de deux utilisateurs.
+
+\section{Interface}
+Le fichier \projectpath{index.html} fournit l'écran de connexion, la création d'une conversation, la liste des conversations existantes et la zone de dialogue. Le front appelle l'API et recharge l'historique sélectionné.
+
+\capture{frontend_connexion.png}{Écran d'inscription ou de connexion.}
+\capture{frontend_conversations.png}{Interface principale avec liste des conversations et zone de dialogue.}
+\capture{memoire_conversation.png}{Démonstration d'une question de suivi utilisant la mémoire de la même conversation.}
+
+\chapter{Ajout d'une couche de graphe métier}
+
+\section{Motivation}
+Le graphe initial contient des classes, documents et chunks, mais pas nécessairement des concepts métier explicites tels que poste d'aiguillage, canton, signal d'origine ou voie de service. Or les documents décrivent des relations qui ne sont pas toujours modélisées directement dans le métamodèle. Une couche métier séparée permet de représenter ces connaissances sans dénaturer la structure Arianes.
+
+\section{Modèle de la couche métier}
+Les nouveaux noeuds portent le label \texttt{ConceptMetier}. Ils sont reliés :
+\begin{itemize}
+  \item aux classes Arianes par \texttt{REPRESENTE\_PAR} lorsqu'une correspondance fiable existe ;
+  \item aux documents par \texttt{DOCUMENTE\_PAR} ;
+  \item entre eux par des relations \texttt{RELATION\_METIER} portant un prédicat normalisé, une citation et un statut de validation.
+\end{itemize}
+
+Cette séparation distingue clairement trois niveaux : le métamodèle prescriptif, les sources documentaires et les connaissances métier extraites.
+
+\section{Extraction dans \projectpath{pipeline_graphe_metier.py}}
+Le pipeline reçoit un passage documentaire et la liste des classes issues des JSON. Le LLM propose des concepts, des correspondances et des triplets source--prédicat--cible. Une validation déterministe vérifie ensuite :
+\begin{enumerate}
+  \item l'existence des concepts source et cible ;
+  \item la présence d'une citation dans le passage ;
+  \item la compatibilité du prédicat avec les règles du projet ;
+  \item l'absence d'auto-relation non informative ;
+  \item la confiance de la correspondance vers une classe Arianes.
+\end{enumerate}
+
+Le mode tolérant conserve certaines propositions sous le statut \texttt{A\_REVOIR} au lieu de les perdre. La normalisation tient compte de la voix passive : par exemple, une voie décrite comme commandée par un poste produit le prédicat \texttt{EST\_COMMANDE\_PAR} dans le sens effectivement exprimé.
+
+\capture{proposition_metier.png}{Exemple de fichier de proposition produit par le pipeline d'extraction métier.}
+
+\section{Traitement de l'ensemble du corpus}
+Le script \projectpath{extraire_tout_graphe_metier.py} parcourt toutes les fiches textuelles, sauvegarde des checkpoints, permet la reprise après interruption et consolide les propositions. Cette conception est importante car les appels au LLM peuvent être longs ou momentanément indisponibles.
+
+\section{Import Neo4j}
+Le fichier \projectpath{graphe_metier_builder.py} importe uniquement les objets conformes aux règles choisies. Il conserve les références documentaires et les informations de validation afin qu'une relation métier puisse être auditée après son insertion.
+
+Lors d'un essai ciblé sur les documents relatifs à l'accès et au canton, 26 concepts et 18 relations ont été conservés, avec le statut \texttt{A\_REVOIR} lorsque la validation humaine restait nécessaire. Ces valeurs constituent un test de faisabilité, non une mesure définitive de qualité.
+
+\capture{graphe_metier_neo4j.png}{Sous-graphe Neo4j montrant les concepts métier, leurs documents et leurs classes Arianes.}
+
+\section{Utilisation par le retrieval}
+Le retriever peut enrichir une question avec les concepts métier proches des classes identifiées et avec les documents qui les justifient. Par exemple, une question sur un poste d'aiguillage peut combiner sa représentation technique, les équipements qu'il commande et les passages décrivant son fonctionnement. La réponse reste accompagnée des sources ayant produit les relations.
+
+\chapter{Prototype de reranking par machine learning}
+
+\section{Objectif}
+Le classement hybride constitue une baseline robuste mais utilise des règles fixes. Le prototype du dossier \projectpath{ml/} étudie si un modèle peut apprendre à mieux ordonner les chunks en fonction des exemples de pertinence.
+
+\section{Caractéristiques et modèle}
+Le prototype utilise NumPy et une régression logistique. Pour un couple question--chunk, le vecteur de caractéristiques peut inclure les scores vectoriel, plein texte et RRF, les rangs correspondants, le recouvrement des termes, la présence d'une classe attendue et les signaux de provenance. Le score appris est :
+\begin{equation}
+  P(y=1\mid x)=\sigma(w^\top x+b), \qquad
+  \sigma(z)=\frac{1}{1+e^{-z}}.
+\end{equation}
+
+\section{Chaîne expérimentale}
+Les fichiers principaux sont :
+\begin{itemize}
+  \item \projectpath{ml/build_dataset_from_evaluation.py}, qui construit les exemples ;
+  \item \projectpath{ml/train_reranker.py}, qui entraîne et sauvegarde le modèle ;
+  \item \projectpath{ml/evaluate_reranker.py}, qui compare la baseline et le modèle ;
+  \item \projectpath{ml/reranker.py}, qui charge le modèle et calcule les scores.
+\end{itemize}
+
+L'activation dans l'application se fait uniquement si la variable \texttt{RERANKER\_MODEL\_PATH} pointe vers un modèle valide. Le comportement par défaut reste la fusion déterministe.
+
+\section{Résultats et interprétation}
+Le premier jeu contient 40 exemples, dont 33 positifs et 7 négatifs. Les métriques d'entraînement atteignent une exactitude de 0,75, une précision de 0,9259 et un rappel de 0,7576, mais elles sont optimistes car le corpus est petit et déséquilibré.
+
+Une validation croisée groupée par question donne les résultats du tableau~\ref{tab:reranking}.
+
+\begin{table}[H]
+\centering
+\caption{Comparaison de la fusion initiale et du reranker}
+\label{tab:reranking}
+\begin{tabular}{lccc}
+\toprule
+Méthode & MRR & nDCG@5 & Recall@5 \\
+\midrule
+Fusion hybride & 1,0000 & 0,9369 & 0,7033 \\
+Reranker ML & 1,0000 & 0,8725 & 0,6367 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Le prototype ne surpasse donc pas encore la baseline. Le choix responsable est de le laisser désactivé par défaut. L'expérience reste utile : elle valide toute la chaîne de données et montre que la prochaine amélioration doit porter sur la qualité des annotations, la quantité de négatifs difficiles et l'évaluation, avant de complexifier le modèle.
+
+\capture{reranker_metriques.png}{Sortie de l'entraînement et comparaison des métriques du reranker.}
+
+\chapter{Tests et évaluation}
+
+\section{Tests automatisés}
+La suite couvre le retrieval, la sécurité des conversations, les utilitaires d'extraction métier et le reranker. Au dernier passage documenté, 29 tests ont réussi. Un avertissement Starlette ne remettait pas en cause le résultat mais devra être surveillé lors des mises à jour de dépendances.
+
+\capture{tests_29_passes.png}{Terminal montrant l'exécution réussie des 29 tests automatisés.}
+
+\section{Évaluation GraphRAG}
+Le script \projectpath{evaluate_graphrag.py} contient douze questions couvrant les recherches structurelles, documentaires et hybrides ainsi qu'une question hors domaine. Lorsque Neo4j et Mistral étaient disponibles, les douze recherches et les douze générations ont abouti ; la question hors domaine a été refusée conformément aux règles.
+
+\capture{evaluation_12_sur_12.png}{Résultat de l'évaluation fonctionnelle GraphRAG sur douze questions.}
+
+\section{Exemples de scénarios}
+Les scénarios représentatifs comprennent :
+\begin{itemize}
+  \item demander les attributs et relations directes de la classe \texttt{Ligne} ;
+  \item expliquer une procédure comme le contrôle par courant de Foucault ;
+  \item poser une question hybride reliant un objet Arianes à une règle documentaire ;
+  \item enchaîner une question pronominale dans la même conversation ;
+  \item vérifier qu'un utilisateur ne peut pas lire la conversation d'un autre ;
+  \item soumettre une question hors périmètre et obtenir un refus explicite.
+\end{itemize}
+
+\section{Limites de l'évaluation}
+Un taux de réussite technique ne mesure pas à lui seul l'exactitude métier. Une évaluation complète doit faire annoter les preuves et réponses par des experts, mesurer séparément le retrieval et la génération, puis suivre la couverture des relations rares. Les tests actuels constituent une base de non-régression, pas une certification du contenu ferroviaire.
+
+\chapter{Déploiement, Git et sécurité}
+
+\section{Configuration}
+Les paramètres sensibles sont placés dans un fichier \projectpath{.env} local et un modèle non secret est fourni dans \projectpath{.env.example}. Le fichier \projectpath{.gitignore} exclut notamment les secrets, caches, bases locales et artefacts générés. Ajouter un fichier à \texttt{.gitignore} n'efface toutefois pas une clé déjà présente dans l'historique Git : dans ce cas, la clé doit être révoquée et l'historique éventuellement purgé.
+
+\section{Versionnement}
+Le dépôt Git conserve une version reproductible du code. Les fichiers sources, les tests, la documentation et les exemples de configuration doivent être versionnés ; les secrets, environnements virtuels et résultats volumineux ne doivent pas l'être. Un dépôt privé réduit l'exposition publique, mais ne rend pas acceptable la conservation de clés actives dans l'historique.
+
+\capture{github_depot.png}{Dépôt GitHub privé montrant la structure versionnée du projet.}
+
+\section{Lancement local}
+Une séquence de lancement typique est :
+\begin{lstlisting}[language=bash,caption={Commandes principales de lancement}]
+python -m pytest -q
+python -m uvicorn api:app --host 127.0.0.1 --port 8000
+\end{lstlisting}
+Sous Windows, une erreur de socket sur un port peut indiquer qu'un autre processus l'utilise ou qu'une politique locale le réserve. Il faut alors identifier le processus ou choisir un autre port autorisé.
+
+\chapter{Discussion et pistes d'amélioration}
+
+\section{Apports}
+Le projet apporte une architecture dans laquelle chaque composant possède une responsabilité nette : le builder construit, le retriever sélectionne, le LLM formule, l'API isole les utilisateurs et les tests vérifient les contrats. L'ajout du graphe métier permet de dépasser une simple lecture du métamodèle tout en conservant la provenance documentaire.
+
+\section{Limites actuelles}
+Les limites principales sont :
+\begin{itemize}
+  \item dépendance à la disponibilité de Mistral pour les embeddings et la génération ;
+  \item couverture métier encore partielle et nécessitant une validation humaine ;
+  \item qualité des réponses dépendante du chunking et des documents disponibles ;
+  \item jeu d'apprentissage du reranker trop petit et déséquilibré ;
+  \item authentification adaptée à un prototype, à renforcer avant production ;
+  \item absence d'un protocole d'évaluation par experts à grande échelle.
+\end{itemize}
+
+\section{Pistes prioritaires}
+\begin{enumerate}
+  \item créer un jeu de questions métier validé par des experts, avec chunks pertinents et réponses de référence ;
+  \item ajouter des tests de fidélité vérifiant que chaque affirmation est soutenue par une source ;
+  \item améliorer la résolution d'entités par synonymes métier contrôlés ;
+  \item mettre en place une interface de validation des relations \texttt{A\_REVOIR} ;
+  \item entraîner le reranker sur davantage de négatifs difficiles ;
+  \item comparer la régression logistique à un gradient boosting puis à un cross-encoder ;
+  \item ajouter observabilité, métriques de latence et journalisation sans données sensibles ;
+  \item durcir les sessions, utiliser HTTPS et prévoir une base serveur en production ;
+  \item versionner les modèles de graphe, les prompts et les jeux d'évaluation.
+\end{enumerate}
+
+\section{Autres usages du machine learning}
+Au-delà du reranking, le machine learning pourrait servir à détecter les doublons de concepts, proposer des correspondances entre concepts métier et classes Arianes, classifier automatiquement le mode de recherche ou estimer la confiance d'une relation extraite. Ces modèles ne doivent toutefois pas remplacer les validations déterministes et métier lorsqu'une erreur aurait une conséquence opérationnelle.
+
+\chapter{Conclusion}
+Ce travail a transformé un ensemble de données Arianes, de documents et de composants conversationnels en une chaîne GraphRAG structurée. L'analyse a montré que la présence d'un bon graphe ne garantit pas, à elle seule, un bon agent : la qualité dépend du retrieval qui choisit explicitement les entités, chemins et passages transmis au modèle. L'application obtenue associe graphe technique, recherche documentaire hybride, mémoire conversationnelle et isolation par utilisateur.
+
+La couche métier ouvre une perspective importante : convertir progressivement les descriptions dispersées dans les procédures en relations exploitables, tout en conservant leur citation et leur statut de validation. Le prototype de reranking apporte une première expérimentation ML, mais ses résultats confirment la nécessité de renforcer les données d'entraînement avant activation. Les prochaines étapes doivent donc privilégier l'évaluation experte, la validation des relations métier et la traçabilité de bout en bout.
+
+\appendix
+\chapter{Inventaire fonctionnel des fichiers}
+
+\begin{longtable}{>{\ttfamily}p{0.34\textwidth}p{0.58\textwidth}}
+\caption{Rôle des principaux fichiers du projet}\\
+\toprule
+Fichier & Fonction \\
+\midrule
+\endfirsthead
+\toprule
+Fichier & Fonction \\
+\midrule
+\endhead
+XmiToJson.py & Conversion du métamodèle XMI vers JSON. \\
+GrapheBuilder\_v3.py & Construction du graphe technique, import documentaire et indexation. \\
+graphrag\_retriever.py & Résolution d'entités, sous-graphe, recherche hybride et reranking optionnel. \\
+Agent\_LG.py & Préparation du contexte et génération contrôlée par Mistral. \\
+api.py & API FastAPI, authentification, sessions, conversations et messages. \\
+index.html & Interface web du chatbot. \\
+pipeline\_graphe\_metier.py & Extraction et validation des concepts et relations métier. \\
+extraire\_tout\_graphe\_metier.py & Traitement complet des documents avec checkpoints. \\
+graphe\_metier\_builder.py & Import de la couche métier validée dans Neo4j. \\
+evaluate\_graphrag.py & Évaluation fonctionnelle du retrieval et des réponses. \\
+ml/reranker.py & Modèle de reranking et calcul des caractéristiques. \\
+ml/train\_reranker.py & Entraînement du reranker. \\
+ml/evaluate\_reranker.py & Comparaison du modèle à la baseline. \\
+tests/ & Tests automatisés et tests de non-régression. \\
+README\_PROJET.md & Documentation technique détaillée du dépôt. \\
+\bottomrule
+\end{longtable}
+
+\chapter{Guide des captures d'écran}
+Toutes les images doivent être placées dans \projectpath{rapport_latex/figures/} avec les noms exacts listés dans \projectpath{figures/README.md}. Tant qu'une image est absente, le document affiche automatiquement un cadre réservé et sa description. Avant toute capture, masquer les clés, mots de passe, cookies, jetons, adresses internes et données personnelles.
+
+\chapter{Commandes de compilation}
+Depuis le dossier \projectpath{rapport_latex/}, utiliser de préférence :
+\begin{lstlisting}[language=bash]
+pdflatex rapport.tex
+bibtex rapport
+pdflatex rapport.tex
+pdflatex rapport.tex
+\end{lstlisting}
+Une distribution telle que MiKTeX ou TeX Live doit être installée. L'éditeur Overleaf peut également compiler le dossier après import de \projectpath{rapport.tex}, \projectpath{references.bib} et du dossier \projectpath{figures/}.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

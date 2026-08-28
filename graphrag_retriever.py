@@ -1,4 +1,6 @@
 import json
+import logging
+import os
 import re
 import time
 import unicodedata
@@ -6,6 +8,7 @@ from difflib import SequenceMatcher
 
 
 RELATIONS_STRUCTURELLES = ["HERITE_DE", "COMPOSE_DE", "ASSOCIE_A", "AGREGE"]
+logger = logging.getLogger(__name__)
 MOTS_AMBIGUS = {
     "a", "au", "aux", "ce", "ces", "dans", "de", "des", "du", "en", "est",
     "et", "la", "le", "les", "ou", "par", "pour", "que", "qui", "son", "sur",
@@ -28,12 +31,28 @@ def tokens(texte: str) -> set[str]:
 class GraphRAGRetriever:
     """Construit un contexte GraphRAG déterministe et entièrement sourcé."""
 
-    def __init__(self, driver, embeddings, cache_seconds: int = 300):
+    def __init__(self, driver, embeddings, cache_seconds: int = 300, reranker=None):
         self.driver = driver
         self.embeddings = embeddings
         self.cache_seconds = cache_seconds
         self._catalogue = []
         self._catalogue_charge_a = 0.0
+        self.reranker = reranker or self._charger_reranker_optionnel()
+
+    @staticmethod
+    def _charger_reranker_optionnel():
+        chemin = os.getenv("RERANKER_MODEL_PATH", "").strip()
+        if not chemin:
+            return None
+        try:
+            from ml.reranker import LinearReranker
+
+            modele = LinearReranker.load(chemin)
+            logger.info("Reranker ML chargé depuis %s", chemin)
+            return modele
+        except Exception as exc:
+            logger.warning("Reranker ML inutilisable, classement standard conservé : %s", exc)
+            return None
 
     def _charger_catalogue(self) -> list[dict]:
         if self._catalogue and time.time() - self._catalogue_charge_a < self.cache_seconds:
@@ -353,7 +372,10 @@ class GraphRAGRetriever:
                 if item.get("score_lexical", 0) >= 2.0
             }
 
-        resultat = sorted(candidats.values(), key=lambda x: -x.get("score_fusion", 0))[:limite]
+        resultat = sorted(candidats.values(), key=lambda x: -x.get("score_fusion", 0))
+        if self.reranker is not None:
+            resultat = self.reranker.rerank(question, resultat)
+        resultat = resultat[:limite]
         for item in resultat:
             item["citation"] = f"{item['titre']} — passage {item['position'] + 1}"
         return resultat

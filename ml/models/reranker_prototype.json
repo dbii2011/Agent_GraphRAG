@@ -1,0 +1,63 @@
+{
+  "model_type": "logistic_regression",
+  "feature_names": [
+    "score_semantique",
+    "score_lexical_log",
+    "score_fusion",
+    "recouvrement_question_texte",
+    "recouvrement_question_titre",
+    "classe_dans_question",
+    "signal_semantique_present",
+    "signal_lexical_present",
+    "rang_reciproque",
+    "longueur_texte_log"
+  ],
+  "weights": [
+    0.7314627858923209,
+    -0.19625942333285137,
+    0.33329166140818056,
+    0.0,
+    1.302578407303576,
+    0.0,
+    0.0,
+    0.0,
+    0.7396659533303112,
+    0.0
+  ],
+  "bias": 1.0869382559659455,
+  "means": [
+    0.907042209804058,
+    1.563939329451324,
+    0.030146592175549426,
+    0.0,
+    0.07142857142857142,
+    0.0,
+    1.0,
+    1.0,
+    0.3397321428571428,
+    0.0
+  ],
+  "scales": [
+    0.013631048969975707,
+    0.22667135597015245,
+    0.0016736734632780703,
+    1.0,
+    0.10227015045197398,
+    1.0,
+    1.0,
+    1.0,
+    0.27479051590069165,
+    1.0
+  ],
+  "metadata": {
+    "trained_at": "2026-08-24T13:31:04.544463+00:00",
+    "examples": 40,
+    "positives": 33,
+    "prototype": true,
+    "training_metrics": {
+      "accuracy": 0.75,
+      "precision": 0.9259259259259259,
+      "recall": 0.7575757575757576
+    }
+  }
+}

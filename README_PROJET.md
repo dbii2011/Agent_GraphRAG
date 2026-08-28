@@ -746,6 +746,17 @@ Parcours attendu :
 - ajouter des métriques de précision, rappel et fidélité des réponses ;
 - remplacer progressivement les prototypes de `Bin/` par une archive documentée.
 
+## 13.1 Prototype de reranking machine learning
+
+Le dossier `ml/` contient un prototype optionnel de régression logistique entraîné
+avec NumPy. Il apprend à reclasser les chunks candidats après la recherche hybride
+et avant la sélection des huit passages transmis à Mistral.
+
+Le modèle est désactivé par défaut. Il est activé uniquement lorsque
+`RERANKER_MODEL_PATH` désigne un modèle JSON compatible. En cas d'erreur, le score
+de fusion standard reste utilisé. Les commandes et limites sont documentées dans
+`ml/README.md`.
+
 ## 14. Fichiers à utiliser en priorité
 
 Pour travailler sur l'application actuelle :
