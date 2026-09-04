@@ -1,0 +1,241 @@
+{
+  "domaine": "gestion des gares ferroviaires",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "gare_de_voyageur",
+      "nom": "Gare de voyageur",
+      "aliases": [],
+      "description": "Lieu d'arrêt des trains composé d'installations permettant la montée et la descente des voyageurs. Peut ne pas comporter de bâtiment voyageur.",
+      "classes_arianes": [
+        "Gare"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "gestionnaire_d_infrastructure",
+      "nom": "Gestionnaire d'Infrastructure",
+      "aliases": [],
+      "description": "Entité responsable de la gestion des infrastructures ferroviaires (ex: SNCF Réseau).",
+      "classes_arianes": [
+        "Region"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "installation_fixe_gare",
+      "nom": "Installation fixe Gare",
+      "aliases": [],
+      "description": "Caractéristiques et attributs associés à une gare de voyageurs dans le système de gestion.",
+      "classes_arianes": [
+        "Gare"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [],
+      "description": "Voie ferrée sur laquelle une gare est localisée.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_rattache",
+      "nom": "Poste rattaché",
+      "aliases": [],
+      "description": "Poste de signalisation ou de gestion associé à une gare.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pr_rattache",
+      "nom": "PR rattaché",
+      "aliases": [],
+      "description": "Point de repère ou installation technique rattachée à une gare.",
+      "classes_arianes": [
+        "Segmentation"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "region_sncf",
+      "nom": "Région SNCF",
+      "aliases": [],
+      "description": "Entité géographique ou administrative associée à une gare.",
+      "classes_arianes": [
+        "Region"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "saf_rattache",
+      "nom": "SAF rattaché",
+      "aliases": [],
+      "description": "Segmentation ou zone de gestion commerciale rattachée à une gare.",
+      "classes_arianes": [
+        "Saf"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "schema_de_signalisation",
+      "nom": "Schéma de signalisation",
+      "aliases": [],
+      "description": "Document ou représentation graphique définissant les installations et règles de signalisation d'une gare.",
+      "classes_arianes": [
+        "Segmentation"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "gare_de_voyageur",
+      "type": "COMPOSE_DE",
+      "cible": "installation_fixe_gare",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Une gare de voyageur est composée d’installations qui ont pour fonction de permettre la montée et la descente des voyageurs."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "installation_fixe_gare",
+      "type": "EST_UN",
+      "cible": "gare_de_voyageur",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Cet objet correspond aux gares de voyageurs"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "poste_rattache",
+      "type": "RATTACHE_A",
+      "cible": "gare_de_voyageur",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Infra : à partir du moment ou il y a un poste rattaché"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "saf_rattache",
+      "type": "RATTACHE_A",
+      "cible": "gare_de_voyageur",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Rattachement SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "schema_de_signalisation",
+      "type": "DECRIT_PAR",
+      "cible": "gare_de_voyageur",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "La création à lieu lorsqu’une gare de voyageur apparait sur le schéma."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "schema_de_signalisation",
+      "type": "DECRIT_PAR",
+      "cible": "installation_fixe_gare",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Le libellé est repris sur le schéma de signalisation."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "installation_fixe_gare",
+      "type": "IMPACTE",
+      "cible": "poste_rattache",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Rattachement POSTE"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "installation_fixe_gare",
+      "type": "IMPACTE",
+      "cible": "pr_rattache",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Rattachement PR"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    }
+  ],
+  "erreurs_validation": [
+    "Relation installation_fixe_gare/LOCALISE_SUR/ligne rejetée: citation absente du passage",
+    "Relation installation_fixe_gare/LOCALISE_SUR/pk rejetée: concept source ou cible absent",
+    "Relation installation_fixe_gare/RATTACHE_A/region_sncf rejetée: citation absente du passage",
+    "Relation installation_fixe_gare/RATTACHE_A/gestionnaire_infrastructure rejetée: citation absente du passage",
+    "Relation pr_rattache/RATTACHE_A/gare_voyageur rejetée: citation absente du passage"
+  ],
+  "document_source": "Gare.txt"
+}

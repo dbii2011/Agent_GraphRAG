@@ -1,0 +1,885 @@
+{
+  "domaine": "gestion_ferroviaire",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "abri",
+      "nom": "Abri",
+      "aliases": [],
+      "description": "Structure de couverture d'un quai (abri métallique, toile, dalle béton, marquise, halle).",
+      "classes_arianes": [
+        "Abri"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "accessible_aux_personnes_a_mobilite_reduite",
+      "nom": "Accessible aux personnes à mobilité réduite",
+      "aliases": [],
+      "description": "Indication si un quai est accessible aux personnes à mobilité réduite (Oui/Non).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "dda",
+      "nom": "DDA",
+      "aliases": [],
+      "description": "Caractéristique de gestion d'un quai (non explicitement définie dans le document).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "DATE"
+    },
+    {
+      "id": "dfa",
+      "nom": "DFA",
+      "aliases": [],
+      "description": "Caractéristique de gestion d'un quai (non explicitement définie dans le document).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "DATE"
+    },
+    {
+      "id": "eclairage",
+      "nom": "Éclairage",
+      "aliases": [],
+      "description": "Indication si un quai est éclairé (Oui/Non).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "gare_de_rattachement",
+      "nom": "Gare de rattachement",
+      "aliases": [],
+      "description": "Gare à laquelle un quai est rattaché.",
+      "classes_arianes": [
+        ":gare"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "hauteur_du_quai",
+      "nom": "Hauteur du quai",
+      "aliases": [],
+      "description": "Hauteur d'un quai parmi les types définis (bas ancien, bas rénové, mi-haut, haut, super-haut, marchandise).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "indication_quai_de_service",
+      "nom": "Indication quai de service",
+      "aliases": [],
+      "description": "Indication si un quai est un quai de service (Oui/Non).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "largeur_du_quai",
+      "nom": "Largeur du quai",
+      "aliases": [],
+      "description": "Largeur d'un quai exprimée en mètres.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "longueur_totale",
+      "nom": "Longueur totale",
+      "aliases": [],
+      "description": "Longueur d'un quai calculée par rapport aux points kilométriques des plans techniques.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "longueur_utile",
+      "nom": "Longueur utile",
+      "aliases": [],
+      "description": "Longueur utile d'un quai, entre signaux ou pancartes, ou limitée par des pancartes spécifiques.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "nombre_d_abris",
+      "nom": "Nombre d’abris",
+      "aliases": [],
+      "description": "Nombre d'abris présents sur un quai.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "nombre_d_ascenseurs",
+      "nom": "Nombre d’ascenseurs",
+      "aliases": [],
+      "description": "Nombre d'ascenseurs présents sur un quai.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "nombre_d_escaliers_mecaniques",
+      "nom": "Nombre d’escaliers mécaniques",
+      "aliases": [],
+      "description": "Nombre d'escaliers mécaniques présents sur un quai.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "nombre_de_rampes",
+      "nom": "Nombre de rampes",
+      "aliases": [],
+      "description": "Nombre de rampes d'accès présentes sur un quai.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "nombre_de_traversees",
+      "nom": "Nombre de traversées",
+      "aliases": [],
+      "description": "Nombre d'équipements permettant le changement de quai (passages aériens, souterrains, plain-pied, etc.).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "pancarte_tt",
+      "nom": "Pancarte TT",
+      "aliases": [],
+      "description": "Pancarte définissant la limite de longueur utile d'un quai.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pancarte_xv",
+      "nom": "Pancarte XV",
+      "aliases": [],
+      "description": "Pancarte définissant la limite de longueur utile d'un quai en fonction du nombre de voitures maximum.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "passage_de_plain_pied",
+      "nom": "Passage de plain-pied",
+      "aliases": [],
+      "description": "Type de traversée de plain-pied permettant le changement de quai.",
+      "classes_arianes": [
+        "traversee_voie"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "passage_souterrain",
+      "nom": "Passage souterrain",
+      "aliases": [],
+      "description": "Type de traversée souterraine permettant le changement de quai.",
+      "classes_arianes": [
+        "traversee_voie"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk_du_quai",
+      "nom": "Pk du quai",
+      "aliases": [],
+      "description": "Plus petit point kilométrique dans le sens croissant du système de référence, associé à un quai.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "plan_technique",
+      "nom": "Plan technique",
+      "aliases": [],
+      "description": "Document technique de référence pour la localisation et la gestion des quais.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "quai",
+      "nom": "Quai",
+      "aliases": [
+        "quais"
+      ],
+      "description": "Aménagement surélevé dans une gare ferroviaire parallèle à la voie, permettant l'accès aux véhicules sur rails.",
+      "classes_arianes": [
+        "Quai"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "type_de_couverture",
+      "nom": "Type de Couverture",
+      "aliases": [],
+      "description": "Type de couverture d'un quai (abri métallique, toile, dalle béton, marquise, halle, non-couvert).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "type_de_revetement_du_sol",
+      "nom": "Type de revêtement du sol",
+      "aliases": [],
+      "description": "Type de revêtement du sol d'un quai (terre, goudron, béton, carrelage, résine).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "type_de_traversee",
+      "nom": "Type de traversée",
+      "aliases": [],
+      "description": "Type de traversée permettant le changement de quai (aérienne, plain-pied, souterraine, combinaisons).",
+      "classes_arianes": [
+        "traversee_voie"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_desservie",
+      "nom": "Voie desservie",
+      "aliases": [
+        "voies desservies"
+      ],
+      "description": "Voie ferroviaire desservie par un quai.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "quai",
+      "type": "RATTACHE_A",
+      "cible": "gare_de_rattachement",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "La gare de rattachement (exemple quai 25 de Paris Saint Lazare)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_desservie",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "On décrit autant de localisation que de voies desservies."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "LOCALISE_SUR",
+      "cible": "pk_du_quai",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Pk du quai (plus petit pk dans le sens croissant du SR)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "longueur_totale",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "La longueur totale est calculée par rapport au point kilométrique des plans techniques."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "longueur_totale"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "longueur_utile",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "La longueur utile pour cette voie (entre signaux ou pancartes)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "longueur_utile"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "hauteur_du_quai",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "La hauteur du quai"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "hauteur_du_quai"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "type_de_couverture",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Type de Couverture"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "type_de_couverture"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "type_de_revetement_du_sol",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Type de revêtement du sol"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "type_de_revetement_du_sol"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "dfa",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Renseigner la DDA et DFA"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "dfa"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "dda",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Renseigner la DDA et DFA"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "dda"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "largeur_du_quai",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Largeur du quai (valeur exprimée en mètre)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "largeur_du_quai"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "indication_quai_de_service",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Indication quai de service (valeurs possibles : Oui / Non)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "indication_quai_de_service"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "eclairage",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Eclairage (valeurs possibles : Oui/Non)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "eclairage"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "nombre_d_ascenseurs",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Nombre d’ascenseurs"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "nombre_d_ascenseurs"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "nombre_d_escaliers_mecaniques",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Nombre d’escaliers mécaniques"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "nombre_d_escaliers_mecaniques"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "nombre_de_rampes",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Nombre de rampes"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "nombre_de_rampes"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "nombre_de_traversees",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Nombre de traversées"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "nombre_de_traversees"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "type_de_traversee",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Type de traversée"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "type_de_traversee"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "accessible_aux_personnes_a_mobilite_reduite",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Accessible aux personnes à mobilité réduite (valeurs possible : Oui / Non)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "accessible_aux_personnes_a_mobilite_reduite"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "COMPOSE_DE",
+      "cible": "abri",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Abri métallique, Abri toile, Dalle béton, Marquise, Halle"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "nombre_de_traversees",
+      "type": "UTILISE",
+      "cible": "type_de_traversee",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "la valeur à renseigner est le nombre d’équipement (type de traversée) permettant le changement de quai"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "quai",
+      "type": "DECRIT_PAR",
+      "cible": "plan_technique",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Forme de remontée : Plan technique"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "LOCALISE_SUR",
+            "cible": "plan_technique"
+          },
+          "raison": "Le plan technique est une source documentaire."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation quai/EST_UN/equipement rejetée: concept source ou cible absent",
+    "Relation quai/COMPOSE_DE/nombre_abris rejetée: citation absente du passage",
+    "Relation longueur_utile/LOCALISE_SUR/pancarte_tt rejetée: citation absente du passage",
+    "Relation longueur_utile/LOCALISE_SUR/pancarte_xv rejetée: citation absente du passage"
+  ],
+  "document_source": "Quai.txt",
+  "relations_rejetees": [],
+  "version_validation": 2
+}

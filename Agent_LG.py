@@ -55,6 +55,104 @@ class AgentLG:
     def close(self):
         self.driver.close()
 
+    @staticmethod
+    def _retirer_sources_visibles(reponse: str) -> str:
+        """Masque les références techniques sans modifier les faits de la réponse."""
+        reponse = re.sub(r"\s*\[Source\s*:[^\]]+\]", "", reponse, flags=re.IGNORECASE)
+        reponse = re.sub(
+            r"\n\s*#{1,6}\s*\*{0,2}Sources(?:\s+finales[^\n]*)?\*{0,2}\s*.*$",
+            "",
+            reponse,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        reponse = re.sub(
+            r"\n\s*Sources\s*:\s*(?:\n\s*-\s*[^\n]+)*\s*$",
+            "",
+            reponse,
+            flags=re.IGNORECASE,
+        )
+        return re.sub(r"\n{3,}", "\n\n", reponse).strip()
+
+    @staticmethod
+    def _formater_chemin_metier(chemin: dict) -> str:
+        """Formate sans LLM le chemin validé retourné par Neo4j."""
+        noms = {
+            concept.get("id"): concept.get("nom") or concept.get("id", "")
+            for concept in chemin.get("concepts", [])
+        }
+
+        def nom(identifiant):
+            return noms.get(identifiant, str(identifiant or "").replace("_", " ").capitalize())
+
+        if not chemin.get("trouve"):
+            detectes = chemin.get("concepts_detectes", [])
+            if len(detectes) < 2 and not (chemin.get("depart") and chemin.get("arrivee")):
+                return (
+                    "Je n’ai pas pu identifier deux concepts métier distincts dans la question. "
+                    "Précise le concept de départ et celui d’arrivée."
+                )
+            return (
+                f"Aucun chemin métier validé n’a été trouvé entre **{nom(chemin.get('depart'))}** "
+                f"et **{nom(chemin.get('arrivee'))}** dans la limite de cinq relations."
+            )
+
+        relations = chemin.get("relations", [])
+        lignes = [
+            f"- **{nom(relation.get('source'))}** — `{relation.get('type', 'RELATION')}` → "
+            f"**{nom(relation.get('cible'))}**"
+            for relation in relations
+        ]
+        nombre = len(relations)
+        introduction = (
+            f"Le chemin métier validé entre **{nom(chemin.get('depart'))}** et "
+            f"**{nom(chemin.get('arrivee'))}** comporte {nombre} "
+            f"relation{'s' if nombre != 1 else ''} :"
+        )
+        return introduction + "\n\n" + "\n".join(lignes)
+
+    @staticmethod
+    def _schema_depuis_retrieval(resultat: dict) -> dict | None:
+        """Construit le petit graphe à afficher, sans demander sa structure au LLM."""
+        chemin = resultat.get("chemin_metier", {})
+        source = chemin if chemin.get("trouve") else resultat.get("graphe_metier", {})
+        relations = source.get("relations", [])
+        concepts = source.get("concepts", [])
+        if not relations:
+            return None
+        ids_utiles = {
+            identifiant
+            for relation in relations
+            for identifiant in (relation.get("source"), relation.get("cible"))
+        }
+        noms = {
+            concept.get("id"): concept.get("nom") or concept.get("id")
+            for concept in concepts
+            if concept.get("id") in ids_utiles
+        }
+        ordre_ids = [
+            concept.get("id") for concept in concepts
+            if concept.get("id") in ids_utiles
+        ]
+        ordre_ids.extend(sorted(ids_utiles - set(ordre_ids)))
+        return {
+            "nodes": [
+                {"id": identifiant, "label": noms.get(identifiant, identifiant.replace("_", " ").capitalize())}
+                for identifiant in ordre_ids
+            ],
+            "links": [
+                {
+                    "source": relation.get("source"),
+                    "target": relation.get("cible"),
+                    "label": relation.get("type", "RELATION"),
+                }
+                for relation in relations
+            ],
+        }
+
+    @staticmethod
+    def _retour(texte: str, schema: dict | None, inclure_graphe: bool):
+        return {"reponse": texte, "graphe": schema} if inclure_graphe else texte
+
     def get_schema_context(self) -> str:
         """Retourne un aperçu borné du schéma réellement présent dans Neo4j."""
         with self.driver.session() as session:
@@ -141,7 +239,8 @@ class AgentLG:
         self,
         question: str,
         historique: list[dict[str, str]] | None = None,
-    ) -> str:
+        inclure_graphe: bool = False,
+    ):
         debut = time.time()
         logger.info("Question reçue : %s", question)
 
@@ -150,6 +249,34 @@ class AgentLG:
                 question,
                 historique=historique,
             )
+            schema_reponse = self._schema_depuis_retrieval(resultat_retrieval)
+            if resultat_retrieval.get("mode") == "CHEMIN_METIER":
+                chemin = resultat_retrieval.get("chemin_metier", {})
+                reponse_controlee = self._formater_chemin_metier(chemin)
+                if not chemin.get("trouve"):
+                    return self._retour(reponse_controlee, None, inclure_graphe)
+                resultat = self.llm.invoke([
+                    {
+                        "role": "system",
+                        "content": (
+                            "Tu reformules un chemin Neo4j validé en français naturel. "
+                            "Transforme chaque relation en une phrase grammaticalement correcte, "
+                            "puis explique brièvement la connexion indirecte. Respecte exactement "
+                            "le sens source, relation, cible. N'ajoute, ne supprime et ne déduis "
+                            "aucune relation. N'affiche ni code, ni nom technique en majuscules, "
+                            "ni source, ni tableau. Réponds directement et en un court paragraphe."
+                        ),
+                    },
+                    {
+                        "role": "user",
+                        "content": (
+                            f"Question : {question}\n\n"
+                            f"Chemin contrôlé à reformuler :\n{reponse_controlee}"
+                        ),
+                    },
+                ])
+                texte = self._retirer_sources_visibles(resultat.content)
+                return self._retour(texte, schema_reponse, inclure_graphe)
             logger.info(
                 "Retrieval GraphRAG : mode=%s racines=%s classes=%s chunks=%s",
                 resultat_retrieval["mode"],
@@ -164,8 +291,29 @@ class AgentLG:
                     "content": (
                         "Tu es l'assistant métier Arianes. Réponds uniquement à partir "
                         "du contexte GraphRAG fourni. Distingue clairement les faits du "
-                        "métamodèle des extraits documentaires. N'invente aucune classe, "
-                        "relation, cardinalité ou procédure. Si le contexte ne suffit "
+                        "métamodèle des extraits documentaires. "
+                        "Réponds d'abord directement à la question dès la première phrase. "
+                        "Adapte strictement le contenu à la demande : ne transforme pas une "
+                        "question ciblée en rapport général. N'ajoute ni définition, ni attributs, "
+                        "ni procédure, ni exemple si ces éléments ne sont pas demandés. "
+                        "Utilise au maximum trois sections courtes. N'utilise aucun tableau Markdown : "
+                        "présente les résultats sous forme de phrases ou de listes à puces courtes. "
+                        "Ne répète pas la même information dans une synthèse. "
+                        "Les relations de graphe_metier sont des connaissances issues des fiches, "
+                        "pas des associations UML. Respecte leur champ condition et cite leurs preuves. "
+                        "Une sélection pilote ne décrit pas tous les équipements ni tous les types existants. "
+                        "Si la question demande un sous-graphe métier, restitue uniquement les concepts et "
+                        "relations présents dans graphe_metier. N'ajoute jamais de relation 'possible', "
+                        "supposée ou reconstruite depuis un passage. Si graphe_metier.relations est vide, "
+                        "indique explicitement qu'aucune relation métier validée n'a été retrouvée. "
+                        "Pour le mode CHEMIN_METIER, utilise exclusivement chemin_metier. Présente chaque "
+                        "étape dans l'ordre, en respectant le sens source/type/cible enregistré. Si trouve "
+                        "vaut false, indique qu'aucun chemin validé n'a été trouvé ou que deux concepts "
+                        "n'ont pas pu être identifiés ; n'invente jamais une connexion. "
+                        "Les sources servent uniquement à contrôler ton raisonnement en interne. "
+                        "N'affiche aucune citation, aucun nom de fichier, aucun numéro de passage "
+                        "et aucune section 'Sources' dans la réponse. Ignore les chunks non utilisés. "
+                        "N'invente aucune classe, relation, cardinalité ou procédure. Si le contexte ne suffit "
                         "pas, dis précisément quelle information manque. Pour une "
                         "question structurelle, privilégie les classes, attributs et "
                         "relations. Pour une question métier, cite les passages sous la "
@@ -212,13 +360,8 @@ class AgentLG:
             )
 
         logger.info("Temps total : %.2fs", time.time() - debut)
-        reponse = resultat.content
-        citations = resultat_retrieval.get("citations", [])
-        if citations and "Sources :" not in reponse:
-            reponse += "\n\nSources :\n" + "\n".join(
-                f"- {citation}" for citation in citations
-            )
-        return reponse
+        texte = self._retirer_sources_visibles(resultat.content)
+        return self._retour(texte, schema_reponse, inclure_graphe)
 
 
 def main():

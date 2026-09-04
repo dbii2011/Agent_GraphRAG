@@ -1,0 +1,298 @@
+{
+  "domaine": "gestion des points remarquables ferroviaires",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "ch_court",
+      "nom": "CH court",
+      "aliases": [],
+      "description": "Libellé à 15 caractères max normalisé pour les saisies de PR.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "ch_long",
+      "nom": "CH long",
+      "aliases": [],
+      "description": "Libellé long normalisé (50 caractères) pour les PR.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "code_chantier",
+      "nom": "Code Chantier",
+      "aliases": [
+        "CH"
+      ],
+      "description": "Code alphanumérique à 2 caractères précisant un point particulier d’un lieu identifié par son libellé ou son code CI.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "code_infrastructure",
+      "nom": "Code Infrastructure",
+      "aliases": [
+        "CI"
+      ],
+      "description": "Code à 6 chiffres propre à chaque site.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "dda",
+      "nom": "DDA",
+      "aliases": [],
+      "description": "Date de début d'application du PR, généralement fournie dans la procédure PR.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "dfa",
+      "nom": "DFA",
+      "aliases": [],
+      "description": "Date de fin d'application du PR, généralement fournie dans la procédure PR.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "fiche_technique_pr",
+      "nom": "Fiche technique PR",
+      "aliases": [],
+      "description": "Document associé à la PPR décrivant le PR et ses caractéristiques.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "gsmr",
+      "nom": "GSMR",
+      "aliases": [],
+      "description": "Indicateur valant « Oui » ou « Non » selon l'habillage LIGNE [Radio Sol-Train].",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "installation_virtuelle",
+      "nom": "Installation virtuelle",
+      "aliases": [],
+      "description": "Installation créée en l'absence d'installation ligne existante ou pour les PR futurs non encore saisis dans GAIA.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "libelle_ci",
+      "nom": "Libellé CI",
+      "aliases": [],
+      "description": "Libellé de 30 caractères max correspondant au libellé CI.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "localisation_a_la_ligne",
+      "nom": "Localisation à la Ligne",
+      "aliases": [],
+      "description": "Localisation du PR à la ligne, correspondant au PK à la ligne ou à une installation ligne (nœud de ligne, gare, poste…).",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "localisation_a_la_voie",
+      "nom": "Localisation à la voie",
+      "aliases": [],
+      "description": "Localisation du PR à la voie, à saisir en fonction de l'analyse dans le fichier technique.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "numero_lieu",
+      "nom": "Numéro lieu",
+      "aliases": [],
+      "description": "Identifiant unique à destination de la base européenne des codes lieu (CRD).",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "particulier",
+      "nom": "Particulier",
+      "aliases": [],
+      "description": "Attribut des PR indiquant s'ils sont horairisés, tarification ou travaux.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "point_remarquable",
+      "nom": "Point Remarquable",
+      "aliases": [
+        "PR"
+      ],
+      "description": "Point géographique identifié par son code CI et son code CH, utilisé pour le calcul des horaires théoriques et parfois pour délimiter des travaux ou un segment de tarification.",
+      "classes_arianes": [
+        "Localisation"
+      ],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "ppr",
+      "nom": "PPR",
+      "aliases": [
+        "Procédure Point Remarquable"
+      ],
+      "description": "Procédure utilisée pour la création, modification ou suppression des PR.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "region",
+      "nom": "Région",
+      "aliases": [],
+      "description": "Région associée au PR en fonction de la localisation à la ligne et de l’habillage région SNCF dans GAIA.",
+      "classes_arianes": [
+        "Region"
+      ],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "schema_de_signalisation",
+      "nom": "Schéma de signalisation",
+      "aliases": [],
+      "description": "Document utilisé pour analyser le type d'opération et repérer les installations existantes correspondantes au PK demandé.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "ticket_jira_guc",
+      "nom": "Ticket JIRA GUC",
+      "aliases": [],
+      "description": "Ticket créé pour la remontée des PR horairisés.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "point_remarquable",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "gsmr",
+      "preuve": {
+        "document": "PointRemarquable.txt",
+        "lignes": "1-137",
+        "citation": "GSMR : Cet indicateur doit avoir la valeur « Oui » ou « Non »."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "point_remarquable",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "ppr",
+      "preuve": {
+        "document": "PointRemarquable.txt",
+        "lignes": "1-137",
+        "citation": "Les cas de création, modification et suppression se font essentiellement sur demande via une PPR (Procédure Point Remarquable)."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "fiche_technique_pr",
+      "type": "DECRIT_PAR",
+      "cible": "ppr",
+      "preuve": {
+        "document": "PointRemarquable.txt",
+        "lignes": "1-137",
+        "citation": "La description du PR est fournie dans la fiche technique associée à la PPR."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "ticket_jira_guc",
+      "type": "COMMANDE",
+      "cible": "point_remarquable",
+      "preuve": {
+        "document": "PointRemarquable.txt",
+        "lignes": "1-137",
+        "citation": "Procédure PR Horairisé et création d’un ticket JIRA GUC."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    }
+  ],
+  "erreurs_validation": [
+    "Relation point_remarquable/EST_UN/localisation rejetée: concept source ou cible absent",
+    "Relation point_remarquable/UTILISE/horaires_theoriques rejetée: concept source ou cible absent",
+    "Relation point_remarquable/DELIMITE/travaux rejetée: concept source ou cible absent, type de relation non autorisé",
+    "Relation point_remarquable/DELIMITE/segment_de_tarification rejetée: concept source ou cible absent, type de relation non autorisé",
+    "Relation point_remarquable/GERE_PAR/guc rejetée: concept source ou cible absent",
+    "Relation schema_signalisation/AIDE_AU_REPERAGE/ppr rejetée: type de relation non autorisé"
+  ],
+  "document_source": "PointRemarquable.txt"
+}

@@ -1,0 +1,3844 @@
+{
+  "domaine": "gestion_ferroviaire",
+  "statut": "VALIDE",
+  "methode_validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE",
+  "concepts": [
+    {
+      "id": "acces",
+      "nom": "Acces",
+      "aliases": [
+        "accès"
+      ],
+      "description": "Point aménagé permettant d'accéder aux voies ferrées depuis l'infrastructure routière, autre qu'un passage à niveau, un ouvrage d'art ou une gare.",
+      "classes_arianes": [
+        "Acces"
+      ],
+      "documents": [
+        "Acces.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "accessible_aux_personnes_a_mobilite_reduite",
+      "nom": "Accessible aux personnes à mobilité réduite",
+      "aliases": [],
+      "description": "Indication si un quai est accessible aux personnes à mobilité réduite (Oui/Non).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "aiguille",
+      "nom": "Aiguille",
+      "aliases": [
+        "aiguillage"
+      ],
+      "description": "Appareil de voie permettant de diriger un train d’une voie à une autre.",
+      "classes_arianes": [
+        "Aiguillage",
+        "Appareil de voie"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "canton",
+      "nom": "Canton",
+      "aliases": [],
+      "description": "Portion de voie définie pour l'espacement des trains, composée d'un signal origine et d'un signal de destination (ou assimilé).",
+      "classes_arianes": [
+        "Canton",
+        "Itineraire"
+      ],
+      "documents": [
+        "CantonEmprunte.txt",
+        "Itineraire.txt",
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "categorie_de_ligne",
+      "nom": "Catégorie de ligne",
+      "aliases": [],
+      "description": "Classification des lignes du Réseau Ferré National selon leur type (LGV, normal, étroit).",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "circuit_de_voie",
+      "nom": "Circuit de Voie",
+      "aliases": [
+        "CdV"
+      ],
+      "description": "Système de détection permanente et continue de la présence ou du passage d’une circulation sur une portion de voie déterminée, appelée zone. Utilisé pour des fonctions de sécurité comme l’immobilisation électrique des aiguilles, l’espacement des trains ou l’annonce des circulations.",
+      "classes_arianes": [
+        "Circuit de voie"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "cloture",
+      "nom": "Clôture",
+      "aliases": [],
+      "description": "Obstacle fermant l’accès aux emprises ferroviaires pour matérialiser les limites et empêcher l’entrée de personnes.",
+      "classes_arianes": [
+        "Obstacle"
+      ],
+      "documents": [
+        "HabillageValeur_Cloture.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "consigne_s9c",
+      "nom": "Consigne S9C",
+      "aliases": [
+        "consigne S9C"
+      ],
+      "description": "Document de référence définissant les caractéristiques des ZEP et groupements de ZEP.",
+      "classes_arianes": [
+        "Consigne"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "date_de_debut_de_fermeture",
+      "nom": "Date de début de fermeture",
+      "aliases": [
+        "DDA"
+      ],
+      "description": "Date à laquelle une fermeture temporaire commence.",
+      "classes_arianes": [
+        "une_phrase_principe"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "date_de_fin_de_fermeture",
+      "nom": "Date de fin de fermeture",
+      "aliases": [
+        "DFA"
+      ],
+      "description": "Date à laquelle une fermeture temporaire se termine.",
+      "classes_arianes": [
+        "une_phrase_principe"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "dda",
+      "nom": "DDA",
+      "aliases": [
+        "date d’application du RTA"
+      ],
+      "description": "Attribut d'un canton (non détaillé dans le document).",
+      "classes_arianes": [
+        "Type Ressource : Sujet",
+        "est"
+      ],
+      "documents": [
+        "CantonEmprunte.txt",
+        "HabillageCourantMaxCatenaire.txt",
+        "HabillageValeur_LigneRegulee.txt",
+        "PointRemarquable.txt",
+        "Post.txt",
+        "Quai.txt",
+        "TypeElectrification.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "detecteur_de_boites_chaudes",
+      "nom": "Détecteur de boîtes chaudes",
+      "aliases": [
+        "DBC"
+      ],
+      "description": "Appareil utilisé dans le milieu ferroviaire afin de détecter un éventuel échauffement des boîtes d'essieux sur un train.",
+      "classes_arianes": [
+        "Detecteur"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "dfa",
+      "nom": "DFA",
+      "aliases": [],
+      "description": "Attribut d'un canton (non détaillé dans le document).",
+      "classes_arianes": [
+        "Type Ressource : Sujet",
+        "est"
+      ],
+      "documents": [
+        "CantonEmprunte.txt",
+        "HabillageCourantMaxCatenaire.txt",
+        "HabillageValeur_LigneRegulee.txt",
+        "PointRemarquable.txt",
+        "Quai.txt",
+        "TypeElectrification.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "domaine_de_protection",
+      "nom": "Domaine de Protection",
+      "aliases": [
+        "DP"
+      ],
+      "description": "Zone protégée dont les modifications peuvent impacter les zones de détection.",
+      "classes_arianes": [],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "domaine_de_protection_voie",
+      "nom": "Domaine de protection voie",
+      "aliases": [],
+      "description": "Zone sécurisée autour des voies et caténaires.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "eclairage",
+      "nom": "Éclairage",
+      "aliases": [],
+      "description": "Indication si un quai est éclairé (Oui/Non).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "eic",
+      "nom": "EIC",
+      "aliases": [],
+      "description": "Entité d'Intervention et de Coordination, impactée par l'habillage.",
+      "classes_arianes": [
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "faisceau",
+      "nom": "Faisceau",
+      "aliases": [],
+      "description": "Ensemble de voies en impasse ou groupées, pouvant être destination d'un itinéraire.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "fermeture_temporaire",
+      "nom": "Fermeture temporaire",
+      "aliases": [],
+      "description": "Période pendant laquelle une ligne ou une voie est neutralisée ou non exploitée.",
+      "classes_arianes": [
+        "une_phrase_principe"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "fiche_d_echange",
+      "nom": "Fiche d'échange",
+      "aliases": [],
+      "description": "Document utilisé pour tracer les suppressions de passages à niveau et éviter les suppressions intempestives.",
+      "classes_arianes": [],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "fin_d_exploitation",
+      "nom": "Fin d'exploitation",
+      "aliases": [
+        "fin de service"
+      ],
+      "description": "Limite au-delà de laquelle les trains ne circulent plus ou sont exploités manuellement, pouvant servir d'origine ou de destination de canton.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "gaia",
+      "nom": "GAÏA",
+      "aliases": [],
+      "description": "Système de description du réseau ferroviaire.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "gare",
+      "nom": "Gare",
+      "aliases": [],
+      "description": "Lieu de rattachement des SAF, responsable de leur gestion ou exploitation.",
+      "classes_arianes": [
+        ":gare"
+      ],
+      "documents": [
+        "Saf.txt",
+        "traversee_voie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "gare_de_rattachement",
+      "nom": "Gare de rattachement",
+      "aliases": [],
+      "description": "Gare à laquelle un quai est rattaché.",
+      "classes_arianes": [
+        ":gare"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "gare_de_voyageur",
+      "nom": "Gare de voyageur",
+      "aliases": [],
+      "description": "Lieu d'arrêt des trains composé d'installations permettant la montée et la descente des voyageurs. Peut ne pas comporter de bâtiment voyageur.",
+      "classes_arianes": [
+        "Gare"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "groupement_de_zep",
+      "nom": "Groupement de ZEP",
+      "aliases": [
+        "groupement de ZEP"
+      ],
+      "description": "Ensemble de ZEP regroupées sous un même libellé pour la gestion des protections.",
+      "classes_arianes": [
+        "ZEP"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "guf",
+      "nom": "GUF",
+      "aliases": [],
+      "description": "Gestionnaire Unifié de la Ferroviaire, destinataire des fichiers Excel.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageValeur_Cloture.txt",
+        "NoeudDeVoie.txt",
+        "PassageANiveau.txt",
+        "Saf.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "habillage_region_sncf",
+      "nom": "Habillage région SNCF",
+      "aliases": [],
+      "description": "Indicateur des limites officielles des régions traversées pour les lignes classiques et responsabilité de suivi des circulations pour les LGV.",
+      "classes_arianes": [
+        "systeme_reperage"
+      ],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "habillage_valeur_ligne_regulee",
+      "nom": "Habillage Valeur Ligne Régulée",
+      "aliases": [],
+      "description": "Objet indiquant les portions de lignes dont le trafic est géré par un régulateur.",
+      "classes_arianes": [
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "hauteur_du_quai",
+      "nom": "Hauteur du quai",
+      "aliases": [],
+      "description": "Hauteur d'un quai parmi les types définis (bas ancien, bas rénové, mi-haut, haut, super-haut, marchandise).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "heurtoir",
+      "nom": "Heurtoir",
+      "aliases": [],
+      "description": "Extrémité de voie sans issue pouvant servir d'origine ou de destination de canton.",
+      "classes_arianes": [
+        "Heurtoir"
+      ],
+      "documents": [
+        "CantonEmprunte.txt",
+        "Itineraire.txt",
+        "Ligne.txt",
+        "ZEP.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "indication_quai_de_service",
+      "nom": "Indication quai de service",
+      "aliases": [],
+      "description": "Indication si un quai est un quai de service (Oui/Non).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "installation_fixe_gare",
+      "nom": "Installation fixe Gare",
+      "aliases": [],
+      "description": "Caractéristiques et attributs associés à une gare de voyageurs dans le système de gestion.",
+      "classes_arianes": [
+        "Gare"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "installation_fixe_voie",
+      "nom": "Installation fixe voie",
+      "aliases": [],
+      "description": "Équipement permanent sur les voies ferrées.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "itineraire",
+      "nom": "Itinéraire",
+      "aliases": [
+        "itinéraires"
+      ],
+      "description": "Trajet défini entre un signal origine et un signal destination, pouvant emprunter un ou plusieurs cantons.",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "CantonEmprunte.txt",
+        "Itineraire.txt",
+        "Post.txt",
+        "Saf.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "joint_de_zone",
+      "nom": "Joint de zone",
+      "aliases": [],
+      "description": "Limite entre zones pouvant servir d'origine ou de destination de canton en l'absence de signal.",
+      "classes_arianes": [
+        "Implantation",
+        "Segment de Zone"
+      ],
+      "documents": [
+        "CantonEmprunte.txt",
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "largeur_du_quai",
+      "nom": "Largeur du quai",
+      "aliases": [],
+      "description": "Largeur d'un quai exprimée en mètres.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [
+        "IF Ligne",
+        "raccordements"
+      ],
+      "description": "Voie ferrée classée par l'entreprise, identifiée par un code et un libellé court.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Acces.txt",
+        "ConfigurationExploitation.txt",
+        "Gare.txt",
+        "Ligne.txt",
+        "ModeDeCantonnement.txt",
+        "PassageANiveau.txt",
+        "Post.txt",
+        "Saf.txt",
+        "ZoneDeDetection.txt",
+        "traversee_voie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "localisation",
+      "nom": "Localisation",
+      "aliases": [],
+      "description": "Positionnement d’un nœud sur une ligne, avec indication de l’ordre ou de l’extrémité.",
+      "classes_arianes": [
+        "Localisation"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt",
+        "Post.txt",
+        "Saf.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "longueur_totale",
+      "nom": "Longueur totale",
+      "aliases": [],
+      "description": "Longueur d'un quai calculée par rapport aux points kilométriques des plans techniques.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "longueur_utile",
+      "nom": "Longueur utile",
+      "aliases": [],
+      "description": "Longueur utile d'un quai, entre signaux ou pancartes, ou limitée par des pancartes spécifiques.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "noeud_de_ligne",
+      "nom": "Nœud de ligne",
+      "aliases": [
+        "NDL"
+      ],
+      "description": "Point caractéristique d'une ligne ferroviaire utilisé pour repérer un PK sur le schéma de signalisation.",
+      "classes_arianes": [
+        "Noeud",
+        "une_phrase_principe"
+      ],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt",
+        "Ligne.txt",
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "noeud_frontiere",
+      "nom": "Nœud Frontière",
+      "aliases": [
+        "Frontière"
+      ],
+      "description": "Nœud situé à l’extrémité d’un tronçon de ligne, indiquant l’interruption de gestion du réseau à la frontière d’un réseau privé ou étranger.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "noeud_intermediaire",
+      "nom": "Nœud Intermédiaire",
+      "aliases": [
+        "Intermédiaire"
+      ],
+      "description": "Nœud maillant les extrémités communes de deux tronçons, d’une même ligne ou deux lignes différentes.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "noeud_pont",
+      "nom": "Nœud Pont",
+      "aliases": [
+        "Pont"
+      ],
+      "description": "Nœud indiquant un croisement de ligne vu du ciel sans communication possible, précisant la ligne placée au-dessus de l’autre.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "nombre_d_ascenseurs",
+      "nom": "Nombre d’ascenseurs",
+      "aliases": [],
+      "description": "Nombre d'ascenseurs présents sur un quai.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "nombre_d_escaliers_mecaniques",
+      "nom": "Nombre d’escaliers mécaniques",
+      "aliases": [],
+      "description": "Nombre d'escaliers mécaniques présents sur un quai.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "nombre_de_rampes",
+      "nom": "Nombre de rampes",
+      "aliases": [],
+      "description": "Nombre de rampes d'accès présentes sur un quai.",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "nombre_de_traversees",
+      "nom": "Nombre de traversées",
+      "aliases": [],
+      "description": "Nombre d'équipements permettant le changement de quai (passages aériens, souterrains, plain-pied, etc.).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "oa",
+      "nom": "OA",
+      "aliases": [],
+      "description": "Ouvrage d'art (Pra, Pro, etc.) impacté par le passage à niveau.",
+      "classes_arianes": [
+        "Obstacle"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "passage_a_niveau",
+      "nom": "passage à niveau",
+      "aliases": [
+        "PN"
+      ],
+      "description": "Croisement des voies ferrées et d'une route ou assimilé au même niveau.",
+      "classes_arianes": [
+        "passage_a_niveau"
+      ],
+      "documents": [
+        "PassageANiveau.txt",
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk",
+      "nom": "Pk",
+      "aliases": [
+        "PK",
+        "PK administratifs",
+        "PK physiques",
+        "Point Kilométrique"
+      ],
+      "description": "Point kilométrique indiquant la localisation d'un accès sur une ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Acces.txt",
+        "ConfigurationExploitation.txt",
+        "HabillageCourantMaxCatenaire.txt",
+        "HabillageValeur_Cloture.txt",
+        "Ligne.txt",
+        "NoeudDeVoie.txt",
+        "OuvrageArt.txt",
+        "PassageANiveau.txt",
+        "Post.txt",
+        "ZoneDeDetection.txt",
+        "traversee_voie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_de_debut",
+      "nom": "PK de début",
+      "aliases": [
+        "Pk début"
+      ],
+      "description": "Point kilométrique marquant le début d'une section ou d'une fermeture temporaire.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_de_fin",
+      "nom": "PK de fin",
+      "aliases": [
+        "Pk fin"
+      ],
+      "description": "Point kilométrique marquant la fin d'une section ou d'une fermeture temporaire.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_debut",
+      "nom": "PK début",
+      "aliases": [],
+      "description": "Point kilométrique de début d'une tranche de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt",
+        "HabillageValeur_LigneRegulee.txt",
+        "Ligne.txt",
+        "RegionSNCF.txt",
+        "TypeElectrification.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_du_quai",
+      "nom": "Pk du quai",
+      "aliases": [],
+      "description": "Plus petit point kilométrique dans le sens croissant du système de référence, associé à un quai.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_fin",
+      "nom": "PK fin",
+      "aliases": [],
+      "description": "Point kilométrique de fin d'une tranche de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt",
+        "HabillageValeur_LigneRegulee.txt",
+        "Ligne.txt",
+        "RegionSNCF.txt",
+        "TypeElectrification.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "plan_technique",
+      "nom": "Plan Technique",
+      "aliases": [
+        "PT"
+      ],
+      "description": "Document définissant les installations et les règles de signalisation et de circulation.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "NoeudDeVoie.txt",
+        "Post.txt",
+        "Quai.txt",
+        "Saf.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "pn_de_rattachement",
+      "nom": "PN de rattachement",
+      "aliases": [],
+      "description": "Passage à niveau associé à une zone surimposée pour rattachement.",
+      "classes_arianes": [
+        "passage_a_niveau"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pn_pere",
+      "nom": "PN père",
+      "aliases": [],
+      "description": "Passage à niveau principal auquel un PN secondaire est rattaché.",
+      "classes_arianes": [
+        "passage_a_niveau"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pn_secondaire",
+      "nom": "PN secondaire",
+      "aliases": [],
+      "description": "Passage à niveau de classe 00, obligatoirement rattaché à un PN père.",
+      "classes_arianes": [
+        "passage_a_niveau"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "point_kilometrique",
+      "nom": "Point Kilométrique",
+      "aliases": [
+        "PK",
+        "PK début",
+        "PK fin"
+      ],
+      "description": "Repère kilométrique le long d'une ligne ferroviaire, utilisé pour délimiter des tronçons.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "HabillageValeur_MatiereDangereuse.txt",
+        "Ligne.txt",
+        "ModeDeCantonnement.txt",
+        "ZEP.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "portion_de_ligne",
+      "nom": "Portion de ligne",
+      "aliases": [],
+      "description": "Segment de ligne ferroviaire défini par des Pk début et fin.",
+      "classes_arianes": [
+        "Portion"
+      ],
+      "documents": [
+        "HabillageValeur_Cloture.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste",
+      "nom": "Poste",
+      "aliases": [],
+      "description": "Installation comportant la manœuvre des signaux et des appareils de voie, pouvant être rattachée ou non à un SAF.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Post.txt",
+        "ZEP.txt",
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_d_aiguillage",
+      "nom": "Poste d’aiguillage",
+      "aliases": [
+        "poste"
+      ],
+      "description": "Poste auquel un itinéraire est rattaché et où le signal origine est situé.",
+      "classes_arianes": [
+        "Poste",
+        "poste"
+      ],
+      "documents": [
+        "Itineraire.txt",
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_d_aiguillage_principal",
+      "nom": "Poste d'aiguillage principal",
+      "aliases": [],
+      "description": "Poste recevant les informations émises par un détecteur de boîtes chaudes.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_d_aiguillage_secondaire",
+      "nom": "Poste d'aiguillage secondaire",
+      "aliases": [],
+      "description": "Poste éventuellement recevant les informations émises par un détecteur de boîtes chaudes.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_rattachement",
+      "nom": "Poste de rattachement",
+      "aliases": [
+        "poste"
+      ],
+      "description": "Poste auquel une ZEP ou un groupement de ZEP est rattaché pour la gestion des protections.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "ZEP.txt",
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_electrique",
+      "nom": "Poste électrique",
+      "aliases": [],
+      "description": "Poste à transit souple, géré électroniquement.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "potence",
+      "nom": "Potence",
+      "aliases": [],
+      "description": "Support des signaux d’extrémités d’une ZEP",
+      "classes_arianes": [
+        "Potence"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "quai",
+      "nom": "Quai",
+      "aliases": [
+        "quais"
+      ],
+      "description": "Aménagement surélevé dans une gare ferroviaire parallèle à la voie, permettant l'accès aux véhicules sur rails.",
+      "classes_arianes": [
+        "Quai"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "region_sncf",
+      "nom": "Région SNCF",
+      "aliases": [],
+      "description": "Entité géographique ou administrative associée à une gare.",
+      "classes_arianes": [
+        "Region"
+      ],
+      "documents": [
+        "Gare.txt",
+        "RegionSNCF.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "repere_kilometrique",
+      "nom": "Repère kilométrique",
+      "aliases": [
+        "RK"
+      ],
+      "description": "Repère kilométrique particulier dont la distance est égale à zéro, souvent appelé PK sur le terrain.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "reseau_des_lignes",
+      "nom": "Réseau des lignes",
+      "aliases": [],
+      "description": "Élément fondamental de la base de données RESEAU/GAIA servant de point de départ à toutes les autres données et permettant de positionner physiquement les informations.",
+      "classes_arianes": [
+        "base"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf",
+      "nom": "SAF",
+      "aliases": [
+        "Les SAF",
+        "Secteur d’Activité Ferroviaire"
+      ],
+      "description": "Site d'Accueil Ferroviaire, lieu où les voies de service peuvent être concernées par le transport de matières dangereuses sous conditions.",
+      "classes_arianes": [
+        "Saf",
+        "Secteur"
+      ],
+      "documents": [
+        "HabillageValeur_MatiereDangereuse.txt",
+        "Ligne.txt",
+        "Post.txt",
+        "Saf.txt",
+        "traversee_voie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_chantier",
+      "nom": "SAF chantier",
+      "aliases": [],
+      "description": "Faisceau incluant les chantiers, les faisceaux de garage de matériel ou toute entité non répertoriée, positionné côté voie 1 ou 2.",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_eim",
+      "nom": "SAF EIM",
+      "aliases": [],
+      "description": "Faisceaux de voies appartenant aux établissements (EIMM, EIM TGV, EMM, EMR, postes MR, ateliers du matériel, etc.).",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_et",
+      "nom": "SAF ET",
+      "aliases": [],
+      "description": "Faisceaux de voies appartenant aux établissements avec une composante traction (EMT, dépôts, établissements T, etc.).",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_ite",
+      "nom": "SAF ITE",
+      "aliases": [],
+      "description": "Installation terminale embranchée, localisée sur une ligne ou un SAF et rattachée à une gare.",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_rattache",
+      "nom": "SAF rattaché",
+      "aliases": [],
+      "description": "Segmentation ou zone de gestion commerciale rattachée à une gare.",
+      "classes_arianes": [
+        "Saf"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_triage",
+      "nom": "SAF Triage",
+      "aliases": [],
+      "description": "Faisceau de triage, localisé sur une ligne ou un SAF et rattaché à une gare ou un SAF.",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "schema_de_signalisation",
+      "nom": "Schéma de signalisation",
+      "aliases": [],
+      "description": "Document ou représentation graphique définissant les installations et règles de signalisation d'une gare.",
+      "classes_arianes": [
+        "Modele signalisation",
+        "Segmentation"
+      ],
+      "documents": [
+        "Gare.txt",
+        "HabillageCourantMaxCatenaire.txt",
+        "HabillageValeur_CategorieLigne.txt",
+        "PointRemarquable.txt",
+        "Post.txt",
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "schema_de_signalisation_du_plan_technique",
+      "nom": "Schéma de signalisation du Plan Technique",
+      "aliases": [],
+      "description": "Document de référence pour la description de la signalisation.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "section_de_ligne",
+      "nom": "Section de ligne",
+      "aliases": [],
+      "description": "Portion de ligne ferroviaire pour laquelle une valeur de courant maximal à la caténaire est définie.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "signal",
+      "nom": "Signal",
+      "aliases": [],
+      "description": "Dispositif de signalisation ferroviaire indiquant des informations aux conducteurs de trains.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt",
+        "Post.txt",
+        "ZEP.txt",
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "signal_d_extremite_de_zep",
+      "nom": "Signal d’extrémité de ZEP",
+      "aliases": [
+        "signaux d’extrémités d’une ZEP"
+      ],
+      "description": "Signal matérialisant les extrémités d’une ZEP situé sur une potence",
+      "classes_arianes": [
+        "Type Extremite"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "signal_de_destination",
+      "nom": "Signal de destination",
+      "aliases": [
+        "signal destination"
+      ],
+      "description": "Signal indiquant la fin d'un itinéraire de sortie de gare ou vers un faisceau/voie en impasse.",
+      "classes_arianes": [
+        "Signal_Destination"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "signal_destination",
+      "nom": "Signal destination",
+      "aliases": [
+        "Destination (signal ou assimilé)"
+      ],
+      "description": "Signal marquant la sortie d'un canton.",
+      "classes_arianes": [
+        "Signal_Destination"
+      ],
+      "documents": [
+        "CantonEmprunte.txt",
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "Itineraire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "signal_origine",
+      "nom": "Signal origine",
+      "aliases": [
+        "Origine (signal ou assimilé)"
+      ],
+      "description": "Signal marquant l'entrée d'un canton, commandant normalement l'accès à celui-ci.",
+      "classes_arianes": [
+        "Signal_Origine"
+      ],
+      "documents": [
+        "CantonEmprunte.txt",
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "Itineraire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "sous_saf",
+      "nom": "Sous-SAF",
+      "aliases": [],
+      "description": "Sous-ensemble d’un SAF Triage, sans localisation à la ligne.",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "systeme_de_reperage",
+      "nom": "Système de repérage",
+      "aliases": [
+        "SR"
+      ],
+      "description": "Système permettant de localiser les lignes par tranches de PK.",
+      "classes_arianes": [
+        "systeme_reperage"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt",
+        "Ligne.txt",
+        "PassageANiveau.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "traverse_en_croix_cadenassee",
+      "nom": "Traverse en croix cadenassée",
+      "aliases": [],
+      "description": "Dispositif de sécurité utilisé pour neutraliser une voie ou une ligne.",
+      "classes_arianes": [
+        "appareil_de_voie"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "traversee_des_voies_a_niveau_par_le_public",
+      "nom": "Traversée des Voies à niveau par le Public",
+      "aliases": [
+        "TVP"
+      ],
+      "description": "Désignation générique des équipements mis en œuvre pour permettre au public de traverser, dans un point d’arrêt, les voies à niveau en empruntant un passage planchéié, muni ou non d’un dispositif signalant l’approche des circulations. Ce terme exclut les ouvrages dénivelés (passerelles, passages souterrains, …).",
+      "classes_arianes": [
+        "traversee_voie"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "troncon_de_ligne",
+      "nom": "Tronçon de ligne",
+      "aliases": [
+        "TL",
+        "rang"
+      ],
+      "description": "Portion de ligne définie par un numéro de rang et des PK début/fin.",
+      "classes_arianes": [
+        "Ligne",
+        "Portion",
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "ConfigurationExploitation.txt",
+        "HabillageValeur_LigneRegulee.txt",
+        "Ligne.txt",
+        "ModeDeCantonnement.txt",
+        "TypeElectrification.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "type_de_couverture",
+      "nom": "Type de Couverture",
+      "aliases": [],
+      "description": "Type de couverture d'un quai (abri métallique, toile, dalle béton, marquise, halle, non-couvert).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "type_de_revetement_du_sol",
+      "nom": "Type de revêtement du sol",
+      "aliases": [],
+      "description": "Type de revêtement du sol d'un quai (terre, goudron, béton, carrelage, résine).",
+      "classes_arianes": [],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "type_de_traversee",
+      "nom": "Type de traversée",
+      "aliases": [],
+      "description": "Type de traversée permettant le changement de quai (aérienne, plain-pied, souterraine, combinaisons).",
+      "classes_arianes": [
+        "traversee_voie"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_de_ligne",
+      "nom": "Voie de ligne",
+      "aliases": [],
+      "description": "Voie sur laquelle est localisé un détecteur de boîtes chaudes.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_de_service",
+      "nom": "Voie de service",
+      "aliases": [
+        "VS",
+        "Voies de Circulation",
+        "voies de stationnement"
+      ],
+      "description": "Voie ne portant pas nécessairement de signaux d'entrée et de sortie, pouvant servir d'origine ou de destination de canton.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "CantonEmprunte.txt",
+        "HabillageValeur_MatiereDangereuse.txt",
+        "Itineraire.txt",
+        "ZEP.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_desservie",
+      "nom": "Voie desservie",
+      "aliases": [
+        "voies desservies"
+      ],
+      "description": "Voie ferroviaire desservie par un quai.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "Quai.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_en_impasse",
+      "nom": "Voie en impasse",
+      "aliases": [],
+      "description": "Voie sans issue, pouvant être destination d'un itinéraire.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_equipee",
+      "nom": "Voie équipée",
+      "aliases": [],
+      "description": "Voie ou tronçon de voie équipé d'un système de contrôle continu de vitesse (KCVB, KCVP ou KVBP).",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_impactee",
+      "nom": "Voie impactée",
+      "aliases": [],
+      "description": "Voie ferroviaire dont les limites sont modifiées en cas de changement des limites de région SNCF.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_principale",
+      "nom": "Voie principale",
+      "aliases": [
+        "voie"
+      ],
+      "description": "Voie du réseau ferré national sur laquelle une ZEP peut être localisée.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zep",
+      "nom": "ZEP",
+      "aliases": [],
+      "description": "Zone d'Exploitation Protégée, élément clé de la gestion des voies ferrées",
+      "classes_arianes": [
+        "ZEP"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_de_detection",
+      "nom": "Zone de détection",
+      "aliases": [],
+      "description": "Zone définie par des points kilométriques (PkD et PkF) pour la détection de trains ou d'obstacles, avec des règles de saisie spécifiques selon le type de zone.",
+      "classes_arianes": [
+        "zone_de_detection"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_de_detection_des_trains",
+      "nom": "zone de détection des trains",
+      "aliases": [],
+      "description": "Installation fixe sur voie dédiée à la détection des trains, définie dans Gaïa. Peut être une zone principale ou surimposée.",
+      "classes_arianes": [
+        "zone_de_detection"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_elementaire_de_protection",
+      "nom": "Zone élémentaire de protection",
+      "aliases": [
+        "ZEP"
+      ],
+      "description": "Partie de voie résultant du découpage des voies du Réseau Ferré National pour les besoins de la maintenance et des travaux.",
+      "classes_arianes": [
+        "ZEP"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_principale",
+      "nom": "Zone principale",
+      "aliases": [],
+      "description": "Zone de détection principale sur voie principale (VP) ou voie secondaire (VS), caractérisée par un libellé, un poste de rattachement, des Pk de début et de fin, et des dates de début et de fin.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_surimposee",
+      "nom": "Zone surimposée",
+      "aliases": [],
+      "description": "Zone de détection additionnelle rattachée à une zone principale, avec un libellé spécifique, un rattachement à la zone principale, un PN de rattachement, des Pk de début et de fin, et des dates de début et de fin.",
+      "classes_arianes": [
+        "Type Zone",
+        "zone_de_detection"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "acces",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "Acces.txt",
+        "lignes": "1-132",
+        "citation": "La localisation de l’accès est obligatoire avec les informations suivantes : Code ligne, PK de localisation"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "voie_de_service",
+      "type": "A_POUR_ORIGINE",
+      "cible": "fin_d_exploitation",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Au cas où la voie d’origine ne serait ni porteuse de joint de zone, ni de signal alors il faut sélectionner « fin de service »"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "voie_de_service",
+      "type": "A_POUR_DESTINATION",
+      "cible": "fin_d_exploitation",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Au cas où la voie de destination ne serait ni porteuse de joint de zone, ni de signal alors il faut sélectionner « fin de service »"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "troncon_de_ligne",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "ConfigurationExploitation.txt",
+        "lignes": "1-121",
+        "citation": "La saisie se fait par tranche de PK (ex : du 0+000 au 80+555 – Voie Banalisée)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "UTILISE",
+      "cible": "voie_de_ligne",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Un détecteur de boîtes chaudes est un appareil utilisé dans le milieu ferroviaire afin de détecter un éventuel échauffement des boîtes d'essieux sur un train."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "RATTACHE_A",
+      "cible": "poste_d_aiguillage_principal",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Il est décrit par : Le rattachement à un poste d’aiguillage principal qui reçoit les informations émises par le DBC et éventuellement à un poste d’aiguillage secondaire"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "RATTACHE_A",
+      "cible": "poste_d_aiguillage_secondaire",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Il est décrit par : Le rattachement à un poste d’aiguillage principal qui reçoit les informations émises par le DBC et éventuellement à un poste d’aiguillage secondaire"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_de_ligne",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Le DBC est typé et localisé sur une voie de ligne"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_rattache",
+      "type": "RATTACHE_A",
+      "cible": "gare_de_voyageur",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Rattachement SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "schema_de_signalisation",
+      "type": "DECRIT_PAR",
+      "cible": "installation_fixe_gare",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Le libellé est repris sur le schéma de signalisation."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "pk",
+      "type": "LOCALISE_SUR",
+      "cible": "section_de_ligne",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "Le PK repris dans le RTA est indicatif et doit être ajusté à la lecture du schéma de signalisation"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "categorie_de_ligne",
+      "type": "LOCALISE_SUR",
+      "cible": "systeme_de_reperage",
+      "preuve": {
+        "document": "HabillageValeur_CategorieLigne.txt",
+        "lignes": "1-125",
+        "citation": "La saisie se fait par tranche de PK du SR (ex : du 0+000 au 60+597 - LGV)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "cloture",
+      "type": "LOCALISE_SUR",
+      "cible": "portion_de_ligne",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "Pk début et fin sur une portion de ligne"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "gaia",
+      "type": "DECRIT_PAR",
+      "cible": "schema_de_signalisation_du_plan_technique",
+      "preuve": {
+        "document": "HabillageValeur_CourantDeFoucault.txt",
+        "lignes": "1-52",
+        "citation": "le schéma de signalisation du Plan Technique"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "habillage_valeur_ligne_regulee",
+      "type": "IMPACTE",
+      "cible": "eic",
+      "preuve": {
+        "document": "HabillageValeur_LigneRegulee.txt",
+        "lignes": "1-119",
+        "citation": "Impact sur les structures et compétences des EIC"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "voie_de_service",
+      "type": "LOCALISE_SUR",
+      "cible": "saf",
+      "preuve": {
+        "document": "HabillageValeur_MatiereDangereuse.txt",
+        "lignes": "1-115",
+        "citation": "Pour les voies de service situées dans les SAF la notion de matières dangereuses concerne uniquement si la voie de service est apte à réceptionner des trains transportant des matières dangereuses"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "signal_destination",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_equipee",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "Les PkD et PkF seront déterminés à partir des Signaux et des NdV."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "itineraire",
+      "type": "COMPOSE_DE",
+      "cible": "aiguille",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Section de voie empruntée par un train pouvant comprendre plusieurs aiguilles"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "signal_origine",
+      "type": "PROTEGE_PAR",
+      "cible": "itineraire",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "dont l’origine est protégée par un signal"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "signal_origine",
+      "type": "A_POUR_DESTINATION",
+      "cible": "signal_destination",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "le signal origine d’un canton doit obligatoirement avoir le même sens que le signal fin du canton"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "RATTACHE_A",
+      "cible": "signal_origine",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "L’itinéraire doit obligatoirement être rattaché à un poste d’aiguillage. Le poste d’aiguillage est celui ou le signal origine est rattaché."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "poste_electrique",
+      "type": "EST_UN",
+      "cible": "poste_d_aiguillage",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Souple : tous les postes électriques et informatiques sont des postes à transit souple."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "signal_de_destination",
+      "type": "A_POUR_DESTINATION",
+      "cible": "faisceau",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "Pour les itinéraires à destination de faisceaux ou de voies en impasse, le macaron de destination est soit celui mentionné à l’entrée du faisceau soit celui du signal de sortie du faisceau ou de la voie en impasse"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "signal_de_destination",
+      "type": "A_POUR_DESTINATION",
+      "cible": "voie_en_impasse",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "Pour les itinéraires à destination de faisceaux ou de voies en impasse, le macaron de destination est soit celui mentionné à l’entrée du faisceau soit celui du signal de sortie du faisceau ou de la voie en impasse"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "reseau_des_lignes",
+      "type": "UTILISE",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Toutes les autres données contenues dans la base de données utilisent comme point de départ le réseau des lignes."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_ORIGINE",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "présentant des caractéristiques de tracé, d’exploitation et d’installation entre un point origine et un point de destination"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_DESTINATION",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "présentant des caractéristiques de tracé, d’exploitation et d’installation entre un point origine et un point de destination"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "pk_de_debut",
+      "type": "LOCALISE_SUR",
+      "cible": "fermeture_temporaire",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Renseigner le PK de l’installation fixe pour le Pk début"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "pk_de_fin",
+      "type": "LOCALISE_SUR",
+      "cible": "fermeture_temporaire",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Renseigner le PK Fin indiqué sur le plan technique délimitant la fin de la fermeture temporaire"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "fermeture_temporaire",
+      "type": "DEBUTE_A",
+      "cible": "date_de_debut_de_fermeture",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Renseigner la date de début (DDA) de la fermeture temporaire"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "date_de_debut_de_fermeture",
+            "type": "LOCALISE_SUR",
+            "cible": "fermeture_temporaire"
+          },
+          "raison": "Date de début de la fermeture, pas localisation."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "fermeture_temporaire",
+      "type": "SE_TERMINE_A",
+      "cible": "date_de_fin_de_fermeture",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Renseigner la date de fin (DFA) de le fermeture temporaire"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "date_de_fin_de_fermeture",
+            "type": "LOCALISE_SUR",
+            "cible": "fermeture_temporaire"
+          },
+          "raison": "Date de fin de la fermeture, pas localisation."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "traverse_en_croix_cadenassee",
+      "type": "LOCALISE_SUR",
+      "cible": "pk_de_debut",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Renseigner le PK de la traverse en croix pour le Pk début"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "repere_kilometrique",
+      "type": "EST_UN",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Le RK est un PK particulier dont la distance est égale à zéro."
+      },
+      "statut": "VALIDE",
+      "avertissements": [],
+      "corrections": [
+        {
+          "avant": {
+            "source": "point_kilometrique",
+            "type": "EST_UN",
+            "cible": "repere_kilometrique"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "noeud_de_ligne",
+      "type": "LOCALISE_SUR",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Prendre les Pks des 2 nœuds de ligne (NDL) des 2 lignes concernées par le raccordement"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "heurtoir",
+      "type": "LOCALISE_SUR",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "La voie 2 à pour extrémité un Heurtoir au PK 0-022 de la ligne 525000."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "ligne",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "354-424",
+        "citation": "Sur ce décret apparaissent les limites administratives associées à la ligne. Elles seront stockées en tant que PK administratifs"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "ligne",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "354-424",
+        "citation": "Le tronçon de ligne sera complété par les PK physiques de la ligne qui absorbent la totalité de la plateforme des voies de cette ligne."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "noeud_pont",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "PK : correspond au PK axe de croissement des lignes"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "noeud_frontiere",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "PK : correspond au PK indiqué sur le schéma de signalisation"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "noeud_intermediaire",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "PK : correspond au PK extrémité des tronçons d’une ligne ou de deux lignes sur le schéma de signalisation"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Une ou plusieurs localisations à savoir pour chaque ligne sur lequel il est localisé comprenant : Un code ligne, Un numéro du tronçon (son rang), Un PK de l'axe du PN projeté sur la ligne ou les lignes."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Un PK de l'axe du PN projeté sur la ligne ou les lignes."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "pn_secondaire",
+      "type": "RATTACHE_A",
+      "cible": "pn_pere",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Un PN secondaire doit obligatoirement être rattaché au PN « père »."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "IMPACTE",
+      "cible": "oa",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Vérifier l’impact sur les OA (Pra, Pro …)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "fiche_d_echange",
+      "type": "TRANSMET_A",
+      "cible": "guf",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "152-174",
+        "citation": "Cette fiche d’échanges doit être renvoyée par l’Infrapôle au GUF."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "poste",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "un poste est rattaché à un SAF de type gare"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "poste",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Une ou plusieurs localisations à savoir pour chaque ligne sur lequel il est localisé"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "poste",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "PK de l'axe du bâtiment projeté sur la ligne"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "installation_fixe_voie",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les installions fixes voies"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "domaine_de_protection_voie",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les domaines de protection voies et caténaires secondaires"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "canton",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les cantons et itinéraires"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "LOCALISE_SUR",
+      "cible": "localisation",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Erreur de la localisation du poste lors de la saisie"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "LOCALISE_SUR",
+      "cible": "localisation",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Changement de type de poste sans modification de la localisation"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "RATTACHE_A",
+      "cible": "gare_de_rattachement",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "La gare de rattachement (exemple quai 25 de Paris Saint Lazare)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_desservie",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "On décrit autant de localisation que de voies desservies."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "LOCALISE_SUR",
+      "cible": "pk_du_quai",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Pk du quai (plus petit pk dans le sens croissant du SR)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "longueur_totale",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "La longueur totale est calculée par rapport au point kilométrique des plans techniques."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "longueur_totale"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "longueur_utile",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "La longueur utile pour cette voie (entre signaux ou pancartes)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "longueur_utile"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "hauteur_du_quai",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "La hauteur du quai"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "hauteur_du_quai"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "type_de_couverture",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Type de Couverture"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "type_de_couverture"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "type_de_revetement_du_sol",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Type de revêtement du sol"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "type_de_revetement_du_sol"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "dfa",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Renseigner la DDA et DFA"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "dfa"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "dda",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Renseigner la DDA et DFA"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "dda"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "largeur_du_quai",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Largeur du quai (valeur exprimée en mètre)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "largeur_du_quai"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "indication_quai_de_service",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Indication quai de service (valeurs possibles : Oui / Non)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "indication_quai_de_service"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "eclairage",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Eclairage (valeurs possibles : Oui/Non)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "eclairage"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "nombre_d_ascenseurs",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Nombre d’ascenseurs"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "nombre_d_ascenseurs"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "nombre_d_escaliers_mecaniques",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Nombre d’escaliers mécaniques"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "nombre_d_escaliers_mecaniques"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "nombre_de_rampes",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Nombre de rampes"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "nombre_de_rampes"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "nombre_de_traversees",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Nombre de traversées"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "nombre_de_traversees"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "type_de_traversee",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Type de traversée"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "type_de_traversee"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "A_POUR_CARACTERISTIQUE",
+      "cible": "accessible_aux_personnes_a_mobilite_reduite",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Accessible aux personnes à mobilité réduite (valeurs possible : Oui / Non)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "COMPOSE_DE",
+            "cible": "accessible_aux_personnes_a_mobilite_reduite"
+          },
+          "raison": "La fiche décrit un champ du quai, pas un composant."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "quai",
+      "type": "DECRIT_PAR",
+      "cible": "plan_technique",
+      "preuve": {
+        "document": "Quai.txt",
+        "lignes": "1-220",
+        "citation": "Forme de remontée : Plan technique"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "quai",
+            "type": "LOCALISE_SUR",
+            "cible": "plan_technique"
+          },
+          "raison": "Le plan technique est une source documentaire."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "habillage_region_sncf",
+      "type": "IMPACTE",
+      "cible": "voie_impactee",
+      "preuve": {
+        "document": "RegionSNCF.txt",
+        "lignes": "1-88",
+        "citation": "En cas de modification des limites de région SNCF sur ligne, il faut reporter ces modifications sur les voies impactées."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "region_sncf",
+      "type": "LOCALISE_SUR",
+      "cible": "pk_debut",
+      "preuve": {
+        "document": "RegionSNCF.txt",
+        "lignes": "1-88",
+        "citation": "Créer les nouvelles limites en respectant les Pk et les dates."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "region_sncf",
+      "type": "LOCALISE_SUR",
+      "cible": "pk_fin",
+      "preuve": {
+        "document": "RegionSNCF.txt",
+        "lignes": "1-88",
+        "citation": "Créer les nouvelles limites en respectant les Pk et les dates."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_ite",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Une ITE doit être localisée sur une ligne ou sur un SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_ite",
+      "type": "RATTACHE_A",
+      "cible": "gare",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Une ITE doit être localisée sur une ligne ou sur un SAF et doit être rattachée à une GARE"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_chantier",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_chantier",
+      "type": "RATTACHE_A",
+      "cible": "gare",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_chantier",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_eim",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_eim",
+      "type": "RATTACHE_A",
+      "cible": "gare",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_eim",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_et",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_et",
+      "type": "RATTACHE_A",
+      "cible": "gare",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_et",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_triage",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_triage",
+      "type": "RATTACHE_A",
+      "cible": "gare",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "saf_triage",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "sous_saf",
+      "type": "RATTACHE_A",
+      "cible": "saf_triage",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement à un SAF Triage"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "localisation",
+      "type": "LOCALISE_SUR",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "102-134",
+        "citation": "Localisation sur SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "traversee_des_voies_a_niveau_par_le_public",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "traversee_voie.txt",
+        "lignes": "1-60",
+        "citation": "PK : le PK correspond à l’axe de la TVP"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "RATTACHE_A",
+      "cible": "poste_de_rattachement",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Une ZEP est rattachée à un seul poste."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_principale",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Pour les ZEP localisées sur voies principales et voies de service, il faut obligatoirement désigner la ou les voies de services concernées par la ZEP."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_de_service",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Pour les ZEP localisées sur voies principales et voies de service, il faut obligatoirement désigner la ou les voies de services concernées par la ZEP."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "A_POUR_DESTINATION",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "La localisation de la ZEP est composée d’un PK début et d’un PK fin sur chaque voie qui la définisse."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "A_POUR_ORIGINE",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "La localisation de la ZEP est composée d’un PK début et d’un PK fin sur chaque voie qui la définisse."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zep",
+      "type": "RATTACHE_A",
+      "cible": "poste",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "La consigne S9 (Annexe 5) précise pour chaque ZEP ou groupement de ZEP de contre-sens le poste de rattachement concerné."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "signal_d_extremite_de_zep",
+      "type": "LOCALISE_SUR",
+      "cible": "potence",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "Les signaux matérialisant les extrémités d’une ZEP situés sur la même potence doivent obligatoirement respecter le sens croissant ou décroissant de la description de la ZEP."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "consigne_s9c",
+      "type": "REGLEMENTE_PAR",
+      "cible": "zep",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "Le rattachement au poste peut dans certains cas être différent. La consigne S9 (Annexe 5) précise pour chaque ZEP ou groupement de ZEP de contre-sens le poste de rattachement concerné."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "consigne_s9c",
+      "type": "REGLEMENTE_PAR",
+      "cible": "groupement_de_zep",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "La consigne S9 (Annexe 5) précise pour chaque ZEP ou groupement de ZEP de contre-sens le poste de rattachement concerné."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "circuit_de_voie",
+      "type": "EST_UN",
+      "cible": "zone_de_detection_des_trains",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Le Circuit de Voie (CdV) est un système de détection permanente et continue de la présence ou du passage d’une circulation sur une portion de voie déterminée, appelée zone."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "circuit_de_voie",
+      "type": "UTILISE",
+      "cible": "zone_de_detection_des_trains",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Il est utilisé dans de nombreuses installations pour réaliser des fonctions de sécurité, notamment pour l’immobilisation électrique des aiguilles, l’espacement des trains, l’annonce des circulations (PN etc…)."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_principale",
+      "type": "RATTACHE_A",
+      "cible": "poste_de_rattachement",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Poste de rattachement (voir §4.8)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_surimposee",
+      "type": "RATTACHE_A",
+      "cible": "zone_principale",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Rattachement à la zone principale"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_surimposee",
+      "type": "RATTACHE_A",
+      "cible": "pn_de_rattachement",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "PN de rattachement"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_principale",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Pk début et d’un Pk fin"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_surimposee",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Pk début et d’un Pk fin"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "joint_de_zone",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "Joint au Pk du signal"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "joint_de_zone",
+      "type": "LOCALISE_SUR",
+      "cible": "signal",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "Joint au droit du signal : joint au Pk du signal"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "signal",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "poste",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "les zones immédiatement en aval du premier signal commandé par le Poste concerné"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_de_detection",
+      "type": "IMPACTE",
+      "cible": "ligne",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "Vérifier l’impact sur IF Ligne (PN…)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    },
+    {
+      "source": "zone_de_detection",
+      "type": "IMPACTE",
+      "cible": "domaine_de_protection",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "Vérifier l’impact sur les Domaines de Protection (DP)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [],
+      "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+    }
+  ],
+  "relations_exclues": 227,
+  "avertissement": "Validation automatique conservatrice : une validation experte reste souhaitable."
+}

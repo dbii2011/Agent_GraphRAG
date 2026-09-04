@@ -1,0 +1,880 @@
+{
+  "domaine": "gestion des circulations ferroviaires",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "aiguille",
+      "nom": "Aiguille",
+      "aliases": [
+        "aiguillage"
+      ],
+      "description": "Appareil de voie permettant de diriger un train d’une voie à une autre.",
+      "classes_arianes": [
+        "Aiguillage",
+        "Appareil de voie"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "bande_jaune",
+      "nom": "Bande jaune",
+      "aliases": [],
+      "description": "Indication présente sur certains itinéraires.",
+      "classes_arianes": [],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "canton",
+      "nom": "Canton",
+      "aliases": [],
+      "description": "Tronçon de voie permettant l’espacement des circulations de même sens, matérialisé par un signal de début et un signal de fin.",
+      "classes_arianes": [
+        "Canton"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "canton_d_itineraire",
+      "nom": "Canton d’itinéraire",
+      "aliases": [],
+      "description": "Type de canton généralement situé en gare, associé à un itinéraire.",
+      "classes_arianes": [
+        "Canton"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "canton_de_pleine_voie",
+      "nom": "Canton de pleine voie",
+      "aliases": [],
+      "description": "Type de canton situé en pleine voie, entre deux gares.",
+      "classes_arianes": [
+        "Canton"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "carre",
+      "nom": "Carré",
+      "aliases": [],
+      "description": "Signal origine ou destination d’itinéraire, de type Carré ou Carré violet.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "disque",
+      "nom": "Disque",
+      "aliases": [],
+      "description": "Signal non origine d’itinéraire.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "faisceau",
+      "nom": "Faisceau",
+      "aliases": [],
+      "description": "Ensemble de voies en impasse ou groupées, pouvant être destination d'un itinéraire.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "faisceau_de_voies",
+      "nom": "Faisceau de voies",
+      "aliases": [],
+      "description": "Ensemble de voies convergentes vers un signal.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "heurtoir",
+      "nom": "Heurtoir",
+      "aliases": [],
+      "description": "Signal destination d’itinéraire pour les voies de service.",
+      "classes_arianes": [
+        "Heurtoir"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "itineraire",
+      "nom": "Itinéraire",
+      "aliases": [
+        "itinéraires"
+      ],
+      "description": "Section de voie empruntée par un train pouvant comprendre plusieurs aiguilles et dont l’origine est protégée par un signal.",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "jalonnement_d_un_itineraire",
+      "nom": "Jalonnement d’un itinéraire",
+      "aliases": [],
+      "description": "Succession des aiguilles empruntées par une circulation ferroviaire, avec leur nombre, rangs et positions.",
+      "classes_arianes": [],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "lgv",
+      "nom": "LGV",
+      "aliases": [],
+      "description": "Ligne à grande vitesse où les itinéraires sont gérés différemment.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "ligne_en_block_manuel",
+      "nom": "Ligne en Block manuel",
+      "aliases": [],
+      "description": "Ligne où les signaux origines ou destinations d’itinéraire peuvent être des Sémaphores.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "macaron",
+      "nom": "Macaron",
+      "aliases": [
+        "macarons"
+      ],
+      "description": "Repère visuel utilisé pour désigner le début ou la fin d’un itinéraire en l’absence de signal.",
+      "classes_arianes": [
+        "macaron"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_d_aiguillage",
+      "nom": "Poste d’aiguillage",
+      "aliases": [
+        "poste"
+      ],
+      "description": "Poste auquel un itinéraire est rattaché et où le signal origine est situé.",
+      "classes_arianes": [
+        "Poste",
+        "poste"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_electrique",
+      "nom": "Poste électrique",
+      "aliases": [],
+      "description": "Poste à transit souple, géré électroniquement.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_mecanique",
+      "nom": "Poste mécanique",
+      "aliases": [],
+      "description": "Poste à transit rigide, géré mécaniquement.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_pai",
+      "nom": "Poste PAI",
+      "aliases": [
+        "PAI"
+      ],
+      "description": "Poste de type PAI (Poste d'Aiguillage Informatisé) où les macarons correspondent aux signaux d'origine et de destination d'itinéraire.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_pipc",
+      "nom": "Poste PIPC",
+      "aliases": [
+        "PIPC"
+      ],
+      "description": "Poste de type PIPC (Poste à Installation de Poste de Commande) où les macarons correspondent aux signaux d'origine et de destination d'itinéraire.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_prci",
+      "nom": "Poste PRCI",
+      "aliases": [
+        "PRCI"
+      ],
+      "description": "Poste de type PRCI (Poste à Relais à Commande Individuelle) où les macarons correspondent aux signaux d'origine et de destination d'itinéraire.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_prg",
+      "nom": "Poste PRG",
+      "aliases": [
+        "PRG"
+      ],
+      "description": "Poste de type PRG (Poste à Relais à Gabarit) similaire au PRS pour l'usage des macarons.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_prs",
+      "nom": "Poste PRS",
+      "aliases": [
+        "Postes PRS"
+      ],
+      "description": "Poste de type PRS (Poste à Relais Simples) où les macarons correspondent à des appellations de voie, d'origine ou de destination.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "semaphore",
+      "nom": "Sémaphore",
+      "aliases": [],
+      "description": "Signal origine ou destination d’itinéraire sur les lignes en Block manuel.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_associe",
+      "nom": "Signal associé",
+      "aliases": [],
+      "description": "Signal lié à un signal origine pour une direction précise.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_d_arret",
+      "nom": "Signal d’arrêt",
+      "aliases": [],
+      "description": "Signal présent sur chaque voie d’un faisceau.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_d_origine",
+      "nom": "Signal d'origine",
+      "aliases": [
+        "signal origine"
+      ],
+      "description": "Signal marquant le début d'un itinéraire, utilisé pour identifier un signal de destination lorsque le macaron ne suffit pas.",
+      "classes_arianes": [
+        "Signal_Origine"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_de_destination",
+      "nom": "Signal de destination",
+      "aliases": [
+        "signal destination"
+      ],
+      "description": "Signal indiquant la fin d'un itinéraire de sortie de gare ou vers un faisceau/voie en impasse.",
+      "classes_arianes": [
+        "Signal_Destination"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_destination",
+      "nom": "Signal destination",
+      "aliases": [],
+      "description": "Signal marquant la fin d’un itinéraire ou d’un canton.",
+      "classes_arianes": [
+        "Signal_Destination"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_origine",
+      "nom": "Signal origine",
+      "aliases": [],
+      "description": "Signal marquant le début d’un itinéraire ou d’un canton.",
+      "classes_arianes": [
+        "Signal_Origine"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "transit_rigide",
+      "nom": "Transit rigide",
+      "aliases": [],
+      "description": "Mode de gestion des postes mécaniques.",
+      "classes_arianes": [],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "transit_souple",
+      "nom": "Transit souple",
+      "aliases": [],
+      "description": "Mode de gestion des postes électriques et informatiques.",
+      "classes_arianes": [],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "voie_de_service",
+      "nom": "Voie de service",
+      "aliases": [],
+      "description": "Voie utilisée pour des manœuvres ou des opérations de service.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "voie_en_impasse",
+      "nom": "Voie en impasse",
+      "aliases": [],
+      "description": "Voie sans issue, pouvant être destination d'un itinéraire.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "Itineraire.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "itineraire",
+      "type": "COMPOSE_DE",
+      "cible": "aiguille",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Section de voie empruntée par un train pouvant comprendre plusieurs aiguilles"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "signal_origine",
+      "type": "PROTEGE_PAR",
+      "cible": "itineraire",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "dont l’origine est protégée par un signal"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "jalonnement_d_un_itineraire",
+      "type": "DECRIT_PAR",
+      "cible": "itineraire",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Le jalonnement d’un itinéraire est la succession des aiguilles empruntées par une circulation ferroviaire."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "canton",
+      "type": "LOCALISE_SUR",
+      "cible": "signal_destination",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Les cantons sont matérialisés par un signal de début et par un signal de fin."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "canton",
+      "type": "LOCALISE_SUR",
+      "cible": "signal_origine",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Les cantons sont matérialisés par un signal de début et par un signal de fin."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "signal_origine",
+      "type": "A_POUR_DESTINATION",
+      "cible": "signal_destination",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "le signal origine d’un canton doit obligatoirement avoir le même sens que le signal fin du canton"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "signal_origine",
+      "type": "EST_UN",
+      "cible": "carre",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Les signaux origines d’itinéraire sont : les Carrés et les Carrés violets."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "signal_origine",
+      "type": "EST_UN",
+      "cible": "semaphore",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Sur les lignes en Block manuel, ce peut être des Sémaphores."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "signal_destination",
+      "type": "EST_UN",
+      "cible": "carre",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Les signaux destinations d’itinéraire sont : les Carrés et les Carrés violets et heurtoir."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "signal_destination",
+      "type": "EST_UN",
+      "cible": "heurtoir",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Les signaux destinations d’itinéraire sont : les Carrés et les Carrés violets et heurtoir."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "signal_destination",
+      "type": "EST_UN",
+      "cible": "semaphore",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Sur les lignes en Block manuel, ce peut être des Sémaphores."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "RATTACHE_A",
+      "cible": "signal_origine",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "L’itinéraire doit obligatoirement être rattaché à un poste d’aiguillage. Le poste d’aiguillage est celui ou le signal origine est rattaché."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "poste_electrique",
+      "type": "EST_UN",
+      "cible": "poste_d_aiguillage",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Souple : tous les postes électriques et informatiques sont des postes à transit souple."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "poste_mecanique",
+      "type": "EST_UN",
+      "cible": "poste_d_aiguillage",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Rigide : tous les postes mécaniques sont considérés, poste à transit rigide."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "transit_souple",
+      "type": "GERE_PAR",
+      "cible": "poste_electrique",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Souple : tous les postes électriques et informatiques sont des postes à transit souple."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "transit_rigide",
+      "type": "GERE_PAR",
+      "cible": "poste_mecanique",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Rigide : tous les postes mécaniques sont considérés, poste à transit rigide."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "canton_de_pleine_voie",
+      "type": "EST_UN",
+      "cible": "canton",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Il faut distinguer 2 types de canton : - Canton de pleine voie"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "ligne_en_block_manuel",
+      "type": "UTILISE",
+      "cible": "semaphore",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Sur les lignes en Block manuel, ce peut être des Sémaphores."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "lgv",
+      "type": "UTILISE",
+      "cible": "signal_associe",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "Sur certains schémas, on retrouve des itinéraires « train » et itinéraires « Manœuvre »."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "faisceau_de_voies",
+      "type": "CONCERNE",
+      "cible": "signal_d_arret",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "1-111",
+        "citation": "L’ensemble des itinéraires repris dans la pièce 2, doivent être décrits."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "macaron",
+      "type": "EST_UN",
+      "cible": "signal_de_destination",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "ils correspondent aux appellations des signaux d’origine et de destination d’itinéraire"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "macaron",
+      "type": "EST_UN",
+      "cible": "signal_d_origine",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "ils correspondent aux appellations des signaux d’origine et de destination d’itinéraire"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "macaron",
+      "type": "NECESSITE",
+      "cible": "signal_d_origine",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "il faut aller chercher le prochain signal origine d’itinéraire"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "signal_de_destination",
+      "type": "A_POUR_DESTINATION",
+      "cible": "faisceau",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "Pour les itinéraires à destination de faisceaux ou de voies en impasse, le macaron de destination est soit celui mentionné à l’entrée du faisceau soit celui du signal de sortie du faisceau ou de la voie en impasse"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "signal_de_destination",
+      "type": "A_POUR_DESTINATION",
+      "cible": "voie_en_impasse",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "Pour les itinéraires à destination de faisceaux ou de voies en impasse, le macaron de destination est soit celui mentionné à l’entrée du faisceau soit celui du signal de sortie du faisceau ou de la voie en impasse"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "poste_prs",
+      "type": "UTILISE",
+      "cible": "macaron",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "En PRS et PRG, ils ne permettent pas d’identifier le signal car ils correspondent à des appellations de voie, d’origine ou de destination"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "poste_prg",
+      "type": "UTILISE",
+      "cible": "macaron",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "En PRS et PRG, ils ne permettent pas d’identifier le signal car ils correspondent à des appellations de voie, d’origine ou de destination"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "poste_prci",
+      "type": "UTILISE",
+      "cible": "macaron",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "En PRCI, PIPC et PAI, ils correspondent aux appellations des signaux d’origine et de destination d’itinéraire"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "poste_pipc",
+      "type": "UTILISE",
+      "cible": "macaron",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "En PRCI, PIPC et PAI, ils correspondent aux appellations des signaux d’origine et de destination d’itinéraire"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "poste_pai",
+      "type": "UTILISE",
+      "cible": "macaron",
+      "preuve": {
+        "document": "Itineraire.txt",
+        "lignes": "112-159",
+        "citation": "En PRCI, PIPC et PAI, ils correspondent aux appellations des signaux d’origine et de destination d’itinéraire"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    }
+  ],
+  "erreurs_validation": [
+    "Relation itineraire/EST_UN/voie rejetée: concept source ou cible absent",
+    "Relation canton/EST_UN/voie rejetée: concept source ou cible absent",
+    "Relation disque/EST_UN/signal rejetée: concept source ou cible absent",
+    "Relation canton_itineraire/EST_UN/canton rejetée: citation absente du passage",
+    "Relation voie_service/EST_UN/voie rejetée: concept source ou cible absent"
+  ],
+  "document_source": "Itineraire.txt"
+}

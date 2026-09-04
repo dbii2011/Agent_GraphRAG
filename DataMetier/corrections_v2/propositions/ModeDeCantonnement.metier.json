@@ -1,0 +1,319 @@
+{
+  "domaine": "cantonnement_ferroviaire",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "block_automatique_a_permissivite_restreinte",
+      "nom": "Block automatique à permissivité restreinte",
+      "aliases": [
+        "BAPR"
+      ],
+      "description": "Type de mode de cantonnement avec restrictions de circulation pour les trains.",
+      "classes_arianes": [
+        "Block automatique lumineux"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "block_automatique_lumineux",
+      "nom": "Block automatique lumineux",
+      "aliases": [
+        "BAL"
+      ],
+      "description": "Type de mode de cantonnement utilisant des signaux lumineux pour réguler la circulation des trains.",
+      "classes_arianes": [
+        "Block automatique lumineux"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "block_manuel",
+      "nom": "Block manuel",
+      "aliases": [
+        "BM"
+      ],
+      "description": "Type de mode de cantonnement nécessitant une intervention humaine pour réguler la circulation.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "cantonnement_telephonique",
+      "nom": "Cantonnement téléphonique",
+      "aliases": [
+        "CAPI",
+        "CT"
+      ],
+      "description": "Type de mode de cantonnement utilisant des communications téléphoniques pour assurer l'espacement des trains.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "etcs",
+      "nom": "ETCS",
+      "aliases": [],
+      "description": "Système européen de contrôle des trains (European Train Control System) pour assurer la sécurité et la régulation.",
+      "classes_arianes": [
+        "Eurobalise ETCS"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [],
+      "description": "Portion de voie ferrée sur laquelle s'applique un mode de cantonnement.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "mode_de_cantonnement",
+      "nom": "Mode de cantonnement",
+      "aliases": [],
+      "description": "Système de signalisation assurant l'espacement des trains circulant dans le même sens sur une ligne.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "plaque_de_cantonnement",
+      "nom": "Plaque de cantonnement",
+      "aliases": [],
+      "description": "Plaque indicative associée à un signal pour identifier un changement de mode de cantonnement.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "point_kilometrique",
+      "nom": "Point kilométrique",
+      "aliases": [
+        "PK"
+      ],
+      "description": "Repère de positionnement le long d'une ligne ferrée.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "signal",
+      "nom": "Signal",
+      "aliases": [],
+      "description": "Dispositif de signalisation ferroviaire indiquant des informations aux conducteurs de trains.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "transmission_voie_machine",
+      "nom": "Transmission voie-machine",
+      "aliases": [
+        "TVM"
+      ],
+      "description": "Type de mode de cantonnement utilisant des transmissions électroniques entre voie et train pour réguler la circulation.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "troncon_de_ligne",
+      "nom": "Tronçon de ligne",
+      "aliases": [],
+      "description": "Segment d'une ligne défini par un rang et des points kilométriques.",
+      "classes_arianes": [
+        "Portion"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_geographique",
+      "nom": "Zone géographique",
+      "aliases": [],
+      "description": "Zone de référence pour l'application d'un mode de cantonnement.",
+      "classes_arianes": [
+        "Zone Géographique 4"
+      ],
+      "documents": [
+        "ModeDeCantonnement.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "mode_de_cantonnement",
+      "type": "COMPOSE_DE",
+      "cible": "block_automatique_lumineux",
+      "preuve": {
+        "document": "ModeDeCantonnement.txt",
+        "lignes": "1-167",
+        "citation": "Les différents types de mode de cantonnement sont : o\tLes blocks automatiques (BAL et BAPR)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "mode_de_cantonnement",
+      "type": "NECESSITE",
+      "cible": "ligne",
+      "preuve": {
+        "document": "ModeDeCantonnement.txt",
+        "lignes": "1-167",
+        "citation": "Sur ligne, le mode de cantonnement correspond à celui ou ceux décrits dans les RT"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "mode_de_cantonnement",
+      "preuve": {
+        "document": "ModeDeCantonnement.txt",
+        "lignes": "1-167",
+        "citation": "Sur ligne, le mode de cantonnement correspond à celui ou ceux décrits dans les RT"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "mode_de_cantonnement",
+      "type": "NECESSITE",
+      "cible": "troncon_de_ligne",
+      "preuve": {
+        "document": "ModeDeCantonnement.txt",
+        "lignes": "1-167",
+        "citation": "Il est défini par les informations suivantes : o\tCode ligne o\tNuméro du tronçon de ligne (le rang)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "mode_de_cantonnement",
+      "type": "LOCALISE_SUR",
+      "cible": "zone_geographique",
+      "preuve": {
+        "document": "ModeDeCantonnement.txt",
+        "lignes": "1-167",
+        "citation": "Il est possible que deux modes de cantonnement se chevauchent sur une même portion de ligne."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "plaque_de_cantonnement",
+      "type": "TRANSMET_A",
+      "cible": "signal",
+      "preuve": {
+        "document": "ModeDeCantonnement.txt",
+        "lignes": "1-167",
+        "citation": "Sur le PT nous avons l’indication qu’une plaque d’identification PR est presentée sur le signal C 9166"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation mode_de_cantonnement/EST_UN/type_zone rejetée: concept source ou cible absent",
+    "Relation mode_de_cantonnement/COMPOSE_DE/block_manuel rejetée: citation absente du passage",
+    "Relation mode_de_cantonnement/COMPOSE_DE/cantonnement_telephonique rejetée: citation absente du passage",
+    "Relation mode_de_cantonnement/COMPOSE_DE/transmission_voie_machine rejetée: citation absente du passage",
+    "Relation mode_de_cantonnement/COMPOSE_DE/etc rejetée: citation absente du passage",
+    "Relation troncon_ligne/A_POUR_ORIGINE/pk rejetée: citation absente du passage",
+    "Relation troncon_ligne/A_POUR_DESTINATION/pk rejetée: citation absente du passage",
+    "Relation mode_de_cantonnement/DECRIT_PAR/signal rejetée: citation absente du passage",
+    "Relation mode_de_cantonnement/IMPACTE/signal rejetée: citation absente du passage"
+  ],
+  "document_source": "ModeDeCantonnement.txt",
+  "relations_rejetees": [],
+  "version_validation": 2
+}

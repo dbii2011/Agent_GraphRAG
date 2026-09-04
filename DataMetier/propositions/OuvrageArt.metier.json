@@ -1,0 +1,190 @@
+{
+  "domaine": "ouvrage_art_ferroviaire",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "obstacle",
+      "nom": "Obstacle",
+      "aliases": [],
+      "description": "Élément franchit par un ouvrage d'art (route, cours d'eau, etc.).",
+      "classes_arianes": [
+        "Obstacle"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "ouvrage_d_art",
+      "nom": "Ouvrage d'art",
+      "aliases": [],
+      "description": "Construction de génie civil, autre qu’un bâtiment, qui permet d’assurer et/ou protéger la continuité d’une voie de circulation.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "passage_souterrain",
+      "nom": "Passage souterrain",
+      "aliases": [],
+      "description": "Ouvrage d'art permettant le passage sous une voie ferrée.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "passerelle",
+      "nom": "Passerelle",
+      "aliases": [],
+      "description": "Ouvrage d'art permettant le passage de piétons ou de véhicules légers au-dessus ou en dessous d’une voie ferrée.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pk",
+      "nom": "PK",
+      "aliases": [
+        "Point Kilométrique"
+      ],
+      "description": "Localisation linéaire d'un ouvrage d'art sur une voie ferrée.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pont_rail",
+      "nom": "Pont rail",
+      "aliases": [],
+      "description": "Ouvrage d'art ferroviaire permettant de franchir un obstacle pour une voie ferrée.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pont_route",
+      "nom": "Pont route",
+      "aliases": [],
+      "description": "Ouvrage d'art permettant de franchir un obstacle pour une voie routière.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "region",
+      "nom": "Région",
+      "aliases": [],
+      "description": "Zone géographique associée à un ouvrage d'art.",
+      "classes_arianes": [
+        "Region"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "tunnel",
+      "nom": "Tunnel",
+      "aliases": [],
+      "description": "Ouvrage d'art ferroviaire souterrain permettant de franchir un obstacle.",
+      "classes_arianes": [
+        "Tunnel"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "pont_route",
+      "type": "RATTACHE_A",
+      "cible": "region",
+      "preuve": {
+        "document": "OuvrageArt.txt",
+        "lignes": "1-84",
+        "citation": "Pont route ... Région O"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "passerelle",
+      "type": "RATTACHE_A",
+      "cible": "region",
+      "preuve": {
+        "document": "OuvrageArt.txt",
+        "lignes": "1-84",
+        "citation": "Passerelle ... Région O"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "passage_souterrain",
+      "type": "RATTACHE_A",
+      "cible": "region",
+      "preuve": {
+        "document": "OuvrageArt.txt",
+        "lignes": "1-84",
+        "citation": "Passage souterrain ... Région O"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    }
+  ],
+  "erreurs_validation": [
+    "Relation ouvrage_art/EST_UN/type_de_configuration rejetée: concept source ou cible absent",
+    "Relation pont_rail/EST_UN/type_de_configuration rejetée: concept source ou cible absent",
+    "Relation pont_route/EST_UN/type_de_configuration rejetée: concept source ou cible absent, citation absente du passage",
+    "Relation passerelle/EST_UN/type_de_configuration rejetée: concept source ou cible absent, citation absente du passage",
+    "Relation tunnel/EST_UN/tunnel rejetée: auto-relation interdite, citation absente du passage",
+    "Relation passage_souterrain/EST_UN/type_de_configuration rejetée: concept source ou cible absent, citation absente du passage",
+    "Relation pont_rail/COMPOSE_DE/obstacle rejetée: citation absente du passage",
+    "Relation pont_route/COMPOSE_DE/obstacle rejetée: citation absente du passage",
+    "Relation passerelle/COMPOSE_DE/obstacle rejetée: citation absente du passage",
+    "Relation passage_souterrain/COMPOSE_DE/obstacle rejetée: citation absente du passage",
+    "Relation tunnel/COMPOSE_DE/obstacle rejetée: citation absente du passage",
+    "Relation pont_rail/LOCALISE_SUR/pk rejetée: citation absente du passage",
+    "Relation pont_route/LOCALISE_SUR/pk rejetée: citation absente du passage",
+    "Relation passerelle/LOCALISE_SUR/pk rejetée: citation absente du passage",
+    "Relation passage_souterrain/LOCALISE_SUR/pk rejetée: citation absente du passage",
+    "Relation tunnel/LOCALISE_SUR/pk rejetée: citation absente du passage",
+    "Relation pont_rail/RATTACHE_A/region rejetée: citation absente du passage",
+    "Relation tunnel/RATTACHE_A/region rejetée: citation absente du passage"
+  ],
+  "document_source": "OuvrageArt.txt"
+}

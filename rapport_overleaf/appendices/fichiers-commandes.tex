@@ -1,0 +1,63 @@
+\chapter{Fichiers, commandes et captures}
+
+\section{Fichiers principaux}
+
+\begin{longtable}{>{\ttfamily}p{0.34\textwidth}p{0.58\textwidth}}
+\caption{Inventaire fonctionnel}\label{tab:fichiers}\\
+\toprule
+Fichier & Fonction \\
+\midrule
+\endfirsthead
+\toprule
+Fichier & Fonction \\
+\midrule
+\endhead
+XmiToJson.py & Conversion XMI vers JSON. \\
+GrapheBuilder\_v3.py & Construction du graphe et indexation documentaire. \\
+graphrag\_retriever.py & Retrieval UML, métier et documentaire. \\
+Agent\_LG.py & Génération contrôlée de la réponse. \\
+api.py & API, authentification, conversations et messages. \\
+index.html & Interface du chatbot. \\
+pipeline\_graphe\_metier.py & Extraction des propositions métier. \\
+validation\_metier.py & Contrôles et corrections déterministes. \\
+extraire\_tout\_graphe\_metier.py & Extraction des 29 fiches avec reprise. \\
+recontroler\_graphe\_metier.py & Recontrôle hors ligne des checkpoints. \\
+graphe\_metier\_builder.py & Import protégé des sélections validées. \\
+importer\_pilote\_metier.py & Précontrôle et import du pilote poste. \\
+evaluate\_graphrag.py & Scénarios d'évaluation fonctionnelle. \\
+\bottomrule
+\end{longtable}
+
+\section{Commandes utiles}
+
+\begin{lstlisting}[language=bash,caption={Tests et lancement de l'application}]
+python -m pytest -q
+python -m uvicorn api:app --host 127.0.0.1 --port 8000
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash,caption={Extraction et contrôle métier}]
+python extraire_tout_graphe_metier.py --inventaire
+python recontroler_graphe_metier.py --output-dir DataMetier/revue_suivante
+python importer_pilote_metier.py
+python importer_pilote_metier.py --importer
+\end{lstlisting}
+
+\section{Requêtes Neo4j}
+
+\begin{lstlisting}[language={},caption={Visualisation du pilote métier}]
+MATCH (c:ConceptMetier {domaine: "Pilote poste d'aiguillage"})
+OPTIONAL MATCH (c)-[r]->(n)
+RETURN c, r, n;
+\end{lstlisting}
+
+\begin{lstlisting}[language={},caption={Visualisation de la classe Ligne}]
+MATCH (c:Classe {nom: "Ligne"})
+OPTIONAL MATCH (c)-[r]-(n)
+RETURN c, r, n
+LIMIT 40;
+\end{lstlisting}
+
+\section{Captures à ajouter}
+
+Placer les images dans le dossier \code{figures/} avec les noms exacts indiqués dans \code{figures/README.md}. Le document compile sans elles et affiche des cadres réservés. Toute clé, tout mot de passe, cookie, jeton, identifiant personnel ou adresse interne doit être masqué avant insertion.
+

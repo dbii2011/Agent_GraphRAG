@@ -15,6 +15,7 @@ Puis ouvre simplement : http://127.0.0.1:8000
 """
 
 import os
+import json
 import uuid
 import hashlib
 import hmac
@@ -58,6 +59,11 @@ class Message(SQLModel, table=True):
     contenu: str
     position: int
     timestamp: datetime = Field(default_factory=datetime.now)
+
+
+class VisualisationMessage(SQLModel, table=True):
+    message_id: uuid.UUID = Field(foreign_key="message.id", primary_key=True)
+    graphe_json: str
 
 
 class Utilisateur(SQLModel, table=True):
@@ -105,6 +111,7 @@ class Reponse(BaseModel):
     question: str
     reponse: str
     conversation_id: str
+    graphe: dict | None = None
 
 
 class ConversationResume(BaseModel):
@@ -116,6 +123,7 @@ class ConversationResume(BaseModel):
 class MessageItem(BaseModel):
     role: str
     contenu: str
+    graphe: dict | None = None
 
 
 class Identifiants(BaseModel):
@@ -261,7 +269,7 @@ def _charger_historique(conversation_id: str, utilisateur_id: uuid.UUID) -> list
     ]
 
 
-def _enregistrer_message(conversation_id: str, role: str, contenu: str, position: int):
+def _enregistrer_message(conversation_id: str, role: str, contenu: str, position: int) -> uuid.UUID:
     with Session(engine) as session:
         msg = Message(
             conversation_id=uuid.UUID(conversation_id),
@@ -270,6 +278,19 @@ def _enregistrer_message(conversation_id: str, role: str, contenu: str, position
             position=position,
         )
         session.add(msg)
+        session.commit()
+        session.refresh(msg)
+        return msg.id
+
+
+def _enregistrer_graphe(message_id: uuid.UUID, graphe: dict | None):
+    if not graphe:
+        return
+    with Session(engine) as session:
+        session.add(VisualisationMessage(
+            message_id=message_id,
+            graphe_json=json.dumps(graphe, ensure_ascii=False),
+        ))
         session.commit()
 
 
@@ -349,11 +370,21 @@ def ask(payload: Question, request: Request):
         position = _prochaine_position(conversation_id)
         _enregistrer_message(conversation_id, "utilisateur", question, position)
 
-        reponse = agent.ask(question, historique=historique)
+        resultat_agent = agent.ask(question, historique=historique, inclure_graphe=True)
+        if isinstance(resultat_agent, dict):
+            reponse = resultat_agent["reponse"]
+            graphe = resultat_agent.get("graphe")
+        else:
+            reponse = resultat_agent
+            graphe = None
 
-        _enregistrer_message(conversation_id, "assistant", reponse, position + 1)
+        message_id = _enregistrer_message(conversation_id, "assistant", reponse, position + 1)
+        _enregistrer_graphe(message_id, graphe)
 
-        return Reponse(question=question, reponse=reponse, conversation_id=conversation_id)
+        return Reponse(
+            question=question, reponse=reponse,
+            conversation_id=conversation_id, graphe=graphe,
+        )
     except HTTPException:
         raise
     except Exception as e:
@@ -391,7 +422,13 @@ def charger_messages(conversation_id: str, request: Request):
         messages = session.exec(statement).all()
     if not messages:
         raise HTTPException(status_code=404, detail="Conversation introuvable.")
-    return [{"role": m.role, "contenu": m.contenu} for m in messages]
+    resultat = []
+    with Session(engine) as session:
+        for message in messages:
+            visualisation = session.get(VisualisationMessage, message.id)
+            graphe = json.loads(visualisation.graphe_json) if visualisation else None
+            resultat.append({"role": message.role, "contenu": message.contenu, "graphe": graphe})
+    return resultat
 
 
 @app.delete("/conversations/{conversation_id}")
@@ -406,6 +443,9 @@ def supprimer_conversation(conversation_id: str, request: Request):
             # aussi simple qu'en SQL brut avec SQLite/SQLModel par defaut)
             statement = select(Message).where(Message.conversation_id == conv_id)
             for msg in session.exec(statement).all():
+                visualisation = session.get(VisualisationMessage, msg.id)
+                if visualisation:
+                    session.delete(visualisation)
                 session.delete(msg)
             lien = session.get(ProprietaireConversation, conv_id)
             if lien:
@@ -421,6 +461,64 @@ def schema():
         return {"schema": agent.get_schema_context()}
     except Exception:
         raise HTTPException(status_code=503, detail="Neo4j est indisponible.")
+
+
+@app.get("/graph")
+def graphe_visible(request: Request, vue: str = "metier"):
+    """Retourne un aperçu borné et en lecture seule pour la visualisation web."""
+    _utilisateur_courant(request)
+    requetes = {
+        "metier": """
+            MATCH (a:ConceptMetier)-[r:RELATION_METIER]->(b:ConceptMetier)
+            WHERE a.valide = true AND b.valide = true AND r.valide = true
+            RETURN elementId(a) AS source_id, a.nom AS source_nom,
+                   'Concept métier' AS source_categorie,
+                   coalesce(a.description, '') AS source_description,
+                   elementId(b) AS cible_id, b.nom AS cible_nom,
+                   'Concept métier' AS cible_categorie,
+                   coalesce(b.description, '') AS cible_description,
+                   coalesce(r.type, type(r)) AS relation
+            ORDER BY source_nom, relation, cible_nom LIMIT 160
+        """,
+        "metamodele": """
+            MATCH (a:Classe)-[r]->(b:Classe)
+            WHERE type(r) IN ['HERITE_DE', 'COMPOSE_DE', 'ASSOCIE_A', 'AGREGE']
+            RETURN elementId(a) AS source_id, a.nom AS source_nom,
+                   'Classe' AS source_categorie,
+                   coalesce(a.description, '') AS source_description,
+                   elementId(b) AS cible_id, b.nom AS cible_nom,
+                   'Classe' AS cible_categorie,
+                   coalesce(b.description, '') AS cible_description,
+                   type(r) AS relation
+            ORDER BY source_nom, relation, cible_nom LIMIT 160
+        """,
+    }
+    if vue not in requetes:
+        raise HTTPException(status_code=400, detail="Vue de graphe inconnue.")
+    try:
+        with agent.driver.session() as session:
+            relations = [record.data() for record in session.run(requetes[vue])]
+    except Exception:
+        raise HTTPException(status_code=503, detail="Neo4j est indisponible.")
+
+    noeuds = {}
+    liens = []
+    for relation in relations:
+        noeuds[relation["source_id"]] = {
+            "id": relation["source_id"], "label": relation["source_nom"],
+            "categorie": relation["source_categorie"],
+            "description": relation["source_description"],
+        }
+        noeuds[relation["cible_id"]] = {
+            "id": relation["cible_id"], "label": relation["cible_nom"],
+            "categorie": relation["cible_categorie"],
+            "description": relation["cible_description"],
+        }
+        liens.append({
+            "source": relation["source_id"], "cible": relation["cible_id"],
+            "label": relation["relation"],
+        })
+    return {"vue": vue, "nodes": list(noeuds.values()), "links": liens}
 
 
 @app.get("/health")

@@ -1,0 +1,453 @@
+{
+  "domaine": "gestion_des_passages_a_niveau",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "arrete_prefectoral",
+      "nom": "Arrêté préfectoral",
+      "aliases": [],
+      "description": "Document administratif autorisant la suppression d'un passage à niveau.",
+      "classes_arianes": [],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "barriere",
+      "nom": "barrière",
+      "aliases": [],
+      "description": "Élément de protection actionné manuellement ou automatiquement au passage à niveau.",
+      "classes_arianes": [
+        "Obstacle"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "base_de_donnees",
+      "nom": "Base de données",
+      "aliases": [],
+      "description": "Système d'information contenant les informations sur les passages à niveau.",
+      "classes_arianes": [],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "date_d_abrogation",
+      "nom": "Date d'abrogation",
+      "aliases": [],
+      "description": "Date à partir de laquelle un passage à niveau est supprimé des bases de données.",
+      "classes_arianes": [],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "fiche_d_echange",
+      "nom": "Fiche d'échange",
+      "aliases": [],
+      "description": "Document utilisé pour tracer les suppressions de passages à niveau et éviter les suppressions intempestives.",
+      "classes_arianes": [],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "guf",
+      "nom": "GUF",
+      "aliases": [],
+      "description": "Entité destinataire des fiches d'échange.",
+      "classes_arianes": [],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "infrapole",
+      "nom": "Infrapôle",
+      "aliases": [],
+      "description": "Service ou entité responsable de la transmission des fiches d'échange.",
+      "classes_arianes": [],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "ligne",
+      "nom": "ligne",
+      "aliases": [],
+      "description": "Ligne ferroviaire sur laquelle est localisé le passage à niveau.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "oa",
+      "nom": "OA",
+      "aliases": [],
+      "description": "Ouvrage d'art (Pra, Pro, etc.) impacté par le passage à niveau.",
+      "classes_arianes": [
+        "Obstacle"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "obstacle",
+      "nom": "obstacle",
+      "aliases": [],
+      "description": "Élément traversé par le passage à niveau (route, chemin, etc.).",
+      "classes_arianes": [
+        "Obstacle"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "passage_a_niveau",
+      "nom": "passage à niveau",
+      "aliases": [
+        "PN"
+      ],
+      "description": "Croisement des voies ferrées et d'une route ou assimilé au même niveau.",
+      "classes_arianes": [
+        "passage_a_niveau"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pk",
+      "nom": "PK",
+      "aliases": [],
+      "description": "Point kilométrique projeté sur la ligne où se situe le passage à niveau.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pn_pere",
+      "nom": "PN père",
+      "aliases": [],
+      "description": "Passage à niveau principal auquel un PN secondaire est rattaché.",
+      "classes_arianes": [
+        "passage_a_niveau"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pn_secondaire",
+      "nom": "PN secondaire",
+      "aliases": [],
+      "description": "Passage à niveau de classe 00, obligatoirement rattaché à un PN père.",
+      "classes_arianes": [
+        "passage_a_niveau"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_de_protection",
+      "nom": "signal de protection",
+      "aliases": [],
+      "description": "Signal protégeant le passage à niveau.",
+      "classes_arianes": [
+        "Obstacle"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "systeme_d_annonce",
+      "nom": "système d’annonce",
+      "aliases": [],
+      "description": "Système utilisé pour annoncer l'arrivée d'un train au passage à niveau.",
+      "classes_arianes": [
+        "Annonce"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "systeme_de_protection_kvb",
+      "nom": "système de protection KVB",
+      "aliases": [],
+      "description": "Système de protection utilisé pour commander les barrières et avertisseurs routiers.",
+      "classes_arianes": [
+        "systeme_protection_kvb"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "systeme_de_reperage",
+      "nom": "système de repérage",
+      "aliases": [],
+      "description": "Système utilisé pour localiser le passage à niveau sur une ligne.",
+      "classes_arianes": [
+        "systeme_reperage"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "systeme_de_surveillance",
+      "nom": "système de surveillance",
+      "aliases": [],
+      "description": "Système permettant de surveiller le passage à niveau.",
+      "classes_arianes": [
+        "Annonce"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "zone_courte",
+      "nom": "zone courte",
+      "aliases": [],
+      "description": "Zone impactée par la présence du passage à niveau.",
+      "classes_arianes": [
+        "Espace"
+      ],
+      "documents": [
+        "PassageANiveau.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "passage_a_niveau",
+      "type": "EST_UN",
+      "cible": "obstacle",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Un passage à niveau (PN) est un croisement des voies ferrées et d'une route ou assimilé au même niveau."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "systeme_de_protection_kvb",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Il est automatique quand les avertisseurs routiers et les barrières (s'il y en a) sont commandés par le train lui-même (annonce puis libération de l’annonce)."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Une ou plusieurs localisations à savoir pour chaque ligne sur lequel il est localisé comprenant : Un code ligne, Un numéro du tronçon (son rang), Un PK de l'axe du PN projeté sur la ligne ou les lignes."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Un PK de l'axe du PN projeté sur la ligne ou les lignes."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "pn_secondaire",
+      "type": "RATTACHE_A",
+      "cible": "pn_pere",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Un PN secondaire doit obligatoirement être rattaché au PN « père »."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "pn_secondaire",
+      "type": "EST_UN",
+      "cible": "passage_a_niveau",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Un PN secondaire qui porte la classe 00."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "IMPACTE",
+      "cible": "zone_courte",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Vérifier les zones courtes du PN"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "IMPACTE",
+      "cible": "oa",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Vérifier l’impact sur les OA (Pra, Pro …)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "IMPACTE",
+      "cible": "signal_de_protection",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "1-151",
+        "citation": "Vérifier les signaux protégeant le PN"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "fiche_d_echange",
+      "type": "COMPOSE_DE",
+      "cible": "passage_a_niveau",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "152-174",
+        "citation": "Ce document a pour objet d’éviter les suppressions intempestives de PN et de tracer les suppressions de PN."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "fiche_d_echange",
+      "type": "TRANSMET_A",
+      "cible": "guf",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "152-174",
+        "citation": "Cette fiche d’échanges doit être renvoyée par l’Infrapôle au GUF."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "fiche_d_echange",
+      "type": "UTILISE",
+      "cible": "arrete_prefectoral",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "152-174",
+        "citation": "Si possible accompagnée de l’arrêté préfectoral."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "date_d_abrogation",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "152-174",
+        "citation": "à partir de cette date, Gaïa Fab’ supprimera le PN des bases de données le cas échéant."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "date_d_abrogation",
+      "type": "TRANSMET_A",
+      "cible": "base_de_donnees",
+      "preuve": {
+        "document": "PassageANiveau.txt",
+        "lignes": "152-174",
+        "citation": "Gaïa Fab’ supprimera le PN des bases de données le cas échéant."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    }
+  ],
+  "erreurs_validation": [
+    "Relation passage_a_niveau/COMPOSE_DE/systeme_annonce rejetée: citation absente du passage",
+    "Relation passage_a_niveau/COMPOSE_DE/systeme_surveillance rejetée: citation absente du passage"
+  ],
+  "document_source": "PassageANiveau.txt"
+}

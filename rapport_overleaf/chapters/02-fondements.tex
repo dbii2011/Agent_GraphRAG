@@ -1,0 +1,63 @@
+\chapter{Fondements théoriques}
+
+\section{Graphes de connaissances}
+
+Un graphe de connaissances représente l'information par des nœuds et des relations. Dans Neo4j, chaque nœud possède un ou plusieurs labels et des propriétés. Une relation est orientée, typée et peut également porter des propriétés.
+
+Par exemple :
+
+\begin{center}
+\begin{tikzpicture}[node distance=2.2cm]
+  \node[source] (ligne) {Classe\\\textbf{Ligne}};
+  \node[source,right=of ligne] (attr) {Attribut\\\textbf{code}};
+  \node[source,right=of attr] (type) {Type\\\textbf{P-String}};
+  \draw[fleche] (ligne) -- node[above,font=\scriptsize]{A\_ATTRIBUT} (attr);
+  \draw[fleche] (attr) -- node[above,font=\scriptsize]{EST\_DE\_TYPE} (type);
+\end{tikzpicture}
+\end{center}
+
+Cette représentation facilite le parcours des dépendances, l'explication d'un chemin et la limitation d'une recherche à un voisinage pertinent.
+
+\section{RAG}
+
+La génération augmentée par recherche, ou RAG, sépare la connaissance externe de la génération de texte. Une question est d'abord utilisée pour retrouver des documents pertinents. Ces documents sont ensuite insérés dans le contexte d'un modèle de langage, qui rédige la réponse \cite{lewis2020rag}.
+
+\begin{equation}
+\text{Question}\rightarrow\text{Recherche}\rightarrow\text{Contexte}\rightarrow\text{LLM}\rightarrow\text{Réponse}
+\end{equation}
+
+Le modèle n'a donc pas besoin d'avoir mémorisé les données Arianes pendant son entraînement.
+
+\section{GraphRAG}
+
+GraphRAG ajoute une étape de recherche structurée dans un graphe. Le simple stockage de données dans Neo4j ne suffit pas : l'agent doit résoudre les entités de la question, parcourir les relations utiles et transmettre ce sous-graphe au modèle \cite{edge2024graphrag}.
+
+Dans ce projet, le contexte final peut combiner :
+
+\begin{itemize}
+  \item un sous-graphe UML ;
+  \item un sous-graphe métier validé ;
+  \item des passages documentaires ;
+  \item l'historique récent de la conversation.
+\end{itemize}
+
+\section{Embeddings et recherche hybride}
+
+Un modèle d'embedding transforme un texte en vecteur numérique. La proximité sémantique est mesurée par la similarité cosinus :
+
+\begin{equation}
+\operatorname{sim}(q,d)=\frac{q\cdot d}{\lVert q\rVert\lVert d\rVert}.
+\end{equation}
+
+La recherche vectorielle est utile pour les reformulations. La recherche plein texte reste meilleure pour des noms ou acronymes exacts. Le système combine les classements avec une fusion par rang réciproque :
+
+\begin{equation}
+\operatorname{RRF}(d)=\sum_{r\in R}\frac{1}{k+\operatorname{rang}_r(d)}.
+\end{equation}
+
+Cette association limite la dépendance à un unique mécanisme de recherche. Les principes probabilistes de recherche lexicale sont notamment décrits dans les travaux sur BM25 \cite{robertson2009bm25}.
+
+\section{LLM et extraction d'information}
+
+Mistral est utilisé de deux manières : création des embeddings et génération de réponses. Dans le pipeline métier, il sert également d'extracteur structuré : un prompt lui demande d'identifier des concepts, des relations et des citations. Il ne s'agit toutefois pas d'un modèle de reconnaissance d'entités spécialisé. La sortie doit donc être contrôlée par du code déterministe avant toute utilisation.
+

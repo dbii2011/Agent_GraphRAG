@@ -1,0 +1,10 @@
+{
+  "domaine": "Ferroviaire",
+  "statut": "A_REVOIR",
+  "concepts": [],
+  "relations": [],
+  "erreurs_validation": [],
+  "document_source": "HabillageValeur_declivite.txt",
+  "relations_rejetees": [],
+  "version_validation": 2
+}

@@ -1,0 +1,13 @@
+Présentation fondée uniquement sur les éléments locaux du projet :
+- README_PROJET.md
+- BILAN_SCRIPTS_PYTHON.md
+- Agent_LG.py
+- api.py
+- graphrag_retriever.py
+- pipeline_graphe_metier.py
+- validation_metier.py
+- GrapheBuilder_v3.py
+- XmiToJson.py
+- résultats Neo4j et pytest observés dans la session
+
+Aucun visuel ni contenu externe n'a été utilisé.

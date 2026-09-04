@@ -1,0 +1,420 @@
+{
+  "domaine": "systèmes_de_controle_continu_de_vitesse",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "habillage_voie",
+      "nom": "Habillage voie",
+      "aliases": [],
+      "description": "Description des zones liées aux systèmes de contrôle continu de vitesse dans GAÏA, effectuée exclusivement au sein de l’habillage voie.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "kcvb",
+      "nom": "KCVB",
+      "aliases": [],
+      "description": "Système destiné à améliorer la sécurité des circulations par un contrôle continu de la vitesse des trains par rapport à celle autorisée par la signalisation latérale et le livret de marche des trains.",
+      "classes_arianes": [
+        "systeme_protection_kvb"
+      ],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "kcvp",
+      "nom": "KCVP",
+      "aliases": [],
+      "description": "Système destiné à améliorer la sécurité des circulations par un contrôle continu de la vitesse des trains par rapport à celle autorisée par la signalisation latérale, articulé autour d’une transmission continue sol/bord.",
+      "classes_arianes": [
+        "systeme_protection_kvb"
+      ],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "kvbp",
+      "nom": "KVBP",
+      "aliases": [],
+      "description": "Système ayant pour fonction de transmettre en permanence au mobile, par la voie, les informations de réouverture du contrôle de vitesse KVB.",
+      "classes_arianes": [
+        "systeme_protection_kvb"
+      ],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "livret_de_marche_des_trains",
+      "nom": "Livret de marche des trains",
+      "aliases": [],
+      "description": "Document définissant les règles de circulation et les vitesses autorisées pour les trains.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "plan_technique",
+      "nom": "Plan Technique",
+      "aliases": [],
+      "description": "Document définissant les installations et les règles de signalisation et de circulation.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "reseau_express_regional_d_ile_de_france",
+      "nom": "Réseau Express Régional d'Île-de-France",
+      "aliases": [
+        "RER"
+      ],
+      "description": "Réseau ferroviaire dense en Île-de-France où les systèmes KCVB, KCVP et KVBP sont déployés.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_destination",
+      "nom": "Signal destination",
+      "aliases": [],
+      "description": "Signal utilisé pour définir les limites des zones équipées de systèmes de contrôle continu de vitesse.",
+      "classes_arianes": [
+        "Signal_Destination"
+      ],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signal_origine",
+      "nom": "Signal origine",
+      "aliases": [],
+      "description": "Signal situé en amont du premier signal muni d’un numéro hexa, utilisé pour définir le sens de contrôle du KVBP.",
+      "classes_arianes": [
+        "Signal_Origine"
+      ],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "signalisation_laterale",
+      "nom": "Signalisation latérale",
+      "aliases": [],
+      "description": "Signalisation utilisée pour autoriser ou restreindre la circulation des trains.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "voie_equipee",
+      "nom": "Voie équipée",
+      "aliases": [],
+      "description": "Voie ou tronçon de voie équipé d'un système de contrôle continu de vitesse (KCVB, KCVP ou KVBP).",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "kcvb",
+      "type": "IMPACTE",
+      "cible": "signalisation_laterale",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "améliorer la sécurité des circulations par un contrôle continu de la vitesse des trains par rapport à celle autorisée par la signalisation latérale"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "kcvp",
+      "type": "IMPACTE",
+      "cible": "signalisation_laterale",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "améliorer la sécurité des circulations par un contrôle continu de la vitesse des trains par rapport à celle autorisée par la signalisation latérale"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "kcvb",
+      "type": "IMPACTE",
+      "cible": "livret_de_marche_des_trains",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "par rapport à celle autorisée par la signalisation latérale et le livret de marche des trains"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "kcvb",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "signalisation_laterale",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "contrôle continu de la vitesse des trains par rapport à celle autorisée par la signalisation latérale"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "kcvp",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "signalisation_laterale",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "contrôle continu de la vitesse des trains par rapport à celle autorisée par la signalisation latérale"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "kcvb",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "livret_de_marche_des_trains",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "par rapport à celle autorisée par la signalisation latérale et le livret de marche des trains"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "kcvb",
+      "type": "A_POUR_DESTINATION",
+      "cible": "reseau_express_regional_d_ile_de_france",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "Ces 3 Systèmes de contrôle continu de vitesse (KCVB, KCVP et KVBP) ont été déployés en zones de circulation dense sur des portions de lignes du Réseau Express Régional d’Ile de France."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "kcvp",
+      "type": "A_POUR_DESTINATION",
+      "cible": "reseau_express_regional_d_ile_de_france",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "Ces 3 Systèmes de contrôle continu de vitesse (KCVB, KCVP et KVBP) ont été déployés en zones de circulation dense sur des portions de lignes du Réseau Express Régional d’Ile de France."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "kvbp",
+      "type": "A_POUR_DESTINATION",
+      "cible": "reseau_express_regional_d_ile_de_france",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "Ces 3 Systèmes de contrôle continu de vitesse (KCVB, KCVP et KVBP) ont été déployés en zones de circulation dense sur des portions de lignes du Réseau Express Régional d’Ile de France."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "habillage_voie",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_equipee",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "La description de zones lié aux systèmes de contrôle continu de vitesse dans GAÏA sera exclusivement effectuée au sein de l’habillage voie."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "signal_origine",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_equipee",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "le signal origine à renseigner sera celui en amont du premier signal muni d’un numéro hexa"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "signal_destination",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_equipee",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "Les PkD et PkF seront déterminés à partir des Signaux et des NdV."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "plan_technique",
+      "type": "REGLEMENTE_PAR",
+      "cible": "kcvb",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "Les nouvelles zones équipées d’un système de contrôle continu de vitesse seront créées lors de la parution d’un nouvel indice du Plan Technique."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "plan_technique",
+      "type": "REGLEMENTE_PAR",
+      "cible": "kcvp",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "Les nouvelles zones équipées d’un système de contrôle continu de vitesse seront créées lors de la parution d’un nouvel indice du Plan Technique."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "plan_technique",
+      "type": "REGLEMENTE_PAR",
+      "cible": "kvbp",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "Les nouvelles zones équipées d’un système de contrôle continu de vitesse seront créées lors de la parution d’un nouvel indice du Plan Technique."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "plan_technique",
+      "type": "REGLEMENTE_PAR",
+      "cible": "habillage_voie",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "Les nouvelles zones équipées d’un système de contrôle continu de vitesse seront créées lors de la parution d’un nouvel indice du Plan Technique."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "signalisation_laterale",
+      "type": "IMPACTE",
+      "cible": "kcvb",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "améliorer la sécurité des circulations par un contrôle continu de la vitesse des trains par rapport à celle autorisée par la signalisation latérale"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "signalisation_laterale",
+      "type": "IMPACTE",
+      "cible": "kcvp",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "améliorer la sécurité des circulations par un contrôle continu de la vitesse des trains par rapport à celle autorisée par la signalisation latérale"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "livret_de_marche_des_trains",
+      "type": "IMPACTE",
+      "cible": "kcvb",
+      "preuve": {
+        "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+        "lignes": "1-79",
+        "citation": "par rapport à celle autorisée par la signalisation latérale et le livret de marche des trains"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    }
+  ],
+  "erreurs_validation": [
+    "Relation systeme_kcvb/EST_UN/systeme_protection_kvb rejetée: concept source ou cible absent",
+    "Relation systeme_kcvp/EST_UN/systeme_protection_kvb rejetée: concept source ou cible absent",
+    "Relation systeme_kvbp/EST_UN/systeme_protection_kvb rejetée: concept source ou cible absent",
+    "Relation voie_equipee/EST_UN/voie rejetée: concept source ou cible absent"
+  ],
+  "document_source": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt"
+}

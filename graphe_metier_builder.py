@@ -7,6 +7,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
+from validation_metier import verifier_import
 
 
 def charger_definition(chemin: Path) -> dict:
@@ -21,6 +22,7 @@ def charger_definition(chemin: Path) -> dict:
 
 
 def importer(driver, definition: dict) -> dict:
+    verifier_import(definition)
     with driver.session() as session:
         session.run(
             "CREATE CONSTRAINT concept_metier_id IF NOT EXISTS "
@@ -32,13 +34,13 @@ def importer(driver, definition: dict) -> dict:
                 """
                 MERGE (c:ConceptMetier {id: $id})
                 SET c.nom = $nom, c.aliases = $aliases, c.description = $description,
-                    c.domaine = $domaine, c.valide = true
+                    c.domaine = $domaine, c.categorie = $categorie, c.valide = true
                 WITH c
                 UNWIND $classes AS nom_classe
                 MATCH (classe:Classe {nom: nom_classe})
                 MERGE (c)-[:REPRESENTE_PAR]->(classe)
                 """,
-                **concept,
+                **{**concept, "categorie": concept.get("categorie", "INCONNU")},
                 domaine=definition["domaine"],
                 classes=concept.get("classes_arianes", []),
             ).consume()
@@ -69,9 +71,17 @@ def importer(driver, definition: dict) -> dict:
                 """
                 MATCH (a:ConceptMetier {id: $source})
                 MATCH (b:ConceptMetier {id: $cible})
-                MERGE (a)-[r:RELATION_METIER {type: $type}]->(b)
+                MERGE (a)-[r:RELATION_METIER {type: $type,
+                    source_document: $source_document, preuve: $citation, lignes: $lignes}]->(b)
                 SET r.preuve = $citation, r.source_document = $source_document,
-                    r.lignes = $lignes, r.valide = true
+                    r.lignes = $lignes, r.valide = true,
+                    r.chunk_ids = $chunk_ids, r.condition = $condition,
+                    r.validation = $validation
+                WITH a, b
+                UNWIND $chunk_ids AS chunk_id
+                MATCH (chunk:Chunk {id: chunk_id})
+                MERGE (a)-[:ETAYE_PAR]->(chunk)
+                MERGE (b)-[:ETAYE_PAR]->(chunk)
                 """,
                 source=relation["source"],
                 cible=relation["cible"],
@@ -79,6 +89,9 @@ def importer(driver, definition: dict) -> dict:
                 citation=citation,
                 source_document=source_document,
                 lignes=lignes,
+                chunk_ids=preuve.get("chunk_ids", []) if isinstance(preuve, dict) else [],
+                condition=relation.get("condition", ""),
+                validation=definition.get("methode_validation", "Relecture explicite"),
             ).consume()
 
         compte = session.run(

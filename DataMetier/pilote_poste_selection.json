@@ -1,0 +1,24 @@
+{
+  "domaine": "Pilote poste d'aiguillage",
+  "racine": "poste_aiguillage",
+  "statut": "VALIDE",
+  "methode_validation": "Revue documentaire assistée du 31 août 2026, pilote autorisé par l'utilisateur ; pas de certification métier opérationnelle",
+  "perimetre": "Commandes, localisation conditionnelle des postes de voie principale, deux exemples de types. Sélection non exhaustive. SAF et impacts de modification exclus.",
+  "concepts": [
+    {"id":"poste_aiguillage","nom":"Poste d'aiguillage","aliases":["poste","poste d’aiguillage"],"description":"Installation comportant la manœuvre des signaux et des appareils de voie, selon la définition de la fiche Post.","categorie":"EQUIPEMENT","classes_arianes":["Poste"],"documents":["Post.txt"],"statut":"VALIDE"},
+    {"id":"signal","nom":"Signal","aliases":["signaux"],"description":"Équipement de signalisation manœuvré par un poste dans le périmètre de cette fiche.","categorie":"EQUIPEMENT","classes_arianes":["Signal"],"documents":["Post.txt"],"statut":"VALIDE"},
+    {"id":"appareil_de_voie","nom":"Appareil de voie","aliases":["appareils de voie"],"description":"Équipement de voie dont la manœuvre fait partie de la définition du poste.","categorie":"EQUIPEMENT","classes_arianes":["AppareilDeVoie"],"documents":["Post.txt"],"statut":"VALIDE"},
+    {"id":"ligne","nom":"Ligne","aliases":[],"description":"Référence de localisation d'un poste de voie principale.","categorie":"OBJET_FERROVIAIRE","classes_arianes":["Ligne"],"documents":["Post.txt"],"statut":"VALIDE"},
+    {"id":"pk","nom":"Point kilométrique","aliases":["PK","Pk"],"description":"Coordonnée utilisée avec la ligne et le rang du tronçon pour localiser un poste de voie principale.","categorie":"LOCALISATION","classes_arianes":["Pk"],"documents":["Post.txt"],"statut":"VALIDE"},
+    {"id":"poste_pai","nom":"Poste de VP électrique à enclenchement informatique","aliases":["PAI"],"description":"Un des types de poste listés dans la fiche Post.","categorie":"TYPE_OBJET","classes_arianes":[],"documents":["Post.txt"],"statut":"VALIDE"},
+    {"id":"poste_prci","nom":"Poste de VP électrique à relais à commande informatique","aliases":["PRCI"],"description":"Un des types de poste listés dans la fiche Post.","categorie":"TYPE_OBJET","classes_arianes":[],"documents":["Post.txt"],"statut":"VALIDE"}
+  ],
+  "relations": [
+    {"source":"signal","type":"EST_COMMANDE_PAR","cible":"poste_aiguillage","statut":"VALIDE","preuve":{"document":"Post.txt","lignes":"1-3","citation":"Installation, quelle que soit par ailleurs sa désignation administrative, comportant la manœuvre des signaux et des appareils de voie."}},
+    {"source":"appareil_de_voie","type":"EST_COMMANDE_PAR","cible":"poste_aiguillage","statut":"VALIDE","preuve":{"document":"Post.txt","lignes":"1-3","citation":"Installation, quelle que soit par ailleurs sa désignation administrative, comportant la manœuvre des signaux et des appareils de voie."}},
+    {"source":"poste_aiguillage","type":"LOCALISE_SUR","cible":"ligne","statut":"VALIDE","condition":"Pour les postes de voie principale ; les postes de SAF peuvent être localisés par désignation du SAF.","preuve":{"document":"Post.txt","lignes":"82-85","citation":"Poste de voie principale :\n\n•\tLocalisation : ligne, rang du tronçon et Pk\n•\tMulti-localisation : dans certain cas, un poste peut être localisé sur plusieurs lignes"}},
+    {"source":"poste_aiguillage","type":"LOCALISE_SUR","cible":"pk","statut":"VALIDE","condition":"Pour les postes de voie principale, avec la ligne et le rang du tronçon.","preuve":{"document":"Post.txt","lignes":"82-85","citation":"Poste de voie principale :\n\n•\tLocalisation : ligne, rang du tronçon et Pk\n•\tMulti-localisation : dans certain cas, un poste peut être localisé sur plusieurs lignes"}},
+    {"source":"poste_pai","type":"EST_UN","cible":"poste_aiguillage","statut":"VALIDE","preuve":{"document":"Post.txt","lignes":"41-48","citation":"Poste de VP électrique à enclenchement informatique ----- PAI"}},
+    {"source":"poste_prci","type":"EST_UN","cible":"poste_aiguillage","statut":"VALIDE","preuve":{"document":"Post.txt","lignes":"41-48","citation":"Poste de VP électrique à relais à commande informatique ----- PRCI"}}
+  ]
+}

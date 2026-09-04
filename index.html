@@ -140,11 +140,14 @@
 
   .msg {
     max-width: 70%;
+    min-width: 0;
     padding: 14px 18px;
     border-radius: 14px;
     line-height: 1.5;
     font-size: 14px;
     white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .msg.utilisateur {
@@ -159,6 +162,59 @@
     background: var(--carte);
     border: 1px solid var(--bordure);
     border-bottom-left-radius: 4px;
+    white-space: normal;
+  }
+
+  .msg.assistant h1, .msg.assistant h2, .msg.assistant h3,
+  .msg.assistant h4 { margin: 12px 0 7px; line-height: 1.25; }
+  .msg.assistant h1 { font-size: 20px; }
+  .msg.assistant h2 { font-size: 18px; }
+  .msg.assistant h3, .msg.assistant h4 { font-size: 16px; }
+  .msg.assistant p { margin: 7px 0; }
+  .msg.assistant ul { margin: 7px 0; padding-left: 22px; }
+  .msg.assistant li { margin: 4px 0; }
+  .msg.assistant code {
+    background: #EEF2F6;
+    border-radius: 4px;
+    padding: 1px 4px;
+    overflow-wrap: anywhere;
+  }
+  .msg.assistant hr { border: 0; border-top: 1px solid var(--bordure); margin: 12px 0; }
+  .table-wrap { width: 100%; overflow-x: auto; margin: 10px 0; }
+  .msg.assistant table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+  .msg.assistant th, .msg.assistant td {
+    border: 1px solid var(--bordure);
+    padding: 7px;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .msg.assistant th { background: #EEF3F8; }
+
+  .response-graph {
+    margin-top: 14px; border: 1px solid #D9E2EC; border-radius: 14px;
+    background: linear-gradient(180deg, #F8FAFC, #F1F5F9); overflow: hidden;
+  }
+  .response-graph-toggle {
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 13px; border: 0; background: transparent; color: #243447;
+    cursor: pointer; font: 600 13px "Segoe UI", sans-serif;
+  }
+  .response-graph-toggle:hover { background: #EAF0F6; }
+  .response-graph-toggle span:last-child { color: #64748B; font-size: 16px; }
+  .response-graph-body { padding: 4px 10px 12px; overflow-x: auto; }
+  .response-graph-svg { display: block; width: 100%; min-width: 560px; height: auto; }
+  .response-graph-edge { stroke: #718096; stroke-width: 1.7; }
+  .response-graph-edge-label {
+    fill: #475569; font: 600 10px "Segoe UI", sans-serif; text-anchor: middle;
+    paint-order: stroke; stroke: #F8FAFC; stroke-width: 5px; stroke-linejoin: round;
+  }
+  .response-graph-node { fill: #FFFFFF; stroke: #5B7FA3; stroke-width: 1.6; }
+  .response-graph-node-label {
+    fill: #172231; font: 600 11px "Segoe UI", sans-serif; text-anchor: middle;
+    dominant-baseline: middle;
   }
 
   .msg.erreur {
@@ -233,6 +289,107 @@
   #user-panel { padding: 12px 16px; border-top: 1px solid var(--bordure); }
   #user-name { display: block; margin-bottom: 8px; font-size: 13px; color: var(--texte-att); }
   #logout { width: 100%; padding: 8px; background: white; border: 1px solid var(--bordure); border-radius: 7px; cursor: pointer; }
+
+  /* Interface conversationnelle moderne */
+  #sidebar { width: 260px; background: #111827; border: 0; color: #E5E7EB; }
+  #sidebar-header { border-color: #273244; padding: 14px; }
+  #nouvelle-conv { background: transparent; border: 1px solid #3B4759; text-align: left; }
+  #nouvelle-conv:hover { background: #202B3C; }
+  .conv-item { color: #D6DCE5; }
+  .conv-item:hover, .conv-item.active { background: #202B3C; color: white; }
+  .conv-suppr, #user-name { color: #9CA3AF; }
+  #user-panel { border-color: #273244; }
+  #logout { color: #D6DCE5; background: transparent; border-color: #3B4759; }
+  #main { background: #F8FAFC; }
+  #header {
+    min-height: 64px; padding: 12px 22px; background: rgba(255,255,255,.94);
+    color: var(--texte); border-bottom: 1px solid var(--bordure); text-align: left;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    backdrop-filter: blur(10px);
+  }
+  #header h1 { font-size: 17px; margin: 0; letter-spacing: -.01em; }
+  #header p { color: var(--texte-att); margin-top: 2px; font-size: 12px; }
+  #ouvrir-graphe {
+    border: 1px solid var(--bordure); background: white; color: var(--texte);
+    padding: 9px 13px; border-radius: 9px; cursor: pointer; font-weight: 600;
+  }
+  #ouvrir-graphe:hover { border-color: #AFC4D8; background: #F2F7FB; }
+  #messages { padding: 30px max(24px, calc((100% - 820px) / 2)); gap: 22px; }
+  .msg { max-width: 88%; font-size: 15px; line-height: 1.65; }
+  .msg.assistant { width: 100%; max-width: 820px; padding: 0; border: 0; background: transparent; }
+  .msg.utilisateur { background: #E8EEF5; color: #172231; border-radius: 18px 18px 5px 18px; padding: 11px 16px; }
+  .msg.chargement { border: 0; background: transparent; padding-left: 0; }
+  #zone-saisie {
+    width: min(860px, calc(100% - 32px)); margin: 0 auto 18px; padding: 7px 8px 7px 18px;
+    border: 1px solid #CBD5E1; border-radius: 20px; box-shadow: 0 8px 28px rgba(15,23,42,.09);
+    align-items: flex-end;
+  }
+  #question { border: 0; padding: 9px 0; min-height: 42px; max-height: 140px; resize: none; font-family: inherit; }
+  #envoyer { width: 42px; height: 42px; padding: 0; border-radius: 13px; font-size: 0; }
+  #envoyer::before { content: "↑"; font-size: 22px; }
+
+  #graph-panel {
+    width: min(62vw, 920px); min-width: 520px; background: #0B1220; color: white;
+    border-left: 1px solid #263246; display: flex; flex-direction: column;
+    transition: width .2s ease, min-width .2s ease; overflow: hidden;
+  }
+  #graph-panel[hidden] { display: none !important; }
+  #graph-panel.fullscreen { position: fixed; inset: 0; width: 100vw; z-index: 30; }
+  .graph-header { padding: 16px; border-bottom: 1px solid #263246; }
+  .graph-title-row { display: flex; justify-content: space-between; align-items: center; }
+  .graph-title-row h2 { margin: 0; font-size: 16px; }
+  #fermer-graphe { border: 0; color: #CBD5E1; background: transparent; font-size: 22px; cursor: pointer; }
+  .graph-tabs { display: flex; gap: 7px; margin-top: 13px; align-items: center; flex-wrap: wrap; }
+  .graph-tab { border: 1px solid #334155; background: #172033; color: #CBD5E1; padding: 7px 10px; border-radius: 8px; cursor: pointer; }
+  .graph-tab.active { background: #2563EB; color: white; border-color: #2563EB; }
+  .graph-tool { border: 1px solid #334155; background: transparent; color: #CBD5E1; width: 32px; height: 32px; border-radius: 8px; cursor: pointer; }
+  .graph-tool:hover { background: #253149; color: white; }
+  #graph-search { flex: 1; min-width: 130px; height: 32px; border: 1px solid #334155; border-radius: 8px; background: #111827; color: white; padding: 0 10px; outline: none; }
+  #graph-search:focus { border-color: #3B82F6; }
+  #graph-status { color: #94A3B8; font-size: 12px; margin-top: 10px; }
+  #graph-canvas { flex: 1; width: 100%; min-height: 320px; cursor: grab; }
+  #graph-canvas:active { cursor: grabbing; }
+  .graph-legend { padding: 10px 16px 15px; color: #94A3B8; font-size: 12px; border-top: 1px solid #263246; }
+  .graph-node-label { fill: #F8FAFC; font: 11px "Segoe UI", sans-serif; pointer-events: none; }
+        .graph-edge-label {
+            fill: #E2E8F0;
+            font: 600 11px "Segoe UI", sans-serif;
+            pointer-events: none;
+            opacity: 1;
+            paint-order: stroke;
+            stroke: #0B1220;
+            stroke-width: 4px;
+            stroke-linejoin: round;
+        }
+        .graph-edge-label.visible {
+            fill: #FFFFFF;
+            font-size: 13px;
+            font-weight: 700;
+        }
+  .graph-node { cursor: pointer; transition: opacity .18s ease; }
+  .graph-node circle { transition: r .18s ease, fill .18s ease, filter .18s ease; }
+  .graph-node.highlight circle { fill: #F59E0B; r: 12px; filter: drop-shadow(0 0 7px rgba(245,158,11,.8)); }
+  .graph-node.selected circle { stroke: #FFFFFF; stroke-width: 3px; r: 13px; }
+  #graph-detail {
+    margin: 0 12px 12px; padding: 14px; border: 1px solid #334155;
+    border-radius: 12px; background: #111B2D; max-height: 230px; overflow-y: auto;
+  }
+  #graph-detail h3 { margin: 0 28px 3px 0; font-size: 15px; }
+  #graph-detail .detail-type { color: #60A5FA; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+  #graph-detail p { color: #CBD5E1; font-size: 12px; line-height: 1.45; margin: 9px 0; }
+  #graph-detail ul { color: #CBD5E1; font-size: 11px; margin: 8px 0; padding-left: 18px; }
+  #interroger-concept { width: 100%; padding: 9px; border: 0; border-radius: 8px; background: #2563EB; color: white; font-weight: 600; cursor: pointer; }
+
+  @media (max-width: 900px) {
+    #sidebar { width: 220px; }
+    #graph-panel { position: fixed; inset: 0 0 0 auto; width: min(92vw, 480px); z-index: 20; box-shadow: -12px 0 35px rgba(0,0,0,.25); }
+  }
+  @media (max-width: 640px) {
+    #sidebar { display: none; }
+    #header p { display: none; }
+    #messages { padding: 22px 16px; }
+    .msg { max-width: 96%; }
+  }
 </style>
 </head>
 <body>
@@ -264,17 +421,40 @@
 
     <div id="main">
       <div id="header">
-        <h1>Ariane Cœur</h1>
-        <p>Assistant du graphe de connaissances Ariane</p>
+        <div><h1>Ariane Cœur</h1><p>Assistant GraphRAG du métamodèle Arianes</p></div>
+        <button id="ouvrir-graphe" type="button">◉ Voir le graphe</button>
       </div>
 
       <div id="messages"></div>
 
       <div id="zone-saisie">
-        <input type="text" id="question" placeholder="Pose ta question sur le graphe Ariane..." autocomplete="off">
+        <textarea id="question" rows="1" placeholder="Pose une question sur Arianes..." autocomplete="off"></textarea>
         <button id="envoyer">Envoyer</button>
       </div>
     </div>
+
+    <aside id="graph-panel" hidden aria-label="Visualisation Neo4j">
+      <div class="graph-header">
+        <div class="graph-title-row"><h2>Graphe Neo4j</h2><button id="fermer-graphe" aria-label="Fermer">×</button></div>
+        <div class="graph-tabs">
+          <button class="graph-tab active" data-vue="metier">Métier</button>
+          <button class="graph-tab" data-vue="metamodele">Métamodèle</button>
+          <input id="graph-search" type="search" placeholder="Rechercher un nœud…" aria-label="Rechercher un nœud">
+          <button class="graph-tool" id="graph-fit" title="Recentrer">⌖</button>
+          <button class="graph-tool" id="graph-fullscreen" title="Plein écran">⛶</button>
+        </div>
+        <div id="graph-status">Chargement du graphe…</div>
+      </div>
+      <svg id="graph-canvas" role="img" aria-label="Sous-graphe Neo4j interactif"></svg>
+      <section id="graph-detail" hidden>
+        <span class="detail-type" id="detail-type"></span>
+        <h3 id="detail-nom"></h3>
+        <p id="detail-description"></p>
+        <ul id="detail-relations"></ul>
+        <button id="interroger-concept" type="button">Interroger ce concept</button>
+      </section>
+      <div class="graph-legend">Molette : zoom • glisser le fond : déplacer • les nœuds restent fixes</div>
+    </aside>
   </div>
 
 <script>
@@ -289,6 +469,16 @@
   const elApp = document.getElementById("app-shell");
   const elAuthForm = document.getElementById("auth-form");
   const elAuthErreur = document.getElementById("auth-erreur");
+  const elGraphPanel = document.getElementById("graph-panel");
+  const elGraphCanvas = document.getElementById("graph-canvas");
+  const elGraphStatus = document.getElementById("graph-status");
+  let vueGraphe = "metier";
+  let animationGraphe = null;
+  let grapheActuel = null;
+  let conceptSelectionne = null;
+  let derniereReponse = "";
+  let transformationGraphe = { x: 0, y: 0, scale: 1 };
+  let compteurSchemas = 0;
 
   async function api(url, options = {}) {
     const res = await fetch(url, options);
@@ -316,6 +506,224 @@
     document.getElementById("user-name").textContent = utilisateur.nom_utilisateur;
     nouvelleConversation(false);
     await chargerConversations();
+  }
+
+  function elementSvg(nom, attributs = {}) {
+    const el = document.createElementNS("http://www.w3.org/2000/svg", nom);
+    for (const [cle, valeur] of Object.entries(attributs)) el.setAttribute(cle, valeur);
+    return el;
+  }
+
+  function dessinerGraphe(data) {
+    if (animationGraphe) cancelAnimationFrame(animationGraphe);
+    elGraphCanvas.innerHTML = "";
+    let largeur = Math.max(elGraphCanvas.clientWidth, 340);
+    let hauteur = Math.max(elGraphCanvas.clientHeight, 420);
+    elGraphCanvas.setAttribute("viewBox", `0 0 ${largeur} ${hauteur}`);
+    transformationGraphe = { x: 0, y: 0, scale: 1 };
+    if (!data.nodes.length) {
+      elGraphStatus.textContent = "Aucune relation validée dans cette vue.";
+      return;
+    }
+    const noeuds = data.nodes.map((n, i) => ({
+      ...n,
+      x: largeur / 2 + Math.cos(i * 2.4) * Math.min(largeur, hauteur) * .32,
+      y: hauteur / 2 + Math.sin(i * 2.4) * Math.min(largeur, hauteur) * .32,
+      vx: 0, vy: 0,
+    }));
+    const parId = new Map(noeuds.map(n => [n.id, n]));
+    const liens = data.links.map(l => ({ ...l, sourceNode: parId.get(l.source), targetNode: parId.get(l.cible) }));
+    const dimensions = positionnerNoeudsFixes(noeuds, liens);
+    largeur = dimensions.largeur;
+    hauteur = dimensions.hauteur;
+    elGraphCanvas.setAttribute("viewBox", `0 0 ${largeur} ${hauteur}`);
+    const defs = elementSvg("defs");
+    const marker = elementSvg("marker", { id: "fleche-graphe", viewBox: "0 0 10 10", refX: "17", refY: "5", markerWidth: "6", markerHeight: "6", orient: "auto-start-reverse" });
+    marker.appendChild(elementSvg("path", { d: "M 0 0 L 10 5 L 0 10 z", fill: "#64748B" }));
+    defs.appendChild(marker);
+    const groupeVue = elementSvg("g");
+    const groupeLiens = elementSvg("g");
+    const groupeNoeuds = elementSvg("g");
+    groupeVue.append(groupeLiens, groupeNoeuds);
+    elGraphCanvas.append(defs, groupeVue);
+    grapheActuel = { data, noeuds, liens, groupeVue, largeur, hauteur };
+
+    for (const lien of liens) {
+      lien.ligne = elementSvg("line", { stroke: "#64748B", "stroke-width": "1.2", opacity: ".75", "marker-end": "url(#fleche-graphe)" });
+      lien.texte = elementSvg("text", { class: "graph-edge-label", "text-anchor": "middle" });
+      lien.texte.textContent = lien.label;
+      groupeLiens.append(lien.ligne, lien.texte);
+    }
+    for (const noeud of noeuds) {
+      const groupe = elementSvg("g", { tabindex: "0", class: "graph-node" });
+      const cercle = elementSvg("circle", {
+        r: data.vue === "metier" ? "9" : "7",
+        fill: data.vue === "metier" ? "#3B82F6" : "#14B8A6",
+        stroke: "#E2E8F0", "stroke-width": "1.2"
+      });
+      const texte = elementSvg("text", { class: "graph-node-label", x: "13", y: "4" });
+      texte.textContent = noeud.label;
+      const titre = elementSvg("title");
+      titre.textContent = `${noeud.label} — ${noeud.categorie}`;
+      groupe.append(cercle, texte, titre);
+      groupeNoeuds.appendChild(groupe);
+      noeud.groupe = groupe;
+      groupe.addEventListener("click", () => afficherDetailNoeud(noeud));
+      groupe.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") afficherDetailNoeud(noeud);
+      });
+    }
+
+    installerNavigationGraphe();
+    for (const n of noeuds) n.groupe.setAttribute("transform", `translate(${n.x},${n.y})`);
+    for (const l of liens) {
+      l.ligne.setAttribute("x1", l.sourceNode.x); l.ligne.setAttribute("y1", l.sourceNode.y);
+      l.ligne.setAttribute("x2", l.targetNode.x); l.ligne.setAttribute("y2", l.targetNode.y);
+      l.texte.setAttribute("x", (l.sourceNode.x + l.targetNode.x) / 2);
+      l.texte.setAttribute("y", (l.sourceNode.y + l.targetNode.y) / 2 - 5);
+    }
+    elGraphStatus.textContent = `${data.nodes.length} nœuds • ${data.links.length} relations`;
+    if (derniereReponse) surlignerConcepts(derniereReponse);
+  }
+
+  function positionnerNoeudsFixes(noeuds, liens) {
+    const voisins = new Map(noeuds.map(n => [n.id, new Set()]));
+    for (const lien of liens) {
+      voisins.get(lien.source).add(lien.cible);
+      voisins.get(lien.cible).add(lien.source);
+    }
+    const restant = new Set(noeuds.map(n => n.id));
+    const composants = [];
+    while (restant.size) {
+      const depart = restant.values().next().value;
+      const pile = [depart], ids = [];
+      restant.delete(depart);
+      while (pile.length) {
+        const id = pile.pop();
+        ids.push(id);
+        for (const voisin of voisins.get(id)) if (restant.delete(voisin)) pile.push(voisin);
+      }
+      composants.push(ids.map(id => noeuds.find(n => n.id === id)));
+    }
+    composants.sort((a, b) => b.length - a.length);
+    const largeurCible = Math.max(1500, Math.ceil(Math.sqrt(noeuds.length)) * 175);
+    let x = 70, y = 70, hauteurLigne = 0, largeurMax = 0;
+    for (const composant of composants) {
+      composant.sort((a, b) => voisins.get(b.id).size - voisins.get(a.id).size || a.label.localeCompare(b.label));
+      const cote = Math.max(360, Math.ceil(Math.sqrt(composant.length)) * 165);
+      if (x + cote > largeurCible && x > 70) { x = 70; y += hauteurLigne + 90; hauteurLigne = 0; }
+      const cx = x + cote / 2, cy = y + cote / 2;
+      composant[0].x = cx; composant[0].y = cy;
+      let index = 1, rayon = 135;
+      while (index < composant.length) {
+        const capacite = Math.max(6, Math.floor(2 * Math.PI * rayon / 125));
+        const quantite = Math.min(capacite, composant.length - index);
+        for (let j = 0; j < quantite; j++) {
+          const angle = -Math.PI / 2 + 2 * Math.PI * j / quantite;
+          composant[index].x = cx + Math.cos(angle) * rayon;
+          composant[index].y = cy + Math.sin(angle) * rayon;
+          index++;
+        }
+        rayon += 135;
+      }
+      x += cote + 90;
+      hauteurLigne = Math.max(hauteurLigne, cote);
+      largeurMax = Math.max(largeurMax, x);
+    }
+    return { largeur: Math.max(700, largeurMax), hauteur: Math.max(520, y + hauteurLigne + 70) };
+  }
+
+  function appliquerTransformationGraphe() {
+    if (!grapheActuel) return;
+    const t = transformationGraphe;
+    grapheActuel.groupeVue.setAttribute("transform", `translate(${t.x} ${t.y}) scale(${t.scale})`);
+  }
+
+  function installerNavigationGraphe() {
+    let panoramique = null;
+    elGraphCanvas.onwheel = (event) => {
+      event.preventDefault();
+      const facteur = event.deltaY < 0 ? 1.12 : .89;
+      const rect = elGraphCanvas.getBoundingClientRect();
+      const px = (event.clientX - rect.left) * grapheActuel.largeur / rect.width;
+      const py = (event.clientY - rect.top) * grapheActuel.hauteur / rect.height;
+      const ancienScale = transformationGraphe.scale;
+      const nouveauScale = Math.max(.45, Math.min(8, ancienScale * facteur));
+      const localX = (px - transformationGraphe.x) / ancienScale;
+      const localY = (py - transformationGraphe.y) / ancienScale;
+      transformationGraphe.x = px - localX * nouveauScale;
+      transformationGraphe.y = py - localY * nouveauScale;
+      transformationGraphe.scale = nouveauScale;
+      appliquerTransformationGraphe();
+    };
+    elGraphCanvas.onpointerdown = (event) => {
+      if (event.target !== elGraphCanvas) return;
+      panoramique = { x: event.clientX, y: event.clientY, tx: transformationGraphe.x, ty: transformationGraphe.y };
+      elGraphCanvas.setPointerCapture(event.pointerId);
+    };
+    elGraphCanvas.onpointermove = (event) => {
+      if (!panoramique) return;
+      const rect = elGraphCanvas.getBoundingClientRect();
+      transformationGraphe.x = panoramique.tx + (event.clientX - panoramique.x) * grapheActuel.largeur / rect.width;
+      transformationGraphe.y = panoramique.ty + (event.clientY - panoramique.y) * grapheActuel.hauteur / rect.height;
+      appliquerTransformationGraphe();
+    };
+    elGraphCanvas.onpointerup = () => { panoramique = null; };
+  }
+
+  function recentrerGraphe(noeud = null) {
+    if (!grapheActuel) return;
+    transformationGraphe = noeud
+      ? { x: grapheActuel.largeur / 2 - noeud.x * 1.7, y: grapheActuel.hauteur / 2 - noeud.y * 1.7, scale: 1.7 }
+      : { x: 0, y: 0, scale: 1 };
+    appliquerTransformationGraphe();
+  }
+
+  function afficherDetailNoeud(noeud) {
+    conceptSelectionne = noeud;
+    document.querySelectorAll(".graph-node.selected").forEach(el => el.classList.remove("selected"));
+    noeud.groupe.classList.add("selected");
+    document.getElementById("detail-type").textContent = noeud.categorie;
+    document.getElementById("detail-nom").textContent = noeud.label;
+    document.getElementById("detail-description").textContent = noeud.description || "Aucune description disponible.";
+    const liste = document.getElementById("detail-relations");
+    liste.innerHTML = "";
+    const relations = grapheActuel.liens.filter(l => l.source === noeud.id || l.cible === noeud.id);
+    grapheActuel.liens.forEach(l => l.texte.classList.toggle("visible", relations.includes(l)));
+    for (const relation of relations.slice(0, 12)) {
+      const item = document.createElement("li");
+      item.textContent = relation.source === noeud.id
+        ? `${relation.label} → ${relation.targetNode.label}`
+        : `${relation.sourceNode.label} → ${relation.label}`;
+      liste.appendChild(item);
+    }
+    document.getElementById("graph-detail").hidden = false;
+    recentrerGraphe(noeud);
+  }
+
+  function normaliserTexte(texte) {
+    return (texte || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/_/g, " ");
+  }
+
+  function surlignerConcepts(reponse) {
+    if (!grapheActuel) return;
+    const texte = normaliserTexte(reponse);
+    let nombre = 0;
+    for (const noeud of grapheActuel.noeuds) {
+      const termes = [noeud.label, noeud.label.replace(/_/g, " ")].map(normaliserTexte).filter(t => t.length >= 2);
+      const present = termes.some(terme => texte.includes(terme));
+      noeud.groupe.classList.toggle("highlight", present);
+      if (present) nombre++;
+    }
+    if (nombre) elGraphStatus.textContent = `${grapheActuel.data.nodes.length} nœuds • ${nombre} cité${nombre > 1 ? "s" : ""} dans la réponse`;
+  }
+
+  async function chargerGraphe(vue = vueGraphe) {
+    vueGraphe = vue;
+    elGraphStatus.textContent = "Chargement du graphe…";
+    document.querySelectorAll(".graph-tab").forEach(b => b.classList.toggle("active", b.dataset.vue === vue));
+    try { dessinerGraphe(await api(`/graph?vue=${encodeURIComponent(vue)}`)); }
+    catch (err) { elGraphStatus.textContent = err.message; }
   }
 
   async function verifierSession() {
@@ -350,12 +758,149 @@
     elAuthErreur.textContent = "";
   };
 
-  function ajouterMessage(role, contenu) {
+  function echapperHtml(texte) {
+    return texte.replace(/[&<>"']/g, (c) => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+    })[c]);
+  }
+
+  function markdownEnLigne(texte) {
+    return echapperHtml(texte)
+      .replace(/`([^`]+)`/g, "<code>$1</code>")
+      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  }
+
+  function rendreMarkdown(contenu) {
+    const lignes = contenu.replace(/\r\n/g, "\n").split("\n");
+    const html = [];
+    let i = 0;
+    while (i < lignes.length) {
+      const ligne = lignes[i];
+      if (ligne.includes("|") && i + 1 < lignes.length && /^\s*\|?[\s:|-]+\|\s*$/.test(lignes[i + 1])) {
+        const cellules = (l) => l.trim().replace(/^\||\|$/g, "").split("|").map(c => c.trim());
+        const entetes = cellules(ligne);
+        i += 2;
+        const rangees = [];
+        while (i < lignes.length && lignes[i].includes("|")) rangees.push(cellules(lignes[i++]));
+        html.push('<div class="table-wrap"><table><thead><tr>' + entetes.map(c => `<th>${markdownEnLigne(c)}</th>`).join("") + '</tr></thead><tbody>' + rangees.map(r => '<tr>' + r.map(c => `<td>${markdownEnLigne(c)}</td>`).join("") + '</tr>').join("") + '</tbody></table></div>');
+        continue;
+      }
+      const titre = ligne.match(/^(#{1,4})\s+(.+)$/);
+      if (titre) html.push(`<h${titre[1].length}>${markdownEnLigne(titre[2])}</h${titre[1].length}>`);
+      else if (/^\s*---+\s*$/.test(ligne)) html.push("<hr>");
+      else if (/^\s*[-*]\s+/.test(ligne)) {
+        const items = [];
+        while (i < lignes.length && /^\s*[-*]\s+/.test(lignes[i])) {
+          items.push(`<li>${markdownEnLigne(lignes[i].replace(/^\s*[-*]\s+/, ""))}</li>`);
+          i++;
+        }
+        html.push(`<ul>${items.join("")}</ul>`);
+        continue;
+      } else if (ligne.trim()) html.push(`<p>${markdownEnLigne(ligne.trim())}</p>`);
+      i++;
+    }
+    return html.join("");
+  }
+
+  function libelleRelation(type) {
+    return String(type || "relation").toLowerCase().replaceAll("_", " ");
+  }
+
+  function creerSchemaReponse(graphe) {
+    if (!graphe || !graphe.nodes?.length || !graphe.links?.length) return null;
+    const carte = document.createElement("section");
+    carte.className = "response-graph";
+    const bouton = document.createElement("button");
+    bouton.type = "button";
+    bouton.className = "response-graph-toggle";
+    bouton.innerHTML = '<span>◉ Schéma des relations</span><span>⌃</span>';
+    const corps = document.createElement("div");
+    corps.className = "response-graph-body";
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "response-graph-svg");
+    const largeur = 760;
+    const hauteur = graphe.nodes.length <= 6 ? 190 : 360;
+    svg.setAttribute("viewBox", `0 0 ${largeur} ${hauteur}`);
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Schéma des relations trouvées dans Neo4j");
+
+    const markerId = `fleche-reponse-${++compteurSchemas}`;
+    const defs = elementSvg("defs");
+    const marker = elementSvg("marker", { id: markerId, viewBox: "0 0 10 10", refX: "9", refY: "5", markerWidth: "6", markerHeight: "6", orient: "auto" });
+    marker.appendChild(elementSvg("path", { d: "M 0 0 L 10 5 L 0 10 z", fill: "#718096" }));
+    defs.appendChild(marker);
+    svg.appendChild(defs);
+
+    const positions = new Map();
+    const n = graphe.nodes.length;
+    graphe.nodes.forEach((noeud, index) => {
+      let x, y;
+      if (n <= 6) {
+        x = 85 + index * ((largeur - 170) / Math.max(1, n - 1));
+        y = hauteur / 2;
+      } else {
+        const angle = (2 * Math.PI * index / n) - Math.PI / 2;
+        x = largeur / 2 + Math.cos(angle) * 280;
+        y = hauteur / 2 + Math.sin(angle) * 125;
+      }
+      positions.set(noeud.id, { x, y });
+    });
+
+    for (const lien of graphe.links) {
+      const source = positions.get(lien.source);
+      const cible = positions.get(lien.target);
+      if (!source || !cible) continue;
+      const dx = cible.x - source.x;
+      const dy = cible.y - source.y;
+      const distance = Math.max(1, Math.hypot(dx, dy));
+      const retrait = 61;
+      const ligne = elementSvg("line", {
+        x1: source.x + dx / distance * retrait, y1: source.y + dy / distance * 24,
+        x2: cible.x - dx / distance * retrait, y2: cible.y - dy / distance * 24,
+        class: "response-graph-edge", "marker-end": `url(#${markerId})`,
+      });
+      const texte = elementSvg("text", {
+        x: (source.x + cible.x) / 2, y: (source.y + cible.y) / 2 - 9,
+        class: "response-graph-edge-label",
+      });
+      texte.textContent = libelleRelation(lien.label);
+      svg.append(ligne, texte);
+    }
+    for (const noeud of graphe.nodes) {
+      const position = positions.get(noeud.id);
+      const groupe = elementSvg("g");
+      groupe.appendChild(elementSvg("rect", { x: position.x - 62, y: position.y - 24, width: "124", height: "48", rx: "12", class: "response-graph-node" }));
+      const texte = elementSvg("text", { x: position.x, y: position.y, class: "response-graph-node-label" });
+      const libelle = String(noeud.label || noeud.id);
+      texte.textContent = libelle.length > 20 ? libelle.slice(0, 18) + "…" : libelle;
+      const titre = elementSvg("title");
+      titre.textContent = libelle;
+      groupe.append(texte, titre);
+      svg.appendChild(groupe);
+    }
+    corps.appendChild(svg);
+    bouton.onclick = () => {
+      corps.hidden = !corps.hidden;
+      bouton.lastElementChild.textContent = corps.hidden ? "⌄" : "⌃";
+    };
+    carte.append(bouton, corps);
+    return carte;
+  }
+
+  function ajouterMessage(role, contenu, graphe = null) {
     const div = document.createElement("div");
     div.className = "msg " + role;
-    div.textContent = contenu;
+    if (role === "assistant") div.innerHTML = rendreMarkdown(contenu);
+    else div.textContent = contenu;
     elMessages.appendChild(div);
     elMessages.scrollTop = elMessages.scrollHeight;
+    if (role === "assistant") {
+      const schema = creerSchemaReponse(graphe);
+      if (schema) div.appendChild(schema);
+      derniereReponse = contenu;
+      surlignerConcepts(contenu);
+    }
     return div;
   }
 
@@ -408,7 +953,7 @@
     try { messages = await api("/conversations/" + id + "/messages"); }
     catch (err) { ajouterMessage("erreur", err.message); return; }
     for (const m of messages) {
-      ajouterMessage(m.role, m.contenu);
+      ajouterMessage(m.role, m.contenu, m.graphe);
     }
     chargerConversations();
   }
@@ -439,7 +984,7 @@
       elChargement.remove();
 
       conversationId = data.conversation_id;
-      ajouterMessage("assistant", data.reponse);
+      ajouterMessage("assistant", data.reponse, data.graphe);
       chargerConversations();
     } catch (err) {
       elChargement.remove();
@@ -452,8 +997,40 @@
 
   elEnvoyer.onclick = envoyerQuestion;
   elQuestion.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") envoyerQuestion();
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); envoyerQuestion(); }
   });
+  elQuestion.addEventListener("input", () => {
+    elQuestion.style.height = "auto";
+    elQuestion.style.height = Math.min(elQuestion.scrollHeight, 140) + "px";
+  });
+  document.getElementById("ouvrir-graphe").onclick = () => {
+    elGraphPanel.hidden = false;
+    chargerGraphe(vueGraphe);
+  };
+  document.getElementById("fermer-graphe").onclick = () => { elGraphPanel.hidden = true; };
+  document.querySelectorAll(".graph-tab").forEach(b => b.onclick = () => chargerGraphe(b.dataset.vue));
+  document.getElementById("graph-fit").onclick = () => recentrerGraphe();
+  document.getElementById("graph-fullscreen").onclick = () => {
+    elGraphPanel.classList.toggle("fullscreen");
+    const donnees = grapheActuel?.data;
+    if (donnees) setTimeout(() => dessinerGraphe(donnees), 220);
+  };
+  document.getElementById("graph-search").addEventListener("input", (event) => {
+    if (!grapheActuel) return;
+    const recherche = normaliserTexte(event.target.value.trim());
+    for (const noeud of grapheActuel.noeuds) {
+      const correspond = recherche && normaliserTexte(noeud.label).includes(recherche);
+      noeud.groupe.style.opacity = !recherche || correspond ? "1" : ".18";
+    }
+    const trouve = recherche && grapheActuel.noeuds.find(n => normaliserTexte(n.label).includes(recherche));
+    if (trouve) recentrerGraphe(trouve);
+  });
+  document.getElementById("interroger-concept").onclick = () => {
+    if (!conceptSelectionne) return;
+    elQuestion.value = `Explique-moi le concept ${conceptSelectionne.label} et ses relations directes.`;
+    elQuestion.dispatchEvent(new Event("input"));
+    elQuestion.focus();
+  };
   document.getElementById("nouvelle-conv").onclick = nouvelleConversation;
   document.getElementById("logout").onclick = async () => {
     try { await api("/auth/logout", { method: "POST" }); } catch (_) {}

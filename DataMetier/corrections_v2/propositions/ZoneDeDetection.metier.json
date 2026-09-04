@@ -1,0 +1,942 @@
+{
+  "domaine": "signalisation_ferroviaire",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "appareil_de_voie",
+      "nom": "Appareil de voie",
+      "aliases": [
+        "aiguille"
+      ],
+      "description": "Dispositif permettant de diriger un train d'une voie à une autre (aiguille, pointe, talon, garage franc).",
+      "classes_arianes": [
+        "Appareil de voie"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "circuit_de_voie",
+      "nom": "Circuit de Voie",
+      "aliases": [
+        "CdV"
+      ],
+      "description": "Système de détection permanente et continue de la présence ou du passage d’une circulation sur une portion de voie déterminée, appelée zone. Utilisé pour des fonctions de sécurité comme l’immobilisation électrique des aiguilles, l’espacement des trains ou l’annonce des circulations.",
+      "classes_arianes": [
+        "Circuit de voie"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "communication",
+      "nom": "Communication",
+      "aliases": [
+        "jonction"
+      ],
+      "description": "Voie de raccordement entre deux voies principales.",
+      "classes_arianes": [
+        "Communication"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "compteur_d_essieux",
+      "nom": "Compteur d’Essieux",
+      "aliases": [
+        "CE",
+        "CPE"
+      ],
+      "description": "Système de surveillance de l’occupation et de la libération d’une section de voie, indépendant de la longueur de la partie contrôlée et de l’isolement entre rails. Fonctionne par comparaison du nombre d’essieux entrants et sortants.",
+      "classes_arianes": [
+        "Circuit de voie"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "domaine_de_protection",
+      "nom": "Domaine de Protection",
+      "aliases": [
+        "DP"
+      ],
+      "description": "Zone protégée dont les modifications peuvent impacter les zones de détection.",
+      "classes_arianes": [],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "joint_de_zone",
+      "nom": "Joint de zone",
+      "aliases": [],
+      "description": "Joint de circuit de voie ou de compteur d'essieux définissant une zone de détection.",
+      "classes_arianes": [
+        "Implantation"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [
+        "IF Ligne"
+      ],
+      "description": "Infrastructure ferroviaire principale dont les modifications peuvent impacter les zones de détection.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "passage_a_niveau",
+      "nom": "Passage à niveau",
+      "aliases": [
+        "PN"
+      ],
+      "description": "Intersection entre une voie ferrée et une route.",
+      "classes_arianes": [
+        "passage_a_niveau"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk",
+      "nom": "Pk",
+      "aliases": [],
+      "description": "Point kilométrique définissant les limites d’une zone de détection.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pn_de_rattachement",
+      "nom": "PN de rattachement",
+      "aliases": [],
+      "description": "Passage à niveau associé à une zone surimposée pour rattachement.",
+      "classes_arianes": [
+        "passage_a_niveau"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste",
+      "nom": "Poste",
+      "aliases": [],
+      "description": "Installation de commande et de contrôle des appareils de voie et des signaux.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_rattachement",
+      "nom": "Poste de rattachement",
+      "aliases": [],
+      "description": "Poste auquel une zone de détection est rattachée pour gestion et contrôle.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "programme_schematique_des_annonces_au_pn",
+      "nom": "Programme schématique des annonces au PN",
+      "aliases": [],
+      "description": "Document technique définissant les annonces pour les passages à niveau et les zones de détection associées.",
+      "classes_arianes": [],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "schema_d_execution",
+      "nom": "Schéma d'exécution",
+      "aliases": [],
+      "description": "Document technique définissant les règles de saisie et les libellés des zones de détection pour les études et travaux.",
+      "classes_arianes": [
+        "execution"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "schema_d_implantation_des_signaux",
+      "nom": "Schéma d'implantation des signaux",
+      "aliases": [],
+      "description": "Document technique définissant les positions des signaux et les règles de saisie associées.",
+      "classes_arianes": [],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "schema_de_signalisation",
+      "nom": "Schéma de Signalisation",
+      "aliases": [],
+      "description": "Document technique définissant les règles de saisie et les libellés des zones de détection.",
+      "classes_arianes": [],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "signal",
+      "nom": "Signal",
+      "aliases": [],
+      "description": "Dispositif de signalisation ferroviaire indiquant des informations aux conducteurs.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "sr_systeme_de_regulation",
+      "nom": "SR (Système de Régulation)",
+      "aliases": [],
+      "description": "Système de régulation des voies et jonctions dont les modifications peuvent impacter les zones de détection.",
+      "classes_arianes": [],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "type_zone_cdv",
+      "nom": "Type Zone CdV",
+      "aliases": [
+        "CdV"
+      ],
+      "description": "Type de zone de détection courte, souvent implantée entre un signal et une zone de type CPE, avec des règles de saisie spécifiques.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "type_zone_ce",
+      "nom": "Type Zone CE",
+      "aliases": [
+        "CE"
+      ],
+      "description": "Type de zone de détection associée à un passage à niveau (PN), définie par des règles de saisie spécifiques autour de l'axe du PN.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "type_zone_cpe",
+      "nom": "Type Zone CPE",
+      "aliases": [
+        "CPE"
+      ],
+      "description": "Type de zone de détection, souvent adjacente à une zone de type CdV.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone",
+      "nom": "Zone",
+      "aliases": [
+        "zone_de_detection"
+      ],
+      "description": "Segment de voie défini par des joints de zone ou des compteurs d'essieux pour la détection de trains.",
+      "classes_arianes": [
+        "zone_de_detection"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_courte",
+      "nom": "Zone courte",
+      "aliases": [],
+      "description": "Zone de détection de 50 mètres, adaptable à 25 mètres en amont et aval en l'absence de PK.",
+      "classes_arianes": [
+        "zone_de_detection"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_de_detection",
+      "nom": "Zone de détection",
+      "aliases": [],
+      "description": "Zone définie par des points kilométriques (PkD et PkF) pour la détection de trains ou d'obstacles, avec des règles de saisie spécifiques selon le type de zone.",
+      "classes_arianes": [
+        "zone_de_detection"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_de_detection_des_trains",
+      "nom": "zone de détection des trains",
+      "aliases": [],
+      "description": "Installation fixe sur voie dédiée à la détection des trains, définie dans Gaïa. Peut être une zone principale ou surimposée.",
+      "classes_arianes": [
+        "zone_de_detection"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_encadrante",
+      "nom": "Zone encadrante",
+      "aliases": [],
+      "description": "Zone adjacente ou environnante dont les modifications peuvent impacter une zone de détection.",
+      "classes_arianes": [
+        "Zone"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_principale",
+      "nom": "Zone principale",
+      "aliases": [],
+      "description": "Zone de détection principale sur voie principale (VP) ou voie secondaire (VS), caractérisée par un libellé, un poste de rattachement, des Pk de début et de fin, et des dates de début et de fin.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_surimposee",
+      "nom": "Zone surimposée",
+      "aliases": [],
+      "description": "Zone de détection additionnelle rattachée à une zone principale, avec un libellé spécifique, un rattachement à la zone principale, un PN de rattachement, des Pk de début et de fin, et des dates de début et de fin.",
+      "classes_arianes": [
+        "Type Zone",
+        "zone_de_detection"
+      ],
+      "documents": [
+        "ZoneDeDetection.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "circuit_de_voie",
+      "type": "EST_UN",
+      "cible": "zone_de_detection_des_trains",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Le Circuit de Voie (CdV) est un système de détection permanente et continue de la présence ou du passage d’une circulation sur une portion de voie déterminée, appelée zone."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "compteur_d_essieux",
+      "type": "EST_UN",
+      "cible": "zone_de_detection_des_trains",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Le Compteur d’Essieux (CE) est destiné à surveiller l’occupation et la libération d’une section de voie."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "circuit_de_voie",
+      "type": "UTILISE",
+      "cible": "zone_de_detection_des_trains",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Il est utilisé dans de nombreuses installations pour réaliser des fonctions de sécurité, notamment pour l’immobilisation électrique des aiguilles, l’espacement des trains, l’annonce des circulations (PN etc…)."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_principale",
+      "type": "COMPOSE_DE",
+      "cible": "zone_de_detection_des_trains",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Les CdV (circuits de voie) et les CE (compteurs d’essieux) sont répartis en 2 classes : Zones principales sur VP ou VS"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_principale",
+      "type": "RATTACHE_A",
+      "cible": "poste_de_rattachement",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Poste de rattachement (voir §4.8)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_surimposee",
+      "type": "RATTACHE_A",
+      "cible": "zone_principale",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Rattachement à la zone principale"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_surimposee",
+      "type": "RATTACHE_A",
+      "cible": "pn_de_rattachement",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "PN de rattachement"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_principale",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Pk début et d’un Pk fin"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_surimposee",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "1-186",
+        "citation": "Pk début et d’un Pk fin"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "joint_de_zone",
+      "type": "LOCALISE_SUR",
+      "cible": "appareil_de_voie",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "le joint de zone ne doit pas être localisé au même PK que l’aiguille"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "négation ou modalité : ne pas interpréter comme un fait universel"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "joint_de_zone",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "Joint au Pk du signal"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "joint_de_zone",
+      "type": "LOCALISE_SUR",
+      "cible": "signal",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "Joint au droit du signal : joint au Pk du signal"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "joint_de_zone",
+      "type": "LOCALISE_SUR",
+      "cible": "appareil_de_voie",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "Joint aiguille seule, côté pointe : joint à 10 m de la pointe"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "joint_de_zone",
+      "type": "LOCALISE_SUR",
+      "cible": "appareil_de_voie",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "Joint aiguille seule, côté talon (GF) : joint à 15 m du GF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "joint_de_zone",
+      "type": "LOCALISE_SUR",
+      "cible": "communication",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "Joint d’une communication simple : joint au milieu de la COM"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone",
+      "type": "RATTACHE_A",
+      "cible": "poste",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "Les zones doivent être rattachées au poste"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_surimposee",
+      "type": "RATTACHE_A",
+      "cible": "passage_a_niveau",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "CdV ou CE* surimposé de PN en gare : PN"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_courte",
+      "type": "RATTACHE_A",
+      "cible": "passage_a_niveau",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "CdV ou CE* surimposé ou zone courte de PN en pleine voie : PN"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone",
+      "type": "COMPOSE_DE",
+      "cible": "circuit_de_voie",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "Un CdV à joints est décrit par ses extrémités"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone",
+      "type": "COMPOSE_DE",
+      "cible": "compteur_d_essieux",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "La fonction zone peut être réalisée par l’intermédiaire de compteurs d’essieux"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "négation ou modalité : ne pas interpréter comme un fait universel",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "signal",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "poste",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "187-372",
+        "citation": "les zones immédiatement en aval du premier signal commandé par le Poste concerné"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "signal",
+      "type": "LOCALISE_SUR",
+      "cible": "zone_de_detection",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "CE à proximité d’un signal => +/- 15 m"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "passage_a_niveau",
+      "type": "LOCALISE_SUR",
+      "cible": "zone_de_detection",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "règle des 25m de l’axe du PN"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_de_detection",
+      "type": "IMPACTE",
+      "cible": "zone_encadrante",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "Vérifier les zones encadrantes"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_de_detection",
+      "type": "IMPACTE",
+      "cible": "ligne",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "Vérifier l’impact sur IF Ligne (PN…)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_de_detection",
+      "type": "IMPACTE",
+      "cible": "sr_systeme_de_regulation",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "Vérifier l’impact lors de modification de SR (sur voies et jonctions)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_de_detection",
+      "type": "IMPACTE",
+      "cible": "domaine_de_protection",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "Vérifier l’impact sur les Domaines de Protection (DP)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "schema_de_signalisation",
+      "type": "UTILISE",
+      "cible": "zone_de_detection",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "Pièce 1 ou Schéma de Signalisation"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "schema_d_implantation_des_signaux",
+      "type": "UTILISE",
+      "cible": "zone_de_detection",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "Schéma d’implantation des signaux"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "programme_schematique_des_annonces_au_pn",
+      "type": "UTILISE",
+      "cible": "zone_de_detection",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "Programme schématique des annonces au PN"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "schema_d_execution",
+      "type": "UTILISE",
+      "cible": "zone_de_detection",
+      "preuve": {
+        "document": "ZoneDeDetection.txt",
+        "lignes": "373-421",
+        "citation": "Schéma d’exécution"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation zone_surimposee/COMPOSE_DE/zone_de_detection rejetée: citation absente du passage",
+    "Relation aiguille/EST_UN/appareil_de_voie rejetée: concept source ou cible absent, citation absente du passage",
+    "Relation pk/LOCALISE_SUR/voie rejetée: concept source ou cible absent",
+    "Relation pk/LOCALISE_SUR/voie rejetée: concept source ou cible absent",
+    "Relation zone_de_detection/DECRIT_PAR/type_zone_cdv rejetée: citation absente du passage",
+    "Relation zone_de_detection/DECRIT_PAR/type_zone_ce rejetée: citation absente du passage",
+    "Relation zone_de_detection/DECRIT_PAR/type_zone_cpe rejetée: citation absente du passage"
+  ],
+  "document_source": "ZoneDeDetection.txt",
+  "relations_rejetees": [],
+  "version_validation": 2
+}

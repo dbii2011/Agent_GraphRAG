@@ -1,0 +1,1119 @@
+{
+  "domaine": "gestion des postes ferroviaires",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "abonnement_aupres_des_pri",
+      "nom": "Abonnement auprès des PRI",
+      "aliases": [],
+      "description": "Abonnement assurant la fourniture automatique de schémas.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "appareil_de_voie",
+      "nom": "Appareil de voie",
+      "aliases": [],
+      "description": "Aiguillage ou autre installation de voie manœuvrée depuis un poste.",
+      "classes_arianes": [
+        "Appareil de voie",
+        "appareil_de_voie"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "base",
+      "nom": "base",
+      "aliases": [],
+      "description": "Base de données ou système de gestion où les postes sont enregistrés (ex: RESEAU/GAIA).",
+      "classes_arianes": [
+        "base"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "canton",
+      "nom": "Canton",
+      "aliases": [],
+      "description": "Segment de voie délimité pour la sécurité ferroviaire.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ccr",
+      "nom": "CCR",
+      "aliases": [],
+      "description": "Centre de Commande Régional, structure pouvant évoluer indépendamment d'un poste.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "date_de_dfs",
+      "nom": "Date de DFS",
+      "aliases": [],
+      "description": "Date de mise hors service d'un poste.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "DATE"
+    },
+    {
+      "id": "dda",
+      "nom": "DDA",
+      "aliases": [],
+      "description": "Date de mise en service ou document associé.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "DATE"
+    },
+    {
+      "id": "domaine_de_protection_voie",
+      "nom": "Domaine de protection voie",
+      "aliases": [],
+      "description": "Zone sécurisée autour des voies et caténaires.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "format_papier",
+      "nom": "Format papier",
+      "aliases": [],
+      "description": "Support physique pour la transmission de schémas.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "installation_fixe_voie",
+      "nom": "Installation fixe voie",
+      "aliases": [],
+      "description": "Équipement permanent sur les voies ferrées.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "itineraire",
+      "nom": "Itinéraire",
+      "aliases": [],
+      "description": "Trajet défini pour les trains.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "levier_de_commande",
+      "nom": "Levier de commande",
+      "aliases": [
+        "levier"
+      ],
+      "description": "Élément de manœuvre individuel ou groupé, localisé en mètre ou en campagne.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "libelle",
+      "nom": "Libellé",
+      "aliases": [],
+      "description": "Nom ou identification textuelle d'un poste.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "CARACTERISTIQUE"
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [],
+      "description": "Élément de réseau ferroviaire sur lequel un poste est localisé.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "localisation",
+      "nom": "Localisation",
+      "aliases": [],
+      "description": "Position géographique d'un poste ou d'un point, définie par ligne, tronçon et PK.",
+      "classes_arianes": [
+        "Localisation"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "mes_du_plan_technique",
+      "nom": "MES du Plan Technique",
+      "aliases": [],
+      "description": "Modification d'état du plan technique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk",
+      "nom": "Pk",
+      "aliases": [],
+      "description": "Point kilométrique définissant la localisation d'un poste sur une ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "plan_technique",
+      "nom": "Plan technique",
+      "aliases": [],
+      "description": "Document technique représentant l'état des installations ferroviaires.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "point",
+      "nom": "Point",
+      "aliases": [],
+      "description": "Groupe de leviers de commande en campagne sous la dépendance d’un poste, ou point de manœuvre spécifique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "point_l",
+      "nom": "Point L",
+      "aliases": [],
+      "description": "Point spécifique de suppression d'un objet.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste",
+      "nom": "Poste",
+      "aliases": [],
+      "description": "Installation comportant la manœuvre des signaux et des appareils de voie, pouvant être rattachée ou non à un SAF.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_d_aiguillage",
+      "nom": "Poste d'aiguillage",
+      "aliases": [],
+      "description": "Équipement permettant de commander et superviser les aiguillages et les itinéraires.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_vp_electrique_a_enclenchement_informatique",
+      "nom": "Poste de VP électrique à enclenchement informatique",
+      "aliases": [
+        "PAI"
+      ],
+      "description": "Type de poste électrique utilisant un enclenchement informatique pour la gestion des itinéraires.",
+      "classes_arianes": [
+        "Poste de VP électrique à enclenchement informatique"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_vp_electrique_a_leviers_d_itineraire",
+      "nom": "Poste de VP électrique à leviers d’itinéraire",
+      "aliases": [
+        "PLIT"
+      ],
+      "description": "Type de poste électrique utilisant des leviers pour les itinéraires.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_vp_electrique_a_relais_a_commande_informatique",
+      "nom": "Poste de VP électrique à relais à commande informatique",
+      "aliases": [
+        "PRCI"
+      ],
+      "description": "Type de poste électrique utilisant des relais et une commande informatique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_vp_electrique_commande_centralisee",
+      "nom": "Poste de VP électrique commande centralisée",
+      "aliases": [
+        "CC",
+        "CC-PC"
+      ],
+      "description": "Type de poste électrique commandé de manière centralisée.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_vp_electrique_tout_relais_a_transit_souple",
+      "nom": "Poste de VP électrique tout relais à transit souple",
+      "aliases": [
+        "PRA",
+        "PRAW",
+        "PRS"
+      ],
+      "description": "Type de poste électrique tout relais avec transit souple.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_vp_mecanique_electromecaniques_unifies",
+      "nom": "Poste de VP mécanique électromécaniques unifiés",
+      "aliases": [
+        "EMU"
+      ],
+      "description": "Type de poste mécanique utilisant des systèmes électromécaniques unifiés.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_vs_de_triage_a_commande_automatique",
+      "nom": "Poste de VS de triage à commande automatique",
+      "aliases": [
+        "PVS-TRI"
+      ],
+      "description": "Type de poste de voie de service (VS) à commande automatique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_vs_electrique",
+      "nom": "Poste de VS électrique",
+      "aliases": [
+        "PVS-ELEC"
+      ],
+      "description": "Type de poste de voie de service (VS) électrique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_vs_mecanique_non_enclenche",
+      "nom": "Poste de VS mécanique non enclenché",
+      "aliases": [
+        "PVS-MEC"
+      ],
+      "description": "Type de poste de voie de service (VS) mécanique non enclenché.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_divers",
+      "nom": "Poste divers",
+      "aliases": [
+        "LEVIER",
+        "P-10",
+        "POINT"
+      ],
+      "description": "Type de poste diversifié selon le nombre de leviers ou la fonction.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pr",
+      "nom": "PR",
+      "aliases": [
+        "Point de repère"
+      ],
+      "description": "Point de repère ou de référence sur le réseau.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf",
+      "nom": "SAF",
+      "aliases": [],
+      "description": "Système d'Aiguillage et de Feux, type de gare auquel un poste peut être rattaché.",
+      "classes_arianes": [
+        "Saf"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "schema_de_signalisation",
+      "nom": "Schéma de signalisation",
+      "aliases": [],
+      "description": "Document graphique représentant la signalisation ferroviaire.",
+      "classes_arianes": [
+        "Modele signalisation"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "secteur_raccordement_sud",
+      "nom": "Secteur Raccordement sud",
+      "aliases": [],
+      "description": "Zone géographique ou fonctionnelle spécifique.",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "signal",
+      "nom": "Signal",
+      "aliases": [],
+      "description": "Élément de signalisation ferroviaire manœuvré depuis un poste.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "telecommande_asservi",
+      "nom": "Télécommandé (asservi)",
+      "aliases": [],
+      "description": "Mode de fonctionnement d'un poste où la commande est effectuée à distance avec asservissement.",
+      "classes_arianes": [
+        "Télécommandé (asservi)"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "type_de_poste",
+      "nom": "Type de poste",
+      "aliases": [],
+      "description": "Catégorie ou modèle d'un poste d'aiguillage.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_de_macon",
+      "nom": "Zone de Mâcon",
+      "aliases": [],
+      "description": "Zone géographique ou fonctionnelle spécifique.",
+      "classes_arianes": [
+        "Zone"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "poste",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "un poste est rattaché à un SAF de type gare"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Une ou plusieurs localisations à savoir pour chaque ligne sur lequel il est localisé"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "PK de l'axe du bâtiment projeté sur la ligne"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_de_vp_electrique_a_enclenchement_informatique",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Cas des Poste SEI : classé dans le type Poste de VP électrique à enclenchement informatique"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_electrique_a_enclenchement_informatique"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_de_vp_electrique_a_relais_a_commande_informatique",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique à relais à commande informatique ----- PRCI"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_electrique_a_relais_a_commande_informatique"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_de_vp_electrique_tout_relais_a_transit_souple",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique tout relais à transit souple ----- PRS / PRA / PRAW"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_electrique_tout_relais_a_transit_souple"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_de_vp_electrique_commande_centralisee",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique commande centralisée ----- CC / CC-PC"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_electrique_commande_centralisee"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_de_vp_electrique_a_leviers_d_itineraire",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique à leviers d’itinéraire ----- PLIT"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_electrique_a_leviers_d_itineraire"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_de_vp_mecanique_electromecaniques_unifies",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP mécanique électromécaniques unifiés ----- EMU"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_mecanique_electromecaniques_unifies"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_de_vs_de_triage_a_commande_automatique",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VS de triage à commande automatique ----- PVS-TRI"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vs_de_triage_a_commande_automatique"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_de_vs_electrique",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VS électrique ----- PVS-ELEC"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vs_electrique"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_de_vs_mecanique_non_enclenche",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VS mécanique non enclenché ----- PVS-MEC"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vs_mecanique_non_enclenche"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_divers",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste divers de moins de 10 leviers ----- P-10"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_divers"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "point",
+      "type": "EST_UN",
+      "cible": "levier_de_commande",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Les points de manœuvre : libellé point suivi du numéro"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "signal",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Installation, quelle que soit par ailleurs sa désignation administrative, comportant la manœuvre des signaux"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste",
+      "type": "NECESSITE",
+      "cible": "base",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "il est nécessaire que celui apparaisse dans la base RESEAU/GAIA"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ccr",
+      "type": "NECESSITE",
+      "cible": "base",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "il est nécessaire que celle-ci apparaisse également dans la base RESEAU/GAIA"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "installation_fixe_voie",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les installions fixes voies"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "domaine_de_protection_voie",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les domaines de protection voies et caténaires secondaires"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "canton",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les cantons et itinéraires"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "installation_fixe_voie",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact à vérifier sur les voies et les installations fixes sur voies"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "pr",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact éventuellement sur les PR"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "LOCALISE_SUR",
+      "cible": "localisation",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Erreur de la localisation du poste lors de la saisie"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "LOCALISE_SUR",
+      "cible": "localisation",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Changement de type de poste sans modification de la localisation"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "COMPOSE_DE",
+      "cible": "libelle",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Erreur du libellé du poste lors de la saisie"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "composition suspecte : la cible est une propriété",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "COMPOSE_DE",
+      "cible": "type_de_poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Changement de type de poste sans modification de la localisation"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation poste/NECESSITE/localisation rejetée: citation absente du passage",
+    "Relation levier_commande/LOCALISE_SUR/pk rejetée: citation absente du passage",
+    "Relation appareil_de_voie/EST_COMMANDE_PAR/poste rejetée: citation absente du passage",
+    "Relation telecommande/EST_UN/poste rejetée: citation absente du passage",
+    "Relation poste_d_aiguillage/EST_UN/poste rejetée: concept source ou cible absent",
+    "Relation poste_d_aiguillage/EST_UN/poste rejetée: concept source ou cible absent",
+    "Relation poste_d_aiguillage/EST_UN/poste rejetée: concept source ou cible absent",
+    "Relation poste_d_aiguillage/EST_UN/poste rejetée: concept source ou cible absent",
+    "Relation format_papier/EST_PRIVILEGIE/schema_signalisation rejetée: type de relation non autorisé",
+    "Relation abonnement_pri/ASSURE/schema_signalisation rejetée: type de relation non autorisé"
+  ],
+  "document_source": "Post.txt",
+  "relations_rejetees": [
+    {
+      "source": "poste_d_aiguillage",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "plan_technique",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "celui-ci ne figure plus sur le plan technique suite à sa suppression physique"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [
+        "commande incompatible avec une date, un document ou une caractéristique",
+        "citation sans action de commande"
+      ]
+    }
+  ],
+  "version_validation": 2
+}

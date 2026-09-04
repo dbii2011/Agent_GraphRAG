@@ -1,0 +1,246 @@
+{
+  "domaine": "gestion des clôtures ferroviaires",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "cloture",
+      "nom": "Clôture",
+      "aliases": [],
+      "description": "Obstacle fermant l’accès aux emprises ferroviaires pour matérialiser les limites et empêcher l’entrée de personnes.",
+      "classes_arianes": [
+        "Obstacle"
+      ],
+      "documents": [
+        "HabillageValeur_Cloture.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "crr",
+      "nom": "CRR",
+      "aliases": [],
+      "description": "Centre Régional de Réalisation, responsable de la gestion des clôtures.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageValeur_Cloture.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "date_de_travail",
+      "nom": "Date de travail",
+      "aliases": [],
+      "description": "Date à laquelle une opération (création, modification, suppression) sur une clôture est effectuée.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageValeur_Cloture.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "fichier_excel",
+      "nom": "Fichier Excel",
+      "aliases": [],
+      "description": "Document de gestion des clôtures utilisé pour les opérations de création, modification ou suppression.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageValeur_Cloture.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "guf",
+      "nom": "GUF",
+      "aliases": [],
+      "description": "Gestionnaire Unifié de la Ferroviaire, destinataire des fichiers Excel.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageValeur_Cloture.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pk",
+      "nom": "Pk",
+      "aliases": [],
+      "description": "Point kilométrique sur une ligne ferroviaire.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "HabillageValeur_Cloture.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "portion_de_ligne",
+      "nom": "Portion de ligne",
+      "aliases": [],
+      "description": "Segment de ligne ferroviaire défini par des Pk début et fin.",
+      "classes_arianes": [
+        "Portion"
+      ],
+      "documents": [
+        "HabillageValeur_Cloture.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "type_de_cloture",
+      "nom": "Type de clôture",
+      "aliases": [],
+      "description": "Catégorie de clôture définie par ses caractéristiques techniques.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageValeur_Cloture.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "cloture",
+      "type": "LOCALISE_SUR",
+      "cible": "portion_de_ligne",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "Pk début et fin sur une portion de ligne"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "cloture",
+      "type": "LOCALISE_SUR",
+      "cible": "portion_de_ligne",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "Position de la clôture (Gauche ou droite)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "cloture",
+      "type": "COMPOSE_DE",
+      "cible": "type_de_cloture",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "Type de clôture « voir liste chapitre 3 »"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "fichier_excel",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "crr",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "fichier Excel envoyé par les CRR"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "cloture",
+      "type": "GERE_PAR",
+      "cible": "guf",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "il faut supprimer l’objet"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "cloture",
+      "type": "GERE_PAR",
+      "cible": "guf",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "il faut ajouter l’objet"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "cloture",
+      "type": "GERE_PAR",
+      "cible": "guf",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "il faut modifier l’objet"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "cloture",
+      "type": "DEPEND_DE",
+      "cible": "date_de_travail",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "à la date de travail prévue"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "cloture",
+      "type": "DEPEND_DE",
+      "cible": "date_de_travail",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "Borner l’objet (DFA= à la date du jour du travail)"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "cloture",
+      "type": "DEPEND_DE",
+      "cible": "date_de_travail",
+      "preuve": {
+        "document": "HabillageValeur_Cloture.txt",
+        "lignes": "1-123",
+        "citation": "Modifier l’actif à la date de travail prévue"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    }
+  ],
+  "erreurs_validation": [
+    "Relation fichier_excel/EST_COMMANDE_PAR/guf rejetée: citation absente du passage"
+  ],
+  "document_source": "HabillageValeur_Cloture.txt"
+}

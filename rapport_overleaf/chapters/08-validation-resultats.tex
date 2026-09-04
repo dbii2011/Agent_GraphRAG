@@ -1,0 +1,65 @@
+\chapter{Validation et résultats}
+
+\section{Stratégie de test}
+
+La validation distingue les fonctions unitaires, le retrieval, les règles de sécurité et l'intégration Neo4j. Les tests couvrent notamment :
+
+\begin{itemize}
+  \item la résolution de classes et le choix du mode ;
+  \item la vérification des citations ;
+  \item les corrections directionnelles bornées ;
+  \item le rejet des auto-relations ;
+  \item la conservation de plusieurs preuves ;
+  \item le refus d'importer une proposition non validée ;
+  \item la récupération des chunks de preuve métier sans embedding ;
+  \item l'isolation des conversations.
+\end{itemize}
+
+La dernière exécution a obtenu 51 tests réussis. Un avertissement de dépréciation Starlette reste à traiter lors d'une future mise à jour des dépendances.
+
+\capture{tests-51.png}{Résultat de la suite de 51 tests}{fig:tests}
+
+\section{Évaluation fonctionnelle du GraphRAG}
+
+Le fichier \code{evaluate\_graphrag.py} regroupe douze scénarios couvrant les questions structurelles, documentaires, hybrides et hors domaine. Lors de l'évaluation complète avec Neo4j et Mistral disponibles, les douze retrievals et générations ont abouti, et la question hors domaine a été refusée.
+
+\section{Pilote métier}
+
+\begin{table}[H]
+\centering
+\caption{État du pilote poste d'aiguillage dans Neo4j}
+\begin{tabular}{lr}
+\toprule
+Élément & Nombre \\
+\midrule
+Concepts métier & 7 \\
+Relations métier & 6 \\
+Liens vers les classes UML & 5 \\
+Liens vers le document & 7 \\
+Liens vers les chunks & 9 \\
+Chunks distincts utilisés comme preuves & 3 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Une seconde importation identique n'a pas créé de doublon. Trois questions de retrieval ont retrouvé les relations et leurs citations. Un test complet avec Mistral a correctement distingué les relations métier de commande des associations UML.
+
+\section{Discussion}
+
+Les résultats démontrent la faisabilité de la chaîne complète, depuis la source documentaire jusqu'à la réponse sourcée. Ils ne constituent pas une validation ferroviaire de l'ensemble des relations extraites. La précision d'une relation dépend de la qualité du passage, du schéma de prédicats, du prompt et de la relecture.
+
+\section{Limites}
+
+\begin{itemize}
+  \item la sélection initiale des classes candidates du pipeline métier est principalement lexicale ;
+  \item les noms CamelCase et les synonymes peuvent réduire le rappel ;
+  \item les 341 relations restantes exigent une revue ;
+  \item le pilote n'est pas exhaustif, même pour les postes ;
+  \item les réponses dépendent de la disponibilité de Mistral ;
+  \item les métriques techniques ne remplacent pas une évaluation par des experts du domaine.
+\end{itemize}
+
+\section{Prototype de reranking}
+
+Un prototype de reranking supervisé a été réalisé pour étudier une piste de machine learning. Avec seulement 40 exemples déséquilibrés, il a obtenu des résultats inférieurs à la fusion hybride : nDCG@5 de 0,8725 contre 0,9369, et Recall@5 de 0,6367 contre 0,7033. Il reste donc désactivé. Cette expérience indique qu'un jeu de questions--chunks annoté par des experts est nécessaire avant toute activation.
+

@@ -1,0 +1,213 @@
+{
+  "domaine": "traversée_voie",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "annonce",
+      "nom": "Annonce",
+      "aliases": [],
+      "description": "Dispositif de réarment ou d’annonce lié à une traversée de voie pour piétons.",
+      "classes_arianes": [
+        "Annonce"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "dispositif_signalant_l_approche_des_circulations",
+      "nom": "dispositif signalant l’approche des circulations",
+      "aliases": [],
+      "description": "Dispositif permettant de signaler l’approche des circulations pour les traversées de voie.",
+      "classes_arianes": [
+        "traversee_voie"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "gare",
+      "nom": "Gare",
+      "aliases": [],
+      "description": "Point d’arrêt où est localisée une traversée de voie pour piétons.",
+      "classes_arianes": [
+        ":gare"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [],
+      "description": "Ligne ferroviaire où est localisée une traversée de voie pour piétons.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "passage_plancheie",
+      "nom": "passage planchéié",
+      "aliases": [],
+      "description": "Passage permettant de traverser les voies à niveau, muni ou non d’un dispositif signalant l’approche des circulations.",
+      "classes_arianes": [
+        "traversee_voie"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk",
+      "nom": "Pk",
+      "aliases": [],
+      "description": "Point kilométrique correspondant à l’axe de la traversée de voie pour piétons.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "region",
+      "nom": "Region",
+      "aliases": [],
+      "description": "Région associée à une traversée de voie pour piétons.",
+      "classes_arianes": [
+        "Region"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf",
+      "nom": "Saf",
+      "aliases": [],
+      "description": "SAF ou sous SAF où est localisée une traversée de voie pour piétons.",
+      "classes_arianes": [
+        "Saf"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "traversee_des_voies_a_niveau_par_le_public",
+      "nom": "Traversée des Voies à niveau par le Public",
+      "aliases": [
+        "TVP"
+      ],
+      "description": "Désignation générique des équipements mis en œuvre pour permettre au public de traverser, dans un point d’arrêt, les voies à niveau en empruntant un passage planchéié, muni ou non d’un dispositif signalant l’approche des circulations. Ce terme exclut les ouvrages dénivelés (passerelles, passages souterrains, …).",
+      "classes_arianes": [
+        "traversee_voie"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "traversee_des_voies_a_niveau_par_le_public",
+      "type": "COMPOSE_DE",
+      "cible": "dispositif_signalant_l_approche_des_circulations",
+      "preuve": {
+        "document": "traversee_voie.txt",
+        "lignes": "1-60",
+        "citation": "muni ou non d’un dispositif signalant l’approche des circulations"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "négation ou modalité : ne pas interpréter comme un fait universel",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "traversee_des_voies_a_niveau_par_le_public",
+      "type": "FAIT_PARTIE_DE",
+      "cible": "gare",
+      "preuve": {
+        "document": "traversee_voie.txt",
+        "lignes": "1-60",
+        "citation": "dans un point d’arrêt"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "traversee_des_voies_a_niveau_par_le_public",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "traversee_voie.txt",
+        "lignes": "1-60",
+        "citation": "traverser, dans un point d’arrêt, les voies à niveau"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "traversee_des_voies_a_niveau_par_le_public",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "traversee_voie.txt",
+        "lignes": "1-60",
+        "citation": "PK : le PK correspond à l’axe de la TVP"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation traversee_voie_public/EST_UN/traversee_voie rejetée: concept source ou cible absent",
+    "Relation traversee_voie_public/COMPOSE_DE/passage_plancheie rejetée: citation absente du passage",
+    "Relation traversee_voie_public/LOCALISE_SUR/saf_tvp rejetée: citation absente du passage",
+    "Relation traversee_voie_public/RATTACHE_A/region_tvp rejetée: citation absente du passage"
+  ],
+  "document_source": "traversee_voie.txt",
+  "relations_rejetees": [],
+  "version_validation": 2
+}

@@ -1,0 +1,164 @@
+{
+  "domaine": "sécurité ferroviaire",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "dbc_capteur_2eme_generation",
+      "nom": "DBC – Capteur 2ème génération",
+      "aliases": [],
+      "description": "Type de détecteur de boîtes chaudes de 2ème génération.",
+      "classes_arianes": [
+        "Detecteur"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "dbc_capteur_3eme_generation",
+      "nom": "DBC – Capteur 3ème génération",
+      "aliases": [],
+      "description": "Type de détecteur de boîtes chaudes de 3ème génération.",
+      "classes_arianes": [
+        "Detecteur"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "dbc_capteur_4eme_generation",
+      "nom": "DBC – Capteur 4ème génération",
+      "aliases": [],
+      "description": "Type de détecteur de boîtes chaudes de 4ème génération.",
+      "classes_arianes": [
+        "Detecteur"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "dbc_capteur_derniere_generation_4bis",
+      "nom": "DBC – Capteur dernière génération (4Bis)",
+      "aliases": [],
+      "description": "Type de détecteur de boîtes chaudes de dernière génération (4Bis).",
+      "classes_arianes": [
+        "Detecteur"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "detecteur_de_boites_chaudes",
+      "nom": "Détecteur de boîtes chaudes",
+      "aliases": [
+        "DBC"
+      ],
+      "description": "Appareil utilisé dans le milieu ferroviaire afin de détecter un éventuel échauffement des boîtes d'essieux sur un train.",
+      "classes_arianes": [
+        "Detecteur"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_d_aiguillage_principal",
+      "nom": "Poste d'aiguillage principal",
+      "aliases": [],
+      "description": "Poste recevant les informations émises par un détecteur de boîtes chaudes.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "poste_d_aiguillage_secondaire",
+      "nom": "Poste d'aiguillage secondaire",
+      "aliases": [],
+      "description": "Poste éventuellement recevant les informations émises par un détecteur de boîtes chaudes.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "voie_de_ligne",
+      "nom": "Voie de ligne",
+      "aliases": [],
+      "description": "Voie sur laquelle est localisé un détecteur de boîtes chaudes.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "UTILISE",
+      "cible": "voie_de_ligne",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Un détecteur de boîtes chaudes est un appareil utilisé dans le milieu ferroviaire afin de détecter un éventuel échauffement des boîtes d'essieux sur un train."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "RATTACHE_A",
+      "cible": "poste_d_aiguillage_principal",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Il est décrit par : Le rattachement à un poste d’aiguillage principal qui reçoit les informations émises par le DBC et éventuellement à un poste d’aiguillage secondaire"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "RATTACHE_A",
+      "cible": "poste_d_aiguillage_secondaire",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Il est décrit par : Le rattachement à un poste d’aiguillage principal qui reçoit les informations émises par le DBC et éventuellement à un poste d’aiguillage secondaire"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_de_ligne",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Le DBC est typé et localisé sur une voie de ligne"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    }
+  ],
+  "erreurs_validation": [],
+  "document_source": "DetecteurBoiteChaude.txt"
+}

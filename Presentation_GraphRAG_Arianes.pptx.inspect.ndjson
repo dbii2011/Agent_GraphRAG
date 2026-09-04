@@ -1,0 +1,217 @@
+{"kind":"deck","id":"pr/7evzvq","name":"Deck"}
+{"kind":"layout","layoutId":"11586d6c-2477-4f29-bec5-1620df200444","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"b2c49ab9-6735-4a33-ab1f-4134cb498380","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/tggjj2","slide":1,"title":"STAGE — INGÉNIERIE DES DONNÉES","textShapes":11}
+{"kind":"textbox","id":"sh/ed8nmhgf","slide":1,"text":"STAGE — INGÉNIERIE DES DONNÉES","textPreview":"STAGE — INGÉNIERIE DES DONNÉES","textChars":30,"textLines":1,"bbox":[48,34,650,28]}
+{"kind":"textbox","id":"sh/1gz6xcfq","slide":1,"text":"Un assistant GraphRAG\npour le modèle Arianes","textPreview":"Un assistant GraphRAG | pour le modèle Arianes","textChars":44,"textLines":2,"bbox":[48,180,850,190]}
+{"kind":"textbox","id":"sh/gfq5o7y5","slide":1,"text":"Du squelette UML aux connaissances métier interrogeables","textPreview":"Du squelette UML aux connaissances métier interrogeables","textChars":56,"textLines":1,"bbox":[48,430,750,70]}
+{"kind":"shape","id":"sh/7ax4r2ho","slide":1,"bbox":[925,150,260,350]}
+{"kind":"shape","id":"sh/69onixg3","slide":1,"bbox":[980,205,150,58]}
+{"kind":"textbox","id":"sh/tczmtczu","slide":1,"text":"Classe","textPreview":"Classe","textChars":6,"textLines":1,"bbox":[994,215,122,30]}
+{"kind":"textbox","id":"sh/sbq5k7y9","slide":1,"text":"métamodèle","textPreview":"métamodèle","textChars":10,"textLines":1,"bbox":[994,247,122,6]}
+{"kind":"shape","id":"sh/b61o3mxs","slide":1,"bbox":[980,300,150,58]}
+{"kind":"textbox","id":"sh/q5snu1gn","slide":1,"text":"Concept","textPreview":"Concept","textChars":7,"textLines":1,"bbox":[994,310,122,30]}
+{"kind":"textbox","id":"sh/g7mdk3a5","slide":1,"text":"métier","textPreview":"métier","textChars":6,"textLines":1,"bbox":[994,342,122,6]}
+{"kind":"shape","id":"sh/h8vud8bq","slide":1,"bbox":[980,395,150,58]}
+{"kind":"textbox","id":"sh/u5kvitsz","slide":1,"text":"Chunk","textPreview":"Chunk","textChars":5,"textLines":1,"bbox":[994,405,122,30]}
+{"kind":"textbox","id":"sh/f6dcbytk","slide":1,"text":"preuve","textPreview":"preuve","textChars":6,"textLines":1,"bbox":[994,437,122,6]}
+{"kind":"shape","id":"sh/s32dgja9","slide":1,"bbox":[1055,263,0,37]}
+{"kind":"shape","id":"sh/t4bu9obe","slide":1,"bbox":[1055,358,0,37]}
+{"kind":"textbox","id":"sh/6hkbets3","slide":1,"text":"GraphRAG","textPreview":"GraphRAG","textChars":8,"textLines":1,"bbox":[958,520,196,34]}
+{"kind":"textbox","id":"sh/7itc7yto","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1170,680,62,18]}
+{"kind":"notes","id":"nt/tggjj2","slide":1,"text":"Présenter le projet en une phrase : rendre un métamodèle complexe et des fiches métier interrogeables en langage naturel.\n\n[Sources]\n- README_PROJET.md\n- BILAN_SCRIPTS_PYTHON.md\n[/Sources]"}
+{"kind":"slide","id":"sl/350enc","slide":2,"title":"PROJET GRAPHRAG ARIANES","textShapes":16}
+{"kind":"textbox","id":"sh/ih8bmlsn","slide":2,"text":"PROJET GRAPHRAG ARIANES","textPreview":"PROJET GRAPHRAG ARIANES","textChars":23,"textLines":1,"bbox":[48,25,500,26]}
+{"kind":"textbox","id":"sh/5kzah0ry","slide":2,"text":"Le projet a évolué en quatre étapes","textPreview":"Le projet a évolué en quatre étapes","textChars":35,"textLines":1,"bbox":[48,55,1184,62]}
+{"kind":"shape","id":"sh/4jqtovad","slide":2,"bbox":[48,125,1184,2]}
+{"kind":"shape","id":"sh/vehsb69w","slide":2,"bbox":[290,334,55,22]}
+{"kind":"shape","id":"sh/ud8bi1sb","slide":2,"bbox":[70,205,235,300]}
+{"kind":"shape","id":"sh/hgzadgr2","slide":2,"bbox":[585,334,55,22]}
+{"kind":"shape","id":"sh/gfqtkbah","slide":2,"bbox":[365,205,235,300]}
+{"kind":"shape","id":"sh/7qxs7690","slide":2,"bbox":[880,334,55,22]}
+{"kind":"shape","id":"sh/6pobe1sf","slide":2,"bbox":[660,205,235,300]}
+{"kind":"shape","id":"sh/srm9cjmp","slide":2,"bbox":[955,205,235,300]}
+{"kind":"textbox","id":"sh/tsvqlona","slide":2,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[90,225,50,50]}
+{"kind":"textbox","id":"sh/654ra94j","slide":2,"text":"Squelette UML","textPreview":"Squelette UML","textChars":13,"textLines":1,"bbox":[90,292,195,45]}
+{"kind":"textbox","id":"sh/r6d8je54","slide":2,"text":"Classes, attributs, héritages et associations","textPreview":"Classes, attributs, héritages et associations","textChars":45,"textLines":1,"bbox":[90,355,195,100]}
+{"kind":"textbox","id":"sh/43298j6t","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[385,225,50,50]}
+{"kind":"textbox","id":"sh/54bqh4ny","slide":2,"text":"Documents","textPreview":"Documents","textChars":9,"textLines":1,"bbox":[385,292,195,45]}
+{"kind":"textbox","id":"sh/i1k769on","slide":2,"text":"Fiches découpées en chunks et vectorisées","textPreview":"Fiches découpées en chunks et vectorisées","textChars":41,"textLines":1,"bbox":[385,355,195,100]}
+{"kind":"textbox","id":"sh/j2t8fe58","slide":2,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[680,225,50,50]}
+{"kind":"textbox","id":"sh/oz69k3mx","slide":2,"text":"Graphe métier","textPreview":"Graphe métier","textChars":13,"textLines":1,"bbox":[680,292,195,45]}
+{"kind":"textbox","id":"sh/p0fqt8ni","slide":2,"text":"Concepts reliés, preuves et conditions","textPreview":"Concepts reliés, preuves et conditions","textChars":38,"textLines":1,"bbox":[680,355,195,100]}
+{"kind":"textbox","id":"sh/xgbqd8fm","slide":2,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[975,225,50,50]}
+{"kind":"textbox","id":"sh/cf2943e1","slide":2,"text":"Application","textPreview":"Application","textChars":11,"textLines":1,"bbox":[975,292,195,45]}
+{"kind":"textbox","id":"sh/bet8byxg","slide":2,"text":"Chat, mémoire, comptes et graphe interactif","textPreview":"Chat, mémoire, comptes et graphe interactif","textChars":43,"textLines":1,"bbox":[975,355,195,100]}
+{"kind":"textbox","id":"sh/adkr2twv","slide":2,"text":"Le résultat n’est plus un simple chatbot : il combine structure, métier et documentation.","textPreview":"Le résultat n’est plus un simple chatbot : il combine structure, métier et documentation.","textChars":89,"textLines":1,"bbox":[70,560,1100,62]}
+{"kind":"textbox","id":"sh/pcbq9ofa","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,680,62,18]}
+{"kind":"notes","id":"nt/350enc","slide":2,"text":"Rappeler le dernier point présenté auparavant : le squelette UML.\nMontrer ensuite l'enrichissement progressif jusqu'à l'application complète.\n\n[Sources]\n- GrapheBuilder_v3.py\n- pipeline_graphe_metier.py\n- api.py\n[/Sources]"}
+{"kind":"slide","id":"sl/8tp7k3","slide":3,"title":"PROJET GRAPHRAG ARIANES","textShapes":18}
+{"kind":"textbox","id":"sh/fypg3edo","slide":3,"text":"PROJET GRAPHRAG ARIANES","textPreview":"PROJET GRAPHRAG ARIANES","textChars":23,"textLines":1,"bbox":[48,25,500,26]}
+{"kind":"textbox","id":"sh/0zyxcju9","slide":3,"text":"Trois sources alimentent une réponse contrôlée","textPreview":"Trois sources alimentent une réponse contrôlée","textChars":46,"textLines":1,"bbox":[48,55,1184,62]}
+{"kind":"shape","id":"sh/107y5ovu","slide":3,"bbox":[48,125,1184,2]}
+{"kind":"shape","id":"sh/21gfetcz","slide":3,"bbox":[50,180,180,82]}
+{"kind":"textbox","id":"sh/nm9g7ydk","slide":3,"text":"XMI","textPreview":"XMI","textChars":3,"textLines":1,"bbox":[64,190,152,30]}
+{"kind":"textbox","id":"sh/onixg3u5","slide":3,"text":"structure UML","textPreview":"structure UML","textChars":13,"textLines":1,"bbox":[64,222,152,30]}
+{"kind":"shape","id":"sh/pory98vq","slide":3,"bbox":[50,305,180,82]}
+{"kind":"textbox","id":"sh/i5wf2pwv","slide":3,"text":"JSON","textPreview":"JSON","textChars":4,"textLines":1,"bbox":[64,315,152,30]}
+{"kind":"textbox","id":"sh/3q5wvudg","slide":3,"text":"modèle normalisé","textPreview":"modèle normalisé","textChars":16,"textLines":1,"bbox":[64,347,152,30]}
+{"kind":"shape","id":"sh/jyxkjm5c","slide":3,"bbox":[50,430,180,82]}
+{"kind":"textbox","id":"sh/ixojahor","slide":3,"text":"Fiches texte","textPreview":"Fiches texte","textChars":12,"textLines":1,"bbox":[64,440,152,30]}
+{"kind":"textbox","id":"sh/50f2lwni","slide":3,"text":"procédures métier","textPreview":"procédures métier","textChars":17,"textLines":1,"bbox":[64,472,152,30]}
+{"kind":"shape","id":"sh/4z61cr6x","slide":3,"bbox":[345,240,270,215]}
+{"kind":"textbox","id":"sh/vad0fm5g","slide":3,"text":"Neo4j","textPreview":"Neo4j","textChars":5,"textLines":1,"bbox":[359,250,242,30]}
+{"kind":"textbox","id":"sh/u94j6hov","slide":3,"text":"Classes + Documents\n+ Concepts métier","textPreview":"Classes + Documents | + Concepts métier","textChars":37,"textLines":2,"bbox":[359,282,242,163]}
+{"kind":"shape","id":"sh/hwfihwn6","slide":3,"bbox":[720,275,210,145]}
+{"kind":"textbox","id":"sh/wv618r61","slide":3,"text":"Retriever","textPreview":"Retriever","textChars":9,"textLines":1,"bbox":[734,285,182,30]}
+{"kind":"textbox","id":"sh/76d0b254","slide":3,"text":"sélectionne le sous-graphe\net les passages utiles","textPreview":"sélectionne le sous-graphe | et les passages utiles","textChars":49,"textLines":2,"bbox":[734,317,182,93]}
+{"kind":"shape","id":"sh/m54j2xoj","slide":3,"bbox":[1020,195,190,92]}
+{"kind":"textbox","id":"sh/q1kjux8r","slide":3,"text":"Mistral","textPreview":"Mistral","textChars":7,"textLines":1,"bbox":[1034,205,162,30]}
+{"kind":"textbox","id":"sh/b2tkn29c","slide":3,"text":"formule la réponse","textPreview":"formule la réponse","textChars":18,"textLines":1,"bbox":[1034,237,162,40]}
+{"kind":"shape","id":"sh/c321w7qh","slide":3,"bbox":[1020,405,190,92]}
+{"kind":"textbox","id":"sh/d4v2pcr2","slide":3,"text":"Application","textPreview":"Application","textChars":11,"textLines":1,"bbox":[1034,415,162,30]}
+{"kind":"textbox","id":"sh/y543yh8n","slide":3,"text":"chat + visualisation","textPreview":"chat + visualisation","textChars":20,"textLines":1,"bbox":[1034,447,162,40]}
+{"kind":"shape","id":"sh/z6dkrm98","slide":3,"bbox":[230,221,115,126.5]}
+{"kind":"shape","id":"sh/k7ml0rqt","slide":3,"bbox":[230,346,115,1.5]}
+{"kind":"shape","id":"sh/l8v2tcre","slide":3,"bbox":[230,347.5,115,123.5]}
+{"kind":"shape","id":"sh/m9432h8z","slide":3,"bbox":[615,347.5,105,0]}
+{"kind":"shape","id":"sh/7udkvm94","slide":3,"bbox":[930,241,90,106.5]}
+{"kind":"shape","id":"sh/h0jehkfi","slide":3,"bbox":[1115,287,0,118]}
+{"kind":"textbox","id":"sh/gzqd8fed","slide":3,"text":"Le LLM ne reçoit qu’un contexte extrait du graphe — pas toute la base.","textPreview":"Le LLM ne reçoit qu’un contexte extrait du graphe — pas toute la base.","textChars":70,"textLines":1,"bbox":[690,555,500,56]}
+{"kind":"textbox","id":"sh/vehwfaxs","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,680,62,18]}
+{"kind":"notes","id":"nt/8tp7k3","slide":3,"text":"Insister sur la séparation entre stockage, retrieval et génération.\nLe modèle de langage ne connaît pas directement Neo4j : le retriever construit son contexte.\n\n[Sources]\n- XmiToJson.py\n- GrapheBuilder_v3.py\n- graphrag_retriever.py\n- Agent_LG.py\n[/Sources]"}
+{"kind":"slide","id":"sl/t3r212","slide":4,"title":"PROJET GRAPHRAG ARIANES","textShapes":21}
+{"kind":"textbox","id":"sh/wruxon2d","slide":4,"text":"PROJET GRAPHRAG ARIANES","textPreview":"PROJET GRAPHRAG ARIANES","textChars":23,"textLines":1,"bbox":[48,25,500,26]}
+{"kind":"textbox","id":"sh/vqlwfils","slide":4,"text":"Deux graphes complémentaires donnent du sens aux données","textPreview":"Deux graphes complémentaires donnent du sens aux données","textChars":56,"textLines":1,"bbox":[48,55,1184,62]}
+{"kind":"shape","id":"sh/a5cfmdk7","slide":4,"bbox":[48,125,1184,2]}
+{"kind":"textbox","id":"sh/943eds3m","slide":4,"text":"COUCHE MÉTIER","textPreview":"COUCHE MÉTIER","textChars":13,"textLines":1,"bbox":[65,155,230,28]}
+{"kind":"shape","id":"sh/83udkn21","slide":4,"bbox":[480,155,230,72]}
+{"kind":"textbox","id":"sh/n2lwbilg","slide":4,"text":"Poste d’aiguillage","textPreview":"Poste d’aiguillage","textChars":18,"textLines":1,"bbox":[494,165,202,30]}
+{"kind":"textbox","id":"sh/m1cvidkv","slide":4,"text":"concept métier","textPreview":"concept métier","textChars":14,"textLines":1,"bbox":[494,197,202,20]}
+{"kind":"shape","id":"sh/t07epc3q","slide":4,"bbox":[130,255,180,65]}
+{"kind":"textbox","id":"sh/szexw725","slide":4,"text":"Signal","textPreview":"Signal","textChars":6,"textLines":1,"bbox":[144,265,152,30]}
+{"kind":"textbox","id":"sh/m5k7ahk7","slide":4,"text":"concept","textPreview":"concept","textChars":7,"textLines":1,"bbox":[144,297,152,13]}
+{"kind":"shape","id":"sh/n6do3mls","slide":4,"bbox":[900,255,210,65]}
+{"kind":"textbox","id":"sh/87mpcr2d","slide":4,"text":"Appareil de voie","textPreview":"Appareil de voie","textChars":16,"textLines":1,"bbox":[914,265,182,30]}
+{"kind":"textbox","id":"sh/98vq5w3y","slide":4,"text":"concept","textPreview":"concept","textChars":7,"textLines":1,"bbox":[914,297,182,13]}
+{"kind":"shape","id":"sh/y1k76hkb","slide":4,"bbox":[310,191,170,96.5]}
+{"kind":"shape","id":"sh/z2tozmlw","slide":4,"bbox":[710,191,190,96.5]}
+{"kind":"textbox","id":"sh/032p8r2h","slide":4,"text":"EST_COMMANDÉ_PAR","textPreview":"EST_COMMANDÉ_PAR","textChars":16,"textLines":1,"bbox":[280,215,190,24]}
+{"kind":"textbox","id":"sh/l4b61c32","slide":4,"text":"EST_COMMANDÉ_PAR","textPreview":"EST_COMMANDÉ_PAR","textChars":16,"textLines":1,"bbox":[718,215,190,24]}
+{"kind":"shape","id":"sh/ixo7i1kf","slide":4,"bbox":[70,375,1140,0]}
+{"kind":"textbox","id":"sh/jyx8b6l0","slide":4,"text":"COUCHE TECHNIQUE","textPreview":"COUCHE TECHNIQUE","textChars":16,"textLines":1,"bbox":[65,395,250,28]}
+{"kind":"shape","id":"sh/v65cnexg","slide":4,"bbox":[480,415,230,68]}
+{"kind":"textbox","id":"sh/u5wve9wv","slide":4,"text":"Classe Poste","textPreview":"Classe Poste","textChars":12,"textLines":1,"bbox":[494,425,202,30]}
+{"kind":"textbox","id":"sh/h8nep4f6","slide":4,"text":"métamodèle Arianes","textPreview":"métamodèle Arianes","textChars":18,"textLines":1,"bbox":[494,457,202,16]}
+{"kind":"shape","id":"sh/g7edgjel","slide":4,"bbox":[130,520,180,62]}
+{"kind":"textbox","id":"sh/3upwrexc","slide":4,"text":"Classe Signal","textPreview":"Classe Signal","textChars":13,"textLines":1,"bbox":[144,530,152,30]}
+{"kind":"textbox","id":"sh/itgvi9wr","slide":4,"text":"UML","textPreview":"UML","textChars":3,"textLines":1,"bbox":[144,562,152,10]}
+{"kind":"shape","id":"sh/5w7etofi","slide":4,"bbox":[900,520,210,62]}
+{"kind":"textbox","id":"sh/4vydkjex","slide":4,"text":"Classe AppareilDeVoie","textPreview":"Classe AppareilDeVoie","textChars":21,"textLines":1,"bbox":[914,530,182,30]}
+{"kind":"textbox","id":"sh/rypwvyx8","slide":4,"text":"UML","textPreview":"UML","textChars":3,"textLines":1,"bbox":[914,562,182,10]}
+{"kind":"shape","id":"sh/qxgvmtw3","slide":4,"bbox":[310,449,170,102]}
+{"kind":"shape","id":"sh/o3idc3u1","slide":4,"bbox":[710,449,190,102]}
+{"kind":"shape","id":"sh/94rul8bm","slide":4,"bbox":[595,227,0,188]}
+{"kind":"textbox","id":"sh/m10vatcv","slide":4,"text":"REPRÉSENTE_PAR","textPreview":"REPRÉSENTE_PAR","textChars":14,"textLines":1,"bbox":[755,385,190,25]}
+{"kind":"textbox","id":"sh/n29cjytg","slide":4,"text":"Le métier explique le fonctionnement ; l’UML garantit la structure.","textPreview":"Le métier explique le fonctionnement ; l’UML garantit la structure.","textChars":67,"textLines":1,"bbox":[310,625,660,36]}
+{"kind":"textbox","id":"sh/0zyt8ju5","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,680,62,18]}
+{"kind":"notes","id":"nt/t3r212","slide":4,"text":"Montrer que les deux graphes restent séparés mais reliés.\nLa relation REPRESENTE_PAR rattache un concept métier à une classe du métamodèle.\n\n[Sources]\n- graphe_metier_builder.py\n- graphrag_retriever.py\n- DataMetier/selection_auto_prudente.json\n[/Sources]"}
+{"kind":"slide","id":"sl/atciwd","slide":5,"title":"PROJET GRAPHRAG ARIANES","textShapes":19}
+{"kind":"textbox","id":"sh/4jq5on6x","slide":5,"text":"PROJET GRAPHRAG ARIANES","textPreview":"PROJET GRAPHRAG ARIANES","textChars":23,"textLines":1,"bbox":[48,25,500,26]}
+{"kind":"textbox","id":"sh/3yh4vipc","slide":5,"text":"Le pipeline métier transforme une fiche en faits vérifiables","textPreview":"Le pipeline métier transforme une fiche en faits vérifiables","textChars":60,"textLines":1,"bbox":[48,55,1184,62]}
+{"kind":"shape","id":"sh/2xonmxor","slide":5,"bbox":[48,125,1184,2]}
+{"kind":"shape","id":"sh/hwfmts7m","slide":5,"bbox":[45,230,190,245]}
+{"kind":"shape","id":"sh/gv65kn61","slide":5,"bbox":[295,230,190,245]}
+{"kind":"shape","id":"sh/fux4ripg","slide":5,"bbox":[545,230,190,245]}
+{"kind":"shape","id":"sh/uto3idov","slide":5,"bbox":[795,230,190,245]}
+{"kind":"shape","id":"sh/1sj65cnq","slide":5,"bbox":[1045,230,190,245]}
+{"kind":"shape","id":"sh/0ra5w765","slide":5,"bbox":[235,352.5,60,0]}
+{"kind":"shape","id":"sh/ihkvqpgz","slide":5,"bbox":[485,352.5,60,0]}
+{"kind":"shape","id":"sh/3itwzuhk","slide":5,"bbox":[735,352.5,60,0]}
+{"kind":"shape","id":"sh/432dszy5","slide":5,"bbox":[985,352.5,60,0]}
+{"kind":"textbox","id":"sh/54ve14zq","slide":5,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[63,248,40,38]}
+{"kind":"textbox","id":"sh/udkvm5g3","slide":5,"text":"Découper","textPreview":"Découper","textChars":8,"textLines":1,"bbox":[63,305,154,35]}
+{"kind":"textbox","id":"sh/vetwvaho","slide":5,"text":"Texte + lignes","textPreview":"Texte + lignes","textChars":14,"textLines":1,"bbox":[63,360,154,65]}
+{"kind":"textbox","id":"sh/gf2dofy9","slide":5,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[313,248,40,38]}
+{"kind":"textbox","id":"sh/hgbexkze","slide":5,"text":"Détecter","textPreview":"Détecter","textChars":8,"textLines":1,"bbox":[313,305,154,35]}
+{"kind":"textbox","id":"sh/e94fy9g7","slide":5,"text":"Entités candidates","textPreview":"Entités candidates","textChars":18,"textLines":1,"bbox":[313,360,154,65]}
+{"kind":"textbox","id":"sh/fadw7exs","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[563,248,40,38]}
+{"kind":"textbox","id":"sh/bepsz6x4","slide":5,"text":"Extraire","textPreview":"Extraire","textChars":8,"textLines":1,"bbox":[563,305,154,35]}
+{"kind":"textbox","id":"sh/atgbq1wj","slide":5,"text":"Relations + preuves","textPreview":"Relations + preuves","textChars":19,"textLines":1,"bbox":[563,360,154,65]}
+{"kind":"textbox","id":"sh/xg7a1gfa","slide":5,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[813,248,40,38]}
+{"kind":"textbox","id":"sh/cfytsbep","slide":5,"text":"Contrôler","textPreview":"Contrôler","textChars":9,"textLines":1,"bbox":[813,305,154,35]}
+{"kind":"textbox","id":"sh/zipc36xg","slide":5,"text":"Règles et cohérence","textPreview":"Règles et cohérence","textChars":19,"textLines":1,"bbox":[813,360,154,65]}
+{"kind":"textbox","id":"sh/yhgbulwv","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1063,248,40,38]}
+{"kind":"textbox","id":"sh/lk7u5gf6","slide":5,"text":"Importer","textPreview":"Importer","textChars":8,"textLines":1,"bbox":[1063,305,154,35]}
+{"kind":"textbox","id":"sh/kjytwbe1","slide":5,"text":"Seulement VALIDE","textPreview":"Seulement VALIDE","textChars":16,"textLines":1,"bbox":[1063,360,154,65]}
+{"kind":"textbox","id":"sh/7m9c7qxc","slide":5,"text":"Une relation sans preuve, ambiguë ou incohérente reste hors du graphe actif.","textPreview":"Une relation sans preuve, ambiguë ou incohérente reste hors du graphe actif.","textChars":76,"textLines":1,"bbox":[145,535,990,55]}
+{"kind":"textbox","id":"sh/6l0bylwr","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,680,62,18]}
+{"kind":"notes","id":"nt/atciwd","slide":5,"text":"Expliquer que Mistral propose, mais ne valide pas seul.\nLes contrôles déterministes vérifient citation, concepts, prédicat, négation et auto-relations.\n\n[Sources]\n- pipeline_graphe_metier.py\n- validation_metier.py\n- recontroler_graphe_metier.py\n- selectionner_graphe_metier_prudent.py\n[/Sources]"}
+{"kind":"slide","id":"sl/mtwiwz","slide":6,"title":"PROJET GRAPHRAG ARIANES","textShapes":16}
+{"kind":"textbox","id":"sh/6lwnad4v","slide":6,"text":"PROJET GRAPHRAG ARIANES","textPreview":"PROJET GRAPHRAG ARIANES","textChars":23,"textLines":1,"bbox":[48,25,500,26]}
+{"kind":"textbox","id":"sh/ton6583m","slide":6,"text":"Une question déclenche un retrieval hybride avant la génération","textPreview":"Une question déclenche un retrieval hybride avant la génération","textChars":63,"textLines":1,"bbox":[48,55,1184,62]}
+{"kind":"shape","id":"sh/sne5c3m1","slide":6,"bbox":[48,125,1184,2]}
+{"kind":"shape","id":"sh/fq5o7ilc","slide":6,"bbox":[65,275,200,112]}
+{"kind":"textbox","id":"sh/epwnedk7","slide":6,"text":"Question","textPreview":"Question","textChars":8,"textLines":1,"bbox":[79,285,172,30]}
+{"kind":"textbox","id":"sh/1s769s3i","slide":6,"text":"« Relations du poste ? »","textPreview":"« Relations du poste ? »","textChars":24,"textLines":1,"bbox":[79,317,172,60]}
+{"kind":"shape","id":"sh/gre5gn2x","slide":6,"bbox":[350,170,220,95]}
+{"kind":"textbox","id":"sh/vul4vel8","slide":6,"text":"1. Entités","textPreview":"1. Entités","textChars":10,"textLines":1,"bbox":[364,180,192,30]}
+{"kind":"textbox","id":"sh/atsn2t4n","slide":6,"text":"Poste / poste_aiguillage","textPreview":"Poste / poste_aiguillage","textChars":24,"textLines":1,"bbox":[364,212,192,43]}
+{"kind":"shape","id":"sh/8vatofel","slide":6,"bbox":[350,405,220,95]}
+{"kind":"textbox","id":"sh/9wjaxkv6","slide":6,"text":"2. Graphe","textPreview":"2. Graphe","textChars":9,"textLines":1,"bbox":[364,415,192,30]}
+{"kind":"textbox","id":"sh/m98bmpwf","slide":6,"text":"voisins + relations","textPreview":"voisins + relations","textChars":19,"textLines":1,"bbox":[364,447,192,43]}
+{"kind":"shape","id":"sh/nahsvud0","slide":6,"bbox":[665,170,220,95]}
+{"kind":"textbox","id":"sh/wzatszex","slide":6,"text":"3. Chunks","textPreview":"3. Chunks","textChars":9,"textLines":1,"bbox":[679,180,192,30]}
+{"kind":"textbox","id":"sh/h0ja14v2","slide":6,"text":"passages pertinents","textPreview":"passages pertinents","textChars":19,"textLines":1,"bbox":[679,212,192,43]}
+{"kind":"shape","id":"sh/uxsbqpwr","slide":6,"bbox":[665,405,220,95]}
+{"kind":"textbox","id":"sh/vy1szudc","slide":6,"text":"4. Contexte","textPreview":"4. Contexte","textChars":11,"textLines":1,"bbox":[679,415,192,30]}
+{"kind":"textbox","id":"sh/c3qtgved","slide":6,"text":"fusion contrôlée","textPreview":"fusion contrôlée","textChars":16,"textLines":1,"bbox":[679,447,192,43]}
+{"kind":"shape","id":"sh/d4zap0vy","slide":6,"bbox":[985,275,220,112]}
+{"kind":"textbox","id":"sh/to7ixs3q","slide":6,"text":"Réponse","textPreview":"Réponse","textChars":7,"textLines":1,"bbox":[999,285,192,30]}
+{"kind":"textbox","id":"sh/snyh4725","slide":6,"text":"courte et ciblée","textPreview":"courte et ciblée","textChars":16,"textLines":1,"bbox":[999,317,192,60]}
+{"kind":"shape","id":"sh/rmp0v2lk","slide":6,"bbox":[265,217.5,85,113.5]}
+{"kind":"shape","id":"sh/6lwz2xkz","slide":6,"bbox":[265,331,85,121.5]}
+{"kind":"shape","id":"sh/1s7i1c3m","slide":6,"bbox":[570,217.5,95,0]}
+{"kind":"shape","id":"sh/gryh8721","slide":6,"bbox":[570,452.5,95,0]}
+{"kind":"shape","id":"sh/fqp0z2lg","slide":6,"bbox":[775,265,0,140]}
+{"kind":"shape","id":"sh/epgz6xkb","slide":6,"bbox":[885,331,100,121.5]}
+{"kind":"textbox","id":"sh/pgri5w3y","slide":6,"text":"Structure + sens métier + documentation","textPreview":"Structure + sens métier + documentation","textChars":39,"textLines":1,"bbox":[420,570,500,42]}
+{"kind":"textbox","id":"sh/ofihcr2d","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,680,62,18]}
+{"kind":"notes","id":"nt/mtwiwz","slide":6,"text":"Le mode peut être structurel, documentaire ou hybride.\nL'historique récent complète la question pour assurer la mémoire dans une conversation.\n\n[Sources]\n- graphrag_retriever.py\n- Agent_LG.py\n- api.py\n[/Sources]"}
+{"kind":"slide","id":"sl/czqnbh","slide":7,"title":"PROJET GRAPHRAG ARIANES","textShapes":15}
+{"kind":"textbox","id":"sh/6lcfipgj","slide":7,"text":"PROJET GRAPHRAG ARIANES","textPreview":"PROJET GRAPHRAG ARIANES","textChars":23,"textLines":1,"bbox":[48,25,500,26]}
+{"kind":"textbox","id":"sh/t8nyt4zu","slide":7,"text":"Le prototype couvre désormais toute la chaîne","textPreview":"Le prototype couvre désormais toute la chaîne","textChars":45,"textLines":1,"bbox":[48,55,1184,62]}
+{"kind":"shape","id":"sh/8nuxkzy9","slide":7,"bbox":[48,125,1184,2]}
+{"kind":"shape","id":"sh/va5gveh0","slide":7,"bbox":[55,190,270,235]}
+{"kind":"textbox","id":"sh/u9wfm9gf","slide":7,"text":"998","textPreview":"998","textChars":3,"textLines":1,"bbox":[75,220,230,85]}
+{"kind":"textbox","id":"sh/hcnyx4z6","slide":7,"text":"classes UML","textPreview":"classes UML","textChars":11,"textLines":1,"bbox":[75,325,230,50]}
+{"kind":"shape","id":"sh/gbexozyl","slide":7,"bbox":[355,190,270,235]}
+{"kind":"textbox","id":"sh/be1wjahw","slide":7,"text":"244","textPreview":"244","textChars":3,"textLines":1,"bbox":[375,220,230,85]}
+{"kind":"textbox","id":"sh/adsfa5gb","slide":7,"text":"chunks indexés","textPreview":"chunks indexés","textChars":14,"textLines":1,"bbox":[375,325,230,50]}
+{"kind":"shape","id":"sh/4rq5cjil","slide":7,"bbox":[655,190,270,235]}
+{"kind":"textbox","id":"sh/5sz65oz6","slide":7,"text":"114","textPreview":"114","textChars":3,"textLines":1,"bbox":[675,220,230,85]}
+{"kind":"textbox","id":"sh/ip8nat0v","slide":7,"text":"concepts métier","textPreview":"concepts métier","textChars":15,"textLines":1,"bbox":[675,325,230,50]}
+{"kind":"shape","id":"sh/3qho3yh0","slide":7,"bbox":[955,190,270,235]}
+{"kind":"textbox","id":"sh/sva5g3yx","slide":7,"text":"120","textPreview":"120","textChars":3,"textLines":1,"bbox":[975,220,230,85]}
+{"kind":"textbox","id":"sh/dwj698zi","slide":7,"text":"relations métier","textPreview":"relations métier","textChars":16,"textLines":1,"bbox":[975,325,230,50]}
+{"kind":"textbox","id":"sh/qtsnetgr","slide":7,"text":"57 tests automatisés","textPreview":"57 tests automatisés","textChars":20,"textLines":1,"bbox":[120,505,300,48]}
+{"kind":"textbox","id":"sh/ru1o7yhc","slide":7,"text":"Comptes et mémoire","textPreview":"Comptes et mémoire","textChars":18,"textLines":1,"bbox":[490,505,300,48]}
+{"kind":"textbox","id":"sh/8z654zid","slide":7,"text":"Graphe interactif","textPreview":"Graphe interactif","textChars":17,"textLines":1,"bbox":[860,505,300,48]}
+{"kind":"textbox","id":"sh/t0f6x4zy","slide":7,"text":"Limite actuelle : 17 composantes métier, car les liens transversaux restent prudents.","textPreview":"Limite actuelle : 17 composantes métier, car les liens transversaux restent prudents.","textChars":85,"textLines":1,"bbox":[160,610,960,38]}
+{"kind":"textbox","id":"sh/p47ulgnq","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,680,62,18]}
+{"kind":"notes","id":"nt/czqnbh","slide":7,"text":"Présenter ces chiffres comme l'état du prototype, pas comme des objectifs définitifs.\nLa fragmentation du graphe évite d'inventer des liens uniquement pour le rendre connexe.\n\n[Sources]\n- Résultats Neo4j observés dans la session\n- Suite pytest observée dans la session\n- api.py\n- index.html\n[/Sources]"}
+{"kind":"slide","id":"sl/q504kw","slide":8,"title":"À retenir","textShapes":10}
+{"kind":"textbox","id":"sh/2x83mpsz","slide":8,"text":"À retenir","textPreview":"À retenir","textChars":9,"textLines":1,"bbox":[48,32,420,35]}
+{"kind":"textbox","id":"sh/p0j2h4ra","slide":8,"text":"Le graphe apporte la structure.\nLes fiches apportent le métier.\nLe GraphRAG relie les deux.","textPreview":"Le graphe apporte la structure. | Les fiches apportent le métier. | Le GraphRAG relie les deux.","textChars":91,"textLines":3,"bbox":[48,125,870,220]}
+{"kind":"shape","id":"sh/ozalozap","slide":8,"bbox":[55,455,340,130]}
+{"kind":"shape","id":"sh/b21kje9g","slide":8,"bbox":[470,455,340,130]}
+{"kind":"shape","id":"sh/q1s3q9sv","slide":8,"bbox":[885,455,340,130]}
+{"kind":"textbox","id":"sh/doj2l4rm","slide":8,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[75,470,35,35]}
+{"kind":"textbox","id":"sh/cnalsza1","slide":8,"text":"Poser une question","textPreview":"Poser une question","textChars":18,"textLines":1,"bbox":[75,515,285,32]}
+{"kind":"textbox","id":"sh/zqlkne9c","slide":8,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[490,470,35,35]}
+{"kind":"textbox","id":"sh/ypc3u9s7","slide":8,"text":"Afficher le sous-graphe","textPreview":"Afficher le sous-graphe","textChars":23,"textLines":1,"bbox":[490,515,285,32]}
+{"kind":"textbox","id":"sh/43mhkzyl","slide":8,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[905,470,35,35]}
+{"kind":"textbox","id":"sh/p4vyt4f6","slide":8,"text":"Vérifier la réponse","textPreview":"Vérifier la réponse","textChars":19,"textLines":1,"bbox":[905,515,285,32]}
+{"kind":"textbox","id":"sh/214zipgv","slide":8,"text":"Démonstration : « Donne-moi les relations métier d’un poste d’aiguillage. »","textPreview":"Démonstration : « Donne-moi les relations métier d’un poste d’aiguillage. »","textChars":75,"textLines":1,"bbox":[160,625,960,38]}
+{"kind":"textbox","id":"sh/32dgruxg","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,680,62,18]}
+{"kind":"notes","id":"nt/q504kw","slide":8,"text":"Terminer par une démonstration courte dans le navigateur.\nQuestion, réponse directe, puis bouton Voir le graphe pour montrer les concepts surlignés.\n\n[Sources]\n- Application locale http://127.0.0.1:8000\n- README_PROJET.md\n[/Sources]"}

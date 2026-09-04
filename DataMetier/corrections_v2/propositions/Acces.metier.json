@@ -1,0 +1,127 @@
+{
+  "domaine": "gestion des accès ferroviaires",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "acces",
+      "nom": "Acces",
+      "aliases": [
+        "accès"
+      ],
+      "description": "Point aménagé permettant d'accéder aux voies ferrées depuis l'infrastructure routière, autre qu'un passage à niveau, un ouvrage d'art ou une gare.",
+      "classes_arianes": [
+        "Acces"
+      ],
+      "documents": [
+        "Acces.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [],
+      "description": "Voie ferrée classée par l'entreprise, identifiée par un code et un libellé court.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Acces.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk",
+      "nom": "Pk",
+      "aliases": [
+        "PK"
+      ],
+      "description": "Point kilométrique indiquant la localisation d'un accès sur une ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Acces.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "wgs84",
+      "nom": "WGS84",
+      "aliases": [
+        "coordonnées GPS"
+      ],
+      "description": "Système de coordonnées géographiques utilisé pour localiser un accès.",
+      "classes_arianes": [
+        "WGS84"
+      ],
+      "documents": [
+        "Acces.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "acces",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "Acces.txt",
+        "lignes": "1-132",
+        "citation": "La localisation de l’accès est obligatoire avec les informations suivantes : Code ligne, PK de localisation"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "acces",
+      "type": "LOCALISE_SUR",
+      "cible": "wgs84",
+      "preuve": {
+        "document": "Acces.txt",
+        "lignes": "1-132",
+        "citation": "Compléter éventuellement les Coordonnées géographiques, pour les valeurs voir chapitre 3 « Règles de coordonnées GPS»"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [],
+  "document_source": "Acces.txt",
+  "relations_rejetees": [
+    {
+      "source": "acces",
+      "type": "COMPOSE_DE",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Acces.txt",
+        "lignes": "1-132",
+        "citation": "Un accès est un point aménagé permettant à partir de l’infrastructure routière d'accéder aux voies ferrées (classées par ligne) de l’entreprise."
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [
+        "relation incompatible avec le sens du passage relu (audit métier)"
+      ]
+    }
+  ],
+  "version_validation": 2
+}

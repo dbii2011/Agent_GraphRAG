@@ -105,6 +105,96 @@ class CypherSecurityTests(unittest.TestCase):
         self.assertEqual("6", messages[1]["content"])
         self.assertIn("question suivante", messages[-1]["content"])
 
+    def test_ask_impose_une_reponse_directe_et_ciblee(self):
+        self.agent.llm = FakeLLM()
+        self.agent.retriever = FakeRetriever()
+
+        self.agent.ask("Donne le sous-graphe métier du poste")
+
+        consigne = self.agent.llm.messages[0]["content"]
+        self.assertIn("première phrase", consigne)
+        self.assertIn("ne transforme pas une question ciblée en rapport général", consigne)
+        self.assertIn("N'ajoute ni définition, ni attributs", consigne)
+        self.assertIn("N'utilise aucun tableau Markdown", consigne)
+        self.assertIn("N'affiche aucune citation", consigne)
+        self.assertIn("Ignore les chunks non utilisés", consigne)
+
+    def test_ask_n_ajoute_pas_toutes_les_citations_du_retrieval(self):
+        self.agent.llm = FakeLLM()
+        self.agent.retriever = FakeRetriever()
+        self.agent.retriever.retrieve = lambda question, historique=None: {
+            "mode": "DOCUMENTAIRE",
+            "classes_racines": [],
+            "sous_graphe": {"classes": []},
+            "chunks": [],
+            "citations": ["source sans rapport"],
+        }
+
+        resultat = self.agent.ask("question")
+
+        self.assertEqual("réponse", resultat)
+
+    def test_ask_fait_reformuler_le_chemin_controle_par_le_llm(self):
+        self.agent.llm = FakeLLM()
+        self.agent.retriever = FakeRetriever()
+        self.agent.retriever.retrieve = lambda question, historique=None: {
+            "mode": "CHEMIN_METIER",
+            "chemin_metier": {
+                "trouve": True,
+                "depart": "signal",
+                "arrivee": "ligne",
+                "concepts": [
+                    {"id": "signal", "nom": "Signal"},
+                    {"id": "poste", "nom": "Poste"},
+                    {"id": "ligne", "nom": "Ligne"},
+                ],
+                "relations": [
+                    {"source": "signal", "type": "EST_COMMANDE_PAR", "cible": "poste"},
+                    {"source": "poste", "type": "LOCALISE_SUR", "cible": "ligne"},
+                ],
+            },
+        }
+
+        resultat = self.agent.ask("Quel chemin relie un signal à une ligne ?")
+
+        self.assertEqual("réponse", resultat)
+        self.assertIn("EST_COMMANDE_PAR", self.agent.llm.messages[-1]["content"])
+        consigne = self.agent.llm.messages[0]["content"]
+        self.assertIn("français naturel", consigne)
+        self.assertIn("N'ajoute, ne supprime", consigne)
+
+    def test_schema_reponse_conserve_l_ordre_du_chemin(self):
+        schema = AgentLG._schema_depuis_retrieval({
+            "chemin_metier": {
+                "trouve": True,
+                "concepts": [
+                    {"id": "signal", "nom": "Signal"},
+                    {"id": "poste", "nom": "Poste"},
+                    {"id": "ligne", "nom": "Ligne"},
+                ],
+                "relations": [
+                    {"source": "signal", "type": "EST_COMMANDE_PAR", "cible": "poste"},
+                    {"source": "poste", "type": "LOCALISE_SUR", "cible": "ligne"},
+                ],
+            },
+            "graphe_metier": {},
+        })
+
+        self.assertEqual(["signal", "poste", "ligne"], [n["id"] for n in schema["nodes"]])
+        self.assertEqual(2, len(schema["links"]))
+
+    def test_retirer_sources_visibles(self):
+        reponse = (
+            "Le signal est commandé par le poste. "
+            "[Source : docs\\Post.txt — passage 1]\n\n"
+            "### Sources finales utilisées\n"
+            "- docs\\Post.txt — passage 1"
+        )
+
+        resultat = AgentLG._retirer_sources_visibles(reponse)
+
+        self.assertEqual("Le signal est commandé par le poste.", resultat)
+
 
 if __name__ == "__main__":
     unittest.main()

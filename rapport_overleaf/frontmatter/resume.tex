@@ -1,0 +1,27 @@
+\chapter*{Résumé}
+\addcontentsline{toc}{chapter}{Résumé}
+
+Ce projet porte sur la conception d'un assistant capable d'interroger le métamodèle Arianes et des fiches de procédure ferroviaires. La solution combine un graphe de connaissances Neo4j, une recherche documentaire hybride, un modèle de langage Mistral et une application web multi-utilisateur. Le métamodèle, fourni en XMI, est converti en JSON puis représenté sous forme de classes, attributs et relations. Les fiches sont découpées en passages et indexées par recherche plein texte et vectorielle.
+
+Le principal apport est une chaîne GraphRAG contrôlée : les entités de la question sont résolues avant l'appel au modèle, un sous-graphe borné est extrait, puis les passages pertinents et leurs sources sont ajoutés au contexte. Une couche métier distincte complète le graphe technique. Les 29 fiches ont fait l'objet d'une extraction de concepts et de relations, mais seul un pilote relu autour du poste d'aiguillage est actuellement importé dans Neo4j. Cette démarche évite de confondre une proposition produite par un modèle avec une connaissance validée.
+
+\textbf{Mots-clés :} GraphRAG, Neo4j, graphe de connaissances, Arianes, Mistral, RAG, extraction d'information, traçabilité.
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+This project designs an assistant for querying the Arianes metamodel and railway procedure sheets. It combines a Neo4j knowledge graph, hybrid document retrieval, the Mistral language model and a multi-user web application. A controlled GraphRAG pipeline resolves entities, retrieves a bounded technical subgraph and selects traceable documentary evidence before generation. A distinct business knowledge layer enriches the technical graph. All 29 procedure sheets have been processed into candidate concepts and relations, while only a reviewed pilot about interlocking posts has currently been imported into Neo4j.
+
+\textbf{Keywords:} GraphRAG, Neo4j, knowledge graph, retrieval-augmented generation, information extraction, traceability.
+
+\chapter*{Liste des sigles}
+\addcontentsline{toc}{chapter}{Liste des sigles}
+\begin{description}[leftmargin=3.5cm,style=nextline]
+  \item[API] Interface de programmation applicative.
+  \item[LLM] Grand modèle de langage.
+  \item[RAG] Génération augmentée par recherche d'information.
+  \item[GraphRAG] RAG utilisant explicitement un graphe de connaissances.
+  \item[XMI] Format d'échange de métadonnées fondé sur XML.
+  \item[RRF] Méthode de fusion de classements par rang réciproque.
+  \item[UML] Langage de modélisation unifié.
+\end{description}

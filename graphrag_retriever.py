@@ -40,6 +40,19 @@ class GraphRAGRetriever:
         self.reranker = reranker or self._charger_reranker_optionnel()
 
     @staticmethod
+    def _necessite_contexte(question: str) -> bool:
+        """Détecte une relance qui dépend réellement de la question précédente."""
+        q = normaliser(question)
+        return bool(
+            re.search(r"^(et|sinon|aussi|pour lui|pour elle|qu en est il)\b", q)
+            or re.search(
+                r"\b(ce dernier|cette derniere|celui ci|celle ci|ses attributs|"
+                r"ses relations|son fonctionnement|sa definition)\b",
+                q,
+            )
+        )
+
+    @staticmethod
     def _charger_reranker_optionnel():
         chemin = os.getenv("RERANKER_MODEL_PATH", "").strip()
         if not chemin:
@@ -124,6 +137,13 @@ class GraphRAGRetriever:
     @staticmethod
     def determiner_mode(question: str) -> str:
         q = normaliser(question)
+        motifs_chemin = (
+            "quel chemin", "un chemin", "le chemin", "chemin entre", "plus court chemin",
+            "relie", "relier",
+            "relation indirecte", "connecte", "connexion entre", "entre deux concepts",
+        )
+        if any(motif in q for motif in motifs_chemin):
+            return "CHEMIN_METIER"
         mots_structure = {
             "attribut", "attributs", "type", "types", "heritage", "herite",
             "parent", "enfant", "relation", "relations", "cardinalite", "chemin",
@@ -142,6 +162,83 @@ class GraphRAGRetriever:
         if document and not structure:
             return "DOCUMENTAIRE"
         return "HYBRIDE"
+
+    def _construire_chemin_metier(
+        self,
+        question: str,
+        classes_racines: list[str],
+        profondeur_max: int = 5,
+    ) -> dict:
+        """Retourne le plus court chemin métier validé entre deux concepts cités."""
+        vide = {
+            "demande": True,
+            "depart": None,
+            "arrivee": None,
+            "trouve": False,
+            "concepts": [],
+            "relations": [],
+        }
+        with self.driver.session() as session:
+            concepts = [
+                record.data()
+                for record in session.run(
+                    """
+                    MATCH (c:ConceptMetier {valide: true})
+                    OPTIONAL MATCH (c)-[:REPRESENTE_PAR]->(classe:Classe)
+                    RETURN c.id AS id, c.nom AS nom, c.aliases AS aliases,
+                           c.description AS description,
+                           collect(DISTINCT classe.nom) AS classes_arianes
+                    ORDER BY c.nom
+                    """
+                )
+            ]
+            extremites = self._selectionner_extremites_chemin(
+                question, concepts, classes_racines
+            )
+            if len(extremites) < 2:
+                vide["concepts_detectes"] = extremites
+                return vide
+
+            depart, arrivee = extremites
+            resultat = session.run(
+                """
+                MATCH (depart:ConceptMetier {id: $depart, valide: true})
+                MATCH (arrivee:ConceptMetier {id: $arrivee, valide: true})
+                MATCH chemin = shortestPath(
+                    (depart)-[:RELATION_METIER*1..5]-(arrivee)
+                )
+                WHERE all(r IN relationships(chemin) WHERE r.valide = true)
+                  AND all(n IN nodes(chemin) WHERE n.valide = true)
+                RETURN [n IN nodes(chemin) | {
+                    id: n.id, nom: n.nom, description: coalesce(n.description, '')
+                }] AS concepts,
+                [r IN relationships(chemin) | {
+                    source: startNode(r).id, type: r.type, cible: endNode(r).id,
+                    preuve: coalesce(r.preuve, ''),
+                    document: coalesce(r.source_document, ''),
+                    lignes: coalesce(r.lignes, ''),
+                    chunk_ids: coalesce(r.chunk_ids, []),
+                    condition: coalesce(r.condition, ''),
+                    validation: coalesce(r.validation, '')
+                }] AS relations,
+                length(chemin) AS longueur
+                """,
+                depart=depart,
+                arrivee=arrivee,
+            ).single()
+        if not resultat:
+            return {**vide, "depart": depart, "arrivee": arrivee}
+        donnees = resultat.data() if hasattr(resultat, "data") else dict(resultat)
+        return {
+            "demande": True,
+            "depart": depart,
+            "arrivee": arrivee,
+            "trouve": True,
+            "longueur": donnees["longueur"],
+            "concepts": donnees["concepts"],
+            "relations": donnees["relations"],
+            "profondeur_max": profondeur_max,
+        }
 
     def _construire_sous_graphe(self, classes_racines: list[str]) -> dict:
         if not classes_racines:
@@ -230,13 +327,67 @@ class GraphRAGRetriever:
             classes_concept = {
                 normaliser(nom) for nom in concept.get("classes_arianes", [])
             }
-            score = (1.0 if exact else 0.7 * recouvrement)
+            # Tolérance bornée aux fautes simples sur un alias ou un nom composé
+            # réduit à son mot significatif (ex. « post » pour l'alias « poste »).
+            # Les noms complets des sous-types ne sont pas comparés mot à mot afin
+            # que « post » ne sélectionne pas tous les concepts commençant par Poste.
+            formulations_courtes = [
+                normaliser(x) for x in (concept.get("aliases") or []) if x
+            ]
+            nom_tokens = tokens(concept.get("nom", ""))
+            if len(nom_tokens) == 1:
+                formulations_courtes.append(next(iter(nom_tokens), ""))
+            fuzzy = any(
+                len(mot_question) >= 4 and len(formulation) >= 4
+                and SequenceMatcher(None, mot_question, formulation).ratio() >= 0.86
+                for mot_question in ts
+                for formulation in formulations_courtes
+            )
+            score = (1.0 if exact else (0.82 if fuzzy else 0.7 * recouvrement))
             if classes & classes_concept:
                 score += 0.35
             if score >= 0.55:
                 candidats.append((min(score, 1.0), concept["id"]))
         candidats.sort(key=lambda item: (-item[0], item[1]))
         return [identifiant for _, identifiant in candidats[:limite]]
+
+    @staticmethod
+    def _selectionner_extremites_chemin(
+        question: str,
+        concepts: list[dict],
+        classes_racines: list[str],
+    ) -> list[str]:
+        """Sélectionne deux mentions distinctes et privilégie les noms précis."""
+        q = normaliser(question)
+        mentions = []
+        for concept in concepts:
+            formulations = [concept.get("nom", ""), *(concept.get("aliases") or [])]
+            for formulation in formulations:
+                f = normaliser(formulation)
+                if not f or f in MOTS_AMBIGUS:
+                    continue
+                for correspondance in re.finditer(rf"\b{re.escape(f)}\b", q):
+                    nom_exact = normaliser(concept.get("nom", "")) == f
+                    mentions.append((
+                        correspondance.start(), correspondance.end(),
+                        len(f), nom_exact, concept["id"],
+                    ))
+
+        mentions.sort(key=lambda m: (-m[2], -int(m[3]), m[0], m[4]))
+        retenues = []
+        intervalles = []
+        for debut, fin, _, _, identifiant in mentions:
+            if any(debut < autre_fin and fin > autre_debut for autre_debut, autre_fin in intervalles):
+                continue
+            retenues.append((debut, identifiant))
+            intervalles.append((debut, fin))
+            if len(retenues) == 2:
+                break
+        if len(retenues) == 2:
+            return [identifiant for _, identifiant in sorted(retenues)]
+        return GraphRAGRetriever._selectionner_concepts(
+            question, concepts, classes_racines, limite=2
+        )
 
     def _construire_graphe_metier(
         self,
@@ -249,7 +400,7 @@ class GraphRAGRetriever:
                 record.data()
                 for record in session.run(
                     """
-                    MATCH (c:ConceptMetier)
+                    MATCH (c:ConceptMetier {valide: true})
                     OPTIONAL MATCH (c)-[:REPRESENTE_PAR]->(classe:Classe)
                     RETURN c.id AS id, c.nom AS nom, c.aliases AS aliases,
                            c.description AS description,
@@ -270,8 +421,8 @@ class GraphRAGRetriever:
                 for record in session.run(
                     """
                     UNWIND $racines AS id
-                    MATCH (racine:ConceptMetier {id: id})
-                    OPTIONAL MATCH (racine)-[:RELATION_METIER]-(voisin:ConceptMetier)
+                    MATCH (racine:ConceptMetier {id: id, valide: true})
+                    OPTIONAL MATCH (racine)-[:RELATION_METIER {valide: true}]-(voisin:ConceptMetier {valide: true})
                     WITH collect(DISTINCT racine) + collect(DISTINCT voisin) AS concepts
                     UNWIND concepts AS c
                     WITH DISTINCT c WHERE c IS NOT NULL
@@ -292,9 +443,12 @@ class GraphRAGRetriever:
                 for record in session.run(
                     """
                     MATCH (a:ConceptMetier)-[r:RELATION_METIER]->(b:ConceptMetier)
-                    WHERE a.id IN $ids AND b.id IN $ids
+                    WHERE a.id IN $ids AND b.id IN $ids AND r.valide = true
+                      AND a.valide = true AND b.valide = true
                     RETURN a.id AS source, r.type AS type, b.id AS cible,
-                           r.preuve AS preuve
+                           r.preuve AS preuve, r.source_document AS document,
+                           r.lignes AS lignes, r.chunk_ids AS chunk_ids,
+                           r.condition AS condition, r.validation AS validation
                     ORDER BY source, type, cible LIMIT 100
                     """,
                     ids=ids,
@@ -305,6 +459,24 @@ class GraphRAGRetriever:
             "concepts": noeuds,
             "relations": relations,
         }
+
+    def _chercher_preuves_metier(self, graphe_metier: dict) -> list[dict]:
+        ids = list(dict.fromkeys(
+            ident for relation in graphe_metier.get("relations", [])
+            for ident in (relation.get("chunk_ids") or [])
+        ))[:6]
+        if not ids:
+            return []
+        with self.driver.session() as session:
+            chunks = [r.data() for r in session.run(
+                "MATCH (c:Chunk)-[:APPARTIENT_A]->(d:Document) WHERE c.id IN $ids "
+                "RETURN c.id AS chunk_id, c.texte AS texte, c.position AS position, "
+                "d.id AS document, d.titre AS titre ORDER BY document, position", ids=ids
+            )]
+        for c in chunks:
+            c["citation"] = f"{c['titre']} — passage {c['position'] + 1}"
+            c["origine_retrieval"] = "preuve_graphe_metier"
+        return chunks
 
     def _chercher_chunks(self, question: str, classes: list[str], limite: int = 8) -> list[dict]:
         vecteur = self.embeddings.embed_query(question)
@@ -386,7 +558,11 @@ class GraphRAGRetriever:
             if message.get("role") == "user":
                 dernier_contexte = message.get("content", "")
                 break
-        question_contextuelle = f"{dernier_contexte}\n{question}".strip() if dernier_contexte else question
+        question_contextuelle = (
+            f"{dernier_contexte}\n{question}".strip()
+            if dernier_contexte and self._necessite_contexte(question)
+            else question
+        )
 
         entites = self.resoudre_classes(question_contextuelle)
         if entites and entites[0]["score"] >= 0.90:
@@ -398,7 +574,21 @@ class GraphRAGRetriever:
         graphe_metier = self._construire_graphe_metier(question_contextuelle, racines)
         perimetre = [c["nom"] for c in sous_graphe["classes"]]
         mode = self.determiner_mode(question_contextuelle)
+        chemin_metier = (
+            self._construire_chemin_metier(question_contextuelle, racines)
+            if mode == "CHEMIN_METIER"
+            else {"demande": False, "trouve": False, "concepts": [], "relations": []}
+        )
         chunks = [] if mode == "STRUCTURE" else self._chercher_chunks(question_contextuelle, perimetre)
+        graphe_preuves = {
+            "relations": [
+                *graphe_metier.get("relations", []),
+                *chemin_metier.get("relations", []),
+            ]
+        }
+        preuves = self._chercher_preuves_metier(graphe_preuves)
+        ids_preuves = {c["chunk_id"] for c in preuves}
+        chunks = (preuves + [c for c in chunks if c["chunk_id"] not in ids_preuves])[:12]
 
         return {
             "question": question,
@@ -408,6 +598,7 @@ class GraphRAGRetriever:
             "classes_racines": racines,
             "sous_graphe": sous_graphe,
             "graphe_metier": graphe_metier,
+            "chemin_metier": chemin_metier,
             "chunks": chunks,
             "citations": list(dict.fromkeys(c["citation"] for c in chunks)),
         }

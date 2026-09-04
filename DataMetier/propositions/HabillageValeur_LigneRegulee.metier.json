@@ -1,0 +1,189 @@
+{
+  "domaine": "gestion du trafic ferroviaire",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "dda",
+      "nom": "DDA",
+      "aliases": [],
+      "description": "Donnée de début d'application associée à l'habillage.",
+      "classes_arianes": [
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "decoupage_type_suivi",
+      "nom": "Découpage type suivi",
+      "aliases": [],
+      "description": "Découpage opérationnel évoluant avec l'habillage.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "dfa",
+      "nom": "DFA",
+      "aliases": [],
+      "description": "Donnée de fin d'application associée à l'habillage.",
+      "classes_arianes": [
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "eic",
+      "nom": "EIC",
+      "aliases": [],
+      "description": "Entité d'Intervention et de Coordination, impactée par l'habillage.",
+      "classes_arianes": [
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "habillage_valeur_ligne_regulee",
+      "nom": "Habillage Valeur Ligne Régulée",
+      "aliases": [],
+      "description": "Objet indiquant les portions de lignes dont le trafic est géré par un régulateur.",
+      "classes_arianes": [
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "ligne_regulee",
+      "nom": "Ligne régulée",
+      "aliases": [],
+      "description": "Section dans les habillages ligne désignant une ligne dont le trafic est régulé.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pk_debut",
+      "nom": "PK début",
+      "aliases": [],
+      "description": "Point kilométrique de début d'un tronçon de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "pk_fin",
+      "nom": "PK fin",
+      "aliases": [],
+      "description": "Point kilométrique de fin d'un tronçon de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "A_REVOIR"
+    },
+    {
+      "id": "troncon_de_ligne",
+      "nom": "Tronçon de ligne",
+      "aliases": [
+        "rang"
+      ],
+      "description": "Portion de ligne identifiée par un numéro de rang.",
+      "classes_arianes": [
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "A_REVOIR"
+    }
+  ],
+  "relations": [
+    {
+      "source": "habillage_valeur_ligne_regulee",
+      "type": "COMPOSE_DE",
+      "cible": "ligne_regulee",
+      "preuve": {
+        "document": "HabillageValeur_LigneRegulee.txt",
+        "lignes": "1-119",
+        "citation": "Dans la section « Habillages Ligne » choisissez le « Ligne régulée »"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "habillage_valeur_ligne_regulee",
+      "type": "COMPOSE_DE",
+      "cible": "troncon_de_ligne",
+      "preuve": {
+        "document": "HabillageValeur_LigneRegulee.txt",
+        "lignes": "1-119",
+        "citation": "Sélectionner le tronçon de ligne demandé"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    },
+    {
+      "source": "habillage_valeur_ligne_regulee",
+      "type": "IMPACTE",
+      "cible": "eic",
+      "preuve": {
+        "document": "HabillageValeur_LigneRegulee.txt",
+        "lignes": "1-119",
+        "citation": "Impact sur les structures et compétences des EIC"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": []
+    },
+    {
+      "source": "habillage_valeur_ligne_regulee",
+      "type": "IMPACTE",
+      "cible": "decoupage_type_suivi",
+      "preuve": {
+        "document": "HabillageValeur_LigneRegulee.txt",
+        "lignes": "1-119",
+        "citation": "Cet habillage implique une évolution du découpage « type de suivi »"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ]
+    }
+  ],
+  "erreurs_validation": [
+    "Relation habillage_valeur_ligne_regulee/EST_UN/type_ressource_sujet rejetée: concept source ou cible absent",
+    "Relation habillage_valeur_ligne_regulee/COMPOSE_DE/pk_debut rejetée: citation absente du passage",
+    "Relation habillage_valeur_ligne_regulee/COMPOSE_DE/pk_fin rejetée: citation absente du passage",
+    "Relation habillage_valeur_ligne_regulee/COMPOSE_DE/dda rejetée: citation absente du passage",
+    "Relation habillage_valeur_ligne_regulee/COMPOSE_DE/dfa rejetée: citation absente du passage"
+  ],
+  "document_source": "HabillageValeur_LigneRegulee.txt"
+}

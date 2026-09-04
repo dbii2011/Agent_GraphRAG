@@ -1,0 +1,641 @@
+{
+  "domaine": "gestion_ferroviaire",
+  "statut": "A_REVOIR",
+  "concepts": [
+    {
+      "id": "crr",
+      "nom": "CRR",
+      "aliases": [],
+      "description": "Entité complétant les informations techniques pour des caractéristiques spécifiques",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "dp_catenaires",
+      "nom": "DP caténaires",
+      "aliases": [],
+      "description": "Dispositifs de protection des caténaires",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "dp_voies",
+      "nom": "DP voies",
+      "aliases": [],
+      "description": "Dispositifs de protection des voies",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "gare",
+      "nom": "Gare",
+      "aliases": [],
+      "description": "Lieu de rattachement des SAF, responsable de leur gestion ou exploitation.",
+      "classes_arianes": [
+        ":gare"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "guc",
+      "nom": "GUC",
+      "aliases": [],
+      "description": "Entité responsable du maintien des PR horairisés lors de la suppression d'un SAF",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "guf",
+      "nom": "GUF",
+      "aliases": [],
+      "description": "Entité indiquant la date de mise en service d'un SAF",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "if_sur_saf",
+      "nom": "IF sur SAF",
+      "aliases": [
+        "IF"
+      ],
+      "description": "Interface située sur un SAF",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "itineraire",
+      "nom": "Itinéraire",
+      "aliases": [],
+      "description": "Trajet défini entre deux points du réseau",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [],
+      "description": "Réseau ferré sur lequel les SAF peuvent être ancrés.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "localisation",
+      "nom": "Localisation",
+      "aliases": [],
+      "description": "Entité définissant un emplacement sur le réseau ferroviaire",
+      "classes_arianes": [
+        "Localisation"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "n_ud_de_vsm",
+      "nom": "Nœud de VSM",
+      "aliases": [],
+      "description": "Point de connexion ou d'intersection dans le réseau",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "plan_technique",
+      "nom": "Plan technique",
+      "aliases": [
+        "PT"
+      ],
+      "description": "Source prioritaire d'informations techniques pour la gestion du réseau",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "pr_horairise",
+      "nom": "PR horairisé",
+      "aliases": [
+        "PR"
+      ],
+      "description": "Point de repère horairisé au niveau d'un SAF",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf",
+      "nom": "SAF",
+      "aliases": [
+        "Secteur d’Activité Ferroviaire"
+      ],
+      "description": "Zone géographique localisée sur le réseau ferré, possédant une ou plusieurs voies de service et assurant une ou plusieurs fonctions liées à l’activité ferroviaire. Peut être décomposé en Sous-SAF dans le cas d’un triage.",
+      "classes_arianes": [
+        "Saf",
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_chantier",
+      "nom": "SAF chantier",
+      "aliases": [],
+      "description": "Faisceau incluant les chantiers, les faisceaux de garage de matériel ou toute entité non répertoriée, positionné côté voie 1 ou 2.",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_eim",
+      "nom": "SAF EIM",
+      "aliases": [],
+      "description": "Faisceaux de voies appartenant aux établissements (EIMM, EIM TGV, EMM, EMR, postes MR, ateliers du matériel, etc.).",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_et",
+      "nom": "SAF ET",
+      "aliases": [],
+      "description": "Faisceaux de voies appartenant aux établissements avec une composante traction (EMT, dépôts, établissements T, etc.).",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_ite",
+      "nom": "SAF ITE",
+      "aliases": [],
+      "description": "Installation terminale embranchée, localisée sur une ligne ou un SAF et rattachée à une gare.",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf_triage",
+      "nom": "SAF Triage",
+      "aliases": [],
+      "description": "Faisceau de triage, localisé sur une ligne ou un SAF et rattaché à une gare ou un SAF.",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "sous_saf",
+      "nom": "Sous-SAF",
+      "aliases": [],
+      "description": "Sous-ensemble d’un SAF Triage, sans localisation à la ligne.",
+      "classes_arianes": [
+        "Secteur"
+      ],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voies_de_service",
+      "nom": "Voies de service",
+      "aliases": [],
+      "description": "Infrastructures ferroviaires secondaires",
+      "classes_arianes": [],
+      "documents": [
+        "Saf.txt"
+      ],
+      "statut": "A_REVOIR",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "saf_ite",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Une ITE doit être localisée sur une ligne ou sur un SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_ite",
+      "type": "RATTACHE_A",
+      "cible": "gare",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Une ITE doit être localisée sur une ligne ou sur un SAF et doit être rattachée à une GARE"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_chantier",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_chantier",
+      "type": "RATTACHE_A",
+      "cible": "gare",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_chantier",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_eim",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_eim",
+      "type": "RATTACHE_A",
+      "cible": "gare",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_eim",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_et",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_et",
+      "type": "RATTACHE_A",
+      "cible": "gare",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_et",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_triage",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Les localisations correspondant aux points d’ancrage du SAF sur le réseau des lignes"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_triage",
+      "type": "RATTACHE_A",
+      "cible": "gare",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "saf_triage",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement soit à une Gare, soit à un SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "sous_saf",
+      "type": "RATTACHE_A",
+      "cible": "saf_triage",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "1-101",
+        "citation": "Rattachement à un SAF Triage"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "localisation",
+      "type": "LOCALISE_SUR",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "102-134",
+        "citation": "Localisation sur SAF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "guf",
+      "type": "DECRIT_PAR",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "102-134",
+        "citation": "Date de mise en service indiquée par le GUF"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "crr",
+      "type": "TRANSMET_A",
+      "cible": "plan_technique",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "102-134",
+        "citation": "En cas de demande du CRR si le PT n’indique pas clairement la caractéristique alors prendre en compte la demande du CRR."
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    },
+    {
+      "source": "pr_horairise",
+      "type": "A_POUR_DESTINATION",
+      "cible": "saf",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "102-134",
+        "citation": "Si un PR est horairisé au niveau du SAF à supprimer"
+      },
+      "statut": "A_REVOIR",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation saf/EST_UN/secteur rejetée: concept source ou cible absent",
+    "Relation crr/COMPLETE/plan_technique rejetée: type de relation non autorisé"
+  ],
+  "document_source": "Saf.txt",
+  "relations_rejetees": [
+    {
+      "source": "plan_technique",
+      "type": "EST_UN",
+      "cible": "localisation",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "102-134",
+        "citation": "Le plan technique est la source prioritaire des informations."
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [
+        "relation incompatible avec le sens du passage relu (audit métier)"
+      ]
+    },
+    {
+      "source": "guc",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "pr_horairise",
+      "preuve": {
+        "document": "Saf.txt",
+        "lignes": "102-134",
+        "citation": "prévenir le GUC afin qu’il procède à son maintien"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "version_validation": 2,
+      "motifs_rejet": [
+        "citation sans action de commande"
+      ]
+    }
+  ],
+  "version_validation": 2
+}
