@@ -1,0 +1,242 @@
+{
+  "documents": 29,
+  "concepts": 324,
+  "relations_valides": 117,
+  "relations_probables": 224,
+  "relations_rejetees": 24,
+  "pilotes": [
+    {
+      "document": "Acces.txt",
+      "fichier": "Acces.pilote.json",
+      "concepts": 3,
+      "relations_valides": 1,
+      "relations_probables": 1,
+      "relations_rejetees": 1
+    },
+    {
+      "document": "CantonEmprunte.txt",
+      "fichier": "CantonEmprunte.pilote.json",
+      "concepts": 12,
+      "relations_valides": 4,
+      "relations_probables": 10,
+      "relations_rejetees": 1
+    },
+    {
+      "document": "ConfigurationExploitation.txt",
+      "fichier": "ConfigurationExploitation.pilote.json",
+      "concepts": 5,
+      "relations_valides": 1,
+      "relations_probables": 6,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "DetecteurBoiteChaude.txt",
+      "fichier": "DetecteurBoiteChaude.pilote.json",
+      "concepts": 4,
+      "relations_valides": 4,
+      "relations_probables": 0,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "Gare.txt",
+      "fichier": "Gare.pilote.json",
+      "concepts": 6,
+      "relations_valides": 2,
+      "relations_probables": 6,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "HabillageCourantMaxCatenaire.txt",
+      "fichier": "HabillageCourantMaxCatenaire.pilote.json",
+      "concepts": 15,
+      "relations_valides": 1,
+      "relations_probables": 11,
+      "relations_rejetees": 1
+    },
+    {
+      "document": "HabillageValeur_CategorieLigne.txt",
+      "fichier": "HabillageValeur_CategorieLigne.pilote.json",
+      "concepts": 5,
+      "relations_valides": 1,
+      "relations_probables": 4,
+      "relations_rejetees": 1
+    },
+    {
+      "document": "HabillageValeur_Cloture.txt",
+      "fichier": "HabillageValeur_Cloture.pilote.json",
+      "concepts": 5,
+      "relations_valides": 1,
+      "relations_probables": 8,
+      "relations_rejetees": 1
+    },
+    {
+      "document": "HabillageValeur_CourantDeFoucault.txt",
+      "fichier": "HabillageValeur_CourantDeFoucault.pilote.json",
+      "concepts": 10,
+      "relations_valides": 1,
+      "relations_probables": 7,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "HabillageValeur_declivite.txt",
+      "fichier": "HabillageValeur_declivite.pilote.json",
+      "concepts": 0,
+      "relations_valides": 0,
+      "relations_probables": 0,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "HabillageValeur_LigneRegulee.txt",
+      "fichier": "HabillageValeur_LigneRegulee.pilote.json",
+      "concepts": 5,
+      "relations_valides": 1,
+      "relations_probables": 3,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "HabillageValeur_MatiereDangereuse.txt",
+      "fichier": "HabillageValeur_MatiereDangereuse.pilote.json",
+      "concepts": 5,
+      "relations_valides": 1,
+      "relations_probables": 4,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "HabillageValeur_SystemesDeControleContinuDeVitesse.txt",
+      "fichier": "HabillageValeur_SystemesDeControleContinuDeVitesse.pilote.json",
+      "concepts": 11,
+      "relations_valides": 1,
+      "relations_probables": 18,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "HabillageValeur_VitessesLimitesVoie.txt",
+      "fichier": "HabillageValeur_VitessesLimitesVoie.pilote.json",
+      "concepts": 9,
+      "relations_valides": 0,
+      "relations_probables": 8,
+      "relations_rejetees": 1
+    },
+    {
+      "document": "Itineraire.txt",
+      "fichier": "Itineraire.pilote.json",
+      "concepts": 30,
+      "relations_valides": 7,
+      "relations_probables": 23,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "Ligne.txt",
+      "fichier": "Ligne.pilote.json",
+      "concepts": 33,
+      "relations_valides": 13,
+      "relations_probables": 27,
+      "relations_rejetees": 4
+    },
+    {
+      "document": "ModeDeCantonnement.txt",
+      "fichier": "ModeDeCantonnement.pilote.json",
+      "concepts": 7,
+      "relations_valides": 0,
+      "relations_probables": 6,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "NoeudDeVoie.txt",
+      "fichier": "NoeudDeVoie.pilote.json",
+      "concepts": 17,
+      "relations_valides": 3,
+      "relations_probables": 14,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "OuvrageArt.txt",
+      "fichier": "OuvrageArt.pilote.json",
+      "concepts": 4,
+      "relations_valides": 0,
+      "relations_probables": 3,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "PassageANiveau.txt",
+      "fichier": "PassageANiveau.pilote.json",
+      "concepts": 14,
+      "relations_valides": 5,
+      "relations_probables": 6,
+      "relations_rejetees": 3
+    },
+    {
+      "document": "PointRemarquable.txt",
+      "fichier": "PointRemarquable.pilote.json",
+      "concepts": 4,
+      "relations_valides": 0,
+      "relations_probables": 2,
+      "relations_rejetees": 2
+    },
+    {
+      "document": "Post.txt",
+      "fichier": "Post.pilote.json",
+      "concepts": 27,
+      "relations_valides": 8,
+      "relations_probables": 18,
+      "relations_rejetees": 1
+    },
+    {
+      "document": "Quai.txt",
+      "fichier": "Quai.pilote.json",
+      "concepts": 22,
+      "relations_valides": 20,
+      "relations_probables": 2,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "RegionSNCF.txt",
+      "fichier": "RegionSNCF.pilote.json",
+      "concepts": 6,
+      "relations_valides": 3,
+      "relations_probables": 3,
+      "relations_rejetees": 1
+    },
+    {
+      "document": "Saf.txt",
+      "fichier": "Saf.pilote.json",
+      "concepts": 14,
+      "relations_valides": 16,
+      "relations_probables": 3,
+      "relations_rejetees": 2
+    },
+    {
+      "document": "traversee_voie.txt",
+      "fichier": "traversee_voie.pilote.json",
+      "concepts": 5,
+      "relations_valides": 1,
+      "relations_probables": 3,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "TypeElectrification.txt",
+      "fichier": "TypeElectrification.pilote.json",
+      "concepts": 7,
+      "relations_valides": 0,
+      "relations_probables": 6,
+      "relations_rejetees": 0
+    },
+    {
+      "document": "ZEP.txt",
+      "fichier": "ZEP.pilote.json",
+      "concepts": 14,
+      "relations_valides": 9,
+      "relations_probables": 4,
+      "relations_rejetees": 5
+    },
+    {
+      "document": "ZoneDeDetection.txt",
+      "fichier": "ZoneDeDetection.pilote.json",
+      "concepts": 25,
+      "relations_valides": 13,
+      "relations_probables": 18,
+      "relations_rejetees": 0
+    }
+  ],
+  "validation_experte": false
+}

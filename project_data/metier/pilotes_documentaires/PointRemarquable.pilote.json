@@ -1,0 +1,188 @@
+{
+  "domaine": "gestion des points remarquables ferroviaires",
+  "statut": "PROBABLE",
+  "methode_validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3",
+  "validation_experte": false,
+  "concepts": [
+    {
+      "id": "fiche_technique_pr",
+      "nom": "Fiche technique PR",
+      "aliases": [],
+      "description": "Document associé à la PPR décrivant le PR et ses caractéristiques.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DOCUMENT",
+      "validation_experte": false
+    },
+    {
+      "id": "gsmr",
+      "nom": "GSMR",
+      "aliases": [],
+      "description": "Indicateur valant « Oui » ou « Non » selon l'habillage LIGNE [Radio Sol-Train].",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "point_remarquable",
+      "nom": "Point Remarquable",
+      "aliases": [
+        "PR"
+      ],
+      "description": "Point géographique identifié par son code CI et son code CH, utilisé pour le calcul des horaires théoriques et parfois pour délimiter des travaux ou un segment de tarification.",
+      "classes_arianes": [
+        "Localisation"
+      ],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "ppr",
+      "nom": "PPR",
+      "aliases": [
+        "Procédure Point Remarquable"
+      ],
+      "description": "Procédure utilisée pour la création, modification ou suppression des PR.",
+      "classes_arianes": [],
+      "documents": [
+        "PointRemarquable.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    }
+  ],
+  "relations": [
+    {
+      "source": "point_remarquable",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "gsmr",
+      "preuve": {
+        "document": "PointRemarquable.txt",
+        "lignes": "1-137",
+        "citation": "GSMR : Cet indicateur doit avoir la valeur « Oui » ou « Non »."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "fiche_technique_pr",
+      "type": "DECRIT_PAR",
+      "cible": "ppr",
+      "preuve": {
+        "document": "PointRemarquable.txt",
+        "lignes": "1-137",
+        "citation": "La description du PR est fournie dans la fiche technique associée à la PPR."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    }
+  ],
+  "relations_valides": 0,
+  "relations_probables": 2,
+  "relations_rejetees": [
+    {
+      "source": "point_remarquable",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "ppr",
+      "preuve": {
+        "document": "PointRemarquable.txt",
+        "lignes": "1-137",
+        "citation": "Les cas de création, modification et suppression se font essentiellement sur demande via une PPR (Procédure Point Remarquable)."
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "citation sans action de commande"
+      ]
+    },
+    {
+      "source": "ticket_jira_guc",
+      "type": "COMMANDE",
+      "cible": "point_remarquable",
+      "preuve": {
+        "document": "PointRemarquable.txt",
+        "lignes": "1-137",
+        "citation": "Procédure PR Horairisé et création d’un ticket JIRA GUC."
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "citation sans action de commande"
+      ]
+    }
+  ],
+  "relations_exclues": 2,
+  "avertissement": "Validation documentaire automatique : aucune certification experte ferroviaire."
+}

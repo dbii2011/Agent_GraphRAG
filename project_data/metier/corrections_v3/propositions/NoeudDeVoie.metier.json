@@ -1,0 +1,835 @@
+{
+  "domaine": "gestion des nœuds de voie ferroviaire",
+  "statut": "PROBABLE",
+  "concepts": [
+    {
+      "id": "appareil_de_voie",
+      "nom": "Appareil de voie",
+      "aliases": [],
+      "description": "Dispositif permettant le changement de voie ou la séparation des flux ferroviaires.",
+      "classes_arianes": [
+        "Appareil de voie"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "appareil_de_voie_type_i",
+      "nom": "Appareil de voie type I",
+      "aliases": [
+        "appareil_de_voie"
+      ],
+      "description": "Appareil de voie associé aux nœuds intermédiaires, possédant deux localisations.",
+      "classes_arianes": [
+        "appareil_de_voie"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "communication",
+      "nom": "Communication",
+      "aliases": [],
+      "description": "Trajets possibles entre lignes identifiés via un nœud de ligne sur le schéma de signalisation.",
+      "classes_arianes": [
+        "Communication"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "date_de_fin_d_activite",
+      "nom": "Date de fin d'activité",
+      "aliases": [
+        "DFA"
+      ],
+      "description": "Date marquant la fin de l'activité d'un nœud de voie ou la date de suppression/modification de son extrémité.",
+      "classes_arianes": [],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "date_de_mise_en_service",
+      "nom": "Date de mise en service",
+      "aliases": [
+        "DDA"
+      ],
+      "description": "Date future de mise en service d'un nœud de voie, fournie par l'étude travaux du GUF.",
+      "classes_arianes": [],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "extremite_de_n_ud",
+      "nom": "Extrémité de nœud",
+      "aliases": [],
+      "description": "Partie terminale d'un nœud de voie, pouvant être modifiée ou supprimée.",
+      "classes_arianes": [
+        "Type Extremite"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "guf",
+      "nom": "GUF",
+      "aliases": [],
+      "description": "Entité fournissant les dates de suppression/modification ou de mise en service des nœuds de voie.",
+      "classes_arianes": [],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "habillage_de_ligne",
+      "nom": "Habillage de ligne",
+      "aliases": [],
+      "description": "Revêtement ou structure associée à une ligne ferroviaire, impacté par les modifications de nœuds.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "localisation",
+      "nom": "Localisation",
+      "aliases": [],
+      "description": "Positionnement d’un nœud sur une ligne, avec indication de l’ordre ou de l’extrémité.",
+      "classes_arianes": [
+        "Localisation"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "n_ud_de_ligne",
+      "nom": "Nœud de ligne",
+      "aliases": [],
+      "description": "Élément permettant de décrire les extrémités de ligne et les intersections entre lignes.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "n_ud_de_voie",
+      "nom": "Nœud de voie",
+      "aliases": [],
+      "description": "Point de connexion ou de séparation des voies ferrées, incluant les extrémités et les appareils de voie.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "n_ud_frontiere",
+      "nom": "Nœud Frontière",
+      "aliases": [
+        "Frontière"
+      ],
+      "description": "Nœud situé à l’extrémité d’un tronçon de ligne, indiquant l’interruption de gestion du réseau à la frontière d’un réseau privé ou étranger.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "n_ud_intermediaire",
+      "nom": "Nœud Intermédiaire",
+      "aliases": [
+        "Intermédiaire"
+      ],
+      "description": "Nœud maillant les extrémités communes de deux tronçons, d’une même ligne ou deux lignes différentes.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "n_ud_j",
+      "nom": "Nœud J",
+      "aliases": [
+        "J"
+      ],
+      "description": "Nœud désignant l’intersection entre deux lignes parallèles, avec connexion par une voie de jonction.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "n_ud_pont",
+      "nom": "Nœud Pont",
+      "aliases": [
+        "Pont"
+      ],
+      "description": "Nœud indiquant un croisement de ligne vu du ciel sans communication possible, précisant la ligne placée au-dessus de l’autre.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "n_ud_terminal",
+      "nom": "Nœud Terminal",
+      "aliases": [
+        "Terminal"
+      ],
+      "description": "Nœud désignant l’extrémité physique de la ligne, pour les lignes se terminant en impasse.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "n_ud_x",
+      "nom": "Nœud X",
+      "aliases": [
+        "X"
+      ],
+      "description": "Nœud désignant un croisement entre deux lignes dont aucune n’est en extrémité ou bien un croisement entre plus de deux lignes.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "n_ud_y",
+      "nom": "Nœud Y",
+      "aliases": [
+        "Y"
+      ],
+      "description": "Nœud situant un croisement entre deux ou trois lignes, dont l’une au moins est en extrémité ou extrémité de rang de ligne.",
+      "classes_arianes": [
+        "Noeud"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk",
+      "nom": "PK",
+      "aliases": [],
+      "description": "Point kilométrique indiquant la position d’un nœud sur une ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "plan_technique",
+      "nom": "Plan Technique",
+      "aliases": [],
+      "description": "Document ou schéma de signalisation définissant les modifications ou créations de nœuds de voie.",
+      "classes_arianes": [],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "point_remarquable",
+      "nom": "Point remarquable",
+      "aliases": [],
+      "description": "Lieu spécifique identifié sur le réseau ferroviaire, impacté par les modifications de nœuds.",
+      "classes_arianes": [],
+      "documents": [
+        "NoeudDeVoie.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "n_ud_pont",
+      "type": "EST_UN",
+      "cible": "n_ud_de_ligne",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "Le nœud « Pont » : il indique un croisement de ligne vu du ciel sans communication possible"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "n_ud_de_ligne",
+            "type": "EST_UN",
+            "cible": "n_ud_pont"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_y",
+      "type": "EST_UN",
+      "cible": "n_ud_de_ligne",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "Le nœud « Y » : il situe un croisement entre deux ou trois lignes"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "n_ud_de_ligne",
+            "type": "EST_UN",
+            "cible": "n_ud_y"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_x",
+      "type": "EST_UN",
+      "cible": "n_ud_de_ligne",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "Le nœud « X » : il désigne un croisement entre deux lignes dont aucune n’est en extrémité"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "n_ud_de_ligne",
+            "type": "EST_UN",
+            "cible": "n_ud_x"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_j",
+      "type": "EST_UN",
+      "cible": "n_ud_de_ligne",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "Le nœud « J » : il désigne l’intersection entre deux lignes parallèles"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "n_ud_de_ligne",
+            "type": "EST_UN",
+            "cible": "n_ud_j"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_frontiere",
+      "type": "EST_UN",
+      "cible": "n_ud_de_ligne",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "Deux autres types peuvent être qualifiés de virtuels, car non matérialisés : Le nœud « Frontière » : situé à l’extrémité d’un tronçon de ligne"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "n_ud_de_ligne",
+            "type": "EST_UN",
+            "cible": "n_ud_frontiere"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_intermediaire",
+      "type": "EST_UN",
+      "cible": "n_ud_de_ligne",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "Le nœud « Intermédiaire » : il maille les extrémités communes de deux tronçons"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "n_ud_de_ligne",
+            "type": "EST_UN",
+            "cible": "n_ud_intermediaire"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_y",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "communication",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "Afin de determiner les communication il faut commencer par identifier le nœud de ligne sur le schéma de signalisation (un adv)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_intermediaire",
+      "type": "COMPOSE_DE",
+      "cible": "appareil_de_voie_type_i",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "Un appareil de voie type I possède deux localisations"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_pont",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "PK : correspond au PK axe de croissement des lignes"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_frontiere",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "PK : correspond au PK indiqué sur le schéma de signalisation"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_intermediaire",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "1-141",
+        "citation": "PK : correspond au PK extrémité des tronçons d’une ligne ou de deux lignes sur le schéma de signalisation"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "date_de_fin_d_activite",
+      "type": "DEPEND_DE",
+      "cible": "guf",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "142-171",
+        "citation": "date de suppression /modification de l’extrémité fournit par le GUF"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "date_de_mise_en_service",
+      "type": "DEPEND_DE",
+      "cible": "guf",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "142-171",
+        "citation": "date de MES, future via étude travaux fournit par le GUF"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "date_de_fin_d_activite",
+      "type": "DEPEND_DE",
+      "cible": "date_de_mise_en_service",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "142-171",
+        "citation": "soit 01/01/2382 (en activité) ou date de suppression /modification de l’extrémité fournit par le GUF."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "plan_technique",
+      "type": "TRANSMET_A",
+      "cible": "guf",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "142-171",
+        "citation": "étude travaux fournit par le GUF"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_de_voie",
+      "type": "IMPACTE",
+      "cible": "habillage_de_ligne",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "142-171",
+        "citation": "il faut vérifier les impacts sur les objets suivants : Habillages des lignes"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_de_voie",
+      "type": "UTILISE",
+      "cible": "appareil_de_voie",
+      "preuve": {
+        "document": "NoeudDeVoie.txt",
+        "lignes": "142-171",
+        "citation": "poses/déposes des appareils de voie en extrémité"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation noeud_de_ligne/EST_UN/noeud_terminal rejetée: citation absente du passage",
+    "Relation noeud_de_voie/IMPACTE/noeud_voie rejetée: citation absente du passage",
+    "Relation noeud_de_voie/IMPACTE/point_remarquable rejetée: citation absente du passage"
+  ],
+  "document_source": "NoeudDeVoie.txt",
+  "relations_rejetees": [],
+  "version_validation": 3
+}

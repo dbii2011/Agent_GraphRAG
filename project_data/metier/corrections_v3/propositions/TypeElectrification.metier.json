@@ -1,0 +1,319 @@
+{
+  "domaine": "électrification des lignes ferroviaires",
+  "statut": "PROBABLE",
+  "concepts": [
+    {
+      "id": "dda",
+      "nom": "DDA",
+      "aliases": [],
+      "description": "Date de début d'application d'un mode d'électrification.",
+      "classes_arianes": [],
+      "documents": [
+        "TypeElectrification.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "dfa",
+      "nom": "DFA",
+      "aliases": [],
+      "description": "Date de fin d'application d'un mode d'électrification.",
+      "classes_arianes": [],
+      "documents": [
+        "TypeElectrification.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "habillage_ligne",
+      "nom": "Habillage Ligne",
+      "aliases": [],
+      "description": "Section du système permettant de gérer les modes d'électrification des lignes.",
+      "classes_arianes": [],
+      "documents": [
+        "TypeElectrification.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne_ferroviaire",
+      "nom": "Ligne ferroviaire",
+      "aliases": [
+        "ligne"
+      ],
+      "description": "Infrastructure ferroviaire composée de tronçons et de voies.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "TypeElectrification.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "mode_d_electrification",
+      "nom": "Mode d'électrification",
+      "aliases": [],
+      "description": "Habillage indiquant pour une ligne la tension délivrée par la caténaire, défini par des caractéristiques obligatoires et des valeurs possibles.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "TypeElectrification.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk_debut",
+      "nom": "PK début",
+      "aliases": [],
+      "description": "Point kilométrique marquant le début d'un tronçon de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "TypeElectrification.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_fin",
+      "nom": "PK fin",
+      "aliases": [],
+      "description": "Point kilométrique marquant la fin d'un tronçon de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "TypeElectrification.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "troncon_de_ligne",
+      "nom": "Tronçon de ligne",
+      "aliases": [
+        "rang"
+      ],
+      "description": "Segment d'une ligne ferroviaire défini par un PK début et un PK fin.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "TypeElectrification.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "valeur_d_electrification",
+      "nom": "Valeur d'électrification",
+      "aliases": [],
+      "description": "Tension ou type d'alimentation électrique applicable à un tronçon de ligne.",
+      "classes_arianes": [],
+      "documents": [
+        "TypeElectrification.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie",
+      "nom": "Voie",
+      "aliases": [],
+      "description": "Élément d'une ligne ferroviaire pouvant avoir un mode d'électrification différent.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "TypeElectrification.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "mode_d_electrification",
+      "type": "DECRIT_PAR",
+      "cible": "valeur_d_electrification",
+      "preuve": {
+        "document": "TypeElectrification.txt",
+        "lignes": "1-175",
+        "citation": "Valeur possibles (Cf chapitre 3)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "mode_d_electrification",
+      "type": "DECRIT_PAR",
+      "cible": "dda",
+      "preuve": {
+        "document": "TypeElectrification.txt",
+        "lignes": "1-175",
+        "citation": "Une DDA (correspondant à la date de l’électrification de la ligne)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "la cible de DECRIT_PAR devrait être une source documentaire",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "habillage_ligne",
+      "type": "GERE_PAR",
+      "cible": "mode_d_electrification",
+      "preuve": {
+        "document": "TypeElectrification.txt",
+        "lignes": "1-175",
+        "citation": "Dans la section « Habillages Ligne » choisissez le « Mode d’Electrification »"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "habillage_ligne",
+      "type": "GERE_PAR",
+      "cible": "troncon_de_ligne",
+      "preuve": {
+        "document": "TypeElectrification.txt",
+        "lignes": "1-175",
+        "citation": "Dans la section « Habillages Ligne » choisissez le « Mode d’Electrification »"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "voie",
+      "type": "A_POUR_DESTINATION",
+      "cible": "valeur_d_electrification",
+      "preuve": {
+        "document": "TypeElectrification.txt",
+        "lignes": "1-175",
+        "citation": "l’information donnée par le RT peut être différentes sur chacune des voies d’une même ligne"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "négation ou modalité : ne pas interpréter comme un fait universel",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": false
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne_ferroviaire",
+      "type": "COMPOSE_DE",
+      "cible": "voie",
+      "preuve": {
+        "document": "TypeElectrification.txt",
+        "lignes": "1-175",
+        "citation": "une même ligne le mode d’électrification peut être différente"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "négation ou modalité : ne pas interpréter comme un fait universel",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": false
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation mode_electrification/DECRIT_PAR/troncon_ligne rejetée: citation absente du passage",
+    "Relation mode_electrification/DECRIT_PAR/ddfa rejetée: citation absente du passage",
+    "Relation troncon_ligne/LOCALISE_SUR/pk_debut rejetée: citation absente du passage",
+    "Relation troncon_ligne/LOCALISE_SUR/pk_fin rejetée: citation absente du passage",
+    "Relation mode_electrification/IMPACTE/domaine_protection_catenaires_s11 rejetée: concept source ou cible absent"
+  ],
+  "document_source": "TypeElectrification.txt",
+  "relations_rejetees": [],
+  "version_validation": 3
+}

@@ -1,0 +1,410 @@
+{
+  "domaine": "gestion des vitesses limites sur le réseau ferroviaire",
+  "statut": "PROBABLE",
+  "methode_validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3",
+  "validation_experte": false,
+  "concepts": [
+    {
+      "id": "categorie_de_train",
+      "nom": "Catégorie de train",
+      "aliases": [],
+      "description": "Classification des trains selon leurs caractéristiques techniques ou opérationnelles.",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "HabillageValeur_VitessesLimitesVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "code_composition",
+      "nom": "Code composition",
+      "aliases": [],
+      "description": "Identifiant associé à une composition de train pour la gestion des vitesses limites.",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "HabillageValeur_VitessesLimitesVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "code_vitesse",
+      "nom": "Code vitesse",
+      "aliases": [],
+      "description": "Code associé à une vitesse limite pour une catégorie de train donnée.",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "HabillageValeur_VitessesLimitesVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "consigne_de_ligne",
+      "nom": "Consigne de ligne",
+      "aliases": [],
+      "description": "Document prescrivant les règles de gestion des vitesses limites pour une ligne spécifique.",
+      "classes_arianes": [
+        "Consigne"
+      ],
+      "documents": [
+        "HabillageValeur_VitessesLimitesVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "indice_de_composition",
+      "nom": "Indice de composition",
+      "aliases": [],
+      "description": "Indice technique lié à la composition d'un train pour la détermination des vitesses limites.",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "HabillageValeur_VitessesLimitesVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "portion_de_voie",
+      "nom": "Portion de voie",
+      "aliases": [],
+      "description": "Segment de voie ferroviaire sur lequel une vitesse limite est définie.",
+      "classes_arianes": [
+        "Portion"
+      ],
+      "documents": [
+        "HabillageValeur_VitessesLimitesVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "renseignement_technique",
+      "nom": "Renseignement Technique",
+      "aliases": [
+        "RT"
+      ],
+      "description": "Document technique décrivant les vitesses limites et leurs modalités d'application sur le réseau.",
+      "classes_arianes": [
+        "Consigne"
+      ],
+      "documents": [
+        "HabillageValeur_VitessesLimitesVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DOCUMENT",
+      "validation_experte": false
+    },
+    {
+      "id": "vitesse_limite",
+      "nom": "Vitesse limite",
+      "aliases": [
+        "VL/COMP"
+      ],
+      "description": "Valeur (en km/h) indiquée pour chaque catégorie de train sur une portion de voie.",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "HabillageValeur_VitessesLimitesVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "voie_banalisee",
+      "nom": "Voie banalisée",
+      "aliases": [
+        "IPCS"
+      ],
+      "description": "Voie pouvant être parcourue dans les deux sens selon les besoins opérationnels.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "HabillageValeur_VitessesLimitesVoie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    }
+  ],
+  "relations": [
+    {
+      "source": "vitesse_limite",
+      "type": "A_POUR_DESTINATION",
+      "cible": "portion_de_voie",
+      "preuve": {
+        "document": "HabillageValeur_VitessesLimitesVoie.txt",
+        "lignes": "1-137",
+        "citation": "une valeur (en km/h) indiquée pour chaque catégorie de train sur une portion de voie."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "vitesse_limite",
+      "type": "UTILISE",
+      "cible": "categorie_de_train",
+      "preuve": {
+        "document": "HabillageValeur_VitessesLimitesVoie.txt",
+        "lignes": "1-137",
+        "citation": "Valeur (en km/h) indiquée pour chaque catégorie de train sur une portion de voie."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "vitesse_limite",
+      "type": "UTILISE",
+      "cible": "code_composition",
+      "preuve": {
+        "document": "HabillageValeur_VitessesLimitesVoie.txt",
+        "lignes": "1-137",
+        "citation": "Correspond à l’indice composition, au code vitesse ou le code composition."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "vitesse_limite",
+      "type": "UTILISE",
+      "cible": "indice_de_composition",
+      "preuve": {
+        "document": "HabillageValeur_VitessesLimitesVoie.txt",
+        "lignes": "1-137",
+        "citation": "Correspond à l’indice composition, au code vitesse ou le code composition."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "vitesse_limite",
+      "type": "UTILISE",
+      "cible": "code_vitesse",
+      "preuve": {
+        "document": "HabillageValeur_VitessesLimitesVoie.txt",
+        "lignes": "1-137",
+        "citation": "Correspond à l’indice composition, au code vitesse ou le code composition."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "renseignement_technique",
+      "type": "GERE_PAR",
+      "cible": "consigne_de_ligne",
+      "preuve": {
+        "document": "HabillageValeur_VitessesLimitesVoie.txt",
+        "lignes": "1-137",
+        "citation": "Parution d’un nouveau RT\nConsigne de ligne"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "voie_banalisee",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "portion_de_voie",
+      "preuve": {
+        "document": "HabillageValeur_VitessesLimitesVoie.txt",
+        "lignes": "1-137",
+        "citation": "Pour les circulations à contre sens (IPCS, voie banalisée)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "vitesse_limite",
+      "type": "NECESSITE",
+      "cible": "renseignement_technique",
+      "preuve": {
+        "document": "HabillageValeur_VitessesLimitesVoie.txt",
+        "lignes": "1-137",
+        "citation": "Pour mettre à jour les vitesses limite par indice composition des consignes de ligne à trafic restreint procéder comme suit"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    }
+  ],
+  "relations_valides": 0,
+  "relations_probables": 8,
+  "relations_rejetees": [
+    {
+      "source": "portion_de_voie",
+      "type": "LOCALISE_SUR",
+      "cible": "renseignement_technique",
+      "preuve": {
+        "document": "HabillageValeur_VitessesLimitesVoie.txt",
+        "lignes": "1-137",
+        "citation": "Pour détecter la création d’une vitesse limite voie, on doit regarder le résumé des modifications dans le préambule sur la nouvelle version du Renseignement Technique (RT)."
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "localisation incompatible avec une date ou un document"
+      ]
+    }
+  ],
+  "relations_exclues": 1,
+  "avertissement": "Validation documentaire automatique : aucune certification experte ferroviaire."
+}

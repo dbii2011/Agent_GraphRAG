@@ -1,0 +1,11 @@
+# Dépendances de l'application. Installer dans un environnement virtuel.
+fastapi
+uvicorn
+sqlmodel
+sqlalchemy
+python-dotenv
+neo4j
+httpx
+langchain-mistralai
+langchain-text-splitters
+numpy

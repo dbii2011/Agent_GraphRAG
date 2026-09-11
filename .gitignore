@@ -19,10 +19,14 @@ ML/venv_ml/
 
 # Test, type-check and tooling caches
 .pytest_cache/
+.pytest_tmp*/
+.pytest-codex-*/
+pytest-cache-files-*/
 .mypy_cache/
 .ruff_cache/
 .coverage
 htmlcov/
+.pptx_build/
 
 # IDE and operating-system files
 .vscode/

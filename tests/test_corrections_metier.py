@@ -4,10 +4,11 @@ from unittest.mock import Mock, MagicMock
 
 import pytest
 
-from graphe_metier_builder import importer
-from pipeline_graphe_metier import consolider, extraire_json_message
-from recontroler_graphe_metier import lire_passage, recontroler
-from validation_metier import controler_relation, corriger_relation, verifier_import
+from arianes.graph.metier_builder import importer
+from arianes.paths import METIER_DATA_DIR
+from arianes.pipelines.extraction_metier import consolider, extraire_json_message
+from arianes.pipelines.recontrole_metier import lire_passage, recontroler
+from arianes.pipelines.validation_metier import controler_relation, corriger_relation, verifier_import
 
 
 def relation(s="signal", t="EST_COMMANDE_PAR", c="poste", citation="Le signal est commandé par le poste.", doc="Post.txt"):
@@ -50,10 +51,10 @@ def test_document_ne_commande_pas_un_poste():
     assert controler_relation(r, concepts("poste", "plan_technique"))["statut"] == "REJETE"
 
 
-def test_incertitude_reste_a_revoir():
+def test_incertitude_devient_probable():
     r = relation("a", "EST_UN", "b", "Une description ambiguë dans la fiche.")
     controle = controler_relation(r, concepts("a", "b"), r["preuve"]["citation"])
-    assert controle["statut"] == "A_REVOIR"
+    assert controle["statut"] == "PROBABLE"
     assert "prédicat non confirmé textuellement" in controle["avertissements"]
 
 
@@ -73,7 +74,7 @@ def test_fusion_ne_cree_pas_auto_relation():
 
 def test_import_direct_refuse_avant_toute_ecriture():
     driver = Mock()
-    with pytest.raises(ValueError, match="non validés"):
+    with pytest.raises(ValueError, match="ni VALIDE ni PROBABLE"):
         importer(driver, {"concepts": list(concepts("signal", "poste").values()), "relations": [relation()]})
     driver.session.assert_not_called()
 
@@ -133,13 +134,16 @@ def test_consolidation_conserve_deux_preuves():
 def test_copie_corrigee_structure_et_statuts():
     import json
     racine = Path(__file__).resolve().parents[1]
-    sortie = racine / "DataMetier/corrections_v2"
+    sortie = METIER_DATA_DIR / "corrections_v3"
     if not sortie.exists():
         pytest.skip("Audit local non livré avec ce checkout")
     rapport = json.loads((sortie / "rapport_controle.json").read_text(encoding="utf-8"))
     g = json.loads((sortie / "proposition_globale.json").read_text(encoding="utf-8"))
     assert len(g["relations"]) == rapport["relations_conservees_a_revoir"]
-    assert all(r["source"] != r["cible"] and r["statut"] == "A_REVOIR" for r in g["relations"])
+    assert all(
+        r["source"] != r["cible"] and r["statut"] in {"VALIDE", "PROBABLE"}
+        for r in g["relations"]
+    )
 
 
 @pytest.mark.parametrize("source,predicat,cible,citation,doc,attendu", [

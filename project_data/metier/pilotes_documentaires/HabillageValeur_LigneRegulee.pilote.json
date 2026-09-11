@@ -1,0 +1,203 @@
+{
+  "domaine": "gestion du trafic ferroviaire",
+  "statut": "PROBABLE",
+  "methode_validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3",
+  "validation_experte": false,
+  "concepts": [
+    {
+      "id": "decoupage_type_suivi",
+      "nom": "Découpage type suivi",
+      "aliases": [],
+      "description": "Découpage opérationnel évoluant avec l'habillage.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "eic",
+      "nom": "EIC",
+      "aliases": [],
+      "description": "Entité d'Intervention et de Coordination, impactée par l'habillage.",
+      "classes_arianes": [
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "habillage_valeur_ligne_regulee",
+      "nom": "Habillage Valeur Ligne Régulée",
+      "aliases": [],
+      "description": "Objet indiquant les portions de lignes dont le trafic est géré par un régulateur.",
+      "classes_arianes": [
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "ligne_regulee",
+      "nom": "Ligne régulée",
+      "aliases": [],
+      "description": "Section dans les habillages ligne désignant une ligne dont le trafic est régulé.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "troncon_de_ligne",
+      "nom": "Tronçon de ligne",
+      "aliases": [
+        "rang"
+      ],
+      "description": "Portion de ligne identifiée par un numéro de rang.",
+      "classes_arianes": [
+        "Type Ressource : Sujet"
+      ],
+      "documents": [
+        "HabillageValeur_LigneRegulee.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    }
+  ],
+  "relations": [
+    {
+      "source": "habillage_valeur_ligne_regulee",
+      "type": "COMPOSE_DE",
+      "cible": "ligne_regulee",
+      "preuve": {
+        "document": "HabillageValeur_LigneRegulee.txt",
+        "lignes": "1-119",
+        "citation": "Dans la section « Habillages Ligne » choisissez le « Ligne régulée »"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "habillage_valeur_ligne_regulee",
+      "type": "COMPOSE_DE",
+      "cible": "troncon_de_ligne",
+      "preuve": {
+        "document": "HabillageValeur_LigneRegulee.txt",
+        "lignes": "1-119",
+        "citation": "Sélectionner le tronçon de ligne demandé"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "habillage_valeur_ligne_regulee",
+      "type": "IMPACTE",
+      "cible": "eic",
+      "preuve": {
+        "document": "HabillageValeur_LigneRegulee.txt",
+        "lignes": "1-119",
+        "citation": "Impact sur les structures et compétences des EIC"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "habillage_valeur_ligne_regulee",
+      "type": "IMPACTE",
+      "cible": "decoupage_type_suivi",
+      "preuve": {
+        "document": "HabillageValeur_LigneRegulee.txt",
+        "lignes": "1-119",
+        "citation": "Cet habillage implique une évolution du découpage « type de suivi »"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    }
+  ],
+  "relations_valides": 1,
+  "relations_probables": 3,
+  "relations_rejetees": [],
+  "relations_exclues": 0,
+  "avertissement": "Validation documentaire automatique : aucune certification experte ferroviaire."
+}

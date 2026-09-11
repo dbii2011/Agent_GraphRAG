@@ -1,0 +1,381 @@
+{
+  "groupes": [
+    {
+      "nom_normalise": "poste d aiguillage",
+      "canonique": {
+        "id": "poste_aiguillage",
+        "nom": "Poste d'aiguillage",
+        "categorie": "EQUIPEMENT",
+        "domaine": "Pilote poste d'aiguillage"
+      },
+      "doublons": [
+        {
+          "id": "poste_d_aiguillage",
+          "nom": "Poste d’aiguillage",
+          "categorie": "INCONNU",
+          "domaine": "gestion_ferroviaire"
+        }
+      ]
+    }
+  ],
+  "noeuds": [
+    {
+      "id": "poste_aiguillage",
+      "proprietes": {
+        "aliases": [
+          "poste",
+          "poste d’aiguillage"
+        ],
+        "categorie": "EQUIPEMENT",
+        "domaine": "Pilote poste d'aiguillage",
+        "description": "Installation comportant la manœuvre des signaux et des appareils de voie, selon la définition de la fiche Post.",
+        "id": "poste_aiguillage",
+        "valide": true,
+        "nom": "Poste d'aiguillage"
+      }
+    },
+    {
+      "id": "poste_d_aiguillage",
+      "proprietes": {
+        "aliases": [
+          "poste"
+        ],
+        "categorie": "INCONNU",
+        "domaine": "gestion_ferroviaire",
+        "description": "Poste auquel un itinéraire est rattaché et où le signal origine est situé.",
+        "id": "poste_d_aiguillage",
+        "valide": true,
+        "nom": "Poste d’aiguillage"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "poste_aiguillage",
+      "type": "REPRESENTE_PAR",
+      "cible": null,
+      "labels_cible": [
+        "Classe"
+      ],
+      "proprietes": {}
+    },
+    {
+      "source": "poste_aiguillage",
+      "type": "DOCUMENTE_PAR",
+      "cible": "docs\\Post.txt",
+      "labels_cible": [
+        "Document"
+      ],
+      "proprietes": {}
+    },
+    {
+      "source": "poste_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "ligne",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "82-85",
+        "condition": "Pour les postes de voie principale ; les postes de SAF peuvent être localisés par désignation du SAF.",
+        "preuve": "Poste de voie principale :\n\n•\tLocalisation : ligne, rang du tronçon et Pk\n•\tMulti-localisation : dans certain cas, un poste peut être localisé sur plusieurs lignes",
+        "chunk_ids": [
+          "docs\\Post.txt_chunk_5"
+        ],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "LOCALISE_SUR",
+        "validation": "Revue documentaire assistée du 31 août 2026, pilote autorisé par l'utilisateur ; pas de certification métier opérationnelle"
+      }
+    },
+    {
+      "source": "poste_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "pk",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "82-85",
+        "condition": "Pour les postes de voie principale, avec la ligne et le rang du tronçon.",
+        "preuve": "Poste de voie principale :\n\n•\tLocalisation : ligne, rang du tronçon et Pk\n•\tMulti-localisation : dans certain cas, un poste peut être localisé sur plusieurs lignes",
+        "chunk_ids": [
+          "docs\\Post.txt_chunk_5"
+        ],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "LOCALISE_SUR",
+        "validation": "Revue documentaire assistée du 31 août 2026, pilote autorisé par l'utilisateur ; pas de certification métier opérationnelle"
+      }
+    },
+    {
+      "source": "poste_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "signal",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "1-3",
+        "condition": "",
+        "preuve": "Installation, quelle que soit par ailleurs sa désignation administrative, comportant la manœuvre des signaux et des appareils de voie.",
+        "chunk_ids": [
+          "docs\\Post.txt_chunk_0"
+        ],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "EST_COMMANDE_PAR",
+        "validation": "Revue documentaire assistée du 31 août 2026, pilote autorisé par l'utilisateur ; pas de certification métier opérationnelle"
+      }
+    },
+    {
+      "source": "poste_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "appareil_de_voie",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "1-3",
+        "condition": "",
+        "preuve": "Installation, quelle que soit par ailleurs sa désignation administrative, comportant la manœuvre des signaux et des appareils de voie.",
+        "chunk_ids": [
+          "docs\\Post.txt_chunk_0"
+        ],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "EST_COMMANDE_PAR",
+        "validation": "Revue documentaire assistée du 31 août 2026, pilote autorisé par l'utilisateur ; pas de certification métier opérationnelle"
+      }
+    },
+    {
+      "source": "poste_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "poste_pai",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "41-48",
+        "condition": "",
+        "preuve": "Poste de VP électrique à enclenchement informatique ----- PAI",
+        "chunk_ids": [
+          "docs\\Post.txt_chunk_2"
+        ],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "EST_UN",
+        "validation": "Revue documentaire assistée du 31 août 2026, pilote autorisé par l'utilisateur ; pas de certification métier opérationnelle"
+      }
+    },
+    {
+      "source": "poste_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "poste_prci",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "41-48",
+        "condition": "",
+        "preuve": "Poste de VP électrique à relais à commande informatique ----- PRCI",
+        "chunk_ids": [
+          "docs\\Post.txt_chunk_2"
+        ],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "EST_UN",
+        "validation": "Revue documentaire assistée du 31 août 2026, pilote autorisé par l'utilisateur ; pas de certification métier opérationnelle"
+      }
+    },
+    {
+      "source": "poste_aiguillage",
+      "type": "ETAYE_PAR",
+      "cible": "docs\\Post.txt_chunk_0",
+      "labels_cible": [
+        "Chunk"
+      ],
+      "proprietes": {}
+    },
+    {
+      "source": "poste_aiguillage",
+      "type": "ETAYE_PAR",
+      "cible": "docs\\Post.txt_chunk_2",
+      "labels_cible": [
+        "Chunk"
+      ],
+      "proprietes": {}
+    },
+    {
+      "source": "poste_aiguillage",
+      "type": "ETAYE_PAR",
+      "cible": "docs\\Post.txt_chunk_5",
+      "labels_cible": [
+        "Chunk"
+      ],
+      "proprietes": {}
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "REPRESENTE_PAR",
+      "cible": null,
+      "labels_cible": [
+        "Classe"
+      ],
+      "proprietes": {}
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "REPRESENTE_PAR",
+      "cible": null,
+      "labels_cible": [
+        "Classe"
+      ],
+      "proprietes": {}
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "DOCUMENTE_PAR",
+      "cible": "docs\\Itineraire.txt",
+      "labels_cible": [
+        "Document"
+      ],
+      "proprietes": {}
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "DOCUMENTE_PAR",
+      "cible": "docs\\Post.txt",
+      "labels_cible": [
+        "Document"
+      ],
+      "proprietes": {}
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "canton",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "135-214",
+        "condition": "",
+        "preuve": "Impact sur les cantons et itinéraires",
+        "chunk_ids": [],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "IMPACTE",
+        "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+      }
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "domaine_de_protection_voie",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "135-214",
+        "condition": "",
+        "preuve": "Impact sur les domaines de protection voies et caténaires secondaires",
+        "chunk_ids": [],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "IMPACTE",
+        "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+      }
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "installation_fixe_voie",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "135-214",
+        "condition": "",
+        "preuve": "Impact sur les installions fixes voies",
+        "chunk_ids": [],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "IMPACTE",
+        "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+      }
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "localisation",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "135-214",
+        "condition": "",
+        "preuve": "Changement de type de poste sans modification de la localisation",
+        "chunk_ids": [],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "LOCALISE_SUR",
+        "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+      }
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "localisation",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "135-214",
+        "condition": "",
+        "preuve": "Erreur de la localisation du poste lors de la saisie",
+        "chunk_ids": [],
+        "source_document": "Post.txt",
+        "valide": true,
+        "type": "LOCALISE_SUR",
+        "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+      }
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "signal_origine",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "1-111",
+        "condition": "",
+        "preuve": "L’itinéraire doit obligatoirement être rattaché à un poste d’aiguillage. Le poste d’aiguillage est celui ou le signal origine est rattaché.",
+        "chunk_ids": [],
+        "source_document": "Itineraire.txt",
+        "valide": true,
+        "type": "RATTACHE_A",
+        "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+      }
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "RELATION_METIER",
+      "cible": "poste_electrique",
+      "labels_cible": [
+        "ConceptMetier"
+      ],
+      "proprietes": {
+        "lignes": "1-111",
+        "condition": "",
+        "preuve": "Souple : tous les postes électriques et informatiques sont des postes à transit souple.",
+        "chunk_ids": [],
+        "source_document": "Itineraire.txt",
+        "valide": true,
+        "type": "EST_UN",
+        "validation": "AUTO_PRUDENTE_PREUVE_DOCUMENTAIRE"
+      }
+    }
+  ]
+}

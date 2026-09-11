@@ -1,0 +1,327 @@
+{
+  "domaine": "gestion des gares ferroviaires",
+  "statut": "PROBABLE",
+  "methode_validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3",
+  "validation_experte": false,
+  "concepts": [
+    {
+      "id": "gare_de_voyageur",
+      "nom": "Gare de voyageur",
+      "aliases": [],
+      "description": "Lieu d'arrêt des trains composé d'installations permettant la montée et la descente des voyageurs. Peut ne pas comporter de bâtiment voyageur.",
+      "classes_arianes": [
+        "Gare"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "installation_fixe_gare",
+      "nom": "Installation fixe Gare",
+      "aliases": [],
+      "description": "Caractéristiques et attributs associés à une gare de voyageurs dans le système de gestion.",
+      "classes_arianes": [
+        "Gare"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_rattache",
+      "nom": "Poste rattaché",
+      "aliases": [],
+      "description": "Poste de signalisation ou de gestion associé à une gare.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "pr_rattache",
+      "nom": "PR rattaché",
+      "aliases": [],
+      "description": "Point de repère ou installation technique rattachée à une gare.",
+      "classes_arianes": [
+        "Segmentation"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "saf_rattache",
+      "nom": "SAF rattaché",
+      "aliases": [],
+      "description": "Segmentation ou zone de gestion commerciale rattachée à une gare.",
+      "classes_arianes": [
+        "Saf"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "schema_de_signalisation",
+      "nom": "Schéma de signalisation",
+      "aliases": [],
+      "description": "Document ou représentation graphique définissant les installations et règles de signalisation d'une gare.",
+      "classes_arianes": [
+        "Segmentation"
+      ],
+      "documents": [
+        "Gare.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DOCUMENT",
+      "validation_experte": false
+    }
+  ],
+  "relations": [
+    {
+      "source": "gare_de_voyageur",
+      "type": "COMPOSE_DE",
+      "cible": "installation_fixe_gare",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Une gare de voyageur est composée d’installations qui ont pour fonction de permettre la montée et la descente des voyageurs."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "installation_fixe_gare",
+      "type": "EST_UN",
+      "cible": "gare_de_voyageur",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Cet objet correspond aux gares de voyageurs"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_rattache",
+      "type": "RATTACHE_A",
+      "cible": "gare_de_voyageur",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Infra : à partir du moment ou il y a un poste rattaché"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "saf_rattache",
+      "type": "RATTACHE_A",
+      "cible": "gare_de_voyageur",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Rattachement SAF"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "schema_de_signalisation",
+      "type": "DECRIT_PAR",
+      "cible": "gare_de_voyageur",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "La création à lieu lorsqu’une gare de voyageur apparait sur le schéma."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "schema_de_signalisation",
+      "type": "DECRIT_PAR",
+      "cible": "installation_fixe_gare",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Le libellé est repris sur le schéma de signalisation."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "installation_fixe_gare",
+      "type": "IMPACTE",
+      "cible": "poste_rattache",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Rattachement POSTE"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "installation_fixe_gare",
+      "type": "IMPACTE",
+      "cible": "pr_rattache",
+      "preuve": {
+        "document": "Gare.txt",
+        "lignes": "1-51",
+        "citation": "Rattachement PR"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    }
+  ],
+  "relations_valides": 2,
+  "relations_probables": 6,
+  "relations_rejetees": [],
+  "relations_exclues": 0,
+  "avertissement": "Validation documentaire automatique : aucune certification experte ferroviaire."
+}

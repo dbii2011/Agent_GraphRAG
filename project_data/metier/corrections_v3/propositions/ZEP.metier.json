@@ -1,0 +1,886 @@
+{
+  "domaine": "maintenance_ferroviaire",
+  "statut": "PROBABLE",
+  "concepts": [
+    {
+      "id": "consigne_s9c",
+      "nom": "Consigne S9C",
+      "aliases": [
+        "consigne S9C"
+      ],
+      "description": "Document de référence définissant les caractéristiques des ZEP et groupements de ZEP.",
+      "classes_arianes": [
+        "Consigne"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "garage_franc",
+      "nom": "Garage franc",
+      "aliases": [
+        "GF"
+      ],
+      "description": "Type d'extrémité de ZEP défini par une distance fixe depuis la pointe d'aiguille.",
+      "classes_arianes": [
+        "Type Extremite"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "gf",
+      "nom": "GF",
+      "aliases": [
+        "GF"
+      ],
+      "description": "Type d'installation fixe en extrémité de ZEP",
+      "classes_arianes": [],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "groupement_de_zep",
+      "nom": "Groupement de ZEP",
+      "aliases": [
+        "groupement de ZEP"
+      ],
+      "description": "Ensemble de ZEP regroupées sous un même libellé pour la gestion des protections.",
+      "classes_arianes": [
+        "ZEP"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "heurtoir",
+      "nom": "Heurtoir",
+      "aliases": [],
+      "description": "Type d'extrémité de ZEP utilisé pour limiter le mouvement des trains.",
+      "classes_arianes": [
+        "Heurtoir"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "installation_exterieure",
+      "nom": "Installation extérieure",
+      "aliases": [],
+      "description": "Élément physique en extrémité de ZEP (signal, heurtoir, taquet, etc.).",
+      "classes_arianes": [
+        "Equipement"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "installation_fixe",
+      "nom": "Installation fixe",
+      "aliases": [
+        "installations fixes"
+      ],
+      "description": "Dispositif de sécurité permanent en extrémité de ZEP (GF, Chevron, joint isolant, etc.)",
+      "classes_arianes": [],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "jalon_d_arret",
+      "nom": "Jalon d’arrêt",
+      "aliases": [
+        "jalons d’arrêts"
+      ],
+      "description": "Dispositif de sécurité provisoire en extrémité de ZEP",
+      "classes_arianes": [],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "joint_de_talon_d_aiguille",
+      "nom": "Joint de talon d'aiguille",
+      "aliases": [],
+      "description": "Point de référence pour le calcul des PK en extrémité de ZEP.",
+      "classes_arianes": [
+        "appareil_de_voie"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "point_kilometrique",
+      "nom": "Point kilométrique",
+      "aliases": [],
+      "description": "Repère de localisation sur une voie utilisé pour définir les extrémités d'une ZEP.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pointe_d_aiguille",
+      "nom": "Pointe d'aiguille",
+      "aliases": [],
+      "description": "Extrémité d'un appareil de voie utilisée comme référence pour les calculs de ZEP.",
+      "classes_arianes": [
+        "appareil_de_voie"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste",
+      "nom": "Poste",
+      "aliases": [],
+      "description": "Poste de rattachement ou de gestion des ZEP",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "poste_de_rattachement",
+      "nom": "Poste de rattachement",
+      "aliases": [
+        "poste"
+      ],
+      "description": "Poste auquel une ZEP ou un groupement de ZEP est rattaché pour la gestion des protections.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "potence",
+      "nom": "Potence",
+      "aliases": [],
+      "description": "Support des signaux d’extrémités d’une ZEP",
+      "classes_arianes": [
+        "Potence"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "rptx",
+      "nom": "RPTX",
+      "aliases": [
+        "RPTX"
+      ],
+      "description": "Responsable de la mise en place des mesures de protection (ex: SAM)",
+      "classes_arianes": [],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "sam",
+      "nom": "SAM",
+      "aliases": [
+        "SAM"
+      ],
+      "description": "Dispositif de sécurité provisoire en extrémité de ZEP",
+      "classes_arianes": [],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "signal",
+      "nom": "Signal",
+      "aliases": [],
+      "description": "Élément de signalisation utilisé comme extrémité de ZEP.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "signal_d_extremite_de_zep",
+      "nom": "Signal d’extrémité de ZEP",
+      "aliases": [
+        "signaux d’extrémités d’une ZEP"
+      ],
+      "description": "Signal matérialisant les extrémités d’une ZEP situé sur une potence",
+      "classes_arianes": [
+        "Type Extremite"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "taquet_derailleur",
+      "nom": "Taquet dérailleur",
+      "aliases": [],
+      "description": "Type d'extrémité de ZEP utilisé pour la protection des voies.",
+      "classes_arianes": [
+        "Taquet"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "tjs_ou_tjd",
+      "nom": "TJS ou TJD",
+      "aliases": [],
+      "description": "Type d'appareil de voie où une ZEP peut commencer ou se terminer, avec une extrémité en pointe d'aiguille.",
+      "classes_arianes": [
+        "appareil_de_voie"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "traversee_oblique",
+      "nom": "Traversée oblique",
+      "aliases": [
+        "TO"
+      ],
+      "description": "Type d'appareil de voie où une ZEP peut commencer ou se terminer.",
+      "classes_arianes": [
+        "appareil_de_voie"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_de_service",
+      "nom": "Voie de service",
+      "aliases": [],
+      "description": "Voie dédiée aux services et à la maintenance sur laquelle une ZEP peut être localisée.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_principale",
+      "nom": "Voie principale",
+      "aliases": [
+        "voie"
+      ],
+      "description": "Voie du réseau ferré national sur laquelle une ZEP peut être localisée.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zep",
+      "nom": "ZEP",
+      "aliases": [],
+      "description": "Zone d'Exploitation Protégée, élément clé de la gestion des voies ferrées",
+      "classes_arianes": [
+        "ZEP"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_elementaire_de_protection",
+      "nom": "Zone élémentaire de protection",
+      "aliases": [
+        "ZEP"
+      ],
+      "description": "Partie de voie résultant du découpage des voies du Réseau Ferré National pour les besoins de la maintenance et des travaux.",
+      "classes_arianes": [
+        "ZEP"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_geographique",
+      "nom": "Zone géographique",
+      "aliases": [],
+      "description": "Zone de référence pour la localisation des ZEP et groupements de ZEP.",
+      "classes_arianes": [
+        "Zone Géographique 4"
+      ],
+      "documents": [
+        "ZEP.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "COMPOSE_DE",
+      "cible": "groupement_de_zep",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Le libellé de groupement de ZEP ne doit pas prendre en compte les numéros indiqués entre parenthèse de la consigne S9."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "négation ou modalité : ne pas interpréter comme un fait universel",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": false
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "RATTACHE_A",
+      "cible": "poste_de_rattachement",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Une ZEP est rattachée à un seul poste."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_principale",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Pour les ZEP localisées sur voies principales et voies de service, il faut obligatoirement désigner la ou les voies de services concernées par la ZEP."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_de_service",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Pour les ZEP localisées sur voies principales et voies de service, il faut obligatoirement désigner la ou les voies de services concernées par la ZEP."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "A_POUR_DESTINATION",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "La localisation de la ZEP est composée d’un PK début et d’un PK fin sur chaque voie qui la définisse."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "A_POUR_ORIGINE",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "La localisation de la ZEP est composée d’un PK début et d’un PK fin sur chaque voie qui la définisse."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "traversee_oblique",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Lorsque la consigne S9C décrit le PK début ou le PK fin d’une ZEP sur une traversée oblique (TO), il faut choisir « autre » installation et non choisir « pointe d’aiguille »."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "tjs_ou_tjd",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Lorsqu’une extrémité d’une ZEP se termine sur une TJS ou TJD la valeur à prendre en compte est « Pointe de l’aiguille »."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "joint_de_talon_d_aiguille",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Lorsque la ZEP commence ou se termine sur un joint de talon d’aiguille le PK à renseigner est le PK de l’aiguille + 30 mètres."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "zep",
+      "type": "RATTACHE_A",
+      "cible": "poste",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "La consigne S9 (Annexe 5) précise pour chaque ZEP ou groupement de ZEP de contre-sens le poste de rattachement concerné."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "signal_d_extremite_de_zep",
+      "type": "LOCALISE_SUR",
+      "cible": "potence",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "Les signaux matérialisant les extrémités d’une ZEP situés sur la même potence doivent obligatoirement respecter le sens croissant ou décroissant de la description de la ZEP."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "consigne_s9c",
+      "type": "REGLEMENTE_PAR",
+      "cible": "zep",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "Le rattachement au poste peut dans certains cas être différent. La consigne S9 (Annexe 5) précise pour chaque ZEP ou groupement de ZEP de contre-sens le poste de rattachement concerné."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "consigne_s9c",
+      "type": "REGLEMENTE_PAR",
+      "cible": "groupement_de_zep",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "La consigne S9 (Annexe 5) précise pour chaque ZEP ou groupement de ZEP de contre-sens le poste de rattachement concerné."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation zep/EST_UN/garage_franc rejetée: citation absente du passage",
+    "Relation zep/EST_UN/taquet_derailleur rejetée: citation absente du passage",
+    "Relation zep/EST_UN/heurtoir rejetée: citation absente du passage",
+    "Relation zep/EST_UN/pointe_aiguille rejetée: citation absente du passage",
+    "Relation groupement_zep/RATTACHE_A/poste_rattachement rejetée: citation absente du passage",
+    "Relation groupement_zep/DEPEND_DE/zep rejetée: citation absente du passage"
+  ],
+  "document_source": "ZEP.txt",
+  "relations_rejetees": [
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "EST_UN",
+      "cible": "installation_exterieure",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Choix du type d’extrémité : Signal, Chevron, Joint isolant, Pancarte (PATC), Taquet dérailleur, Garage franc (GF), Pointe aiguille, Heurtoir, Autres"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "relation incompatible avec le sens du passage relu (audit métier)"
+      ]
+    },
+    {
+      "source": "zone_elementaire_de_protection",
+      "type": "EST_UN",
+      "cible": "signal",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "1-124",
+        "citation": "Choix du type d’extrémité : Signal, ..."
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "relation incompatible avec le sens du passage relu (audit métier)"
+      ]
+    },
+    {
+      "source": "sam",
+      "type": "EST_UN",
+      "cible": "installation_fixe",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "Il faut privilégier les installations fixes, le SAM et Jalon d’arrêt sont des dispositifs de sécurité provisoires."
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "relation incompatible avec le sens du passage relu (audit métier)"
+      ]
+    },
+    {
+      "source": "jalon_d_arret",
+      "type": "EST_UN",
+      "cible": "installation_fixe",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "Il faut privilégier les installations fixes, le SAM et Jalon d’arrêt sont des dispositifs de sécurité provisoires."
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "relation incompatible avec le sens du passage relu (audit métier)"
+      ]
+    },
+    {
+      "source": "rptx",
+      "type": "COMMANDE",
+      "cible": "sam",
+      "preuve": {
+        "document": "ZEP.txt",
+        "lignes": "125-185",
+        "citation": "Le SAM est une mesure de protection à mettre en place par le RPTX."
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "citation sans action de commande"
+      ]
+    }
+  ],
+  "version_validation": 3
+}

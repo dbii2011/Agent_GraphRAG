@@ -1,0 +1,362 @@
+{
+  "domaine": "gestion_ferroviaire",
+  "statut": "PROBABLE",
+  "concepts": [
+    {
+      "id": "code_ligne",
+      "nom": "Code ligne",
+      "aliases": [],
+      "description": "Identifiant unique d'une ligne ferroviaire.",
+      "classes_arianes": [],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "crr",
+      "nom": "CRR",
+      "aliases": [
+        "Comité Régional de Réseau"
+      ],
+      "description": "Instance émettrice des demandes de modification des limites de régions SNCF.",
+      "classes_arianes": [],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "dates_de_validite",
+      "nom": "Dates de validité",
+      "aliases": [],
+      "description": "Période pendant laquelle les informations de découpage sont valides.",
+      "classes_arianes": [],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "habillage_region_sncf",
+      "nom": "Habillage région SNCF",
+      "aliases": [],
+      "description": "Indicateur des limites officielles des régions traversées pour les lignes classiques et responsabilité de suivi des circulations pour les LGV.",
+      "classes_arianes": [
+        "systeme_reperage"
+      ],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne_classique",
+      "nom": "Ligne classique",
+      "aliases": [],
+      "description": "Type de ligne ferroviaire gérée par les régions SNCF.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne_lgv",
+      "nom": "Ligne LGV",
+      "aliases": [],
+      "description": "Type de ligne à grande vitesse dont la responsabilité de suivi des circulations est attribuée à la région.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk_debut",
+      "nom": "PK début",
+      "aliases": [],
+      "description": "Point kilométrique de début d'une section de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_fin",
+      "nom": "PK fin",
+      "aliases": [],
+      "description": "Point kilométrique de fin d'une section de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "region_sncf",
+      "nom": "Région SNCF",
+      "aliases": [],
+      "description": "Entité administrative gérant le suivi des circulations et définissant les limites officielles des régions traversées.",
+      "classes_arianes": [
+        "Region"
+      ],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "systeme_de_reperage_ligne",
+      "nom": "Système de repérage ligne",
+      "aliases": [],
+      "description": "Outil ou méthode utilisé pour identifier et localiser les lignes ferroviaires.",
+      "classes_arianes": [
+        "systeme_reperage"
+      ],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_impactee",
+      "nom": "Voie impactée",
+      "aliases": [],
+      "description": "Voie ferroviaire dont les limites sont modifiées en cas de changement des limites de région SNCF.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "RegionSNCF.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "habillage_region_sncf",
+      "type": "IMPACTE",
+      "cible": "voie_impactee",
+      "preuve": {
+        "document": "RegionSNCF.txt",
+        "lignes": "1-88",
+        "citation": "En cas de modification des limites de région SNCF sur ligne, il faut reporter ces modifications sur les voies impactées."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "region_sncf",
+      "type": "GERE_PAR",
+      "cible": "ligne_lgv",
+      "preuve": {
+        "document": "RegionSNCF.txt",
+        "lignes": "1-88",
+        "citation": "la responsabilité à la région qui gère le suivi des circulations"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "region_sncf",
+      "type": "RATTACHE_A",
+      "cible": "habillage_region_sncf",
+      "preuve": {
+        "document": "RegionSNCF.txt",
+        "lignes": "1-88",
+        "citation": "L’habillage région SNCF n’a pas de corrélation avec les compétences territoriales."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "region_sncf",
+      "type": "LOCALISE_SUR",
+      "cible": "pk_debut",
+      "preuve": {
+        "document": "RegionSNCF.txt",
+        "lignes": "1-88",
+        "citation": "Créer les nouvelles limites en respectant les Pk et les dates."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "region_sncf",
+      "type": "LOCALISE_SUR",
+      "cible": "pk_fin",
+      "preuve": {
+        "document": "RegionSNCF.txt",
+        "lignes": "1-88",
+        "citation": "Créer les nouvelles limites en respectant les Pk et les dates."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "habillage_region_sncf",
+      "type": "REGLEMENTE_PAR",
+      "cible": "region_sncf",
+      "preuve": {
+        "document": "RegionSNCF.txt",
+        "lignes": "1-88",
+        "citation": "L’habillage « Région SNCF » est obligatoire"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation habillage_region_sncf/EST_UN/systeme_reperage rejetée: concept source ou cible absent",
+    "Relation habillage_region_sncf/EST_UN/systeme_reperage rejetée: concept source ou cible absent",
+    "Relation ligne_classique/EST_UN/ligne rejetée: concept source ou cible absent",
+    "Relation ligne_lgv/EST_UN/ligne rejetée: concept source ou cible absent, citation absente du passage",
+    "Relation ligne_classique/COMPOSE_DE/pk_debut rejetée: citation absente du passage",
+    "Relation ligne_classique/COMPOSE_DE/pk_fin rejetée: citation absente du passage",
+    "Relation ligne_classique/COMPOSE_DE/region_sncf rejetée: citation absente du passage",
+    "Relation ligne_classique/COMPOSE_DE/systeme_reperage_ligne rejetée: citation absente du passage",
+    "Relation ligne_classique/COMPOSE_DE/code_ligne rejetée: citation absente du passage",
+    "Relation ligne_classique/COMPOSE_DE/dates_validite rejetée: citation absente du passage"
+  ],
+  "document_source": "RegionSNCF.txt",
+  "relations_rejetees": [
+    {
+      "source": "crr",
+      "type": "COMMANDE",
+      "cible": "region_sncf",
+      "preuve": {
+        "document": "RegionSNCF.txt",
+        "lignes": "1-88",
+        "citation": "Demande émise par le CRR"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "citation sans action de commande"
+      ]
+    }
+  ],
+  "version_validation": 3
+}

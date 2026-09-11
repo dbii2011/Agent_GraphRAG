@@ -1,12 +1,13 @@
 import unittest
 from pathlib import Path
 
-from graphe_metier_builder import charger_definition
+from arianes.graph.metier_builder import charger_definition
+from arianes.paths import METIER_DATA_DIR
 
 
 class GrapheMetierBuilderTests(unittest.TestCase):
     def test_definition_poste_aiguillage_est_coherente(self):
-        chemin = Path(__file__).parents[1] / "DataMetier" / "poste_aiguillage.json"
+        chemin = METIER_DATA_DIR / "poste_aiguillage.json"
         definition = charger_definition(chemin)
         ids = {concept["id"] for concept in definition["concepts"]}
 

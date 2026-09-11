@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from pipeline_graphe_metier import (
+from arianes.pipelines.extraction_metier import (
     classes_candidates,
     consolider,
     decouper_document,
@@ -10,7 +10,8 @@ from pipeline_graphe_metier import (
     marquer_valide,
     valider_extraction,
 )
-from extraire_tout_graphe_metier import decouvrir_documents, chemin_resultat
+from arianes.paths import PROCEDURES_DIR
+from arianes.pipelines.extraction_globale import decouvrir_documents, chemin_resultat
 
 
 class FauxMessage:
@@ -48,7 +49,7 @@ class PipelineGrapheMetierTests(unittest.TestCase):
         self.assertEqual("Poste", resultat[0]["nom"])
 
     def test_decoupage_conserve_les_lignes(self):
-        chemin = Path(__file__).parents[1] / "Docs" / "Post.txt"
+        chemin = PROCEDURES_DIR / "Post.txt"
         morceaux = decouper_document(chemin, taille_max=1000)
         self.assertEqual(1, morceaux[0]["debut"])
         self.assertEqual(
@@ -81,7 +82,7 @@ class PipelineGrapheMetierTests(unittest.TestCase):
         self.assertEqual([], resultat["relations"])
         self.assertTrue(resultat["erreurs_validation"])
 
-    def test_relation_sourcee_reste_a_revoir(self):
+    def test_relation_sourcee_devient_valide_documentairement(self):
         citation = "Le poste commande les aiguilles de la zone concernée."
         extraction = {
             "domaine": "Signalisation",
@@ -105,7 +106,10 @@ class PipelineGrapheMetierTests(unittest.TestCase):
             {"Poste", "Aiguillage"},
         )
         self.assertEqual(1, len(resultat["relations"]))
-        self.assertEqual("A_REVOIR", resultat["relations"][0]["statut"])
+        # Citation présente, mais « aiguilles » ne confirme pas à elle seule
+        # le concept « Aiguillage » ni le sens du triplet : conserver sans certifier.
+        self.assertEqual("PROBABLE", resultat["relations"][0]["statut"])
+        self.assertFalse(resultat["relations"][0]["validation_experte"])
 
     def test_est_un_sans_predicat_taxonomique_reste_a_revoir(self):
         extraction = {
@@ -189,7 +193,7 @@ class PipelineGrapheMetierTests(unittest.TestCase):
         self.assertEqual(1, len(filtrer_valides(definition)["concepts"]))
 
     def test_extraction_document_ne_modifie_pas_neo4j(self):
-        document = Path(__file__).parents[1] / "Docs" / "Post.txt"
+        document = PROCEDURES_DIR / "Post.txt"
         catalogue = {
             "Poste": {"nom": "Poste", "description": "", "attributs": set()},
             "TypeModeFonctionnementPoste": {
@@ -206,7 +210,7 @@ class PipelineGrapheMetierTests(unittest.TestCase):
         self.assertEqual(1, len(resultat["relations"]))
 
     def test_script_global_decouvre_uniquement_les_fiches_txt(self):
-        dossier = Path(__file__).parents[1] / "Docs"
+        dossier = PROCEDURES_DIR
         documents = decouvrir_documents(dossier)
         self.assertTrue(documents)
         self.assertTrue(all(document.suffix.lower() == ".txt" for document in documents))

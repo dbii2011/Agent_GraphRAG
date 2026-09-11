@@ -1,0 +1,590 @@
+{
+  "domaine": "gestion du courant maximal à la caténaire",
+  "statut": "PROBABLE",
+  "methode_validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3",
+  "validation_experte": false,
+  "concepts": [
+    {
+      "id": "article_111",
+      "nom": "Article 111",
+      "aliases": [],
+      "description": "Article du RTA utilisé comme alternative à l'article 302 pour certaines lignes.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "article_302",
+      "nom": "Article 302",
+      "aliases": [],
+      "description": "Article du RTA précisant les valeurs de courant maximal à la caténaire.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "courant_max_a_la_catenaire",
+      "nom": "Courant Max à la caténaire",
+      "aliases": [
+        "courant maximal à la caténaire"
+      ],
+      "description": "Valeur du courant maximal en ligne disponible pour un engin moteur ou groupe d’engins moteurs, exprimée en ampère.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "dda",
+      "nom": "DDA",
+      "aliases": [
+        "date d’application du RTA"
+      ],
+      "description": "Date de début d'application d'un RTA pour une section de ligne.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DATE",
+      "validation_experte": false
+    },
+    {
+      "id": "dfa",
+      "nom": "DFA",
+      "aliases": [],
+      "description": "Date de fin d'application d'un RTA pour une section de ligne.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DATE",
+      "validation_experte": false
+    },
+    {
+      "id": "engin_moteur",
+      "nom": "Engin moteur",
+      "aliases": [
+        "groupe d’engin moteur"
+      ],
+      "description": "Véhicule ferroviaire capable de se déplacer par lui-même et consommant du courant de la caténaire.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "n_ud_de_ligne",
+      "nom": "Nœud de ligne",
+      "aliases": [],
+      "description": "Point caractéristique d'une ligne ferroviaire utilisé pour repérer un PK sur le schéma de signalisation.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "op00580",
+      "nom": "OP00580",
+      "aliases": [],
+      "description": "Document réglementaire définissant les signaux propres à la traction électrique.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "periode_d_activite_dda_dfa",
+      "nom": "Période d’activité DDA-DFA",
+      "aliases": [],
+      "description": "Période durant laquelle le courant maximal à la caténaire est applicable, définie par les dates DDA (date d’application) et DFA.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "pk",
+      "nom": "PK",
+      "aliases": [
+        "Point Kilométrique"
+      ],
+      "description": "Repère kilométrique indicatif associé à une section de ligne dans le RTA.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION",
+      "validation_experte": false
+    },
+    {
+      "id": "rta",
+      "nom": "RTA",
+      "aliases": [
+        "Règlement Technique d’Application"
+      ],
+      "description": "Document réglementaire définissant les valeurs de courant maximal à la caténaire pour les sections de ligne.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "schema_de_signalisation",
+      "nom": "Schéma de signalisation",
+      "aliases": [],
+      "description": "Document graphique permettant d'ajuster le PK en cas d'absence de valeur dans le RTA.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "DOCUMENT",
+      "validation_experte": false
+    },
+    {
+      "id": "section_de_ligne",
+      "nom": "Section de ligne",
+      "aliases": [],
+      "description": "Portion de ligne ferroviaire pour laquelle une valeur de courant maximal à la caténaire est définie.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "signal_propre_a_la_traction_electrique",
+      "nom": "Signal propre à la traction électrique",
+      "aliases": [],
+      "description": "Signal ferroviaire spécifique indiquant des informations liées à la traction électrique, défini par l'article 205.9 de l'OP00580.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "srl",
+      "nom": "SRL",
+      "aliases": [],
+      "description": "Caractéristique obligatoire du courant maximal à la caténaire indiquant la valeur en ampère.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageCourantMaxCatenaire.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    }
+  ],
+  "relations": [
+    {
+      "source": "courant_max_a_la_catenaire",
+      "type": "A_POUR_DESTINATION",
+      "cible": "engin_moteur",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "disponible pour un engin moteur ou groupe d’engin moteur"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "courant_max_a_la_catenaire",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "srl",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "Valeur du courant maximal"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "courant_max_a_la_catenaire",
+      "type": "LOCALISE_SUR",
+      "cible": "section_de_ligne",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "fourni pour chaque section de ligne"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "rta",
+      "type": "DECRIT_PAR",
+      "cible": "article_302",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "valeurs en Ampère extraites des RTA article 302"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "rta",
+      "type": "DECRIT_PAR",
+      "cible": "article_111",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "Sur certain RTA l’article 302 est « réservé » et les valeurs se trouvent dans l’article 111"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "pk",
+      "type": "LOCALISE_SUR",
+      "cible": "section_de_ligne",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "Le PK repris dans le RTA est indicatif et doit être ajusté à la lecture du schéma de signalisation"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "pk",
+      "type": "DEPEND_DE",
+      "cible": "schema_de_signalisation",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "doit être ajusté à la lecture du schéma de signalisation"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "pk",
+      "type": "LOCALISE_SUR",
+      "cible": "n_ud_de_ligne",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "repérant soit les nœuds de lignes"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "pk",
+      "type": "LOCALISE_SUR",
+      "cible": "signal_propre_a_la_traction_electrique",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "soit les signaux propres à la traction électrique"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "signal_propre_a_la_traction_electrique",
+      "type": "DECRIT_PAR",
+      "cible": "op00580",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "tels que définis art 205.9 de l’OP00580"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "periode_d_activite_dda_dfa",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "dda",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "DDA = date d’application du RT"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "periode_d_activite_dda_dfa",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "dfa",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "Période d’activité DDA -DFA"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    }
+  ],
+  "relations_valides": 1,
+  "relations_probables": 11,
+  "relations_rejetees": [
+    {
+      "source": "selecteur_de_puissance",
+      "type": "EST_UN",
+      "cible": "poste_de_conduite",
+      "preuve": {
+        "document": "HabillageCourantMaxCatenaire.txt",
+        "lignes": "1-43",
+        "citation": "présent dans le poste de conduite"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "relation incompatible avec le sens du passage relu (audit métier)"
+      ]
+    }
+  ],
+  "relations_exclues": 1,
+  "avertissement": "Validation documentaire automatique : aucune certification experte ferroviaire."
+}

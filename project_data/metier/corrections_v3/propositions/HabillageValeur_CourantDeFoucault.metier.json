@@ -1,0 +1,381 @@
+{
+  "domaine": "ferroviaire",
+  "statut": "PROBABLE",
+  "concepts": [
+    {
+      "id": "date_debut_activite",
+      "nom": "Date Début Activité",
+      "aliases": [
+        "DDA"
+      ],
+      "description": "Date d'application d'une nouvelle version de texte de référence.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "date_fin_activite",
+      "nom": "Date Fin Activité",
+      "aliases": [
+        "DFA"
+      ],
+      "description": "Date de fin d'application d'une version de texte de référence.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "division_description_du_reseau",
+      "nom": "Division Description du Réseau",
+      "aliases": [
+        "DDR"
+      ],
+      "description": "Service responsable de l'adaptation de la description de l'habillage.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "frein_a_courant_de_foucault",
+      "nom": "Frein à courant de Foucault",
+      "aliases": [],
+      "description": "Électroaimant fonctionnant grâce à des courants électriques créant un champ magnétique, utilisé comme ralentisseur.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "gaia",
+      "nom": "GAÏA",
+      "aliases": [],
+      "description": "Système de description du réseau ferroviaire.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "habillage_ligne",
+      "nom": "Habillage ligne",
+      "aliases": [],
+      "description": "Description de l'utilisation des freins à courant de Foucault au sein de GAÏA.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "installation_de_signalisation",
+      "nom": "Installation de signalisation",
+      "aliases": [],
+      "description": "Équipement adapté pour recevoir des engins à courant de Foucault.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne_du_rfn",
+      "nom": "Ligne du RFN",
+      "aliases": [
+        "ligne"
+      ],
+      "description": "Ligne du Réseau Ferré National compatible ou non avec l'utilisation des freins à courant de Foucault.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "schema_de_signalisation_du_plan_technique",
+      "nom": "Schéma de signalisation du Plan Technique",
+      "aliases": [],
+      "description": "Document de référence pour la description de la signalisation.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "texte_de_reference",
+      "nom": "Texte de référence",
+      "aliases": [],
+      "description": "Document officiel définissant les règles d'utilisation des freins à courant de Foucault.",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "HabillageValeur_CourantDeFoucault.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "ligne_du_rfn",
+      "type": "COMPOSE_DE",
+      "cible": "installation_de_signalisation",
+      "preuve": {
+        "document": "HabillageValeur_CourantDeFoucault.txt",
+        "lignes": "1-52",
+        "citation": "les installations de signalisation sont adaptées à recevoir ces véhicules"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "habillage_ligne",
+      "type": "COMPOSE_DE",
+      "cible": "frein_a_courant_de_foucault",
+      "preuve": {
+        "document": "HabillageValeur_CourantDeFoucault.txt",
+        "lignes": "1-52",
+        "citation": "La description de l’utilisation des freins à courant de Foucault dans GAÏA sera exclusivement effectuée au sein de l’habillage ligne"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "division_description_du_reseau",
+      "type": "GERE_PAR",
+      "cible": "habillage_ligne",
+      "preuve": {
+        "document": "HabillageValeur_CourantDeFoucault.txt",
+        "lignes": "1-52",
+        "citation": "Une adaptation de description de l’habillage « utilisation des freins à courant de Foucault » devra être apportée par la Division Description du Réseau (DDR)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "gaia",
+      "type": "UTILISE",
+      "cible": "habillage_ligne",
+      "preuve": {
+        "document": "HabillageValeur_CourantDeFoucault.txt",
+        "lignes": "1-52",
+        "citation": "La description de l’utilisation des freins à courant de Foucault dans GAÏA sera exclusivement effectuée au sein de l’habillage ligne"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "gaia",
+      "type": "DECRIT_PAR",
+      "cible": "schema_de_signalisation_du_plan_technique",
+      "preuve": {
+        "document": "HabillageValeur_CourantDeFoucault.txt",
+        "lignes": "1-52",
+        "citation": "le schéma de signalisation du Plan Technique"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "texte_de_reference",
+      "type": "A_POUR_DESTINATION",
+      "cible": "habillage_ligne",
+      "preuve": {
+        "document": "HabillageValeur_CourantDeFoucault.txt",
+        "lignes": "1-52",
+        "citation": "Une nouvelle description de l’utilisation des freins à courant de Foucault sera créée lors de la parution d’une nouvelle version du ou des textes de références"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "date_debut_activite",
+      "type": "A_POUR_DESTINATION",
+      "cible": "texte_de_reference",
+      "preuve": {
+        "document": "HabillageValeur_CourantDeFoucault.txt",
+        "lignes": "1-52",
+        "citation": "avec une DDA correspondant à la date d’application de cette version"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "date_fin_activite",
+      "type": "A_POUR_DESTINATION",
+      "cible": "texte_de_reference",
+      "preuve": {
+        "document": "HabillageValeur_CourantDeFoucault.txt",
+        "lignes": "1-52",
+        "citation": "avec une DFA correspondant à la date d’application de cette version"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation frein_a_courant_de_foucault/EST_UN/ressource_nouvelle rejetée: concept source ou cible absent",
+    "Relation frein_a_courant_de_foucault/UTILISE/courant_electrique rejetée: concept source ou cible absent",
+    "Relation frein_a_courant_de_foucault/A_POUR_TECHNOLOGIE/champ_magnetique rejetée: concept source ou cible absent",
+    "Relation frein_a_courant_de_foucault/A_POUR_ROLE/ralentisseur rejetée: concept source ou cible absent, type de relation non autorisé",
+    "Relation ligne_rfn/EST_UN/ligne rejetée: concept source ou cible absent"
+  ],
+  "document_source": "HabillageValeur_CourantDeFoucault.txt",
+  "relations_rejetees": [],
+  "version_validation": 3
+}

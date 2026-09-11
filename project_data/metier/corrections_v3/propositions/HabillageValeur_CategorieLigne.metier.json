@@ -1,0 +1,301 @@
+{
+  "domaine": "gestion des catégories de lignes ferroviaires",
+  "statut": "PROBABLE",
+  "concepts": [
+    {
+      "id": "categorie_de_ligne",
+      "nom": "Catégorie de ligne",
+      "aliases": [],
+      "description": "Classification des lignes du Réseau Ferré National selon leur type (LGV, normal, étroit).",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne_a_grande_vitesse",
+      "nom": "Ligne à Grande Vitesse",
+      "aliases": [
+        "LGV"
+      ],
+      "description": "Catégorie de ligne réservée aux lignes à grande vitesse.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne_du_reseau_conventionnel_a_ecartement_normal",
+      "nom": "Ligne du réseau conventionnel à écartement normal",
+      "aliases": [
+        "NORMAL"
+      ],
+      "description": "Catégorie de ligne pour les lignes conventionnelles à écartement normal.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne_du_reseau_conventionnel_a_voie_etroite",
+      "nom": "Ligne du réseau conventionnel à voie étroite",
+      "aliases": [
+        "ETROIT"
+      ],
+      "description": "Catégorie de ligne pour les lignes conventionnelles à voie étroite.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk_debut",
+      "nom": "PK début",
+      "aliases": [],
+      "description": "Point kilométrique de début d'une tranche de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_fin",
+      "nom": "PK fin",
+      "aliases": [],
+      "description": "Point kilométrique de fin d'une tranche de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "schema_de_signalisation",
+      "nom": "Schéma de signalisation",
+      "aliases": [],
+      "description": "Document ou système définissant les règles de signalisation d'une ligne.",
+      "classes_arianes": [
+        "Modele signalisation"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DOCUMENT"
+    },
+    {
+      "id": "systeme_de_reperage",
+      "nom": "Système de repérage",
+      "aliases": [
+        "SR"
+      ],
+      "description": "Système permettant de localiser les lignes par tranches de PK.",
+      "classes_arianes": [
+        "systeme_reperage"
+      ],
+      "documents": [
+        "HabillageValeur_CategorieLigne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "categorie_de_ligne",
+      "type": "UTILISE",
+      "cible": "systeme_de_reperage",
+      "preuve": {
+        "document": "HabillageValeur_CategorieLigne.txt",
+        "lignes": "1-125",
+        "citation": "Il est défini par les informations suivantes : code ligne, numéro du tronçon de ligne (rang), PK début, PK fin, Valeur"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "categorie_de_ligne",
+      "type": "UTILISE",
+      "cible": "pk_debut",
+      "preuve": {
+        "document": "HabillageValeur_CategorieLigne.txt",
+        "lignes": "1-125",
+        "citation": "Il est défini par les informations suivantes : code ligne, numéro du tronçon de ligne (rang), PK début, PK fin, Valeur"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "categorie_de_ligne",
+      "type": "UTILISE",
+      "cible": "pk_fin",
+      "preuve": {
+        "document": "HabillageValeur_CategorieLigne.txt",
+        "lignes": "1-125",
+        "citation": "Il est défini par les informations suivantes : code ligne, numéro du tronçon de ligne (rang), PK début, PK fin, Valeur"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "categorie_de_ligne",
+      "type": "GERE_PAR",
+      "cible": "schema_de_signalisation",
+      "preuve": {
+        "document": "HabillageValeur_CategorieLigne.txt",
+        "lignes": "1-125",
+        "citation": "Pour les lignes à écartement normal et les lignes LGV, c'est le schéma de signalisation. Si la ligne est équipée de signalisation LGV alors catégorie \"LGV\" sinon ligne \"à écartement normal\""
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "categorie_de_ligne",
+      "type": "LOCALISE_SUR",
+      "cible": "systeme_de_reperage",
+      "preuve": {
+        "document": "HabillageValeur_CategorieLigne.txt",
+        "lignes": "1-125",
+        "citation": "La saisie se fait par tranche de PK du SR (ex : du 0+000 au 60+597 - LGV)"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation categorie_ligne/EST_UN/ligne rejetée: concept source ou cible absent",
+    "Relation categorie_ligne/A_POUR_TECHNOLOGIE/ligne_grande_vitesse rejetée: citation absente du passage",
+    "Relation categorie_ligne/A_POUR_TECHNOLOGIE/ligne_conventionnelle_normale rejetée: citation absente du passage",
+    "Relation categorie_ligne/A_POUR_TECHNOLOGIE/ligne_conventionnelle_etroite rejetée: citation absente du passage"
+  ],
+  "document_source": "HabillageValeur_CategorieLigne.txt",
+  "relations_rejetees": [
+    {
+      "source": "categorie_de_ligne",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "systeme_de_reperage",
+      "preuve": {
+        "document": "HabillageValeur_CategorieLigne.txt",
+        "lignes": "1-125",
+        "citation": "Il est à initialiser lors de la création du système de repérage de la ligne"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "citation sans action de commande"
+      ]
+    }
+  ],
+  "version_validation": 3
+}

@@ -1,0 +1,625 @@
+{
+  "domaine": "ferroviaire",
+  "statut": "PROBABLE",
+  "methode_validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3",
+  "validation_experte": false,
+  "concepts": [
+    {
+      "id": "bal",
+      "nom": "BAL",
+      "aliases": [],
+      "description": "Type de cantonnement (Block Automatique Lumineux).",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "bapr",
+      "nom": "BAPR",
+      "aliases": [],
+      "description": "Type de cantonnement (Block Automatique à Permutation de Voies).",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "bm",
+      "nom": "BM",
+      "aliases": [],
+      "description": "Type de cantonnement (Block Manuel).",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "canton",
+      "nom": "Canton",
+      "aliases": [],
+      "description": "Portion de voie définie pour l'espacement des trains, composée d'un signal origine et d'un signal de destination (ou assimilé).",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "carre_violet_type_bas",
+      "nom": "Carré violet type bas",
+      "aliases": [
+        "Cv type bas"
+      ],
+      "description": "Variante de carré violet pouvant être origine ou destination de canton, nécessitant un canton spécifique pour les itinéraires.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "fin_d_exploitation",
+      "nom": "Fin d'exploitation",
+      "aliases": [
+        "fin de service"
+      ],
+      "description": "Limite au-delà de laquelle les trains ne circulent plus ou sont exploités manuellement, pouvant servir d'origine ou de destination de canton.",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "heurtoir",
+      "nom": "Heurtoir",
+      "aliases": [],
+      "description": "Extrémité de voie sans issue pouvant servir d'origine ou de destination de canton.",
+      "classes_arianes": [
+        "Heurtoir"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "itineraire",
+      "nom": "Itinéraire",
+      "aliases": [],
+      "description": "Trajet défini entre un signal origine et un signal destination, pouvant emprunter un ou plusieurs cantons.",
+      "classes_arianes": [
+        "Itineraire"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "joint_de_zone",
+      "nom": "Joint de zone",
+      "aliases": [],
+      "description": "Limite entre zones pouvant servir d'origine ou de destination de canton en l'absence de signal.",
+      "classes_arianes": [
+        "Segment de Zone"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "signal_destination",
+      "nom": "Signal destination",
+      "aliases": [
+        "Destination (signal ou assimilé)"
+      ],
+      "description": "Signal marquant la sortie d'un canton.",
+      "classes_arianes": [
+        "Signal_Destination"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "signal_origine",
+      "nom": "Signal origine",
+      "aliases": [
+        "Origine (signal ou assimilé)"
+      ],
+      "description": "Signal marquant l'entrée d'un canton, commandant normalement l'accès à celui-ci.",
+      "classes_arianes": [
+        "Signal_Origine"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "voie_de_service",
+      "nom": "Voie de service",
+      "aliases": [
+        "VS"
+      ],
+      "description": "Voie ne portant pas nécessairement de signaux d'entrée et de sortie, pouvant servir d'origine ou de destination de canton.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "CantonEmprunte.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    }
+  ],
+  "relations": [
+    {
+      "source": "canton",
+      "type": "COMPOSE_DE",
+      "cible": "signal_origine",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Un canton est composé d’un signal origine et d’un signal de fin"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "canton",
+      "type": "COMPOSE_DE",
+      "cible": "signal_destination",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Un canton est composé d’un signal origine et d’un signal de fin"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "canton",
+      "type": "A_POUR_ORIGINE",
+      "cible": "heurtoir",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "l’origine et la fin du canton peut être : Un heurtoir"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "négation ou modalité : ne pas interpréter comme un fait universel"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.85,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": false
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "canton",
+      "type": "A_POUR_DESTINATION",
+      "cible": "heurtoir",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "l’origine et la fin du canton peut être : Un heurtoir"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "négation ou modalité : ne pas interpréter comme un fait universel"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.85,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": false
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "canton",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "bal",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Cantonnement (BAL, BAPR, BM …)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "canton",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "bapr",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Cantonnement (BAL, BAPR, BM …)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "canton",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "bm",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Cantonnement (BAL, BAPR, BM …)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "carre_violet_type_bas",
+      "type": "IMPACTE",
+      "cible": "canton",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Lorsqu’un itinéraire a pour origine ou destination un Cv type bas, il faut créer un canton spécifique pour l’itinéraire"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "voie_de_service",
+      "type": "LOCALISE_SUR",
+      "cible": "canton",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "il est nécessaire de créer des cantons qui ont pour origine ou fin des voies de service"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "voie_de_service",
+      "type": "A_POUR_ORIGINE",
+      "cible": "joint_de_zone",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "il faut sélectionner un joint de zone si la voie en est équipée"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "voie_de_service",
+      "type": "A_POUR_DESTINATION",
+      "cible": "joint_de_zone",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "il faut sélectionner un joint de zone si la voie en est équipée"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "voie_de_service",
+      "type": "A_POUR_ORIGINE",
+      "cible": "fin_d_exploitation",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Au cas où la voie d’origine ne serait ni porteuse de joint de zone, ni de signal alors il faut sélectionner « fin de service »"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "voie_de_service",
+      "type": "A_POUR_DESTINATION",
+      "cible": "fin_d_exploitation",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Au cas où la voie de destination ne serait ni porteuse de joint de zone, ni de signal alors il faut sélectionner « fin de service »"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "itineraire",
+      "type": "EMPRUNTE",
+      "cible": "canton",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "Un seul canton doit être décrit malgré le nombre d’itinéraires l’empruntant"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    }
+  ],
+  "relations_valides": 4,
+  "relations_probables": 10,
+  "relations_rejetees": [
+    {
+      "source": "cantonnement",
+      "type": "EST_UN",
+      "cible": "itineraire",
+      "preuve": {
+        "document": "CantonEmprunte.txt",
+        "lignes": "1-92",
+        "citation": "un dispositif d’espacement des trains appelé « cantonnement » est mis en place"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "relation incompatible avec le sens du passage relu (audit métier)"
+      ]
+    }
+  ],
+  "relations_exclues": 1,
+  "avertissement": "Validation documentaire automatique : aucune certification experte ferroviaire."
+}

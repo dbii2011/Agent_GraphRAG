@@ -1,0 +1,267 @@
+\chapter{Démarche détaillée et implémentation actuelle}
+
+Ce chapitre décrit la version effectivement présente dans le dépôt. Il complète les vues
+fonctionnelles précédentes par une lecture reproductible des traitements, des fichiers
+intermédiaires et des décisions de conception. La règle directrice est de séparer trois
+responsabilités : construire la connaissance, sélectionner les éléments pertinents, puis
+rédiger une réponse. Un LLM ne doit pas remplir simultanément ces trois rôles.
+
+\section{Organisation actuelle du dépôt}
+
+Le dépôt a été réorganisé afin de distinguer le code actif, les données, les essais et les
+anciens prototypes. Le point d'entrée reste \code{api.py}; le code applicatif réutilisable
+est regroupé dans le package \code{arianes/}.
+
+\begin{lstlisting}[caption={Arborescence fonctionnelle actuelle}]
+api.py                         API FastAPI et point d'entree
+index.html                     interface web
+arianes/
+  agent.py                     orchestration et generation
+  retrieval.py                 routage et retrieval GraphRAG
+  paths.py                     chemins centralises
+  evaluation.py                evaluation fonctionnelle
+  graph/
+    uml_builder.py             import UML et documents
+    metier_builder.py          import de la couche metier
+  pipelines/
+    xmi_to_json.py             conversion XMI vers JSON
+    extraction_metier.py       extraction d'une fiche
+    extraction_globale.py      traitement du corpus
+    validation_metier.py       validation V3
+    recontrole_metier.py       second controle hors ligne
+    selection_prudente.py      selection globale graduee
+    generer_pilotes.py         pilote par document
+    normalisation_metier.py    fusion de doublons
+project_data/
+  xmi/                         sources du metamodele
+  uml/                         JSON structures
+  procedures/                  fiches texte
+  metier/                      propositions et pilotes
+tests/                         tests automatises
+ml/                            prototype de reranking
+documentation/                 documentation technique
+legacy/                        anciens prototypes non actifs
+\end{lstlisting}
+
+Le module \code{arianes/paths.py} centralise les chemins. Cette décision évite que chaque
+script reconstruise des chemins relatifs différents et rend les commandes exécutables
+depuis la racine. Le dossier \code{legacy/} est conservé pour la traçabilité, mais il ne
+participe pas au lancement normal.
+
+\section{Deux temporalités : hors ligne et en ligne}
+
+\subsection{Préparation hors ligne}
+
+La préparation hors ligne est exécutée lorsque les sources changent. Elle comprend la
+conversion XMI, la construction du graphe UML, le découpage des fiches, le calcul des
+embeddings, puis l'extraction et la validation du graphe métier. Ces opérations sont plus
+coûteuses, mais leurs résultats sont persistés dans Neo4j et dans des fichiers JSON auditables.
+
+\begin{center}
+\resizebox{0.96\linewidth}{!}{%
+\begin{tikzpicture}[node distance=7mm and 8mm]
+\node[source] (xmi) {XMI Arianes};
+\node[traitement,right=of xmi] (json) {Conversion\\\code{xmi\_to\_json.py}};
+\node[stockage,right=of json] (uml) {JSON UML};
+\node[traitement,below=of uml] (builder) {Construction\\UML et documents};
+\node[stockage,left=of builder] (neo) {Neo4j};
+\node[source,below=of xmi] (docs) {29 fiches texte};
+\node[traitement,right=of docs] (extract) {Extraction et\\validation V3};
+\node[stockage,right=of extract] (pilot) {Pilotes métier};
+\draw[fleche] (xmi)--(json);
+\draw[fleche] (json)--(uml);
+\draw[fleche] (uml)--(builder);
+\draw[fleche] (docs)--(builder);
+\draw[fleche] (builder)--(neo);
+\draw[fleche] (docs)--(extract);
+\draw[fleche] (uml)--(extract);
+\draw[fleche] (extract)--(pilot);
+\draw[fleche] (pilot)--(neo);
+\end{tikzpicture}
+}
+\end{center}
+
+\subsection{Traitement en ligne}
+
+Le traitement en ligne commence à la réception d'une question. Il ne reconstruit pas le
+graphe. Il consulte les index et les relations déjà préparés, produit un contexte compact,
+puis appelle le fournisseur choisi par l'utilisateur. La séparation garantit qu'un échec
+du fournisseur de génération ne modifie jamais la connaissance stockée.
+
+\section{Conversion XMI et construction UML}
+
+\code{arianes/pipelines/xmi\_to\_json.py} analyse les exports XMI avec leur espace de noms.
+Il extrait les classes, descriptions, attributs, multiplicités, énumérations, généralisations
+et associations. Une étape de déduplication stabilise les listes lorsqu'un export contient
+plusieurs représentations du même élément. Le JSON obtenu joue le rôle de contrat entre le
+format externe XMI et Neo4j : le builder n'a pas besoin de connaître les détails XML.
+
+\code{arianes/graph/uml\_builder.py} importe ensuite les objets par \code{MERGE}. Les
+contraintes d'unicité portent notamment sur \code{Classe.nom}, \code{Attribut.key},
+\code{Document.id} et \code{Chunk.id}. Une classe possède ses attributs par
+\code{A\_ATTRIBUT}; un attribut pointe vers son type par \code{EST\_DE\_TYPE}. Les
+relations entre classes sont limitées à \code{HERITE\_DE}, \code{ASSOCIE\_A},
+\code{COMPOSE\_DE} et \code{AGREGE}.
+
+Chaque fiche textuelle devient un \code{Document}. Elle est découpée par un séparateur de
+texte avec chevauchement afin d'éviter de couper brutalement une information à la frontière
+de deux passages. Chaque \code{Chunk} conserve son texte, sa position et son embedding.
+Deux index complémentaires sont créés : un index plein texte pour les termes précis et un
+index vectoriel pour les reformulations sémantiques.
+
+\section{Routage explicite des questions}
+
+\code{arianes/retrieval.py} commence par normaliser la question : suppression des accents,
+passage en minuscules et découpage des noms CamelCase. Il résout ensuite les classes par
+correspondance exacte, recouvrement lexical et similarité de chaîne. Les entités ambiguës
+ne sont pas remplacées arbitrairement. Par exemple, \emph{Habillage} ne désigne aucune
+classe exacte; le système propose alors \code{HabillageParcours}, \code{HabillageValeur}
+ou d'autres classes réelles et demande une précision.
+
+Le routage distingue actuellement six modes :
+
+\begin{description}
+  \item[STRUCTURE] consultation des classes, attributs et relations UML;
+  \item[DOCUMENTAIRE] recherche de définitions, règles ou étapes dans les chunks;
+  \item[METIER] interrogation des concepts et relations issus des fiches;
+  \item[CHEMIN\_UML] plus court chemin multi-sauts entre deux classes UML;
+  \item[CHEMIN\_METIER] plus court chemin entre deux concepts métier actifs;
+  \item[HYBRIDE] combinaison ciblée de plusieurs couches lorsque la formulation le justifie.
+\end{description}
+
+Le qualificatif explicite de l'utilisateur est prioritaire. Ainsi, « chemin UML » ne doit
+jamais être redirigé vers les relations métier. Cette distinction a été introduite après
+l'observation d'un cas où \emph{Habillage} et \emph{Ligne} étaient recherchés dans la
+mauvaise couche.
+
+\section{Recherche des chemins multi-sauts}
+
+Pour un chemin UML, deux classes exactes sont résolues avant la requête. Neo4j recherche
+le plus court chemin, borné à huit relations, parmi les quatre types structurels autorisés.
+Le parcours est non orienté pour découvrir une connexion, mais la réponse conserve le sens
+réel de chaque relation. Lorsqu'une arête est parcourue à l'envers, ce fait est signalé.
+Cette précaution évite de présenter une association inversée comme une nouvelle règle.
+
+Pour un chemin métier, la profondeur est bornée à cinq relations. Seuls les concepts et
+relations portant \code{valide=true} sont parcourus. Le résultat contient les preuves,
+conditions, exceptions et statuts. Si aucune connexion n'existe, le système l'indique sans
+demander au LLM de compléter le chemin.
+
+\section{Recherche documentaire hybride}
+
+La recherche vectorielle calcule l'embedding de la question puis compare ce vecteur aux
+embeddings des chunks avec la similarité cosinus. En parallèle, l'index plein texte retrouve
+les expressions exactes. Les deux classements sont fusionnés par Reciprocal Rank Fusion :
+\[
+  \mathrm{RRF}(d)=\sum_{r\in R}\frac{1}{60+\operatorname{rang}_{r}(d)}.
+\]
+Le score ne remplace pas les règles d'ancrage. Lorsqu'aucune classe n'est résolue, une
+correspondance lexicale minimale est exigée pour éviter qu'une simple proximité vectorielle
+ne ramène un passage hors sujet. Les chunks explicitement associés à une preuve métier sont
+placés en priorité et dédupliqués.
+
+Le prototype de reranking de \code{ml/} calcule des caractéristiques telles que score
+sémantique, score lexical, score fusionné et recouvrement des mots. Il reste désactivé, car
+le faible jeu d'entraînement ne démontre pas un gain par rapport à la fusion déterministe.
+
+\section{Pipeline métier : de la fiche à Neo4j}
+
+\subsection{Extraction contrôlée}
+
+\code{extraction\_globale.py} découvre les fichiers \code{project\_data/procedures/*.txt}
+et appelle \code{extraction\_metier.py} document par document. Des checkpoints permettent
+de reprendre après interruption. Pour chaque morceau de texte, le programme sélectionne au
+maximum trente classes UML candidates. La sélection est calculée avant l'appel au LLM;
+elle limite le contexte et interdit au modèle de proposer librement une classe inexistante.
+
+Le prompt demande un JSON comportant des concepts, leurs alias, leur catégorie, leurs
+classes Arianes candidates et des triplets source--prédicat--cible. Chaque relation doit
+être accompagnée d'une citation exacte. La sortie reste une \emph{proposition} : elle est
+écrite dans \code{project\_data/metier/propositions/} et n'est pas importée automatiquement.
+
+\subsection{Validation V3 graduée}
+
+\code{validation\_metier.py} applique cinq critères pondérés : preuve exacte (30 points),
+concepts identifiés (20), prédicat confirmé (20), direction confirmée (15) et condition
+complète (15). Le score maximal est 100. Une erreur certaine, telle qu'une auto-relation,
+une extrémité absente ou une preuve invérifiable, conduit à \code{REJETE}. En l'absence de
+motif bloquant, un score d'au moins 85 avec passage disponible conduit à \code{VALIDE};
+les autres relations exploitables sont classées \code{PROBABLE}.
+
+\attention{Dans ce rapport, \code{VALIDE} signifie confirmé par les contrôles
+documentaires. Il ne signifie pas certifié par un expert ferroviaire. Une relation
+\code{PROBABLE} est utilisable seulement avec une formulation prudente et ses conditions.}
+
+\code{recontrole\_metier.py} relit les propositions à partir des passages sources et écrit
+une version V3 par document ainsi qu'une consolidation globale. \code{generer\_pilotes.py}
+produit un pilote documentaire pour chaque fiche. \code{selection\_prudente.py} réunit les
+relations \code{VALIDE} et \code{PROBABLE}, écarte les rejets et supprime les concepts non
+utilisés. Le fichier \code{pilote\_global\_documentaire.json} est l'entrée de l'import global.
+
+\subsection{Rôle des dossiers intermédiaires}
+
+\begin{itemize}
+  \item \code{propositions/} contient la sortie brute contrôlable du LLM;
+  \item \code{corrections\_v2/} conserve l'ancien contrôle pour l'historique;
+  \item \code{corrections\_v3/} contient le recontrôle gradué actuel;
+  \item \code{pilotes\_documentaires/} contient une sélection exploitable par fiche;
+  \item \code{pilote\_global\_documentaire.json} consolide le corpus pour l'import;
+  \item \code{sauvegardes/} conserve l'état avant certaines fusions de doublons.
+\end{itemize}
+
+\subsection{Import et traçabilité}
+
+\code{metier\_builder.py} refuse les relations rejetées, fusionne les concepts par identifiant
+canonique et crée \code{RELATION\_METIER}. Les propriétés comprennent le statut, le score,
+la condition, l'exception, les avertissements et les identifiants de chunks. Les ponts
+\code{REPRESENTE\_PAR}, \code{DOCUMENTE\_PAR} et \code{ETAYE\_PAR} relient respectivement
+un concept à une classe UML, un document et ses preuves textuelles. La couche métier reste
+donc distincte du métamodèle tout en étant navigable dans la même base.
+
+\section{Construction de la réponse}
+
+\code{arianes/agent.py} ne décide pas quelles données lire : il reçoit le résultat du
+retriever. Pour un chemin, une première représentation déterministe est produite afin de
+figer les classes et relations. Pour une réponse générative, le contexte JSON contient
+uniquement les éléments retenus. Le prompt interdit l'ajout d'une classe, d'une relation ou
+d'une procédure absente et impose une formulation prudente pour \code{PROBABLE}.
+
+L'utilisateur choisit explicitement Mistral, Gemini ou Groq dans l'interface. Il n'existe pas
+de basculement silencieux entre fournisseurs : une erreur 429 ou 413 est associée au
+fournisseur sélectionné. Ce choix facilite le diagnostic, car un résultat ne dépend pas d'un
+fallback invisible. Les embeddings documentaires restent actuellement calculés avec le
+service configuré lors de la construction et de la recherche.
+
+\section{API, authentification et mémoire}
+
+\code{api.py} initialise l'agent au démarrage, expose l'interface et stocke les comptes,
+sessions, conversations et messages dans SQLite. Les mots de passe sont dérivés avec
+PBKDF2-HMAC-SHA256, un sel et 600000 itérations. Le cookie de session est HttpOnly et
+SameSite strict. Chaque accès à une conversation vérifie son propriétaire.
+
+La mémoire conversationnelle n'est pas stockée dans Neo4j. SQLite conserve l'historique
+par utilisateur; le retriever ne réutilise le message précédent que pour les relances
+référentielles telles que « et ses attributs? ». Une nouvelle question autonome ne doit pas
+être polluée par l'ancien sujet. Le graphe affiché dans l'interface provient du résultat de
+retrieval de la question et constitue un complément visuel à la réponse textuelle.
+
+\section{Reproductibilité et commandes}
+
+\begin{lstlisting}[caption={Commandes principales depuis la racine}]
+python -m arianes.pipelines.xmi_to_json
+python -m arianes.graph.uml_builder
+python -m arianes.pipelines.extraction_globale
+python -m arianes.pipelines.recontrole_metier \
+  --output-dir project_data/metier/corrections_v3
+python -m arianes.pipelines.generer_pilotes
+python -m arianes.pipelines.selection_prudente
+python -m arianes.graph.metier_builder \
+  project_data/metier/pilote_global_documentaire.json
+python -m unittest discover -s tests -v
+python -m uvicorn api:app --reload
+\end{lstlisting}
+
+La séparation des commandes permet de reconstruire seulement l'étape nécessaire et de
+contrôler chaque artefact avant l'import. Elle facilite également l'explication du projet :
+les scripts de préparation construisent une base traçable; le retriever sélectionne; le LLM
+formule; l'API conserve la mémoire et applique les droits d'accès.

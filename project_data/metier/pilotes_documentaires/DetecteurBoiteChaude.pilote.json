@@ -1,0 +1,185 @@
+{
+  "domaine": "sécurité ferroviaire",
+  "statut": "VALIDE",
+  "methode_validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3",
+  "validation_experte": false,
+  "concepts": [
+    {
+      "id": "detecteur_de_boites_chaudes",
+      "nom": "Détecteur de boîtes chaudes",
+      "aliases": [
+        "DBC"
+      ],
+      "description": "Appareil utilisé dans le milieu ferroviaire afin de détecter un éventuel échauffement des boîtes d'essieux sur un train.",
+      "classes_arianes": [
+        "Detecteur"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_d_aiguillage_principal",
+      "nom": "Poste d'aiguillage principal",
+      "aliases": [],
+      "description": "Poste recevant les informations émises par un détecteur de boîtes chaudes.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_d_aiguillage_secondaire",
+      "nom": "Poste d'aiguillage secondaire",
+      "aliases": [],
+      "description": "Poste éventuellement recevant les informations émises par un détecteur de boîtes chaudes.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "voie_de_ligne",
+      "nom": "Voie de ligne",
+      "aliases": [],
+      "description": "Voie sur laquelle est localisé un détecteur de boîtes chaudes.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "DetecteurBoiteChaude.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    }
+  ],
+  "relations": [
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "UTILISE",
+      "cible": "voie_de_ligne",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Un détecteur de boîtes chaudes est un appareil utilisé dans le milieu ferroviaire afin de détecter un éventuel échauffement des boîtes d'essieux sur un train."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "RATTACHE_A",
+      "cible": "poste_d_aiguillage_principal",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Il est décrit par : Le rattachement à un poste d’aiguillage principal qui reçoit les informations émises par le DBC et éventuellement à un poste d’aiguillage secondaire"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "RATTACHE_A",
+      "cible": "poste_d_aiguillage_secondaire",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Il est décrit par : Le rattachement à un poste d’aiguillage principal qui reçoit les informations émises par le DBC et éventuellement à un poste d’aiguillage secondaire"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "detecteur_de_boites_chaudes",
+      "type": "LOCALISE_SUR",
+      "cible": "voie_de_ligne",
+      "preuve": {
+        "document": "DetecteurBoiteChaude.txt",
+        "lignes": "1-215",
+        "citation": "Le DBC est typé et localisé sur une voie de ligne"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    }
+  ],
+  "relations_valides": 4,
+  "relations_probables": 0,
+  "relations_rejetees": [],
+  "relations_exclues": 0,
+  "avertissement": "Validation documentaire automatique : aucune certification experte ferroviaire."
+}

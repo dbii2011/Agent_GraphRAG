@@ -2,19 +2,20 @@ import json
 from pathlib import Path
 from unittest.mock import MagicMock
 
-from graphrag_retriever import GraphRAGRetriever
-from recontroler_graphe_metier import lire_passage
-from validation_metier import normaliser, verifier_import
+from arianes.paths import METIER_DATA_DIR, PROCEDURES_DIR
+from arianes.retrieval import GraphRAGRetriever
+from arianes.pipelines.recontrole_metier import lire_passage
+from arianes.pipelines.validation_metier import normaliser, verifier_import
 
 
 def test_selection_pilote_preuves_et_conditions():
     root = Path(__file__).resolve().parents[1]
-    selection = json.loads((root / 'DataMetier/pilote_poste_selection.json').read_text(encoding='utf-8'))
+    selection = json.loads((METIER_DATA_DIR / 'pilote_poste_selection.json').read_text(encoding='utf-8'))
     verifier_import(selection)
     assert len(selection['concepts']) == 7
     assert len(selection['relations']) == 6
     for r in selection['relations']:
-        assert normaliser(r['preuve']['citation']) in normaliser(lire_passage(r['preuve'], root / 'Docs'))
+        assert normaliser(r['preuve']['citation']) in normaliser(lire_passage(r['preuve'], PROCEDURES_DIR))
         if r['type'] == 'LOCALISE_SUR':
             assert 'voie principale' in r['condition']
     assert 'SAF' not in [c['nom'] for c in selection['concepts']]

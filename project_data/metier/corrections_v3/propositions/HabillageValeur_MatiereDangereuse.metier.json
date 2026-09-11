@@ -1,0 +1,261 @@
+{
+  "domaine": "habilitation des lignes au transport de matières dangereuses",
+  "statut": "PROBABLE",
+  "concepts": [
+    {
+      "id": "application_matieres_dangereuses",
+      "nom": "Application Matières Dangereuses",
+      "aliases": [],
+      "description": "Outil informatique dédié à la gestion des données relatives au transport de matières dangereuses sur le réseau ferroviaire.",
+      "classes_arianes": [],
+      "documents": [
+        "HabillageValeur_MatiereDangereuse.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne_apte_au_transport_de_matieres_dangereuses",
+      "nom": "Ligne apte au transport de matières dangereuses",
+      "aliases": [
+        "ligne apte à la circulation des trains transportant des matières dangereuses"
+      ],
+      "description": "Ligne désignée comme pouvant accueillir des trains transportant des matières dangereuses, selon des critères réglementaires ou techniques.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageValeur_MatiereDangereuse.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne_sans_voyageur",
+      "nom": "Ligne sans voyageur",
+      "aliases": [
+        "SV",
+        "Sans Voyageur"
+      ],
+      "description": "Ligne ferroviaire dédiée au transport de marchandises, sans service voyageurs.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "HabillageValeur_MatiereDangereuse.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "operateur_et",
+      "nom": "Opérateur ET",
+      "aliases": [
+        "CRR",
+        "GUF"
+      ],
+      "description": "Entité opérationnelle responsable de la gestion des informations sur les lignes et voies de service.",
+      "classes_arianes": [
+        "Operateur : ET"
+      ],
+      "documents": [
+        "HabillageValeur_MatiereDangereuse.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "point_kilometrique",
+      "nom": "Point Kilométrique",
+      "aliases": [
+        "PK début",
+        "PK fin"
+      ],
+      "description": "Repère kilométrique le long d'une ligne ferroviaire, utilisé pour délimiter des tronçons.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "HabillageValeur_MatiereDangereuse.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "saf",
+      "nom": "SAF",
+      "aliases": [],
+      "description": "Site d'Accueil Ferroviaire, lieu où les voies de service peuvent être concernées par le transport de matières dangereuses sous conditions.",
+      "classes_arianes": [
+        "Saf"
+      ],
+      "documents": [
+        "HabillageValeur_MatiereDangereuse.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_de_service",
+      "nom": "Voie de service",
+      "aliases": [
+        "Voies de Circulation",
+        "voies de stationnement"
+      ],
+      "description": "Voie ferroviaire utilisée pour des opérations de circulation ou de stationnement, distincte des voies principales.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "HabillageValeur_MatiereDangereuse.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "voie_de_service",
+      "type": "LOCALISE_SUR",
+      "cible": "saf",
+      "preuve": {
+        "document": "HabillageValeur_MatiereDangereuse.txt",
+        "lignes": "1-115",
+        "citation": "Pour les voies de service situées dans les SAF la notion de matières dangereuses concerne uniquement si la voie de service est apte à réceptionner des trains transportant des matières dangereuses"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne_apte_au_transport_de_matieres_dangereuses",
+      "type": "GERE_PAR",
+      "cible": "operateur_et",
+      "preuve": {
+        "document": "HabillageValeur_MatiereDangereuse.txt",
+        "lignes": "1-115",
+        "citation": "fichiers Excel envoyé par les CRR et réceptionné par le GUF"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne_apte_au_transport_de_matieres_dangereuses",
+      "type": "UTILISE",
+      "cible": "application_matieres_dangereuses",
+      "preuve": {
+        "document": "HabillageValeur_MatiereDangereuse.txt",
+        "lignes": "1-115",
+        "citation": "se positionner sur « Matières dangereuses »"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne_apte_au_transport_de_matieres_dangereuses",
+      "type": "UTILISE",
+      "cible": "application_matieres_dangereuses",
+      "preuve": {
+        "document": "HabillageValeur_MatiereDangereuse.txt",
+        "lignes": "1-115",
+        "citation": "Localiser la ligne (code) puis la tranche de Pk à saisir dans l’application « Matières dangereuses »"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne_apte_au_transport_de_matieres_dangereuses",
+      "type": "UTILISE",
+      "cible": "application_matieres_dangereuses",
+      "preuve": {
+        "document": "HabillageValeur_MatiereDangereuse.txt",
+        "lignes": "1-115",
+        "citation": "corriger la donnée dans l’application « Matières dangereuses »"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation ligne_apte_md/EST_UN/ligne rejetée: concept source ou cible absent",
+    "Relation ligne_sans_voyageur/EST_UN/ligne rejetée: concept source ou cible absent",
+    "Relation voie_de_service/EST_UN/voie rejetée: concept source ou cible absent",
+    "Relation ligne_apte_md/COMPOSE_DE/pk rejetée: citation absente du passage"
+  ],
+  "document_source": "HabillageValeur_MatiereDangereuse.txt",
+  "relations_rejetees": [],
+  "version_validation": 3
+}

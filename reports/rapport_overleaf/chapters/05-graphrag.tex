@@ -1,0 +1,72 @@
+\chapter{Pipeline GraphRAG en ligne}
+
+\section{Diagnostic initial}
+
+L'analyse du système a montré que le graphe technique était globalement construit, mais que l'agent ne l'exploitait pas encore par une chaîne de retrieval suffisamment contrôlée. La correction a consisté à séparer clairement le retrieval déterministe de la génération. Le fournisseur de génération n'est pas chargé de décider librement quelles données lire dans Neo4j.
+
+\section{Traitement d'une question}
+
+Pour une question $q$, le traitement peut être résumé par :
+
+\begin{equation}
+q\rightarrow E(q)\rightarrow M(q)\rightarrow
+\bigl(G_{UML},G_{métier},D\bigr)\rightarrow C\rightarrow LLM,
+\end{equation}
+
+où $E(q)$ représente les entités résolues, $M(q)$ le mode de recherche, $G$ les sous-graphes, $D$ les passages et $C$ le contexte final.
+
+\subsection{Mémoire conversationnelle}
+
+Les derniers messages utilisateur sont ajoutés à la question courante. Une question telle que « et quels sont ses attributs ? » peut ainsi reprendre une classe mentionnée précédemment, sans mélanger les conversations d'autres utilisateurs.
+
+\subsection{Résolution des classes}
+
+Le catalogue des classes est chargé depuis Neo4j. Les noms sont normalisés : accents, casse et CamelCase sont traités. Le retriever combine correspondance exacte, recouvrement des mots et similarité de chaîne. Les classes courtes ou trop génériques sont filtrées afin de réduire les faux positifs.
+
+\subsection{Choix du mode}
+
+Six modes sont distingués :
+
+\begin{description}
+  \item[STRUCTURE] attributs, héritages, associations et compositions ;
+  \item[DOCUMENTAIRE] procédures, règles, définitions et fonctionnement ;
+  \item[METIER] concepts et relations fonctionnelles issus des fiches ;
+  \item[CHEMIN\_UML] plus court chemin entre deux classes UML ;
+  \item[CHEMIN\_METIER] plus court chemin entre deux concepts métier ;
+  \item[HYBRIDE] utilisation simultanée du graphe et des fiches.
+\end{description}
+
+\subsection{Sous-graphe UML}
+
+Le système extrait un voisinage borné des classes racines. Il ne transmet jamais l'ensemble des 998 classes au modèle. Cette limitation réduit le bruit, le nombre de tokens et le risque d'interpréter une relation hors sujet.
+
+\subsection{Sous-graphe métier}
+
+Seuls les nœuds et relations portant \code{valide=true} sont utilisés. Les concepts sont sélectionnés grâce à leur nom, leurs alias et leurs classes Arianes associées. Les relations fournissent leurs citations, conditions et identifiants de chunks.
+
+\subsection{Recherche documentaire}
+
+En mode documentaire ou hybride, l'embedding de la question est comparé aux chunks. Les résultats vectoriels et plein texte sont fusionnés par RRF. Les chunks directement désignés comme preuves d'une relation métier sont ajoutés prioritairement et dédupliqués.
+
+\section{Contexte transmis au fournisseur de génération}
+
+Le contexte contient explicitement :
+
+\begin{lstlisting}[language={},caption={Structure simplifiée du contexte GraphRAG}]
+{
+  "mode": "HYBRIDE",
+  "classes_racines": ["Poste"],
+  "sous_graphe": {"classes": [], "relations": []},
+  "graphe_metier": {"concepts": [], "relations": []},
+  "chunks": [],
+  "citations": []
+}
+\end{lstlisting}
+
+Le prompt demande de ne pas inventer de classe, relation ou procédure, de distinguer les faits UML des connaissances métier et de respecter les conditions portées par les relations.
+
+\section{Exemple}
+
+Pour « Quels équipements sont commandés par un poste d'aiguillage ? », le retriever sélectionne le concept \code{poste\_aiguillage}, les relations \code{EST\_COMMANDE\_PAR}, puis leurs passages de preuve. Le fournisseur sélectionné formule enfin une réponse en distinguant connaissance métier et association UML.
+
+\capture{reponse-graphrag.png}{Réponse GraphRAG distinguant le graphe UML, le graphe métier et les sources}{fig:reponse-graphrag}

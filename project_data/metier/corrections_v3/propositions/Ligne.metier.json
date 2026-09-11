@@ -1,0 +1,1787 @@
+{
+  "domaine": "gestion_ferroviaire",
+  "statut": "PROBABLE",
+  "concepts": [
+    {
+      "id": "code_ligne",
+      "nom": "Code ligne",
+      "aliases": [],
+      "description": "Identifiant unique à six chiffres d’une ligne, déterminé selon des règles spécifiques à son type.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "date_de_debut_de_fermeture",
+      "nom": "Date de début de fermeture",
+      "aliases": [
+        "DDA"
+      ],
+      "description": "Date à laquelle une fermeture temporaire commence.",
+      "classes_arianes": [
+        "une_phrase_principe"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "date_de_fin_de_fermeture",
+      "nom": "Date de fin de fermeture",
+      "aliases": [
+        "DFA"
+      ],
+      "description": "Date à laquelle une fermeture temporaire se termine.",
+      "classes_arianes": [
+        "une_phrase_principe"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "date_de_validite",
+      "nom": "Date de validité",
+      "aliases": [],
+      "description": "Date associée à une ligne ou un tronçon de ligne pour son statut ou sa création.",
+      "classes_arianes": [],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "date_du_troncon_de_ligne",
+      "nom": "Date du tronçon de ligne",
+      "aliases": [
+        "TL"
+      ],
+      "description": "Date définissant le tronçon de ligne dans la base de données.",
+      "classes_arianes": [],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "DATE"
+    },
+    {
+      "id": "detournement",
+      "nom": "Detournement",
+      "aliases": [
+        "fiches de détournement ARTIC"
+      ],
+      "description": "Fiches documentant les détournements de ligne",
+      "classes_arianes": [
+        "Detournement"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "fermeture_temporaire",
+      "nom": "Fermeture temporaire",
+      "aliases": [],
+      "description": "Période pendant laquelle une ligne ou une voie est neutralisée ou non exploitée.",
+      "classes_arianes": [
+        "une_phrase_principe"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "heurtoir",
+      "nom": "Heurtoir",
+      "aliases": [],
+      "description": "Dispositif d'arrêt en bout de voie.",
+      "classes_arianes": [
+        "Heurtoir"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "libelle_de_ligne",
+      "nom": "Libellé de ligne",
+      "aliases": [],
+      "description": "Désignation de la ligne, souvent basée sur les noms des gares extrêmes desservies.",
+      "classes_arianes": [],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [
+        "raccordements"
+      ],
+      "description": "Voie ferrée ou ensemble de voies ferrées présentant des caractéristiques de tracé, d’exploitation et d’installation entre un point origine et un point de destination, sur lequel peut être assuré un service de transport. Constituée d’un ou plusieurs tronçons de ligne.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ligne_classique",
+      "nom": "Ligne classique",
+      "aliases": [],
+      "description": "Ligne proprement dite, infrastructure ferroviaire reliant deux nœuds de tronçons de ligne extrémités via des nœuds intermédiaires.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "n_ud_de_ligne",
+      "nom": "Nœud de ligne",
+      "aliases": [
+        "NDL"
+      ],
+      "description": "Point de connexion entre deux lignes ou entre une ligne et un raccordement.",
+      "classes_arianes": [
+        "une_phrase_principe"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "pk",
+      "nom": "Pk",
+      "aliases": [
+        "PK administratifs",
+        "PK physiques"
+      ],
+      "description": "Point kilométrique administratif associé à une ligne",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_administratif",
+      "nom": "PK administratif",
+      "aliases": [],
+      "description": "Limites administratives associées à une ligne, stockées dans GAIA/RESEAU.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_de_debut",
+      "nom": "PK de début",
+      "aliases": [
+        "Pk début"
+      ],
+      "description": "Point kilométrique marquant le début d'une section ou d'une fermeture temporaire.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_de_fin",
+      "nom": "PK de fin",
+      "aliases": [
+        "Pk fin"
+      ],
+      "description": "Point kilométrique marquant la fin d'une section ou d'une fermeture temporaire.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_debut",
+      "nom": "Pk début",
+      "aliases": [],
+      "description": "Point kilométrique marquant le début d’une ligne ou d’un tronçon de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_fin",
+      "nom": "Pk fin",
+      "aliases": [],
+      "description": "Point kilométrique marquant la fin d’une ligne ou d’un tronçon de ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "pk_physique",
+      "nom": "PK physique",
+      "aliases": [],
+      "description": "PK correspondant à la plateforme des voies d’une ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "point_kilometrique",
+      "nom": "Point Kilométrique",
+      "aliases": [
+        "PK"
+      ],
+      "description": "Expression de la localisation ponctuelle d’un objet sur le réseau des lignes, conforme au système de repérage.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "raccordement",
+      "nom": "Raccordement",
+      "aliases": [],
+      "description": "Infrastructure ferroviaire permettant la jonction entre deux lignes quel que soit leur type.",
+      "classes_arianes": [
+        "Liaison"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "rang_de_troncon",
+      "nom": "Rang de tronçon",
+      "aliases": [],
+      "description": "Numéro séquentiel attribué à un tronçon de ligne de l’origine vers la fin.",
+      "classes_arianes": [],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "repere_kilometrique",
+      "nom": "Repère kilométrique",
+      "aliases": [
+        "RK"
+      ],
+      "description": "Repère kilométrique particulier dont la distance est égale à zéro, souvent appelé PK sur le terrain.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "LOCALISATION"
+    },
+    {
+      "id": "reseau_des_lignes",
+      "nom": "Réseau des lignes",
+      "aliases": [],
+      "description": "Élément fondamental de la base de données RESEAU/GAIA servant de point de départ à toutes les autres données et permettant de positionner physiquement les informations.",
+      "classes_arianes": [
+        "base"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "ressource_nouvelle",
+      "nom": "ressource_nouvelle",
+      "aliases": [
+        "Installations fixes ligne",
+        "Les NdL et NdV",
+        "Les habillages ligne",
+        "Les habillages voie",
+        "Les points Remarquables (PR)",
+        "Les sections de ligne",
+        "Structures et compétences"
+      ],
+      "description": "Ressources associées à l'habillage d'une ligne",
+      "classes_arianes": [
+        "ressource_nouvelle"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "saf",
+      "nom": "Saf",
+      "aliases": [
+        "Les SAF"
+      ],
+      "description": "Sites d'Accueil Ferroviaire",
+      "classes_arianes": [
+        "Saf"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "statut_de_ligne",
+      "nom": "Statut de ligne",
+      "aliases": [],
+      "description": "État d’exploitation d’une ligne (exploitée, non exploitée, neutralisée).",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "systeme_de_reperage",
+      "nom": "Système de repérage",
+      "aliases": [],
+      "description": "Système permettant de localiser ponctuellement un objet sur le réseau des lignes, incluant les PK, PCR et RK.",
+      "classes_arianes": [
+        "systeme_reperage"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "traverse_en_croix_cadenassee",
+      "nom": "Traverse en croix cadenassée",
+      "aliases": [],
+      "description": "Dispositif de sécurité utilisé pour neutraliser une voie ou une ligne.",
+      "classes_arianes": [
+        "appareil_de_voie"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "tronc_commun",
+      "nom": "Tronc commun",
+      "aliases": [],
+      "description": "Section partagée par plusieurs lignes, créée uniquement pour des distances supérieures à 2 km.",
+      "classes_arianes": [
+        "Portion"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "troncon_de_ligne",
+      "nom": "Tronçon de ligne",
+      "aliases": [
+        "TL"
+      ],
+      "description": "Partie physiquement continue d’une ligne, délimitée par deux nœuds d’extrémités (origine et fin) de tronçon de ligne, et possédant un système de repérage cohérent.",
+      "classes_arianes": [
+        "Portion"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "type_de_ligne",
+      "nom": "Type de ligne",
+      "aliases": [],
+      "description": "Catégorie définissant la nature de la ligne (ligne proprement dite, raccordement, voie-mère d’embranchement, voie de desserte de port).",
+      "classes_arianes": [
+        "Type Zone"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie",
+      "nom": "Voie",
+      "aliases": [],
+      "description": "Élément externe représentant une voie ferrée",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_de_desserte_de_port",
+      "nom": "Voie de desserte de port",
+      "aliases": [],
+      "description": "Liaison ferroviaire avec une zone portuaire disposant de sa propre infrastructure ferroviaire interne.",
+      "classes_arianes": [
+        "Liaison"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_mere_d_embranchement",
+      "nom": "Voie-mère d’embranchement",
+      "aliases": [],
+      "description": "Liaison ferroviaire avec une ou plusieurs zones d’activité disposant chacune de sa propre infrastructure ferroviaire interne.",
+      "classes_arianes": [
+        "Liaison"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "voie_non_exploitee",
+      "nom": "Voie non exploitée",
+      "aliases": [],
+      "description": "État d'une voie indiquant qu'elle n'est pas en service opérationnel.",
+      "classes_arianes": [
+        "Voie"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_d_activite",
+      "nom": "Zone d’activité",
+      "aliases": [],
+      "description": "Zone disposant de sa propre infrastructure ferroviaire interne, liée à une voie-mère d’embranchement.",
+      "classes_arianes": [
+        "Zone"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    },
+    {
+      "id": "zone_portuaire",
+      "nom": "Zone portuaire",
+      "aliases": [],
+      "description": "Zone portuaire disposant de sa propre infrastructure ferroviaire interne, liée à une voie de desserte de port.",
+      "classes_arianes": [
+        "Zone"
+      ],
+      "documents": [
+        "Ligne.txt"
+      ],
+      "statut": "PROBABLE",
+      "categorie": "INCONNU"
+    }
+  ],
+  "relations": [
+    {
+      "source": "reseau_des_lignes",
+      "type": "UTILISE",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Toutes les autres données contenues dans la base de données utilisent comme point de départ le réseau des lignes."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "reseau_des_lignes",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Le réseau des lignes permet en effet de pouvoir positionner physiquement toutes les autres informations contenues dans RESEAU/GAIA."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "COMPOSE_DE",
+      "cible": "troncon_de_ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Une ligne est constituée d’un ou de plusieurs tronçons de ligne (mais le plus souvent, d’un seul)."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_ORIGINE",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "présentant des caractéristiques de tracé, d’exploitation et d’installation entre un point origine et un point de destination"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_DESTINATION",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "présentant des caractéristiques de tracé, d’exploitation et d’installation entre un point origine et un point de destination"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "point_kilometrique",
+      "type": "EST_UN",
+      "cible": "systeme_de_reperage",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "POINT KILOMETRIQUE : EXPRESSION DE LA LOCALISATION PONCTUELLE D’UN OBJET SUR LE RESEAU DES LIGNES, CONFORMEMENT AU SYSTEME DE REPERAGE."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "pk_administratif",
+      "type": "EST_UN",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Les limites administratives associées à la ligne. Elles seront stockées en tant que PK administratifs dans GAIA/RESEAU."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "pk_physique",
+      "type": "EST_UN",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Le tronçon de ligne sera complété par les PK physiques de la ligne qui absorbent la totalité de la plateforme des voies de cette ligne."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "type_de_ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Les différents types de lignes rencontrés sont :"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne_classique",
+      "type": "EST_UN",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "ligne proprement dite : infrastructure ferroviaire reliant deux nœuds de tronçons de ligne extrémités via des nœuds de tronçons de ligne intermédiaires."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "raccordement",
+      "type": "EST_UN",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "raccordement : infrastructure ferroviaire permettant la jonction entre deux lignes quel que soit leur type."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "voie_mere_d_embranchement",
+      "type": "EST_UN",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "voie-mère d’embranchement : liaison ferroviaire avec une ou plusieurs zones d’activité disposant chacune de sa propre infrastructure ferroviaire interne."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "voie_de_desserte_de_port",
+      "type": "EST_UN",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "voie de desserte de port : liaison ferroviaire avec une zone portuaire disposant de sa propre infrastructure ferroviaire interne."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "code_ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Les lignes sont identifiées de façon unique par un code à six chiffres."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "libelle_de_ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "La désignation de la nouvelle ligne reprend le plus souvent le nom des gares extrêmes desservies"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "pk_debut",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Un Pk début et un Pk fin."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "pk_fin",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Un Pk début et un Pk fin."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "date_de_validite",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Date de validité"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "troncon_de_ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "rang_de_troncon",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Un rang (numéroté de 1 en 1 de l’origine vers la fin)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "date_du_troncon_de_ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Date du tronçon de ligne (TL)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "REGLEMENTE_PAR",
+      "cible": "statut_de_ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "Une ligne ne peut pas être supprimée, seul son statut peut modifier"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "zone_d_activite",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "voie-mère d’embranchement : liaison ferroviaire avec une ou plusieurs zones d’activité disposant chacune de sa propre infrastructure ferroviaire interne."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "zone_portuaire",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "1-222",
+        "citation": "voie de desserte de port : liaison ferroviaire avec une zone portuaire disposant de sa propre infrastructure ferroviaire interne."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "pk_de_debut",
+      "type": "LOCALISE_SUR",
+      "cible": "fermeture_temporaire",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Renseigner le PK de l’installation fixe pour le Pk début"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "pk_de_fin",
+      "type": "LOCALISE_SUR",
+      "cible": "fermeture_temporaire",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Renseigner le PK Fin indiqué sur le plan technique délimitant la fin de la fermeture temporaire"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "fermeture_temporaire",
+      "type": "DEBUTE_A",
+      "cible": "date_de_debut_de_fermeture",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Renseigner la date de début (DDA) de la fermeture temporaire"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "date_de_debut_de_fermeture",
+            "type": "LOCALISE_SUR",
+            "cible": "fermeture_temporaire"
+          },
+          "raison": "Date de début de la fermeture, pas localisation."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.85,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "fermeture_temporaire",
+      "type": "SE_TERMINE_A",
+      "cible": "date_de_fin_de_fermeture",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Renseigner la date de fin (DFA) de le fermeture temporaire"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "date_de_fin_de_fermeture",
+            "type": "LOCALISE_SUR",
+            "cible": "fermeture_temporaire"
+          },
+          "raison": "Date de fin de la fermeture, pas localisation."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.85,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "traverse_en_croix_cadenassee",
+      "type": "LOCALISE_SUR",
+      "cible": "pk_de_debut",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Renseigner le PK de la traverse en croix pour le Pk début"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "systeme_de_reperage",
+      "type": "DECRIT_PAR",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "L'expression de la localisation d'un point sur un tronçon de ligne est traduite par un point kilométrique (PK)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "la cible de DECRIT_PAR devrait être une source documentaire",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "repere_kilometrique",
+      "type": "EST_UN",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Le RK est un PK particulier dont la distance est égale à zéro."
+      },
+      "statut": "VALIDE",
+      "avertissements": [],
+      "corrections": [
+        {
+          "avant": {
+            "source": "point_kilometrique",
+            "type": "EST_UN",
+            "cible": "repere_kilometrique"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.85,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "troncon_de_ligne",
+      "type": "COMPOSE_DE",
+      "cible": "systeme_de_reperage",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Un tronçon de ligne est une partie physiquement continue d’une ligne, possédant un système de repérage cohérent."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "systeme_de_reperage",
+      "type": "DECRIT_PAR",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Le système de repérage permet de définir la localisation de tout point sur le réseau des lignes d’une part et d’autre part de calculer la distance entre deux points d’un même tronçon de ligne."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "la cible de DECRIT_PAR devrait être une source documentaire",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "systeme_de_reperage",
+      "type": "A_POUR_TECHNOLOGIE",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Toute ligne du réseau possède un système de repérage orienté et ordonné selon des repères kilométriques (RK)"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "code_ligne",
+      "type": "REGLEMENTE_PAR",
+      "cible": "systeme_de_reperage",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Il est défini par : le code ligne de la ligne concernée ;"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "troncon_de_ligne",
+      "type": "COMPOSE_DE",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Le système de repérage permet de définir la localisation de tout point sur le réseau des lignes d’une part et d’autre part de calculer la distance entre deux points d’un même tronçon de ligne."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "n_ud_de_ligne",
+      "type": "LOCALISE_SUR",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Prendre les Pks des 2 nœuds de ligne (NDL) des 2 lignes concernées par le raccordement"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "heurtoir",
+      "type": "LOCALISE_SUR",
+      "cible": "point_kilometrique",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "La voie 2 à pour extrémité un Heurtoir au PK 0-022 de la ligne 525000."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "tronc_commun",
+      "type": "NECESSITE",
+      "cible": "troncon_de_ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "223-353",
+        "citation": "Les troncs communs ne doivent être mis en place seulement pour des distances supérieures à 2km."
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "354-424",
+        "citation": "Sur ce décret apparaissent les limites administratives associées à la ligne. Elles seront stockées en tant que PK administratifs"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    },
+    {
+      "source": "ligne",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "354-424",
+        "citation": "Le tronçon de ligne sera complété par les PK physiques de la ligne qui absorbent la totalité de la plateforme des voies de cette ligne."
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": []
+    }
+  ],
+  "erreurs_validation": [
+    "Relation troncon_de_ligne/EST_UN/ligne rejetée: citation absente du passage",
+    "Relation voie_non_exploitee/EST_UN/voie rejetée: concept source ou cible absent",
+    "Relation voie_non_exploitee/EST_UN/voie rejetée: concept source ou cible absent"
+  ],
+  "document_source": "Ligne.txt",
+  "relations_rejetees": [
+    {
+      "source": "ligne",
+      "type": "COMPOSE_DE",
+      "cible": "voie",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "354-424",
+        "citation": "Il est très important de dissocier la notion de ligne et la notion de voie."
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "relation incompatible avec le sens du passage relu (audit métier)"
+      ]
+    },
+    {
+      "source": "ligne",
+      "type": "EST_UN",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "354-424",
+        "citation": "Les 2 raccordements (L408360 – L408370) qui permettent de passer d’une ligne à une autre"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "auto-relation interdite après consolidation"
+      ]
+    },
+    {
+      "source": "ligne",
+      "type": "EST_UN",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "354-424",
+        "citation": "Les lignes classiques L810000 – L800000 et les RACC 834310 et 834311 sont modifiés par le rallongement"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "auto-relation interdite après consolidation"
+      ]
+    },
+    {
+      "source": "ligne",
+      "type": "EST_UN",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Ligne.txt",
+        "lignes": "354-424",
+        "citation": "Plusieurs raccordements sont créés (L810310 – L800390 – 800395)"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "auto-relation interdite après consolidation"
+      ]
+    }
+  ],
+  "version_validation": 3
+}

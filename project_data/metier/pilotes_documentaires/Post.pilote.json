@@ -1,0 +1,1265 @@
+{
+  "domaine": "gestion des postes ferroviaires",
+  "statut": "PROBABLE",
+  "methode_validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3",
+  "validation_experte": false,
+  "concepts": [
+    {
+      "id": "base",
+      "nom": "base",
+      "aliases": [],
+      "description": "Base de données ou système de gestion où les postes sont enregistrés (ex: RESEAU/GAIA).",
+      "classes_arianes": [
+        "base"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "canton",
+      "nom": "Canton",
+      "aliases": [],
+      "description": "Segment de voie délimité pour la sécurité ferroviaire.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "ccr",
+      "nom": "CCR",
+      "aliases": [],
+      "description": "Centre de Commande Régional, structure pouvant évoluer indépendamment d'un poste.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "domaine_de_protection_voie",
+      "nom": "Domaine de protection voie",
+      "aliases": [],
+      "description": "Zone sécurisée autour des voies et caténaires.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "installation_fixe_voie",
+      "nom": "Installation fixe voie",
+      "aliases": [],
+      "description": "Équipement permanent sur les voies ferrées.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "levier_de_commande",
+      "nom": "Levier de commande",
+      "aliases": [
+        "levier"
+      ],
+      "description": "Élément de manœuvre individuel ou groupé, localisé en mètre ou en campagne.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "libelle",
+      "nom": "Libellé",
+      "aliases": [],
+      "description": "Nom ou identification textuelle d'un poste.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "CARACTERISTIQUE",
+      "validation_experte": false
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [],
+      "description": "Élément de réseau ferroviaire sur lequel un poste est localisé.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "localisation",
+      "nom": "Localisation",
+      "aliases": [],
+      "description": "Position géographique d'un poste ou d'un point, définie par ligne, tronçon et PK.",
+      "classes_arianes": [
+        "Localisation"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION",
+      "validation_experte": false
+    },
+    {
+      "id": "pk",
+      "nom": "Pk",
+      "aliases": [],
+      "description": "Point kilométrique définissant la localisation d'un poste sur une ligne.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION",
+      "validation_experte": false
+    },
+    {
+      "id": "point",
+      "nom": "Point",
+      "aliases": [],
+      "description": "Groupe de leviers de commande en campagne sous la dépendance d’un poste, ou point de manœuvre spécifique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste",
+      "nom": "Poste",
+      "aliases": [],
+      "description": "Installation comportant la manœuvre des signaux et des appareils de voie, pouvant être rattachée ou non à un SAF.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_d_aiguillage",
+      "nom": "Poste d'aiguillage",
+      "aliases": [],
+      "description": "Équipement permettant de commander et superviser les aiguillages et les itinéraires.",
+      "classes_arianes": [
+        "Poste"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_de_vp_electrique_a_enclenchement_informatique",
+      "nom": "Poste de VP électrique à enclenchement informatique",
+      "aliases": [
+        "PAI"
+      ],
+      "description": "Type de poste électrique utilisant un enclenchement informatique pour la gestion des itinéraires.",
+      "classes_arianes": [
+        "Poste de VP électrique à enclenchement informatique"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_de_vp_electrique_a_leviers_d_itineraire",
+      "nom": "Poste de VP électrique à leviers d’itinéraire",
+      "aliases": [
+        "PLIT"
+      ],
+      "description": "Type de poste électrique utilisant des leviers pour les itinéraires.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_de_vp_electrique_a_relais_a_commande_informatique",
+      "nom": "Poste de VP électrique à relais à commande informatique",
+      "aliases": [
+        "PRCI"
+      ],
+      "description": "Type de poste électrique utilisant des relais et une commande informatique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_de_vp_electrique_commande_centralisee",
+      "nom": "Poste de VP électrique commande centralisée",
+      "aliases": [
+        "CC",
+        "CC-PC"
+      ],
+      "description": "Type de poste électrique commandé de manière centralisée.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_de_vp_electrique_tout_relais_a_transit_souple",
+      "nom": "Poste de VP électrique tout relais à transit souple",
+      "aliases": [
+        "PRA",
+        "PRAW",
+        "PRS"
+      ],
+      "description": "Type de poste électrique tout relais avec transit souple.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_de_vp_mecanique_electromecaniques_unifies",
+      "nom": "Poste de VP mécanique électromécaniques unifiés",
+      "aliases": [
+        "EMU"
+      ],
+      "description": "Type de poste mécanique utilisant des systèmes électromécaniques unifiés.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_de_vs_de_triage_a_commande_automatique",
+      "nom": "Poste de VS de triage à commande automatique",
+      "aliases": [
+        "PVS-TRI"
+      ],
+      "description": "Type de poste de voie de service (VS) à commande automatique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_de_vs_electrique",
+      "nom": "Poste de VS électrique",
+      "aliases": [
+        "PVS-ELEC"
+      ],
+      "description": "Type de poste de voie de service (VS) électrique.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_de_vs_mecanique_non_enclenche",
+      "nom": "Poste de VS mécanique non enclenché",
+      "aliases": [
+        "PVS-MEC"
+      ],
+      "description": "Type de poste de voie de service (VS) mécanique non enclenché.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "poste_divers",
+      "nom": "Poste divers",
+      "aliases": [
+        "LEVIER",
+        "P-10",
+        "POINT"
+      ],
+      "description": "Type de poste diversifié selon le nombre de leviers ou la fonction.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "pr",
+      "nom": "PR",
+      "aliases": [
+        "Point de repère"
+      ],
+      "description": "Point de repère ou de référence sur le réseau.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "saf",
+      "nom": "SAF",
+      "aliases": [],
+      "description": "Système d'Aiguillage et de Feux, type de gare auquel un poste peut être rattaché.",
+      "classes_arianes": [
+        "Saf"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "signal",
+      "nom": "Signal",
+      "aliases": [],
+      "description": "Élément de signalisation ferroviaire manœuvré depuis un poste.",
+      "classes_arianes": [
+        "Signal"
+      ],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "type_de_poste",
+      "nom": "Type de poste",
+      "aliases": [],
+      "description": "Catégorie ou modèle d'un poste d'aiguillage.",
+      "classes_arianes": [],
+      "documents": [
+        "Post.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    }
+  ],
+  "relations": [
+    {
+      "source": "poste",
+      "type": "RATTACHE_A",
+      "cible": "saf",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "un poste est rattaché à un SAF de type gare"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Une ou plusieurs localisations à savoir pour chaque ligne sur lequel il est localisé"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "PK de l'axe du bâtiment projeté sur la ligne"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_de_vp_electrique_a_enclenchement_informatique",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Cas des Poste SEI : classé dans le type Poste de VP électrique à enclenchement informatique"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_electrique_a_enclenchement_informatique"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_de_vp_electrique_a_relais_a_commande_informatique",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique à relais à commande informatique ----- PRCI"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_electrique_a_relais_a_commande_informatique"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_de_vp_electrique_tout_relais_a_transit_souple",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique tout relais à transit souple ----- PRS / PRA / PRAW"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_electrique_tout_relais_a_transit_souple"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_de_vp_electrique_commande_centralisee",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique commande centralisée ----- CC / CC-PC"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_electrique_commande_centralisee"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_de_vp_electrique_a_leviers_d_itineraire",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP électrique à leviers d’itinéraire ----- PLIT"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_electrique_a_leviers_d_itineraire"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_de_vp_mecanique_electromecaniques_unifies",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VP mécanique électromécaniques unifiés ----- EMU"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vp_mecanique_electromecaniques_unifies"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_de_vs_de_triage_a_commande_automatique",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VS de triage à commande automatique ----- PVS-TRI"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vs_de_triage_a_commande_automatique"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_de_vs_electrique",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VS électrique ----- PVS-ELEC"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vs_electrique"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_de_vs_mecanique_non_enclenche",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste de VS mécanique non enclenché ----- PVS-MEC"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_de_vs_mecanique_non_enclenche"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_divers",
+      "type": "EST_UN",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Poste divers de moins de 10 leviers ----- P-10"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "corrections": [
+        {
+          "avant": {
+            "source": "poste",
+            "type": "EST_UN",
+            "cible": "poste_divers"
+          },
+          "raison": "Typologie relue : le type spécialisé est la source."
+        }
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": false,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "point",
+      "type": "EST_UN",
+      "cible": "levier_de_commande",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Les points de manœuvre : libellé point suivi du numéro"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "signal",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "Installation, quelle que soit par ailleurs sa désignation administrative, comportant la manœuvre des signaux"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste",
+      "type": "NECESSITE",
+      "cible": "base",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "il est nécessaire que celui apparaisse dans la base RESEAU/GAIA"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "ccr",
+      "type": "NECESSITE",
+      "cible": "base",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "1-134",
+        "citation": "il est nécessaire que celle-ci apparaisse également dans la base RESEAU/GAIA"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "installation_fixe_voie",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les installions fixes voies"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "domaine_de_protection_voie",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les domaines de protection voies et caténaires secondaires"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "canton",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact sur les cantons et itinéraires"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "installation_fixe_voie",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact à vérifier sur les voies et les installations fixes sur voies"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "IMPACTE",
+      "cible": "pr",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Impact éventuellement sur les PR"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "LOCALISE_SUR",
+      "cible": "localisation",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Erreur de la localisation du poste lors de la saisie"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "LOCALISE_SUR",
+      "cible": "localisation",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Changement de type de poste sans modification de la localisation"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "COMPOSE_DE",
+      "cible": "libelle",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Erreur du libellé du poste lors de la saisie"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "composition suspecte : la cible est une propriété",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "poste_d_aiguillage",
+      "type": "COMPOSE_DE",
+      "cible": "type_de_poste",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "Changement de type de poste sans modification de la localisation"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    }
+  ],
+  "relations_valides": 8,
+  "relations_probables": 18,
+  "relations_rejetees": [
+    {
+      "source": "poste_d_aiguillage",
+      "type": "EST_COMMANDE_PAR",
+      "cible": "plan_technique",
+      "preuve": {
+        "document": "Post.txt",
+        "lignes": "135-214",
+        "citation": "celui-ci ne figure plus sur le plan technique suite à sa suppression physique"
+      },
+      "statut": "REJETE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [
+        "commande incompatible avec une date, un document ou une caractéristique",
+        "citation sans action de commande"
+      ]
+    }
+  ],
+  "relations_exclues": 1,
+  "avertissement": "Validation documentaire automatique : aucune certification experte ferroviaire."
+}

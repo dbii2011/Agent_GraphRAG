@@ -20,16 +20,21 @@ import uuid
 import hashlib
 import hmac
 import secrets
+import logging
+from threading import Lock
+from pathlib import Path
 from datetime import datetime, timedelta
 from contextlib import asynccontextmanager
+from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from sqlmodel import SQLModel, Field, Session, create_engine, select
+from sqlalchemy import inspect, text
 from dotenv import load_dotenv
 
-from Agent_LG import AgentLG  # ta classe existante, inchangée
+from arianes.agent import AgentLG
 
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./ariane_coeur.db")
@@ -37,7 +42,12 @@ DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./ariane_coeur.db")
 # check_same_thread=False : necessaire car FastAPI traite les requetes
 # potentiellement sur des threads differents ; sans risque ici car chaque
 # fonction ouvre/ferme sa propre Session.
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+engine = create_engine(DATABASE_URL, connect_args=(
+    {"check_same_thread": False} if DATABASE_URL.startswith("sqlite:") else {}
+))
+
+# Sérialisation pour le déploiement local mono-processus (pas multi-workers).
+_conversation_locks = [Lock() for _ in range(64)]
 
 agent: AgentLG | None = None
 
@@ -58,6 +68,7 @@ class Message(SQLModel, table=True):
     role: str
     contenu: str
     position: int
+    provider: str | None = Field(default=None)
     timestamp: datetime = Field(default_factory=datetime.now)
 
 
@@ -93,6 +104,9 @@ async def lifespan(app: FastAPI):
     agent = AgentLG()
     print("Initialisation du schema SQLite (historique des conversations)...")
     SQLModel.metadata.create_all(engine)
+    if "provider" not in {colonne["name"] for colonne in inspect(engine).get_columns("message")}:
+        with engine.begin() as connexion:
+            connexion.execute(text("ALTER TABLE message ADD COLUMN provider VARCHAR"))
     yield
     print("Fermeture de la connexion Neo4j...")
     agent.driver.close()
@@ -105,12 +119,14 @@ app = FastAPI(title="Ariane Cœur", lifespan=lifespan)
 class Question(BaseModel):
     question: str
     conversation_id: str | None = None
+    provider: Literal["mistral", "gemini", "groq"] = "gemini"
 
 
 class Reponse(BaseModel):
     question: str
     reponse: str
     conversation_id: str
+    provider: str
     graphe: dict | None = None
 
 
@@ -123,6 +139,7 @@ class ConversationResume(BaseModel):
 class MessageItem(BaseModel):
     role: str
     contenu: str
+    provider: str | None = None
     graphe: dict | None = None
 
 
@@ -269,13 +286,20 @@ def _charger_historique(conversation_id: str, utilisateur_id: uuid.UUID) -> list
     ]
 
 
-def _enregistrer_message(conversation_id: str, role: str, contenu: str, position: int) -> uuid.UUID:
+def _enregistrer_message(
+    conversation_id: str,
+    role: str,
+    contenu: str,
+    position: int,
+    provider: str | None = None,
+) -> uuid.UUID:
     with Session(engine) as session:
         msg = Message(
             conversation_id=uuid.UUID(conversation_id),
             role=role,
             contenu=contenu,
             position=position,
+            provider=provider,
         )
         session.add(msg)
         session.commit()
@@ -365,12 +389,22 @@ def ask(payload: Question, request: Request):
     if not conversation_id:
         conversation_id = _creer_conversation(titre=question, utilisateur_id=utilisateur.id)
 
+    verrou = _conversation_locks[hash(conversation_id) % len(_conversation_locks)]
+    if not verrou.acquire(blocking=False):
+        raise HTTPException(status_code=409, detail="Une réponse est déjà en cours. Réessaie après sa fin.")
     try:
         historique = _charger_historique(conversation_id, utilisateur.id)
         position = _prochaine_position(conversation_id)
-        _enregistrer_message(conversation_id, "utilisateur", question, position)
+        _enregistrer_message(
+            conversation_id, "utilisateur", question, position, payload.provider
+        )
 
-        resultat_agent = agent.ask(question, historique=historique, inclure_graphe=True)
+        resultat_agent = agent.ask(
+            question,
+            historique=historique,
+            inclure_graphe=True,
+            provider=payload.provider,
+        )
         if isinstance(resultat_agent, dict):
             reponse = resultat_agent["reponse"]
             graphe = resultat_agent.get("graphe")
@@ -378,17 +412,22 @@ def ask(payload: Question, request: Request):
             reponse = resultat_agent
             graphe = None
 
-        message_id = _enregistrer_message(conversation_id, "assistant", reponse, position + 1)
+        message_id = _enregistrer_message(
+            conversation_id, "assistant", reponse, position + 1, payload.provider
+        )
         _enregistrer_graphe(message_id, graphe)
 
         return Reponse(
             question=question, reponse=reponse,
-            conversation_id=conversation_id, graphe=graphe,
+            conversation_id=conversation_id, provider=payload.provider, graphe=graphe,
         )
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Erreur lors du traitement : {str(e)}")
+        logging.exception("Échec de traitement de la conversation")
+        raise HTTPException(status_code=500, detail="Erreur lors du traitement. Consulte les journaux du serveur.") from e
+    finally:
+        verrou.release()
 
 
 @app.get("/conversations", response_model=list[ConversationResume])
@@ -427,8 +466,25 @@ def charger_messages(conversation_id: str, request: Request):
         for message in messages:
             visualisation = session.get(VisualisationMessage, message.id)
             graphe = json.loads(visualisation.graphe_json) if visualisation else None
-            resultat.append({"role": message.role, "contenu": message.contenu, "graphe": graphe})
+            resultat.append({
+                "role": message.role,
+                "contenu": message.contenu,
+                "provider": message.provider,
+                "graphe": graphe,
+            })
     return resultat
+
+
+@app.get("/providers")
+def lister_fournisseurs(request: Request):
+    _utilisateur_courant(request)
+    return {
+        "default": "gemini",
+        "providers": [
+            {"id": identifiant, "configured": configure}
+            for identifiant, configure in agent.fournisseurs_disponibles().items()
+        ],
+    }
 
 
 @app.delete("/conversations/{conversation_id}")
@@ -456,7 +512,8 @@ def supprimer_conversation(conversation_id: str, request: Request):
 
 
 @app.get("/schema")
-def schema():
+def schema(request: Request):
+    _utilisateur_courant(request)
     try:
         return {"schema": agent.get_schema_context()}
     except Exception:
@@ -470,7 +527,11 @@ def graphe_visible(request: Request, vue: str = "metier"):
     requetes = {
         "metier": """
             MATCH (a:ConceptMetier)-[r:RELATION_METIER]->(b:ConceptMetier)
-            WHERE a.valide = true AND b.valide = true AND r.valide = true
+            WHERE coalesce(a.actif, a.valide, false) AND coalesce(b.actif, b.valide, false)
+              AND coalesce(r.actif, r.valide, false)
+              AND coalesce(r.statut, 'PROBABLE') IN ['VALIDE', 'PROBABLE']
+              AND coalesce(a.statut, 'PROBABLE') IN ['VALIDE', 'PROBABLE']
+              AND coalesce(b.statut, 'PROBABLE') IN ['VALIDE', 'PROBABLE']
             RETURN elementId(a) AS source_id, a.nom AS source_nom,
                    'Concept métier' AS source_categorie,
                    coalesce(a.description, '') AS source_description,
@@ -533,4 +594,4 @@ def health():
 
 @app.get("/")
 def accueil():
-    return FileResponse("index.html")
+    return FileResponse(str(Path(__file__).resolve().parent / "index.html"))

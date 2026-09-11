@@ -1,0 +1,159 @@
+{
+  "domaine": "ouvrage_art_ferroviaire",
+  "statut": "PROBABLE",
+  "methode_validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3",
+  "validation_experte": false,
+  "concepts": [
+    {
+      "id": "passage_souterrain",
+      "nom": "Passage souterrain",
+      "aliases": [],
+      "description": "Ouvrage d'art permettant le passage sous une voie ferrée.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "passerelle",
+      "nom": "Passerelle",
+      "aliases": [],
+      "description": "Ouvrage d'art permettant le passage de piétons ou de véhicules légers au-dessus ou en dessous d’une voie ferrée.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "pont_route",
+      "nom": "Pont route",
+      "aliases": [],
+      "description": "Ouvrage d'art permettant de franchir un obstacle pour une voie routière.",
+      "classes_arianes": [
+        "Type de Configuration"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "region",
+      "nom": "Région",
+      "aliases": [],
+      "description": "Zone géographique associée à un ouvrage d'art.",
+      "classes_arianes": [
+        "Region"
+      ],
+      "documents": [
+        "OuvrageArt.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    }
+  ],
+  "relations": [
+    {
+      "source": "pont_route",
+      "type": "RATTACHE_A",
+      "cible": "region",
+      "preuve": {
+        "document": "OuvrageArt.txt",
+        "lignes": "1-84",
+        "citation": "Pont route ... Région O"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "passerelle",
+      "type": "RATTACHE_A",
+      "cible": "region",
+      "preuve": {
+        "document": "OuvrageArt.txt",
+        "lignes": "1-84",
+        "citation": "Passerelle ... Région O"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "passage_souterrain",
+      "type": "RATTACHE_A",
+      "cible": "region",
+      "preuve": {
+        "document": "OuvrageArt.txt",
+        "lignes": "1-84",
+        "citation": "Passage souterrain ... Région O"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    }
+  ],
+  "relations_valides": 0,
+  "relations_probables": 3,
+  "relations_rejetees": [],
+  "relations_exclues": 0,
+  "avertissement": "Validation documentaire automatique : aucune certification experte ferroviaire."
+}

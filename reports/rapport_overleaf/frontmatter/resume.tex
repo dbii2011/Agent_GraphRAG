@@ -1,0 +1,29 @@
+\chapter*{Résumé}
+\addcontentsline{toc}{chapter}{Résumé}
+
+Ce projet porte sur la conception d'un assistant capable d'interroger le métamodèle Arianes et des fiches de procédure ferroviaires. La solution combine un graphe de connaissances Neo4j, une recherche documentaire hybride, plusieurs modèles de langage sélectionnables et une application web multi-utilisateur. Le métamodèle, fourni en XMI, est converti en JSON puis représenté sous forme de classes, attributs et relations. Les fiches sont découpées en passages et indexées par recherche plein texte et vectorielle.
+
+Le principal apport est une chaîne GraphRAG contrôlée : les entités de la question sont résolues avant l'appel au modèle, la question est orientée vers la couche UML, documentaire ou métier, puis un contexte borné et traçable est construit. Le système sait également rechercher des chemins multi-sauts UML ou métier. La génération est découplée du retrieval et peut être confiée à Mistral, Gemini ou Groq.
+
+Une couche métier distincte complète le graphe technique. Les 29 fiches ont été traitées par un pipeline d'extraction, de recontrôle et de sélection graduée. La base actuelle contient 255 concepts métier et 347 relations actives : 123 sont confirmées documentairement et 224 sont classées probables. Ces statuts ne constituent pas une certification ferroviaire; ils rendent explicite le niveau de confiance avant une validation experte ultérieure.
+
+\textbf{Mots-clés :} GraphRAG, Neo4j, graphe de connaissances, Arianes, Mistral, RAG, extraction d'information, traçabilité.
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+This project designs an assistant for querying the Arianes metamodel and railway procedure sheets. It combines a Neo4j knowledge graph, hybrid document retrieval, selectable language-model providers and a multi-user web application. A controlled GraphRAG pipeline routes each question to the UML, documentary or business layer and supports bounded multi-hop paths. All 29 procedure sheets have been processed through extraction, deterministic review and graduated selection. The current global documentary pilot contains 255 business concepts and 347 active relationships, with an explicit distinction between document-confirmed and probable statements.
+
+\textbf{Keywords:} GraphRAG, Neo4j, knowledge graph, retrieval-augmented generation, information extraction, traceability.
+
+\chapter*{Liste des sigles}
+\addcontentsline{toc}{chapter}{Liste des sigles}
+\begin{description}[leftmargin=3.5cm,style=nextline]
+  \item[API] Interface de programmation applicative.
+  \item[LLM] Grand modèle de langage.
+  \item[RAG] Génération augmentée par recherche d'information.
+  \item[GraphRAG] RAG utilisant explicitement un graphe de connaissances.
+  \item[XMI] Format d'échange de métadonnées fondé sur XML.
+  \item[RRF] Méthode de fusion de classements par rang réciproque.
+  \item[UML] Langage de modélisation unifié.
+\end{description}

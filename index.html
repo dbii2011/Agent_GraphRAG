@@ -204,7 +204,7 @@
   }
   .response-graph-toggle:hover { background: #EAF0F6; }
   .response-graph-toggle span:last-child { color: #64748B; font-size: 16px; }
-  .response-graph-body { padding: 4px 10px 12px; overflow-x: auto; }
+  .response-graph-body { padding: 4px 10px 12px; overflow: auto; max-height: 620px; }
   .response-graph-svg { display: block; width: 100%; min-width: 560px; height: auto; }
   .response-graph-edge { stroke: #718096; stroke-width: 1.7; }
   .response-graph-edge-label {
@@ -215,6 +215,14 @@
   .response-graph-node-label {
     fill: #172231; font: 600 11px "Segoe UI", sans-serif; text-anchor: middle;
     dominant-baseline: middle;
+  }
+  .response-graph-relation-box { fill: #E8F0FA; stroke: #9CB7D3; stroke-width: 1.2; }
+  .response-graph-relation-label {
+    fill: #294A6D; font: 700 10px "Segoe UI", sans-serif; text-anchor: middle;
+    dominant-baseline: middle;
+  }
+  .response-graph-summary {
+    margin: 2px 8px 8px; color: #64748B; font-size: 11px; text-align: center;
   }
 
   .msg.erreur {
@@ -324,6 +332,13 @@
     border: 1px solid #CBD5E1; border-radius: 20px; box-shadow: 0 8px 28px rgba(15,23,42,.09);
     align-items: flex-end;
   }
+  #provider-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+  #provider-select {
+    align-self: center; max-width: 100px; padding: 7px 8px;
+    border: 1px solid var(--bordure); border-radius: 9px;
+    background: #F1F5F9; color: var(--texte); font: inherit; font-size: 12px;
+    cursor: pointer;
+  }
   #question { border: 0; padding: 9px 0; min-height: 42px; max-height: 140px; resize: none; font-family: inherit; }
   #envoyer { width: 42px; height: 42px; padding: 0; border-radius: 13px; font-size: 0; }
   #envoyer::before { content: "↑"; font-size: 22px; }
@@ -428,6 +443,12 @@
       <div id="messages"></div>
 
       <div id="zone-saisie">
+        <label id="provider-label" for="provider-select">Modèle</label>
+        <select id="provider-select" aria-label="Fournisseur du modèle">
+          <option value="gemini">Gemini</option>
+          <option value="mistral">Mistral</option>
+          <option value="groq">Groq</option>
+        </select>
         <textarea id="question" rows="1" placeholder="Pose une question sur Arianes..." autocomplete="off"></textarea>
         <button id="envoyer">Envoyer</button>
       </div>
@@ -465,6 +486,11 @@
   const elListeConv = document.getElementById("liste-conversations");
   const elQuestion = document.getElementById("question");
   const elEnvoyer = document.getElementById("envoyer");
+  const elProvider = document.getElementById("provider-select");
+  elProvider.value = localStorage.getItem("llm_provider") || "gemini";
+  elProvider.addEventListener("change", () => {
+    localStorage.setItem("llm_provider", elProvider.value);
+  });
   const elAuthScreen = document.getElementById("auth-screen");
   const elApp = document.getElementById("app-shell");
   const elAuthForm = document.getElementById("auth-form");
@@ -820,7 +846,8 @@
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("class", "response-graph-svg");
     const largeur = 760;
-    const hauteur = graphe.nodes.length <= 6 ? 190 : 360;
+    const liensAffiches = graphe.links;
+    const hauteur = Math.max(150, 32 + liensAffiches.length * 70);
     svg.setAttribute("viewBox", `0 0 ${largeur} ${hauteur}`);
     svg.setAttribute("role", "img");
     svg.setAttribute("aria-label", "Schéma des relations trouvées dans Neo4j");
@@ -832,54 +859,52 @@
     defs.appendChild(marker);
     svg.appendChild(defs);
 
-    const positions = new Map();
-    const n = graphe.nodes.length;
-    graphe.nodes.forEach((noeud, index) => {
-      let x, y;
-      if (n <= 6) {
-        x = 85 + index * ((largeur - 170) / Math.max(1, n - 1));
-        y = hauteur / 2;
-      } else {
-        const angle = (2 * Math.PI * index / n) - Math.PI / 2;
-        x = largeur / 2 + Math.cos(angle) * 280;
-        y = hauteur / 2 + Math.sin(angle) * 125;
-      }
-      positions.set(noeud.id, { x, y });
-    });
+    const noms = new Map(graphe.nodes.map(noeud => [noeud.id, String(noeud.label || noeud.id)]));
+    const libelleCourt = valeur => valeur.length > 27 ? valeur.slice(0, 25) + "…" : valeur;
 
-    for (const lien of graphe.links) {
-      const source = positions.get(lien.source);
-      const cible = positions.get(lien.target);
-      if (!source || !cible) continue;
-      const dx = cible.x - source.x;
-      const dy = cible.y - source.y;
-      const distance = Math.max(1, Math.hypot(dx, dy));
-      const retrait = 61;
-      const ligne = elementSvg("line", {
-        x1: source.x + dx / distance * retrait, y1: source.y + dy / distance * 24,
-        x2: cible.x - dx / distance * retrait, y2: cible.y - dy / distance * 24,
+    liensAffiches.forEach((lien, index) => {
+      const y = 48 + index * 70;
+      const source = noms.get(lien.source) || String(lien.source);
+      const cible = noms.get(lien.target) || String(lien.target);
+
+      svg.appendChild(elementSvg("line", {
+        x1: 210, y1: y, x2: 290, y2: y,
+        class: "response-graph-edge",
+      }));
+      svg.appendChild(elementSvg("line", {
+        x1: 470, y1: y, x2: 548, y2: y,
         class: "response-graph-edge", "marker-end": `url(#${markerId})`,
-      });
-      const texte = elementSvg("text", {
-        x: (source.x + cible.x) / 2, y: (source.y + cible.y) / 2 - 9,
-        class: "response-graph-edge-label",
-      });
-      texte.textContent = libelleRelation(lien.label);
-      svg.append(ligne, texte);
-    }
-    for (const noeud of graphe.nodes) {
-      const position = positions.get(noeud.id);
-      const groupe = elementSvg("g");
-      groupe.appendChild(elementSvg("rect", { x: position.x - 62, y: position.y - 24, width: "124", height: "48", rx: "12", class: "response-graph-node" }));
-      const texte = elementSvg("text", { x: position.x, y: position.y, class: "response-graph-node-label" });
-      const libelle = String(noeud.label || noeud.id);
-      texte.textContent = libelle.length > 20 ? libelle.slice(0, 18) + "…" : libelle;
-      const titre = elementSvg("title");
-      titre.textContent = libelle;
-      groupe.append(texte, titre);
-      svg.appendChild(groupe);
-    }
+      }));
+
+      const sourceGroupe = elementSvg("g");
+      sourceGroupe.appendChild(elementSvg("rect", { x: 20, y: y - 23, width: "190", height: "46", rx: "11", class: "response-graph-node" }));
+      const sourceTexte = elementSvg("text", { x: 115, y, class: "response-graph-node-label" });
+      sourceTexte.textContent = libelleCourt(source);
+      const sourceTitre = elementSvg("title");
+      sourceTitre.textContent = source;
+      sourceGroupe.append(sourceTexte, sourceTitre);
+
+      const relationGroupe = elementSvg("g");
+      relationGroupe.appendChild(elementSvg("rect", { x: 290, y: y - 18, width: "180", height: "36", rx: "18", class: "response-graph-relation-box" }));
+      const relationTexte = elementSvg("text", { x: 380, y, class: "response-graph-relation-label" });
+      relationTexte.textContent = libelleCourt(libelleRelation(lien.label));
+      relationGroupe.appendChild(relationTexte);
+
+      const cibleGroupe = elementSvg("g");
+      cibleGroupe.appendChild(elementSvg("rect", { x: 548, y: y - 23, width: "190", height: "46", rx: "11", class: "response-graph-node" }));
+      const cibleTexte = elementSvg("text", { x: 643, y, class: "response-graph-node-label" });
+      cibleTexte.textContent = libelleCourt(cible);
+      const cibleTitre = elementSvg("title");
+      cibleTitre.textContent = cible;
+      cibleGroupe.append(cibleTexte, cibleTitre);
+
+      svg.append(sourceGroupe, relationGroupe, cibleGroupe);
+    });
     corps.appendChild(svg);
+    const resume = document.createElement("p");
+    resume.className = "response-graph-summary";
+    resume.textContent = `${liensAffiches.length} relation${liensAffiches.length > 1 ? "s" : ""} affichée${liensAffiches.length > 1 ? "s" : ""}. Fais défiler le schéma pour toutes les consulter.`;
+    corps.appendChild(resume);
     bouton.onclick = () => {
       corps.hidden = !corps.hidden;
       bouton.lastElementChild.textContent = corps.hidden ? "⌄" : "⌃";
@@ -979,7 +1004,11 @@
       const data = await api("/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question, conversation_id: conversationId }),
+        body: JSON.stringify({
+          question,
+          conversation_id: conversationId,
+          provider: elProvider.value,
+        }),
       });
       elChargement.remove();
 

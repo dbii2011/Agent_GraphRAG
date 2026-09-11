@@ -1,0 +1,204 @@
+{
+  "domaine": "traversée_voie",
+  "statut": "PROBABLE",
+  "methode_validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3",
+  "validation_experte": false,
+  "concepts": [
+    {
+      "id": "dispositif_signalant_l_approche_des_circulations",
+      "nom": "dispositif signalant l’approche des circulations",
+      "aliases": [],
+      "description": "Dispositif permettant de signaler l’approche des circulations pour les traversées de voie.",
+      "classes_arianes": [
+        "traversee_voie"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "gare",
+      "nom": "Gare",
+      "aliases": [],
+      "description": "Point d’arrêt où est localisée une traversée de voie pour piétons.",
+      "classes_arianes": [
+        ":gare"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "ligne",
+      "nom": "Ligne",
+      "aliases": [],
+      "description": "Ligne ferroviaire où est localisée une traversée de voie pour piétons.",
+      "classes_arianes": [
+        "Ligne"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    },
+    {
+      "id": "pk",
+      "nom": "Pk",
+      "aliases": [],
+      "description": "Point kilométrique correspondant à l’axe de la traversée de voie pour piétons.",
+      "classes_arianes": [
+        "Pk"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "LOCALISATION",
+      "validation_experte": false
+    },
+    {
+      "id": "traversee_des_voies_a_niveau_par_le_public",
+      "nom": "Traversée des Voies à niveau par le Public",
+      "aliases": [
+        "TVP"
+      ],
+      "description": "Désignation générique des équipements mis en œuvre pour permettre au public de traverser, dans un point d’arrêt, les voies à niveau en empruntant un passage planchéié, muni ou non d’un dispositif signalant l’approche des circulations. Ce terme exclut les ouvrages dénivelés (passerelles, passages souterrains, …).",
+      "classes_arianes": [
+        "traversee_voie"
+      ],
+      "documents": [
+        "traversee_voie.txt"
+      ],
+      "statut": "VALIDE",
+      "categorie": "INCONNU",
+      "validation_experte": false
+    }
+  ],
+  "relations": [
+    {
+      "source": "traversee_des_voies_a_niveau_par_le_public",
+      "type": "COMPOSE_DE",
+      "cible": "dispositif_signalant_l_approche_des_circulations",
+      "preuve": {
+        "document": "traversee_voie.txt",
+        "lignes": "1-60",
+        "citation": "muni ou non d’un dispositif signalant l’approche des circulations"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "négation ou modalité : ne pas interpréter comme un fait universel",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.65,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": false
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "traversee_des_voies_a_niveau_par_le_public",
+      "type": "FAIT_PARTIE_DE",
+      "cible": "gare",
+      "preuve": {
+        "document": "traversee_voie.txt",
+        "lignes": "1-60",
+        "citation": "dans un point d’arrêt"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "traversee_des_voies_a_niveau_par_le_public",
+      "type": "LOCALISE_SUR",
+      "cible": "ligne",
+      "preuve": {
+        "document": "traversee_voie.txt",
+        "lignes": "1-60",
+        "citation": "traverser, dans un point d’arrêt, les voies à niveau"
+      },
+      "statut": "PROBABLE",
+      "avertissements": [
+        "catégorie source ou cible à préciser",
+        "prédicat non confirmé textuellement"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 0.8,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": false,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    },
+    {
+      "source": "traversee_des_voies_a_niveau_par_le_public",
+      "type": "LOCALISE_SUR",
+      "cible": "pk",
+      "preuve": {
+        "document": "traversee_voie.txt",
+        "lignes": "1-60",
+        "citation": "PK : le PK correspond à l’axe de la TVP"
+      },
+      "statut": "VALIDE",
+      "avertissements": [
+        "catégorie source ou cible à préciser"
+      ],
+      "niveau_validation": "DOCUMENTAIRE",
+      "validation_experte": false,
+      "score_confiance": 1.0,
+      "criteres": {
+        "preuve_exacte": true,
+        "concepts_identifies": true,
+        "predicat_confirme": true,
+        "direction_confirmee": true,
+        "condition_complete": true
+      },
+      "version_validation": 3,
+      "motifs_rejet": [],
+      "validation": "CLASSIFICATION_DOCUMENTAIRE_AUTOMATIQUE_V3"
+    }
+  ],
+  "relations_valides": 1,
+  "relations_probables": 3,
+  "relations_rejetees": [],
+  "relations_exclues": 0,
+  "avertissement": "Validation documentaire automatique : aucune certification experte ferroviaire."
+}
